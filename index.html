@@ -398,6 +398,49 @@
             margin-bottom: 2.5rem;
         }
 
+        .sponsor-prospectus {
+            margin-top: 2rem;
+            padding: 1.5rem 1.25rem;
+            border-radius: 16px;
+            background: linear-gradient(135deg, #f0fdfe 0%, #d2e4fd 100%);
+            border: 2px solid #7acaf6;
+            box-shadow: 0 16px 30px rgba(21, 74, 249, 0.12);
+        }
+
+        .sponsor-prospectus h3 {
+            color: #154af9;
+            font-size: clamp(1.45rem, 3vw, 2.1rem);
+            line-height: 1.15;
+            margin-bottom: 0.85rem;
+        }
+
+        .sponsor-prospectus p {
+            color: #555;
+            font-size: 1rem;
+        }
+
+        .sponsor-prospectus .hero-cta {
+            display: inline-block;
+            min-width: min(100%, 300px);
+            margin: 0.35rem 0 0.9rem;
+            padding: 0.8rem 1.8rem;
+            background: linear-gradient(135deg, #154af9 0%, #24b0fa 100%);
+            color: white;
+            font-size: 1.1rem;
+            box-shadow: 0 12px 24px rgba(21, 74, 249, 0.2);
+        }
+
+        .sponsor-prospectus .hero-cta:hover {
+            background: linear-gradient(135deg, #0f3dd1 0%, #1b97dd 100%);
+            color: white;
+        }
+
+        .sponsor-prospectus .email-link {
+            font-size: clamp(1.05rem, 2.4vw, 1.45rem);
+            font-weight: 700;
+            color: #154af9;
+        }
+
         .faq-list {
             display: grid;
             gap: 1.75rem;
@@ -695,7 +738,11 @@
                     <!--<a href="https://example.com"><img src="images/company1.png" alt="Company 1"></a>-->
                 </div>
             </div>
-            <p>If you'd like to sponsor Pixel Forge, please contact us at <a href="mailto:pixelforgejam@gmail.com">pixelforgejam@gmail.com</a>!</p><br>
+            <div class="sponsor-prospectus">
+                <h3>Interested in Sponsoring? Check out our:</h3>
+                <a href="contents/sponsorform.pdf" download="sponsorform.pdf" class="hero-cta">Sponsorship Prospectus</a>
+                <p>Or email: <a href="mailto:pixelforgejam@gmail.com" class="email-link">pixelforgejam@gmail.com</a></p>
+            </div>
         </section>
 
         <section id="faq">
