@@ -398,6 +398,49 @@
             margin-bottom: 2.5rem;
         }
 
+        .sponsor-prospectus {
+            margin-top: 2.5rem;
+            padding: 2.25rem 1.5rem;
+            border-radius: 18px;
+            background: linear-gradient(135deg, #f0fdfe 0%, #d2e4fd 100%);
+            border: 2px solid #7acaf6;
+            box-shadow: 0 16px 30px rgba(21, 74, 249, 0.12);
+        }
+
+        .sponsor-prospectus h3 {
+            color: #154af9;
+            font-size: clamp(2rem, 4vw, 2.9rem);
+            line-height: 1.1;
+            margin-bottom: 1.25rem;
+        }
+
+        .sponsor-prospectus p {
+            color: #555;
+            font-size: 1.15rem;
+        }
+
+        .sponsor-prospectus .hero-cta {
+            display: inline-block;
+            min-width: min(100%, 360px);
+            margin: 0.5rem 0 1.25rem;
+            padding: 1rem 2.4rem;
+            background: linear-gradient(135deg, #154af9 0%, #24b0fa 100%);
+            color: white;
+            font-size: 1.3rem;
+            box-shadow: 0 12px 24px rgba(21, 74, 249, 0.2);
+        }
+
+        .sponsor-prospectus .hero-cta:hover {
+            background: linear-gradient(135deg, #0f3dd1 0%, #1b97dd 100%);
+            color: white;
+        }
+
+        .sponsor-prospectus .email-link {
+            font-size: clamp(1.35rem, 3vw, 2rem);
+            font-weight: 700;
+            color: #154af9;
+        }
+
         .faq-list {
             display: grid;
             gap: 1.75rem;
@@ -687,7 +730,11 @@
                 <div class="sponsor-logos small">
                 </div>
             </div>
-            <p>If you'd like to sponsor Pixel Forge, please contact us at <a href="mailto:pixelforgejam@gmail.com">pixelforgejam@gmail.com</a>!</p><br>
+            <div class="sponsor-prospectus">
+                <h3>Interested in Sponsoring? Check out our:</h3>
+                <a href="contents/sponsorform.pdf" download="sponsorform.pdf" class="hero-cta">Sponsorship Prospectus</a>
+                <p>Or email: <a href="mailto:pixelforgejam@gmail.com" class="email-link">pixelforgejam@gmail.com</a></p>
+            </div>
         </section>
 
         <section id="faq">
