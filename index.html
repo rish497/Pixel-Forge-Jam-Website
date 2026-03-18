@@ -164,7 +164,7 @@
         }
 
         footer {
-            background: #154af9;
+            background: #7acaf6;
             color: white;
             text-align: center;
             padding: 2rem;
@@ -458,23 +458,6 @@
             object-fit: contain;
         }
 
-        #prize-donors .sponsor-logos img {
-            max-height: 140px;
-            width: auto;
-            height: auto;
-            object-fit: contain;
-        }
-
-        #prize-donors {
-            text-align: center;
-        }
-
-        a {
-            color: #154af9;
-            text-decoration: underline;
-            font-weight: 600;
-        }
-
         a:hover {
             color: #5379f6;
             text-decoration: underline;
@@ -520,7 +503,32 @@
             margin: 1.5rem auto 0;
             border-radius: 10px;
         }
+        .menu-toggle {
+            display: none;
+            font-size: 1.8rem;
+            background: none;
+            border: none;
+            color: #154af9;
+            cursor: pointer;
+        }
+        @media (max-width: 768px) {
 
+            .menu-toggle {
+                display: block;
+                margin: 0 auto;
+            }
+
+            nav ul {
+                display: none;
+                flex-direction: column;
+                gap: 1rem;
+                margin-top: 1rem;
+            }
+
+            nav ul.active {
+                display: flex;
+            }
+        }
     </style>
 </head>
 
@@ -534,7 +542,9 @@
     </header>
 
     <nav>
-        <ul>
+        <button class="menu-toggle" id="menuToggle">☰</button>
+
+        <ul id="navMenu">
             <li><a href="#about">About</a></li>
             <li><a href="#winners">Winners</a></li>
             <li><a href="#timeline">Timeline</a></li>
@@ -718,6 +728,7 @@
     </footer>
 
     <script>
+
         document.documentElement.classList.add('js-scroll');
 
         const scrollAnimatedItems = document.querySelectorAll('.scroll-fade');
@@ -745,6 +756,12 @@
                 item.classList.add('is-visible');
             });
         }
+        const menuToggle = document.getElementById("menuToggle");
+        const navMenu = document.getElementById("navMenu");
+
+        menuToggle.addEventListener("click", () => {
+        navMenu.classList.toggle("active");
+        });
     </script>
 
 </body></html>
