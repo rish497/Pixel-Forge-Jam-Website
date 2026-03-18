@@ -1,0 +1,508 @@
+<!DOCTYPE html><html lang="en"><head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" type="image/png" href="images/pig.png">
+    <title>Oink Game Jam</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700&display=swap');
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            font-family: 'Nunito', sans-serif;
+            background-image: url('images/background.png');
+            background-repeat: repeat;
+            background-position: 0% 0%;
+            color: #2d2d2d;
+            line-height: 1.6;
+        }
+
+        header {
+            background: linear-gradient(135deg, #000000 0%, #292929 100%);
+            padding: 1rem 1.5rem;
+            text-align: center;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        h1 {
+            font-size: 3.5rem;
+            color: white;
+            margin-bottom: 0.5rem;
+        }
+
+        .subtitle {
+            font-size: 1.3rem;
+            color: #f0f6fe;
+        }
+
+        nav {
+            background: white;
+            padding: 1rem;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+            position: sticky;
+            top: 0;
+            z-index: 100;
+        }
+
+        nav ul {
+            list-style: none;
+            display: flex;
+            justify-content: center;
+            gap: 2rem;
+            flex-wrap: wrap;
+        }
+
+        nav a {
+            text-decoration: none;
+            color: #154af9;
+            font-weight: 600;
+            font-size: 1.1rem;
+            position: relative;
+        }
+
+        nav a::after {
+            content: "";
+            position: absolute;
+            width: 0%;
+            height: 2px;
+            left: 0;
+            bottom: -4px;
+            background: #154af9;
+            transition: width 0.25s ease;
+        }
+
+        nav a:hover::after {
+            width: 100%;
+        }
+        .container {
+            max-width: 1000px;
+            margin: 0 auto;
+            padding: 2rem;
+        }
+
+        section {
+            background: rgb(255, 255, 255);
+            margin: 2rem 0;
+            padding: 2.5rem;
+            border-radius: 12px;
+            box-shadow: 0 4px 6px rgba(166, 176, 250, 0.15);
+            scroll-margin-top: 90px;
+            transition: transform 0.2s ease, box-shadow 0.2s ease;
+        }
+
+        section:hover {
+            transform: translateY(-4px);
+            box-shadow: 0 10px 20px rgba(0,0,0,0.12);
+        }
+
+        h2 {
+            color: #0642ff;
+            font-size: 2.2rem;
+            margin-bottom: 1.5rem;
+            border-bottom: 3px solid #154af9;
+            padding-bottom: 0.5rem;
+        }
+
+        .timeline-item {
+            margin: 1.5rem 0;
+            padding-left: 2rem;
+            border-left: 4px solid #263ef5;
+        }
+
+        .timeline-item h3 {
+            color: #154af9;
+            font-size: 1.4rem;
+            margin-bottom: 0.5rem;
+        }
+
+        .timeline-item p {
+            color: #24b0fa;
+            font-size: 1.1rem;
+        }
+
+        .rule-item {
+            background: #d2e4fd;
+            padding: 1.2rem;
+            margin: 1rem 0;
+            border-radius: 8px;
+            border-left: 5px solid #154af9;
+        }
+
+        .rule-item h3 {
+            color: #154af9;
+            margin-bottom: 0.5rem;
+        }
+
+        .prize-card {
+            background: linear-gradient(135deg, #f0fdfe 0%, #d2e4fd 100%);
+            padding: 1.5rem;
+            margin: 1.5rem 0;
+            border-radius: 10px;
+            border: 2px solid #154af9;
+        }
+
+        .prize-card h3 {
+            color: #154af9;
+            font-size: 1.5rem;
+            margin-bottom: 0.8rem;
+        }
+
+        .prize-card p {
+            font-size: 1.1rem;
+            color: #555;
+        }
+
+        footer {
+            background: #154af9;
+            color: white;
+            text-align: center;
+            padding: 2rem;
+            margin-top: 3rem;
+        }
+
+        .hero-buttons {
+            margin-top: 0.1rem;
+            margin-bottom: 0.7rem;
+            display: flex;
+            justify-content: center;
+            gap: 1rem;
+            flex-wrap: wrap;
+        }
+
+        .hero-cta {
+            background: #7acaf6;
+            color: #154af9;
+            padding: 0.9rem 2.2rem;
+            border-radius: 999px;
+            text-decoration: none;
+            font-weight: 700;
+            font-size: 1.15rem;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
+            transition: transform 0.2s ease, box-shadow 0.2s ease, background 0.2s ease;
+        }
+
+        .hero-cta:hover {
+            transform: translateY(-2px);
+            background: #f0f7fe;
+            box-shadow: 0 6px 14px rgba(0, 0, 0, 0.2);
+            text-decoration: none;
+        }
+
+        .hero-cta.secondary {
+            background: transparent;
+            color: white;
+            border: 2px solid white;
+        }
+
+        .cta-button {
+            display: inline-block;
+            background: #154af9;
+            color: white;
+            padding: 1rem 2rem;
+            border-radius: 8px;
+            text-decoration: none;
+            font-weight: 600;
+            margin-top: 1rem;
+            transition: background 0.3s;
+        }
+
+        .cta-button:hover {
+            background: #154af9;
+        }
+
+        @media (max-width: 768px) {
+            h1 {
+                font-size: 2.5rem;
+            }
+
+            nav ul {
+                gap: 1rem;
+            }
+
+            section {
+                padding: 1.5rem;
+            }
+        }
+
+        #sponsors {
+            text-align: center;
+            margin: 3rem 0;
+        }
+
+        .sponsor-tier {
+            margin-bottom: 2.5rem;
+        }
+
+        .sponsor-logos {
+            display: flex;
+            justify-content: center;
+            gap: 1.5rem;
+            flex-wrap: wrap;
+            margin-top: 1rem;
+        }
+
+        .sponsor-logos img {
+            border-radius: 8px;
+        }
+
+        .sponsor-logos.xlarge img {
+            max-width: 870px;
+        }
+
+        .sponsor-logos.medium img {
+            max-width: 660px;
+        }
+
+        .sponsor-logos.small {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 1.8rem;
+        }
+
+        .sponsor-logos.small img {
+            max-width: 270px;
+            max-height: 170px;
+            width: auto;
+            height: auto;
+            object-fit: contain;
+        }
+
+        #prize-donors .sponsor-logos img {
+            max-height: 140px;
+            width: auto;
+            height: auto;
+            object-fit: contain;
+        }
+
+        #prize-donors {
+            text-align: center;
+        }
+
+        a {
+            color: #154af9;
+            text-decoration: underline;
+            font-weight: 600;
+        }
+
+        a:hover {
+            color: #5379f6;
+            text-decoration: underline;
+        }
+
+        .hexany-logo {
+            height: 120px;
+            width: auto;
+            object-fit: contain;
+        }
+
+        .chequered-logo {
+            height: 250px;
+            width: auto;
+            object-fit: contain;
+        }
+
+        .sponsor-logos a {
+            transition: transform 0.2s ease, opacity 0.2s ease;
+        }
+
+        .sponsor-logos a:hover {
+            transform: translateY(-2px);
+            opacity: 0.85;
+        }
+
+        .pizzadoggy-logo {
+            max-width: 400px !important;
+            max-height: 270px !important;
+        }
+
+        .wil-logo {
+            height: 100px;
+            width: auto;
+            object-fit: contain;
+        }
+
+        .winners-img {
+            width: 100%;
+            max-width: 700px;
+            height: auto;
+            display: block;
+            margin: 1.5rem auto 0;
+            border-radius: 10px;
+        }
+
+    </style>
+</head>
+
+<body>
+    <header>
+        <img src="images/header.png" alt="Oink Game Jam" style="max-width: 1000px; width: 100%; height: auto;">
+        <div class="hero-buttons">
+            <a href="https://itch.io/jam/oink-jam" class="hero-cta">Join the Jam</a>
+            <a href="https://discord.gg/ZaW5UfvrNV" class="hero-cta">Join Discord</a>
+        </div>
+    </header>
+
+    <nav>
+        <ul>
+            <li><a href="#about">About</a></li>
+            <li><a href="#winners">Winners</a></li>
+            <li><a href="#timeline">Timeline</a></li>
+            <li><a href="#themes">Themes</a></li>
+            <li><a href="#rules">Rules</a></li>
+            <li><a href="#prizes">Prizes</a></li>
+            <li><a href="#sponsors">Sponsors</a></li>
+        </ul>
+    </nav>
+
+    <div class="container">
+        <section id="about">
+            <h2>About</h2>
+            <p>Pixel Forge a 1-week game development hackathon where developers, artists, designers, and creators come together to build 
+                something awesome. You have 7 days to create a game from scratch, experiment with ideas, 
+                and turn creativity into playable projects.Whether you're a beginner or experienced developer, 
+                Pixel Forge is all about creativity, learning, and building cool games. Not only will you have a shiny new game to add to your portfolio, but you'll also receive
+                recognition, feedback, and the chance to win prizes!</p><br>
+            <p>Don't worry if you can't participate in this jam, as we are running more
+                iterations in the future!</p>
+        </section>
+
+        <section id="winners">
+            <h2>Pixel Forge Jam 2026 Winners</h2>
+            <p>The winners will be announced and highlighted once the game jam has ended. You can go to the game jam <a href="https://itch.io/jam/pixelforge" target="_blank">here!</a></p>
+        </section>
+
+        <section id="timeline">
+            <h2>2026 Timeline</h2>
+            <div class="timeline-item">
+                <h3>Jam Starts</h3>
+                <p>April 7th</p>
+            </div>
+            <div class="timeline-item">
+                <h3>Submission Deadline</h3>
+                <p>April 14th</p>
+            </div>
+            <div class="timeline-item">
+                <h3>Voting Period</h3>
+                <p>April 14th to April 18th</p>
+            </div>
+            <div class="timeline-item">
+                <h3>Winners Announced</h3>
+                <p>April 19th</p>
+            </div>
+        </section>
+
+        <section id="themes">
+            <h2>Themes</h2>
+            <p><b>The theme will be released 1 hour before the game jam starts! Head over to our <a href="https://discord.gg/mM8PpjGyM6">Discord</a> for more info!</b></p>
+            <p style="margin-top: 1rem;">You can interpret the themes however you like!</p>
+        </section>
+
+        <section id="rules">
+            <h2>Rules</h2>
+            <div class="rule-item">
+                <h3>1. Submissions</h3>
+                <p>Your game must have been entirely made during the jam period. You may use small pre-existing assets and
+                    tools, but disclose and properly credit them in your game description. You should also include an explanation of how
+                    your game relates to one of the themes. You can use any game engine!</p>
+            </div>
+            <div class="rule-item">
+                <h3>2. Progress</h3>
+                <p><b>YOU MUST KEEP TRACK OF YOUR PROGRESS!</b> This can be done either by taking screenshots every day with
+                    the date/time visible, or by having a public GitHub repository for your project. We may ask to see
+                    it at the end of the jam.</p>
+            </div>
+            <div class="rule-item">
+                <h3>3. Team Size</h3>
+                <p>Solo developers and teams of up to 4 people are allowed. Join our Discord server to easily find
+                    teammates!</p>
+            </div>
+            <div class="rule-item">
+                <h3>4. Game Content</h3>
+                <p>Games should generally be appropriate for all ages, with the exception of scary/violent content in
+                    horror games. No offensive, hateful, or explicit content.</p>
+            </div>
+            <div class="rule-item">
+                <h3>5. Be Kind</h3>
+                <p>Provide constructive feedback to others and maintain a supportive community atmosphere!</p>
+            </div>
+        </section>
+
+        <section id="prizes">
+            <h2>Prizes</h2>
+            <p>Winners should contact <a href="mailto:pixelforgejam@gmail.com">pixelforgejam@gmail.com</a> or join the <a href="https://discord.gg/mM8PpjGyM6">Discord</a> to claim their prizes. As most of the prizes
+                listed below aren't 1 for each team member, teams are responsible for determining how they'll split
+                them. </p>
+
+            <div class="prize-card">
+                <h3>🥇 First Place</h3>
+                <p>- Featured on our websites, signed winner certificate, and Discord role</p>
+            </div>
+
+            <div class="prize-card">
+                <h3>🥈 Second Place</h3>
+                <p>- Featured on our websites, signed winner certificate, and Discord role</p>
+            </div>
+
+            <div class="prize-card">
+                <h3>🥉 Third Place</h3>
+                <p>- Featured on our websites, signed winner certificate, and Discord role</p>
+            </div>
+
+            <div class="prize-card">
+                <h3>💎 Organizers' Choice</h3>
+                <p>- Featured on our websites, signed winner certificate, and Discord role</p>
+                <p>Chosen by the OinkJam organizers. The winners of the above categories are not eligible for this
+                    prize.</p>
+            </div>
+
+            <div class="prize-card">
+                <h3>🎁 All Participants</h3>
+                <p>- Signed participation certificate for those that want one</p>
+            </div>
+        </section>
+
+        <section id="sponsors">
+            <h2>Sponsors</h2>
+            <!-- Gold Sponsors -->
+            <div class="sponsor-tier gold">
+                <h3>Gold Sponsors</h3>
+                <div class="sponsor-logos xlarge">
+                </div>
+            </div>
+
+            <!-- Silver Sponsors -->
+            <div class="sponsor-tier silver">
+                <h3>Silver Sponsors</h3>
+                <div class="sponsor-logos medium">
+                </div>
+            </div>
+
+            <!-- bronze Sponsors -->
+            <div class="sponsor-tier bronze">
+                <h3>Bronze Sponsors</h3>
+                <div class="sponsor-logos small">
+                </div>
+            </div>
+            <p>If you'd like to sponsor OinkJam, please contact us at <a href="mailto:pixelforgejam@gmail.com">pixelforgejam@gmail.com</a>!</p><br>
+        </section>
+    </div>
+
+    <footer>
+        <p>© Pixel Forge Jam 2026</p>
+        <p style="margin-top: 0.5rem;">Questions? Contact us at pixelforgejam@gmail.com or ask in our Discord.</p>
+    </footer>
+
+
+</body></html>
