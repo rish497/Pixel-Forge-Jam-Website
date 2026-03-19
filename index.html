@@ -237,6 +237,65 @@
             margin-top: 1rem;
         }
 
+        .theme-suggestion-card {
+            margin-top: 1.75rem;
+            padding: 1.5rem;
+            border-radius: 18px;
+            background: linear-gradient(135deg, #f8fbff 0%, #e6efff 100%);
+            border: 2px solid #d5e2ff;
+            box-shadow: 0 18px 30px rgba(21, 74, 249, 0.08);
+        }
+
+        .theme-suggestion-card h3 {
+            color: #154af9;
+            font-size: 1.45rem;
+            margin-bottom: 0.4rem;
+        }
+
+        .theme-suggestion-card p {
+            color: #4f5d7a;
+        }
+
+        .theme-suggestion-form {
+            display: grid;
+            gap: 0.85rem;
+            margin-top: 1rem;
+        }
+
+        .theme-suggestion-label {
+            color: #154af9;
+            font-weight: 700;
+        }
+
+        .theme-suggestion-input {
+            width: 100%;
+            padding: 0.95rem 1rem;
+            border-radius: 14px;
+            border: 2px solid #bfd4ff;
+            background: #ffffff;
+            color: #2d2d2d;
+            font: inherit;
+            transition: border-color 0.2s ease, box-shadow 0.2s ease;
+        }
+
+        .theme-suggestion-input:focus {
+            outline: none;
+            border-color: #154af9;
+            box-shadow: 0 0 0 4px rgba(21, 74, 249, 0.14);
+        }
+
+        .theme-suggestion-submit {
+            border: none;
+            cursor: pointer;
+            justify-self: start;
+        }
+
+        .theme-suggestion-status {
+            min-height: 1.5rem;
+            color: #154af9;
+            font-weight: 700;
+        }
+
         .why-pixel-forge {
             margin-top: 3rem;
             padding-top: 2.5rem;
@@ -647,6 +706,24 @@
                 <p>Don't worry if you can't participate in this jam, as we are running more
                     iterations in the future!</p>
             </div>
+            <div class="theme-suggestion-card">
+                <h3>Suggest a Theme</h3>
+                <p>Enter a possible theme idea for the hackathon.</p>
+                <form id="themeSuggestionForm" class="theme-suggestion-form">
+                    <label for="themeSuggestionInput" class="theme-suggestion-label">Theme idea</label>
+                    <input
+                        id="themeSuggestionInput"
+                        class="theme-suggestion-input"
+                        type="text"
+                        name="themeSuggestion"
+                        maxlength="120"
+                        placeholder="Example: Tiny Worlds"
+                        required
+                    >
+                    <button type="submit" class="hero-cta theme-suggestion-submit">Add Theme to File</button>
+                    <p id="themeSuggestionStatus" class="theme-suggestion-status" aria-live="polite"></p>
+                </form>
+            </div>
         </section>
 
         <!--<section id="winners">
@@ -846,12 +923,63 @@
                 item.classList.add('is-visible');
             });
         }
+
         const menuToggle = document.getElementById("menuToggle");
         const navMenu = document.getElementById("navMenu");
+        const themeSuggestionForm = document.getElementById("themeSuggestionForm");
+        const themeSuggestionInput = document.getElementById("themeSuggestionInput");
+        const themeSuggestionStatus = document.getElementById("themeSuggestionStatus");
 
-        menuToggle.addEventListener("click", () => {
-        navMenu.classList.toggle("active");
-        });
+        const appendThemeSuggestion = async (theme) => {
+            const response = await fetch("/api/theme-suggestions", {
+                method: "POST",
+                headers: {
+                    "Content-Type": "application/json"
+                },
+                body: JSON.stringify({ theme })
+            });
+
+            let payload = null;
+
+            try {
+                payload = await response.json();
+            } catch (error) {
+                payload = null;
+            }
+
+            if (!response.ok) {
+                throw new Error(payload && payload.error ? payload.error : "Unable to update theme.txt.");
+            }
+        };
+
+        if (menuToggle && navMenu) {
+            menuToggle.addEventListener("click", () => {
+                navMenu.classList.toggle("active");
+            });
+        }
+
+        if (themeSuggestionForm && themeSuggestionInput && themeSuggestionStatus) {
+            themeSuggestionForm.addEventListener("submit", async (event) => {
+                event.preventDefault();
+
+                const theme = themeSuggestionInput.value.trim();
+
+                if (!theme) {
+                    themeSuggestionStatus.textContent = "Enter a theme before saving.";
+                    return;
+                }
+
+                themeSuggestionStatus.textContent = "Appending theme to theme.txt...";
+
+                try {
+                    await appendThemeSuggestion(theme);
+                    themeSuggestionStatus.textContent = "The theme has been added to our list.";
+                    themeSuggestionForm.reset();
+                } catch (error) {
+                    themeSuggestionStatus.textContent = error.message || "Unable to update theme.txt.";
+                }
+            });
+        }
     </script>
 
 </body></html>
