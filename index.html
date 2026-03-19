@@ -364,6 +364,11 @@
                 opacity: 1;
                 filter: none;
             }
+
+            .aseprite-logo-link::before,
+            .aseprite-logo-link::after {
+                animation: none;
+            }
         }
 
         @media (max-width: 768px) {
@@ -529,6 +534,50 @@
             opacity: 0.85;
         }
 
+        .aseprite-logo-link {
+            position: relative;
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            padding: clamp(1rem, 2vw, 1.5rem) clamp(1.25rem, 3vw, 2.25rem);
+            isolation: isolate;
+        }
+
+        .aseprite-logo-link::before,
+        .aseprite-logo-link::after {
+            content: "";
+            position: absolute;
+            z-index: -1;
+            pointer-events: none;
+            border-radius: 999px;
+        }
+
+        .aseprite-logo-link::before {
+            inset: 18% 6% 20%;
+            background:
+                radial-gradient(circle at 24% 38%, rgba(160, 94, 255, 0.52) 0%, rgba(160, 94, 255, 0.24) 32%, rgba(160, 94, 255, 0) 70%),
+                radial-gradient(circle at 78% 62%, rgba(108, 63, 235, 0.42) 0%, rgba(108, 63, 235, 0.18) 36%, rgba(108, 63, 235, 0) 74%);
+            filter: blur(30px);
+            transform: translateY(12px) scale(1.16, 0.92);
+            opacity: 0.95;
+            animation: asepritePatchFloat 7s ease-in-out infinite;
+        }
+
+        .aseprite-logo-link::after {
+            inset: 46% 12% 4%;
+            background: radial-gradient(circle at center, rgba(122, 79, 245, 0.38) 0%, rgba(122, 79, 245, 0.18) 40%, rgba(122, 79, 245, 0) 74%);
+            filter: blur(24px);
+            transform: translateY(18px) scale(1.26, 0.6);
+            opacity: 0.85;
+            animation: asepritePatchDrift 8.5s ease-in-out infinite;
+        }
+
+        .aseprite-logo-link img {
+            position: relative;
+            z-index: 1;
+            filter: drop-shadow(0 14px 22px rgba(72, 37, 140, 0.2));
+        }
+
         .pizzadoggy-logo {
             max-width: 400px !important;
             max-height: 270px !important;
@@ -538,6 +587,30 @@
             height: 100px;
             width: auto;
             object-fit: contain;
+        }
+
+        @keyframes asepritePatchFloat {
+            0%,
+            100% {
+                transform: translateY(12px) scale(1.16, 0.92);
+            }
+
+            50% {
+                transform: translateY(2px) scale(1.22, 0.98);
+            }
+        }
+
+        @keyframes asepritePatchDrift {
+            0%,
+            100% {
+                transform: translateY(18px) scale(1.26, 0.6);
+                opacity: 0.82;
+            }
+
+            50% {
+                transform: translateY(10px) scale(1.32, 0.66);
+                opacity: 0.96;
+            }
         }
 
         .winners-img {
@@ -729,7 +802,7 @@
                 <h3>Silver Sponsors</h3>
                 <div class="sponsor-logos medium">
                     <!--<a href="https://example.com"><img src="images/company1.png" alt="Company 1"></a>-->
-                    <a href="https://www.aseprite.org/"><img src="images\Aseprite-logo.png" alt="Aseprite"></a>
+                    <a href="https://www.aseprite.org/" class="aseprite-logo-link"><img src="images\Aseprite-logo.png" alt="Aseprite"></a>
                 </div>
             </div>
 
