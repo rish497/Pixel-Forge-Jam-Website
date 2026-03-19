@@ -1,7 +1,0 @@
-{
-  "name": "pixel-forge-jam-website",
-  "private": true,
-  "scripts": {
-    "start": "node server.js"
-  }
-}
