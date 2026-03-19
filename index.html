@@ -165,7 +165,7 @@
 
         footer {
             background: #7acaf6;
-            color: white;
+            color: #154af9;
             text-align: center;
             padding: 2rem;
             margin-top: 3rem;
@@ -479,11 +479,21 @@
         }
 
         .sponsor-logos.xlarge img {
-            max-width: 800px;
+            width: clamp(260px, 60vw, 600px);
+            height: auto;
+            object-fit: contain;
         }
 
         .sponsor-logos.medium img {
-            max-width: 450px;
+            width: clamp(180px, 40vw, 450px);
+            height: auto;
+            object-fit: contain;
+        }
+
+        .sponsor-logos.small img {
+            width: clamp(120px, 25vw, 300px);
+            height: auto;
+            object-fit: contain;
         }
 
         .sponsor-logos.small {
@@ -491,14 +501,6 @@
             align-items: center;
             justify-content: center;
             gap: 1.8rem;
-        }
-
-        .sponsor-logos.small img {
-            max-width: 270px;
-            max-height: 170px;
-            width: auto;
-            height: auto;
-            object-fit: contain;
         }
 
         a:hover {
