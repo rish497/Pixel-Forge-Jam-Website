@@ -720,7 +720,7 @@
                         placeholder="Example: Tiny Worlds"
                         required
                     >
-                    <button type="submit" class="hero-cta theme-suggestion-submit">Add Theme to File</button>
+                    <button type="submit" class="hero-cta theme-suggestion-submit">Submit Theme</button>
                     <p id="themeSuggestionStatus" class="theme-suggestion-status" aria-live="polite"></p>
                 </form>
             </div>
@@ -929,26 +929,39 @@
         const themeSuggestionForm = document.getElementById("themeSuggestionForm");
         const themeSuggestionInput = document.getElementById("themeSuggestionInput");
         const themeSuggestionStatus = document.getElementById("themeSuggestionStatus");
+        const themeSuggestionEndpoint = "https://script.google.com/macros/s/AKfycbzPaFrfhRuD7meUpfmPyM7QQjzIi0XntGk7HWh7rEowdxp5Vp4RFtXqfyc8imYIvneA/exec";
 
         const appendThemeSuggestion = async (theme) => {
-            const response = await fetch("/api/theme-suggestions", {
+            if (!themeSuggestionEndpoint || themeSuggestionEndpoint === "PASTE_YOUR_GOOGLE_APPS_SCRIPT_WEB_APP_URL_HERE") {
+                throw new Error("Add your Google Apps Script web app URL in index.html before using this form.");
+            }
+
+            const payload = new URLSearchParams({ theme });
+            const response = await fetch(themeSuggestionEndpoint, {
                 method: "POST",
-                headers: {
-                    "Content-Type": "application/json"
-                },
-                body: JSON.stringify({ theme })
+                body: payload,
+                mode: "cors"
             });
 
-            let payload = null;
+            const responseText = await response.text();
+            let responsePayload = null;
 
             try {
-                payload = await response.json();
+                responsePayload = JSON.parse(responseText);
             } catch (error) {
-                payload = null;
+                responsePayload = null;
+            }
+
+            if (responsePayload && responsePayload.error) {
+                throw new Error(responsePayload.error);
             }
 
             if (!response.ok) {
-                throw new Error(payload && payload.error ? payload.error : "Unable to update theme.txt.");
+                throw new Error(responsePayload && responsePayload.error ? responsePayload.error : "Unable to submit your theme right now.");
+            }
+
+            if (!responsePayload || responsePayload.ok !== true) {
+                throw new Error("Theme service returned an unexpected response.");
             }
         };
 
@@ -965,18 +978,18 @@
                 const theme = themeSuggestionInput.value.trim();
 
                 if (!theme) {
-                    themeSuggestionStatus.textContent = "Enter a theme before saving.";
+                    themeSuggestionStatus.textContent = "Enter a theme before submitting.";
                     return;
                 }
 
-                themeSuggestionStatus.textContent = "Appending theme to theme.txt...";
+                themeSuggestionStatus.textContent = "Submitting your theme...";
 
                 try {
                     await appendThemeSuggestion(theme);
                     themeSuggestionStatus.textContent = "The theme has been added to our list.";
                     themeSuggestionForm.reset();
                 } catch (error) {
-                    themeSuggestionStatus.textContent = error.message || "Unable to update theme.txt.";
+                    themeSuggestionStatus.textContent = error.message || "Unable to submit your theme right now.";
                 }
             });
         }
