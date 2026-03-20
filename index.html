@@ -282,7 +282,7 @@
 
         .discord-widget-wrap {
             display: flex;
-            justify-content: center;
+            justify-content: left;
         }
 
         .discord-widget-embed {
@@ -636,19 +636,29 @@
         .sponsor-logos img {
             border-radius: 8px;
         }
-
+        /*gold*/
         .sponsor-logos.xlarge img {
             width: clamp(260px, 60vw, 600px);
             height: auto;
             object-fit: contain;
         }
-
+        /*silver*/
         .sponsor-logos.medium img {
             width: clamp(180px, 40vw, 450px);
             height: auto;
             object-fit: contain;
         }
+        .sponsor-logos.medium .xyz {
+            flex-basis: 100%;
+            display: flex;
+            justify-content: center;
+        }
 
+        .sponsor-logos.medium .xyz img {
+            height: 150px;
+            width: auto;
+        }
+        /*bronze*/
         .sponsor-logos.small img {
             width: clamp(120px, 25vw, 300px);
             height: auto;
@@ -832,21 +842,6 @@
             </div>
         </section>
 
-        <section class="discord-community-section" aria-label="Discord community">
-            <p class="discord-community-kicker"><span aria-hidden="true">*</span><a href="https://discord.gg/mM8PpjGyM6">join our discord server</a></p>
-            <div class="discord-widget-wrap">
-                <iframe
-                    class="discord-widget-embed"
-                    src="https://discord.com/widget?id=1483430081501204572&theme=dark"
-                    title="Pixel Forge Jam Discord widget"
-                    loading="lazy"
-                    allowtransparency="true"
-                    frameborder="0"
-                    sandbox="allow-popups allow-popups-to-escape-sandbox allow-same-origin allow-scripts"
-                ></iframe>
-            </div>
-        </section>
-
         <!--<section id="winners">
             <h2>Pixel Forge Jam 2026 Winners</h2>
             <p>The winners will be announced and highlighted once the game jam has ended. You can go to the game jam <a href="https://itch.io/jam/pixelforge" target="_blank">here!</a></p>
@@ -930,33 +925,58 @@
             <h2 class="section-title-image"><img src="images\Prizes-3-17-2026.png" width="250px" alt="Prizes"></h2>
             <p>Winners should contact <a href="mailto:pixelforgejam@gmail.com">pixelforgejam@gmail.com</a> or join the <a href="https://discord.gg/mM8PpjGyM6">Discord</a> to claim their prizes. As most of the prizes
                 listed below aren't 1 for each team member, teams are responsible for determining how they'll split
-                them. </p>
+                them. Prizes will be distributed per team member. Teams may receive one key per member
+                 (up to the number of available keys). Solo winners will receive one key.</p>
 
             <div class="prize-card">
                 <h3>🥇 First Place (1 Winner)</h3>
-                <p>- Up to 2 Aseprite Keys ($40 Value)</p>
+                <p>- Up to 2 Aseprite Keys ($20 Value Each)</p>
+                <p>- Up to 4 .xyz domains ($15 Value Each)</p>
+                <p>- 1 PixelOver key ($30 Value Each)</p>
+                <p>-1 Kronnect Non-Bundle Asset License ($50 value)</p>
                 <p>- Featured on our websites, signed winner certificate, and Discord role</p>
             </div>
 
             <div class="prize-card">
                 <h3>🥈 Second Place (1 Winner)</h3>
-                <p>- Up to 2 Aseprite Keys ($40 Value)</p>
+                <p>- Up to 2 Aseprite Keys ($20 Value Each)</p>
+                <p>- Up to 4 .xyz domains ($15 Value Each)</p>
+                <p>- 1 PixelOver key ($30 Value Each)</p>
+                <p>-1 Kronnect Non-Bundle Asset License ($50 value)</p>
                 <p>- Featured on our websites, signed winner certificate, and Discord role</p>
             </div>
 
             <div class="prize-card">
                 <h3>🥉 Third Place (1 Winner)</h3>
-                <p>- Up to 2 Aseprite Keys ($40 Value)</p>
+                <p>- Up to 2 Aseprite Keys ($20 Value Each)</p>
+                <p>- Up to 2 .xyz domains ($15 Value Each)</p>
+                <p>- 1 PixelOver key ($30 Value Each)</p>
+                <p>-1 Kronnect Non-Bundle Asset License ($50 value)</p>
                 <p>- Featured on our websites, signed winner certificate, and Discord role</p>
             </div>
 
             <div class="prize-card">
-                <h3>💎 Organizers' Choice (3 Winners)</h3>
+                <h3>🏅 Fourth Place (1 Winner)</h3>
+                <p>- 1 PixelOver key ($30 Value Each)</p>
+                <p>-1 Kronnect Non-Bundle Asset License ($50 value)</p>
+                <p>- Featured on our websites, signed winner certificate, and Discord role</p>
+            </div>
+
+            <div class="prize-card">
+                <h3>🏅 Fifth Place (1 Winner)</h3>
+                <p>- 1 PixelOver key ($30 Value Each)</p>
+                <p>-1 Kronnect Non-Bundle Asset License ($50 value)</p>
+                <p>- Featured on our websites, signed winner certificate, and Discord role</p>
+            </div>
+
+            <div class="prize-card">
+                <h3>💎 Judges' Choice (3 Winners)</h3>
                 <p>- 1 Aseprite Key Each ($20 Value)</p>
                 <p>- Featured on our websites, signed winner certificate, and Discord role</p>
                 <p>Chosen by the Pixel Forge organizers. The winners of the above categories are not eligible for this
                     prize.</p>
             </div>
+            
 
             <div class="prize-card">
                 <h3>🎁 All Participants</h3>
@@ -969,6 +989,7 @@
             <!-- Gold Sponsors -->
             <div class="sponsor-tier gold">
                 <h3>Gold Sponsors</h3>
+                <p>none</p>
                 <div class="sponsor-logos xlarge">
                     <!--<a href="https://www.aseprite.org/"><img src="images\Aseprite-logo.png" alt="Aseprite"></a>-->
                 </div>
@@ -980,12 +1001,16 @@
                 <div class="sponsor-logos medium">
                     <a href="https://www.aseprite.org/"><img src="images\Aseprite-logo.png" alt="Aseprite"></a>
                     <a href="http://kronnect.com"><img src="images\kronnect.png" alt="Kronnect"></a>
+                    <a href="https://gen.xyz/" class="xyz" ><img src="images\xyz-logo-color.png" alt="gen.xyz"></a>
+                    <a href="https://pixelover.io/"><img src="images\title_final.png" alt="PixelOver"></a>
+                    
                 </div>
             </div>
 
             <!-- bronze Sponsors -->
             <div class="sponsor-tier bronze">
                 <h3>Bronze Sponsors</h3>
+                <p>none</p>
                 <div class="sponsor-logos small">
                     <!--<a href="https://example.com"><img src="images/company1.png" alt="Company 1"></a>-->
                 </div>
@@ -1023,6 +1048,18 @@
                 <div class="faq-item">
                     <h3 class="faq-question">Question: Is there a Discord I can join?</h3>
                     <p class="faq-answer">Answer: Yes, <a href="https://discord.gg/mM8PpjGyM6">click here to join</a>.</p>
+                <br>
+                <div class="discord-widget-wrap">
+                    <iframe
+                        class="discord-widget-embed"
+                        src="https://discord.com/widget?id=1483430081501204572&theme=dark"
+                        title="Pixel Forge Jam Discord widget"
+                        loading="lazy"
+                        allowtransparency="true"
+                        frameborder="0"
+                        sandbox="allow-popups allow-popups-to-escape-sandbox allow-same-origin allow-scripts"
+                    ></iframe>
+                </div>
                 </div>
             </div>
         </section>
