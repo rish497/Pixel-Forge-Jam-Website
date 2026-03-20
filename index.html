@@ -17,6 +17,7 @@
         }
 
         body {
+            cursor: url('images/cursor.png') 8 8, auto;
             font-family: 'Nunito', sans-serif;
             background-image: url('images/background.png');
             background-repeat: repeat;
@@ -92,7 +93,7 @@
         }
 
         section {
-            background: rgb(255, 255, 255);
+            background: white;
             margin: 2rem 0;
             padding: 2.5rem;
             border-radius: 12px;
@@ -112,6 +113,13 @@
             margin-bottom: 1.5rem;
             border-bottom: 3px solid #154af9;
             padding-bottom: 0.5rem;
+        }
+
+        .section-title-image img {
+            display: block;
+            max-width: 100%;
+            height: clamp(72px, 10vw, 100px);
+            object-fit: contain;
         }
 
         .timeline-item {
@@ -530,10 +538,40 @@
             max-width: 940px;
         }
 
+        .legal-section-intro {
+            color: #555;
+            font-size: 1.08rem;
+            margin-bottom: 1.35rem;
+        }
+
+        .legal-list {
+            display: grid;
+            gap: 1rem;
+        }
+
+        .legal-item {
+            background: linear-gradient(135deg, #f0f7fe 0%, #dfeaff 100%);
+            border-left: 5px solid #154af9;
+            border-radius: 10px;
+            padding: 1.2rem 1.3rem;
+        }
+
+        .legal-item h3 {
+            color: #154af9;
+            font-size: 1.2rem;
+            margin-bottom: 0.35rem;
+        }
+
+        .legal-item p {
+            color: #555;
+            font-size: 1.05rem;
+            max-width: 940px;
+        }
+
         .sponsor-logos {
             display: flex;
             justify-content: center;
-            gap: 1.5rem;
+            gap: 3rem;
             flex-wrap: wrap;
             margin-top: 1rem;
         }
@@ -564,7 +602,7 @@
             display: flex;
             align-items: center;
             justify-content: center;
-            gap: 1.8rem;
+            gap: 2rem;
         }
 
         a:hover {
@@ -593,10 +631,10 @@
             opacity: 0.85;
         }
 
-        .silver img {
+        /*.silver img {
             position: relative;
             z-index: 1;
-            filter: drop-shadow(0 14px 22px rgb(43, 42, 42));
+            filter: drop-shadow(30px 30px 22px rgb(92, 91, 91));
         }
         .gold img {
             position: relative;
@@ -607,7 +645,7 @@
             position: relative;
             z-index: 1;
             filter: drop-shadow(0 14px 22px rgba(132, 76, 3, 0.696));
-        }
+        }*/
 
         @keyframes asepritePatchFloat {
             0%,
@@ -667,12 +705,40 @@
                 display: flex;
             }
         }
+        .floating-header {
+            max-width: 1000px;
+            width: 100%;
+            height: auto;
+            animation: floatY 4s ease-in-out infinite;
+        }
+
+        @keyframes floatY {
+            0% {
+                transform: translateY(0px);
+            }
+            50% {
+                transform: translateY(-15px);
+            }
+            100% {
+                transform: translateY(0px);
+            }
+        }
+        a,
+        button,
+        .hero-cta,
+        .cta-button,
+        .menu-toggle,
+        input,
+        textarea,
+        select {
+            cursor: url('images/pointer.png') 8 8, pointer;
+        }
     </style>
 </head>
 
 <body>
     <header>
-        <img src="images/header.png" alt="Pixel Forge Game Jam" style="max-width: 1000px; width: 100%; height: auto;">
+        <img src="images/header.png" alt="Pixel Forge Game Jam" style="max-width: 1000px; width: 100%; height: auto; " class="floating-header">
         <div class="hero-buttons">
             <a href="https://itch.io/jam/pixelforge" class="hero-cta">Join the Jam</a>
             <a href="https://discord.gg/mM8PpjGyM6" class="hero-cta">Join Discord</a>
@@ -691,12 +757,13 @@
             <li><a href="#prizes">Prizes</a></li>
             <li><a href="#sponsors">Sponsors</a></li>
             <li><a href="#faq">FAQ</a></li>
+            <li><a href="#legal">Legal</a></li>
         </ul>
     </nav>
 
     <div class="container">
         <section id="about">
-            <h2>About</h2>
+            <h2 class="section-title-image"><img src="images\About-3-20-2026.png" width="200px" alt="About"></h2>
             <div class="about-copy">
                 <p>Pixel Forge Jam is a 1-week game development hackathon where developers, artists, designers, and creators come together to build
                     something awesome. You have 7 days to create a game from scratch, experiment with ideas,
@@ -714,7 +781,7 @@
         </section> -->
 
         <section id="timeline">
-            <h2>2026 Timeline</h2>
+            <h2 class="section-title-image"><img src="images/2026-Timeline-3-20-2026.png" alt="2026 Timeline"></h2>
             <div class="timeline-item">
                 <h3>Jam Starts</h3>
                 <p>April 18th</p>
@@ -734,7 +801,7 @@
         </section>
 
         <section id="themes">
-            <h2>Themes</h2>
+            <h2 class="section-title-image"><img src="images\Theme-3-17-2026 (3).png" width="250px" alt="Theme"></h2>
             <p><b>The theme will be released at the start of the game jam! Head over to our <a href="https://discord.gg/mM8PpjGyM6">Discord</a> for more info!</b></p>
             <!--<p style="margin-top: 1rem;">You can interpret the themes however you like!</p>-->
             <div class="theme-suggestion-card">
@@ -758,7 +825,7 @@
         </section>
 
         <section id="rules">
-            <h2>Rules</h2>
+            <h2 class="section-title-image"><img src="images\Rules-3-17-2026 (1).png" width="200px" alt="Rules"></h2>
             <div class="rule-item">
                 <h3>1. Submissions</h3>
                 <p>Your game must have been entirely made during the jam period. You may use small pre-existing assets and
@@ -788,7 +855,7 @@
         </section>
 
         <section id="prizes">
-            <h2>Prizes</h2>
+            <h2 class="section-title-image"><img src="images\Prizes-3-17-2026.png" width="250px" alt="Prizes"></h2>
             <p>Winners should contact <a href="mailto:pixelforgejam@gmail.com">pixelforgejam@gmail.com</a> or join the <a href="https://discord.gg/mM8PpjGyM6">Discord</a> to claim their prizes. As most of the prizes
                 listed below aren't 1 for each team member, teams are responsible for determining how they'll split
                 them. </p>
@@ -826,12 +893,12 @@
         </section>
 
         <section id="sponsors">
-            <h2>Sponsors</h2>
+            <h2 class="section-title-image"><img src="images/Sponsors-3-17-2026.png" alt="Sponsors"></h2>
             <!-- Gold Sponsors -->
             <div class="sponsor-tier gold">
                 <h3>Gold Sponsors</h3>
                 <div class="sponsor-logos xlarge">
-                    <!--<a href="https://www.aseprite.org/" class="gold"><img src="images\Aseprite-logo.png" alt="Aseprite"></a>-->
+                    <!--<a href="https://www.aseprite.org/"><img src="images\Aseprite-logo.png" alt="Aseprite"></a>-->
                 </div>
             </div>
 
@@ -839,7 +906,8 @@
             <div class="sponsor-tier silver">
                 <h3>Silver Sponsors</h3>
                 <div class="sponsor-logos medium">
-                    <a href="https://www.aseprite.org/" class="silver"><img src="images\Aseprite-logo.png" alt="Aseprite"></a>
+                    <a href="https://www.aseprite.org/"><img src="images\Aseprite-logo.png" alt="Aseprite"></a>
+                    <a href="http://kronnect.com"><img src="images\kronnect.png" alt="Kronnect"></a>
                 </div>
             </div>
 
@@ -847,7 +915,7 @@
             <div class="sponsor-tier bronze">
                 <h3>Bronze Sponsors</h3>
                 <div class="sponsor-logos small">
-                    <!--<a href="https://example.com" class="bronze"><img src="images/company1.png" alt="Company 1"></a>-->
+                    <!--<a href="https://example.com"><img src="images/company1.png" alt="Company 1"></a>-->
                 </div>
             </div>
             <div class="sponsor-prospectus">
@@ -858,7 +926,7 @@
         </section>
 
         <section id="faq">
-            <h2>Q &amp; A</h2>
+            <h2 class="section-title-image"><img src="images\FAQ-3-20-2026.png" width="150px" alt="FAQ"></h2>
             <div class="faq-list">
                 <div class="faq-item">
                     <h3 class="faq-question">Question: What is the theme?</h3>
@@ -883,6 +951,27 @@
                 <div class="faq-item">
                     <h3 class="faq-question">Question: Is there a Discord I can join?</h3>
                     <p class="faq-answer">Answer: Yes, <a href="https://discord.gg/mM8PpjGyM6">click here to join</a>.</p>
+                </div>
+            </div>
+        </section>
+
+        <section id="legal">
+            <h2 class="section-title-image"><img src="images/Legal-3-20-2026_2.png" width="200px" alt="Legal and Ownership"></h2>
+            <p class="legal-section-intro">The following terms apply to all Pixel Forge Jam submissions:</p>
+            <div class="legal-list">
+                <div class="legal-item">
+                    <h3>You Keep Your Rights</h3>
+                    <p>Anything you make during the Pixel Forge Jam is your property. Pixel Forge claims no rights or ownership of your game.</p>
+                </div>
+
+                <div class="legal-item">
+                    <h3>Submission Promotion</h3>
+                    <p>Any game submitted to the Pixel Forge Jam may appear in a Pixel Forge YouTube video, social media post, or on the Pixel Forge website without needing your express permission.</p>
+                </div>
+
+                <div class="legal-item">
+                    <h3>Asset Rights</h3>
+                    <p>By submitting a game, you confirm that you have the legal right to use and share all code, art, audio, fonts, and other assets included in your project, and that any required credits are provided.</p>
                 </div>
             </div>
         </section>
