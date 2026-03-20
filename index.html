@@ -245,6 +245,55 @@
             margin-top: 1rem;
         }
 
+        .discord-community-section {
+            max-width: 430px;
+            margin-left: auto;
+            margin-right: auto;
+            padding-top: 2rem;
+        }
+
+        .discord-community-kicker {
+            display: flex;
+            align-items: center;
+            flex-wrap: wrap;
+            gap: 0.45rem;
+            margin-bottom: 1rem;
+            font-size: 1.05rem;
+            font-weight: 800;
+            letter-spacing: 0.03em;
+            text-transform: lowercase;
+        }
+
+        .discord-community-kicker span {
+            color: #2d2d2d;
+            font-size: 1.2rem;
+            line-height: 1;
+        }
+
+        .discord-community-kicker a {
+            color: #ff4b4b;
+            text-decoration-thickness: 2px;
+            text-underline-offset: 0.18em;
+        }
+
+        .discord-community-kicker a:hover {
+            color: #ff6961;
+        }
+
+        .discord-widget-wrap {
+            display: flex;
+            justify-content: center;
+        }
+
+        .discord-widget-embed {
+            display: block;
+            width: min(100%, 350px);
+            height: 500px;
+            border: none;
+            border-radius: 18px;
+            background: #111318;
+        }
+
         .theme-suggestion-card {
             margin-top: 1.75rem;
             padding: 1.5rem;
@@ -458,6 +507,14 @@
             .why-pixel-forge-intro {
                 position: static;
                 top: auto;
+            }
+
+            .discord-widget-embed {
+                height: 420px;
+            }
+
+            .discord-community-section {
+                max-width: 100%;
             }
         }
 
@@ -775,6 +832,21 @@
             </div>
         </section>
 
+        <section class="discord-community-section" aria-label="Discord community">
+            <p class="discord-community-kicker"><span aria-hidden="true">*</span><a href="https://discord.gg/mM8PpjGyM6">join our discord server</a></p>
+            <div class="discord-widget-wrap">
+                <iframe
+                    class="discord-widget-embed"
+                    src="https://discord.com/widget?id=1483430081501204572&theme=dark"
+                    title="Pixel Forge Jam Discord widget"
+                    loading="lazy"
+                    allowtransparency="true"
+                    frameborder="0"
+                    sandbox="allow-popups allow-popups-to-escape-sandbox allow-same-origin allow-scripts"
+                ></iframe>
+            </div>
+        </section>
+
         <!--<section id="winners">
             <h2>Pixel Forge Jam 2026 Winners</h2>
             <p>The winners will be announced and highlighted once the game jam has ended. You can go to the game jam <a href="https://itch.io/jam/pixelforge" target="_blank">here!</a></p>
@@ -1082,6 +1154,7 @@
                 }
             });
         }
+
     </script>
 
 </body></html>
