@@ -636,19 +636,29 @@
         .sponsor-logos img {
             border-radius: 8px;
         }
-
+        /*gold*/
         .sponsor-logos.xlarge img {
             width: clamp(260px, 60vw, 600px);
             height: auto;
             object-fit: contain;
         }
-
+        /*silver*/
         .sponsor-logos.medium img {
             width: clamp(180px, 40vw, 450px);
             height: auto;
             object-fit: contain;
         }
+        .sponsor-logos.medium .xyz {
+            flex-basis: 100%;
+            display: flex;
+            justify-content: center;
+        }
 
+        .sponsor-logos.medium .xyz img {
+            height: 150px;
+            width: auto;
+        }
+        /*bronze*/
         .sponsor-logos.small img {
             width: clamp(120px, 25vw, 300px);
             height: auto;
@@ -919,39 +929,47 @@
 
             <div class="prize-card">
                 <h3>🥇 First Place (1 Winner)</h3>
-                <p>- Up to 2 Aseprite Keys ($40 Value)</p>
+                <p>- Up to 2 Aseprite Keys ($20 Value Each)</p>
+                <p>- Up to 4 .xyz domains ($15 Value Each)</p>
+                <p>- 1 PixelOver key ($30 Value Each)</p>
                 <p>-1 Kronnect Non-Bundle Asset License ($50 value)</p>
                 <p>- Featured on our websites, signed winner certificate, and Discord role</p>
             </div>
 
             <div class="prize-card">
                 <h3>🥈 Second Place (1 Winner)</h3>
-                <p>- Up to 2 Aseprite Keys ($40 Value)</p>
+                <p>- Up to 2 Aseprite Keys ($20 Value Each)</p>
+                <p>- Up to 4 .xyz domains ($15 Value Each)</p>
+                <p>- 1 PixelOver key ($30 Value Each)</p>
                 <p>-1 Kronnect Non-Bundle Asset License ($50 value)</p>
                 <p>- Featured on our websites, signed winner certificate, and Discord role</p>
             </div>
 
             <div class="prize-card">
                 <h3>🥉 Third Place (1 Winner)</h3>
-                <p>- Up to 2 Aseprite Keys ($40 Value)</p>
+                <p>- Up to 2 Aseprite Keys ($20 Value Each)</p>
+                <p>- Up to 2 .xyz domains ($15 Value Each)</p>
+                <p>- 1 PixelOver key ($30 Value Each)</p>
                 <p>-1 Kronnect Non-Bundle Asset License ($50 value)</p>
                 <p>- Featured on our websites, signed winner certificate, and Discord role</p>
             </div>
 
             <div class="prize-card">
                 <h3>🏅 Fourth Place (1 Winner)</h3>
+                <p>- 1 PixelOver key ($30 Value Each)</p>
                 <p>-1 Kronnect Non-Bundle Asset License ($50 value)</p>
                 <p>- Featured on our websites, signed winner certificate, and Discord role</p>
             </div>
 
             <div class="prize-card">
                 <h3>🏅 Fifth Place (1 Winner)</h3>
+                <p>- 1 PixelOver key ($30 Value Each)</p>
                 <p>-1 Kronnect Non-Bundle Asset License ($50 value)</p>
                 <p>- Featured on our websites, signed winner certificate, and Discord role</p>
             </div>
 
             <div class="prize-card">
-                <h3>💎 Organizers' Choice (3 Winners)</h3>
+                <h3>💎 Judges' Choice (3 Winners)</h3>
                 <p>- 1 Aseprite Key Each ($20 Value)</p>
                 <p>- Featured on our websites, signed winner certificate, and Discord role</p>
                 <p>Chosen by the Pixel Forge organizers. The winners of the above categories are not eligible for this
@@ -970,6 +988,7 @@
             <!-- Gold Sponsors -->
             <div class="sponsor-tier gold">
                 <h3>Gold Sponsors</h3>
+                <p>none</p>
                 <div class="sponsor-logos xlarge">
                     <!--<a href="https://www.aseprite.org/"><img src="images\Aseprite-logo.png" alt="Aseprite"></a>-->
                 </div>
@@ -981,12 +1000,16 @@
                 <div class="sponsor-logos medium">
                     <a href="https://www.aseprite.org/"><img src="images\Aseprite-logo.png" alt="Aseprite"></a>
                     <a href="http://kronnect.com"><img src="images\kronnect.png" alt="Kronnect"></a>
+                    <a href="https://gen.xyz/" class="xyz" ><img src="images\xyz-logo-color.png" alt="gen.xyz"></a>
+                    <a href="https://pixelover.io/"><img src="images\title_final.png" alt="PixelOver"></a>
+                    
                 </div>
             </div>
 
             <!-- bronze Sponsors -->
             <div class="sponsor-tier bronze">
                 <h3>Bronze Sponsors</h3>
+                <p>none</p>
                 <div class="sponsor-logos small">
                     <!--<a href="https://example.com"><img src="images/company1.png" alt="Company 1"></a>-->
                 </div>
