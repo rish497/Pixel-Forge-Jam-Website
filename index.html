@@ -114,6 +114,14 @@
             padding-bottom: 0.5rem;
         }
 
+        .section-title-image img {
+            display: block;
+            max-width: 100%;
+            width: auto;
+            height: clamp(72px, 10vw, 100px);
+            object-fit: contain;
+        }
+
         .timeline-item {
             margin: 1.5rem 0;
             padding-left: 2rem;
@@ -530,6 +538,36 @@
             max-width: 940px;
         }
 
+        .legal-section-intro {
+            color: #555;
+            font-size: 1.08rem;
+            margin-bottom: 1.35rem;
+        }
+
+        .legal-list {
+            display: grid;
+            gap: 1rem;
+        }
+
+        .legal-item {
+            background: linear-gradient(135deg, #f0f7fe 0%, #dfeaff 100%);
+            border-left: 5px solid #154af9;
+            border-radius: 10px;
+            padding: 1.2rem 1.3rem;
+        }
+
+        .legal-item h3 {
+            color: #154af9;
+            font-size: 1.2rem;
+            margin-bottom: 0.35rem;
+        }
+
+        .legal-item p {
+            color: #555;
+            font-size: 1.05rem;
+            max-width: 940px;
+        }
+
         .sponsor-logos {
             display: flex;
             justify-content: center;
@@ -714,7 +752,7 @@
         </section> -->
 
         <section id="timeline">
-            <h2>2026 Timeline</h2>
+            <h2 class="section-title-image"><img src="images/2026-Timeline-3-20-2026.png" alt="2026 Timeline"></h2>
             <div class="timeline-item">
                 <h3>Jam Starts</h3>
                 <p>April 18th</p>
@@ -826,7 +864,7 @@
         </section>
 
         <section id="sponsors">
-            <h2>Sponsors</h2>
+            <h2 class="section-title-image"><img src="images/Sponsors-3-17-2026.png" alt="Sponsors"></h2>
             <!-- Gold Sponsors -->
             <div class="sponsor-tier gold">
                 <h3>Gold Sponsors</h3>
@@ -883,6 +921,27 @@
                 <div class="faq-item">
                     <h3 class="faq-question">Question: Is there a Discord I can join?</h3>
                     <p class="faq-answer">Answer: Yes, <a href="https://discord.gg/mM8PpjGyM6">click here to join</a>.</p>
+                </div>
+            </div>
+        </section>
+
+        <section id="legal">
+            <h2 class="section-title-image"><img src="images/Legal-3-20-2026_2.png" alt="Legal and Ownership"></h2>
+            <p class="legal-section-intro">The following terms apply to all Pixel Forge Jam submissions:</p>
+            <div class="legal-list">
+                <div class="legal-item">
+                    <h3>You Keep Your Rights</h3>
+                    <p>Anything you make during the Pixel Forge Jam is your property. Pixel Forge claims no rights or ownership of your game.</p>
+                </div>
+
+                <div class="legal-item">
+                    <h3>Submission Promotion</h3>
+                    <p>Any game submitted to the Pixel Forge Jam may appear in a Pixel Forge YouTube video, social media post, or on the Pixel Forge website without needing your express permission.</p>
+                </div>
+
+                <div class="legal-item">
+                    <h3>Asset Rights</h3>
+                    <p>By submitting a game, you confirm that you have the legal right to use and share all code, art, audio, fonts, and other assets included in your project, and that any required credits are provided.</p>
                 </div>
             </div>
         </section>
