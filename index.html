@@ -17,6 +17,7 @@
         }
 
         body {
+            cursor: url('images/cursor.png') 8 8, auto;
             font-family: 'Nunito', sans-serif;
             background-image: url('images/background.png');
             background-repeat: repeat;
@@ -704,12 +705,40 @@
                 display: flex;
             }
         }
+        .floating-header {
+            max-width: 1000px;
+            width: 100%;
+            height: auto;
+            animation: floatY 4s ease-in-out infinite;
+        }
+
+        @keyframes floatY {
+            0% {
+                transform: translateY(0px);
+            }
+            50% {
+                transform: translateY(-15px);
+            }
+            100% {
+                transform: translateY(0px);
+            }
+        }
+        a,
+        button,
+        .hero-cta,
+        .cta-button,
+        .menu-toggle,
+        input,
+        textarea,
+        select {
+            cursor: url('images/pointer.png') 8 8, pointer;
+        }
     </style>
 </head>
 
 <body>
     <header>
-        <img src="images/header.png" alt="Pixel Forge Game Jam" style="max-width: 1000px; width: 100%; height: auto;">
+        <img src="images/header.png" alt="Pixel Forge Game Jam" style="max-width: 1000px; width: 100%; height: auto; " class="floating-header">
         <div class="hero-buttons">
             <a href="https://itch.io/jam/pixelforge" class="hero-cta">Join the Jam</a>
             <a href="https://discord.gg/mM8PpjGyM6" class="hero-cta">Join Discord</a>
