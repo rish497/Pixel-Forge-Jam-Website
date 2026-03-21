@@ -572,27 +572,57 @@
 
         .faq-list {
             display: grid;
-            gap: 1.75rem;
+            gap: 1rem;
         }
 
-        .faq-item + .faq-item {
-            padding-top: 1.5rem;
-            border-top: 1px solid #dbe6ff;
+        .faq-item {
+            background: linear-gradient(135deg, #f7fbff 0%, #eaf2ff 100%);
+            border: 1px solid #dbe6ff;
+            border-radius: 14px;
+            overflow: hidden;
         }
 
         .faq-question {
+            list-style: none;
+            cursor: pointer;
             color: #154af9;
-            font-size: 1.4rem;
+            font-size: 1.25rem;
             font-style: normal;
             font-weight: 700;
             line-height: 1.2;
-            margin-bottom: 0.45rem;
+            padding: 1.15rem 3.75rem 1.15rem 1.25rem;
+            position: relative;
+        }
+
+        .faq-question::-webkit-details-marker {
+            display: none;
+        }
+
+        .faq-question::after {
+            content: "+";
+            position: absolute;
+            right: 1.25rem;
+            top: 50%;
+            transform: translateY(-50%);
+            font-size: 1.9rem;
+            line-height: 1;
+            color: #154af9;
+            transition: transform 0.2s ease;
+        }
+
+        .faq-item[open] .faq-question::after {
+            content: "-";
         }
 
         .faq-answer {
             color: #555;
             font-size: 1.1rem;
             max-width: 940px;
+            padding: 0 1.25rem 1.25rem;
+        }
+
+        .faq-answer p {
+            margin: 0;
         }
 
         .legal-section-intro {
@@ -1025,42 +1055,52 @@
         <section id="faq">
             <h2 class="section-title-image"><img src="images\FAQ-3-20-2026.png" width="150px" alt="FAQ"></h2>
             <div class="faq-list">
-                <div class="faq-item">
-                    <h3 class="faq-question">Question: What is the theme?</h3>
-                    <p class="faq-answer">Answer: The theme will be announced when the jam begins.</p>
-                </div>
+                <details class="faq-item">
+                    <summary class="faq-question">Question: What is the theme?</summary>
+                    <div class="faq-answer">
+                        <p>Answer: The theme will be announced when the jam begins.</p>
+                    </div>
+                </details>
 
-                <div class="faq-item">
-                    <h3 class="faq-question">Question: Does my game have to be a certain format?</h3>
-                    <p class="faq-answer">Answer: No, but remember that not all users have Windows/Mac/Linux devices. Browser based is a good idea to get as many people playing your game as possible and try to make at least a Windows version.</p>
-                </div>
+                <details class="faq-item">
+                    <summary class="faq-question">Question: Does my game have to be a certain format?</summary>
+                    <div class="faq-answer">
+                        <p>Answer: No, but remember that not all users have Windows/Mac/Linux devices. Browser based is a good idea to get as many people playing your game as possible and try to make at least a Windows version.</p>
+                    </div>
+                </details>
 
-                <div class="faq-item">
-                    <h3 class="faq-question">Question: What assets can I use?</h3>
-                    <p class="faq-answer">Answer: The vast majority of code must be written during the jam, but you can use whatever art and audio assets you have the legal right to use.</p>
-                </div>
+                <details class="faq-item">
+                    <summary class="faq-question">Question: What assets can I use?</summary>
+                    <div class="faq-answer">
+                        <p>Answer: The vast majority of code must be written during the jam, but you can use whatever art and audio assets you have the legal right to use.</p>
+                    </div>
+                </details>
 
-                <div class="faq-item">
-                    <h3 class="faq-question">Question: Can I submit a game that I already started on?</h3>
-                    <p class="faq-answer">Answer: No, it is required that all participants make the entirety of the game in the time provided.</p>
-                </div>
+                <details class="faq-item">
+                    <summary class="faq-question">Question: Can I submit a game that I already started on?</summary>
+                    <div class="faq-answer">
+                        <p>Answer: No, it is required that all participants make the entirety of the game in the time provided.</p>
+                    </div>
+                </details>
 
-                <div class="faq-item">
-                    <h3 class="faq-question">Question: Is there a Discord I can join?</h3>
-                    <p class="faq-answer">Answer: Yes, <a href="https://discord.gg/mM8PpjGyM6">click here to join</a>.</p>
-                <br>
-                <div class="discord-widget-wrap">
-                    <iframe
-                        class="discord-widget-embed"
-                        src="https://discord.com/widget?id=1483430081501204572&theme=dark"
-                        title="Pixel Forge Jam Discord widget"
-                        loading="lazy"
-                        allowtransparency="true"
-                        frameborder="0"
-                        sandbox="allow-popups allow-popups-to-escape-sandbox allow-same-origin allow-scripts"
-                    ></iframe>
-                </div>
-                </div>
+                <details class="faq-item">
+                    <summary class="faq-question">Question: Is there a Discord I can join?</summary>
+                    <div class="faq-answer">
+                        <p>Answer: Yes, <a href="https://discord.gg/mM8PpjGyM6">click here to join</a>.</p>
+                        <br>
+                        <div class="discord-widget-wrap">
+                            <iframe
+                                class="discord-widget-embed"
+                                src="https://discord.com/widget?id=1483430081501204572&theme=dark"
+                                title="Pixel Forge Jam Discord widget"
+                                loading="lazy"
+                                allowtransparency="true"
+                                frameborder="0"
+                                sandbox="allow-popups allow-popups-to-escape-sandbox allow-same-origin allow-scripts"
+                            ></iframe>
+                        </div>
+                    </div>
+                </details>
             </div>
         </section>
 
