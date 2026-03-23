@@ -53,7 +53,7 @@
         nav,
         section,
         footer {
-            max-width: 1180px;
+            width: 1180px;
             margin-inline: auto;
             border: 1px solid var(--line);
             box-shadow: var(--shadow);
@@ -227,7 +227,7 @@
         .prize-card li { color: var(--muted); }
         .prize-card li::before { content: "+ "; color: var(--green); font-weight: 700; }
         .prizes-intro,
-        .legal-intro { max-width: 70ch; margin-bottom: 1.2rem; color: var(--muted); }
+        .legal-intro { margin-bottom: 1.2rem; color: var(--muted); }
 
         #sponsors { text-align: center; }
         #sponsors .section-head { justify-content: center; }
@@ -285,8 +285,8 @@
             margin-top: 1rem;
         }
         .sponsor-logos img { border-radius: 8px; }
-        .sponsor-logos.xlarge img { width: clamp(260px, 60vw, 600px); height: auto; object-fit: contain; }
-        .sponsor-logos.medium img { width: clamp(180px, 40vw, 450px); height: auto; object-fit: contain; }
+        .sponsor-logos.xlarge img { width: clamp(260px, 60vw, 800px); height: auto; object-fit: contain; }
+        .sponsor-logos.medium img { width: clamp(180px, 40vw, 500px); height: auto; object-fit: contain; }
         .sponsor-logos.medium .xyz { flex-basis: 100%; display: flex; justify-content: center; }
         .sponsor-logos.medium .xyz img { height: 150px; width: auto; }
         .sponsor-logos.small img { width: clamp(120px, 25vw, 300px); height: auto; object-fit: contain; }
@@ -475,14 +475,51 @@
                         <p class="eyebrow">How It Works</p>
                         <h2><img src="images/Rules-3-17-2026 (1).png" alt="Rules"></h2>
                     </div>
-                    <p>The rules are straightforward: build during the jam, keep proof of progress, and keep the community healthy.</p>
                 </div>
                 <div class="rules-grid">
-                    <article class="card"><span class="rule-index">1</span><h3>Submissions</h3><p>Your game must be made during the jam. Small pre-existing assets and tools are fine if you disclose and credit them properly.</p></article>
-                    <article class="card"><span class="rule-index">2</span><h3>Progress</h3><p>You must track progress with dated screenshots or a public repository. Organizers may ask to review it after the jam.</p></article>
-                    <article class="card"><span class="rule-index">3</span><h3>Team Size</h3><p>Solo developers and teams of up to four are allowed. Use the Discord server if you need teammates.</p></article>
-                    <article class="card"><span class="rule-index">4</span><h3>Game Content</h3><p>Games should be broadly appropriate for all ages, aside from standard horror or non-explicit violent content.</p></article>
-                    <article class="card"><span class="rule-index">5</span><h3>Be Kind</h3><p>Give useful feedback, respect other participants, and help keep the jam constructive and welcoming.</p></article>
+
+                    <article class="card">
+                        <span class="rule-index">1</span>
+                        <h3>Participation</h3>
+                        <p>You can use any game engine you like and participate solo or in a team of up to 4 people.</p>
+                    </article>
+
+                    <article class="card">
+                        <span class="rule-index">2</span>
+                        <h3>Original Work</h3>
+                        <p>All work should be created during the jam period. Pre-made assets are allowed if properly credited. AI-generated content is not allowed.</p>
+                    </article>
+
+                    <article class="card">
+                        <span class="rule-index">3</span>
+                        <h3>Theme Usage</h3>
+                        <p>Your submission must include a short explanation of how your game uses the theme.</p>
+                    </article>
+
+                    <article class="card">
+                        <span class="rule-index">4</span>
+                        <h3>Content Guidelines</h3>
+                        <p>No hateful, offensive, or NSFW content. If your game includes horror or violence, clearly mention it on your game page.</p>
+                    </article>
+
+                    <article class="card">
+                        <span class="rule-index">5</span>
+                        <h3>Submission Format</h3>
+                        <p>A browser-playable version is highly recommended since it gets more plays and ratings. If not possible, Windows or Mac builds are acceptable.</p>
+                    </article>
+
+                    <article class="card">
+                        <span class="rule-index">6</span>
+                        <h3>Fair Play</h3>
+                        <p>Do not attempt to manipulate ratings in any way.</p>
+                    </article>
+
+                    <article class="card">
+                        <span class="rule-index">7</span>
+                        <h3>Respect & Feedback</h3>
+                        <p>Be respectful during the voting period and provide useful, constructive feedback to other participants.</p>
+                    </article>
+
                 </div>
             </section>
             <section id="prizes">
@@ -491,9 +528,8 @@
                         <p class="eyebrow">What You Can Win</p>
                         <h2><img src="images/Prizes-3-17-2026.png" alt="Prizes"></h2>
                     </div>
-                    <p>Prize distribution depends on team size and available keys. Teams decide how shared rewards are split.</p>
                 </div>
-                <p class="prizes-intro">Winners should contact <a href="mailto:pixelforgejam@gmail.com">pixelforgejam@gmail.com</a> or join the <a href="https://discord.gg/mM8PpjGyM6" rel="noopener noreferrer">Discord</a> to claim prizes. Teams may receive one key per member, up to the number of available keys. Solo winners receive one key.</p>
+                <p class="prizes-intro">Winners should contact <a href="mailto:pixelforgejam@gmail.com">pixelforgejam@gmail.com</a> or join the <a href="https://discord.gg/mM8PpjGyM6" rel="noopener noreferrer">Discord</a> to claim prizes. Teams may receive one key per member, up to the number of available keys. Solo winners receive one key. Prize distribution depends on team size and available keys. Teams decide how shared rewards are split.</p>
                 <div class="prize-grid">
                     <article class="card prize-card">
                         <span class="prize-rank">First Place</span>
@@ -645,9 +681,7 @@
                         <p class="eyebrow">Ownership</p>
                         <h2><img src="images/Legal-3-20-2026_2.png" alt="Legal and Ownership"></h2>
                     </div>
-                    <p>The event keeps ownership simple: you keep your project, and organizers retain standard promotional rights for submitted work.</p>
                 </div>
-                <p class="legal-intro">The following terms apply to all Pixel Forge Jam submissions:</p>
                 <div class="legal-grid">
                     <article class="card"><h3>You Keep Your Rights</h3><p>Anything you make during Pixel Forge Jam remains your property. Pixel Forge does not claim ownership of your game.</p></article>
                     <article class="card"><h3>Submission Promotion</h3><p>Submitted games may appear in Pixel Forge videos, social posts, or website coverage without requiring additional permission.</p></article>
