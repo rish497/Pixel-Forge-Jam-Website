@@ -1,532 +1,238 @@
-<!DOCTYPE html><html lang="en"><head>
+<!DOCTYPE html>
+<html lang="en">
+<head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="icon" type="image/png" href="images\New Piskel-2.png (9).png">
+    <meta name="description" content="Pixel Forge Jam is a one-week online game jam for developers, artists, designers, and creators.">
+    <link rel="icon" type="image/png" href="images/New Piskel-2.png (9).png">
     <title>Pixel Forge Jam</title>
     <style>
-        @import url('https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700&display=swap');
+        @import url('https://fonts.googleapis.com/css2?family=Press+Start+2P&family=Space+Grotesk:wght@400;500;700&display=swap');
 
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
+        :root {
+            --ink: #10203d;
+            --muted: #58657f;
+            --panel: rgba(255, 255, 255, 0.95);
+            --line: rgba(73, 128, 255, 0.18);
+            --blue: #1d7dff;
+            --cyan: #46c8ff;
+            --orange: #ff7a18;
+            --gold: #ffd56d;
+            --green: #34d399;
+            --shadow: 0 24px 50px rgba(8, 17, 31, 0.16);
+            --radius-xl: 30px;
+            --radius-lg: 22px;
+            --radius-md: 16px;
         }
 
-        html {
-            scroll-behavior: smooth;
-        }
-
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        html { scroll-behavior: smooth; }
         body {
-            cursor: url('images/cursor.png') 8 8, auto;
-            font-family: 'Nunito', sans-serif;
-            background-image: url('images/background.png');
-            background-repeat: repeat;
-            background-position: 0% 0%;
-            color: #2d2d2d;
+            min-height: 100vh;
+            font-family: 'Space Grotesk', sans-serif;
+            color: var(--ink);
             line-height: 1.6;
+            cursor: url('images/cursor.png') 8 8, auto;
+            background:
+                radial-gradient(circle at top left, rgba(70, 200, 255, 0.18), transparent 28%),
+                radial-gradient(circle at top right, rgba(255, 122, 24, 0.18), transparent 24%),
+                linear-gradient(180deg, rgba(8, 17, 31, 0.96) 0%, rgba(14, 30, 64, 0.94) 16%, rgba(231, 241, 255, 0.96) 45%, rgba(242, 247, 255, 1) 100%),
+                url('images/background.png');
+            background-repeat: no-repeat, no-repeat, no-repeat, repeat;
+            background-size: auto, auto, auto, 160px;
+            background-attachment: fixed, fixed, fixed, scroll;
         }
 
-        header {
-            background: linear-gradient(135deg, #000000 0%, #292929 100%);
-            padding: 1rem 1.5rem;
-            text-align: center;
-            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-            display: flex;
-            flex-direction: column;
-            align-items: center;
+        a, button, input, textarea, select { cursor: url('images/pointer.png') 8 8, pointer; }
+        img { display: block; max-width: 100%; }
+        a { color: var(--blue); text-underline-offset: 0.16em; }
+        a:hover { color: #115fc9; }
+
+        .site-shell { padding: 1rem clamp(0.9rem, 2vw, 1.4rem) 4rem; }
+        .hero,
+        nav,
+        section,
+        footer {
+            max-width: 1180px;
+            margin-inline: auto;
+            border: 1px solid var(--line);
+            box-shadow: var(--shadow);
         }
 
-        h1 {
-            font-size: 3.5rem;
-            color: white;
-            margin-bottom: 0.5rem;
-        }
-
-        .subtitle {
-            font-size: 1.3rem;
-            color: #f0f6fe;
-        }
-
-        nav {
-            background: #7acaf6;
-            padding: 1rem;
-            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-            position: sticky;
-            top: 0;
-            z-index: 100;
-        }
-
-        nav ul {
-            list-style: none;
-            display: flex;
-            justify-content: center;
+        .hero {
+            display: grid;
+            grid-template-columns: minmax(0, 1.05fr) minmax(320px, 0.95fr);
             gap: 2rem;
-            flex-wrap: wrap;
-        }
-
-        nav a {
-            text-decoration: none;
-            color: #154af9;
-            font-weight: 600;
-            font-size: 1.1rem;
+            padding: clamp(1.5rem, 3vw, 2.2rem);
+            border-radius: 36px;
+            background: linear-gradient(145deg, rgba(8, 17, 31, 0.98) 0%, rgba(18, 42, 87, 0.96) 60%, rgba(33, 91, 184, 0.94) 100%);
+            overflow: hidden;
             position: relative;
         }
 
-        nav a::after {
+        .hero::before {
             content: "";
             position: absolute;
-            width: 0%;
-            height: 2px;
-            left: 0;
-            bottom: -4px;
-            background: #154af9;
-            transition: width 0.25s ease;
+            top: -60px;
+            right: -30px;
+            width: 220px;
+            height: 220px;
+            border-radius: 28px;
+            background:
+                linear-gradient(90deg, rgba(255,255,255,0.08) 1px, transparent 1px),
+                linear-gradient(rgba(255,255,255,0.08) 1px, transparent 1px);
+            background-size: 20px 20px;
+            transform: rotate(12deg);
+            pointer-events: none;
         }
 
-        nav a:hover::after {
-            width: 100%;
-        }
-        .container {
-            max-width: 1000px;
-            margin: 0 auto;
-            padding: 2rem;
-        }
-
-        section {
-            background: white;
-            margin: 2rem 0;
-            padding: 2.5rem;
-            border-radius: 12px;
-            box-shadow: 0 4px 6px rgba(166, 176, 250, 0.15);
-            scroll-margin-top: 90px;
-            transition: transform 0.2s ease, box-shadow 0.2s ease;
-        }
-
-        section:hover {
-            transform: translateY(-4px);
-            box-shadow: 0 10px 20px rgba(0,0,0,0.12);
-        }
-
-        h2 {
-            color: #0642ff;
-            font-size: 2.2rem;
-            margin-bottom: 1.5rem;
-            border-bottom: 3px solid #154af9;
-            padding-bottom: 0.5rem;
-        }
-
-        .section-title-image img {
-            display: block;
-            max-width: 100%;
-            height: clamp(72px, 10vw, 100px);
-            object-fit: contain;
-        }
-
-        .timeline-item {
-            margin: 1.5rem 0;
-            padding-left: 2rem;
-            border-left: 4px solid #263ef5;
-        }
-
-        .timeline-item h3 {
-            color: #154af9;
-            font-size: 1.4rem;
-            margin-bottom: 0.5rem;
-        }
-
-        .timeline-item p {
-            color: #24b0fa;
-            font-size: 1.1rem;
-        }
-
-        .rule-item {
-            background: #d2e4fd;
-            padding: 1.2rem;
-            margin: 1rem 0;
-            border-radius: 8px;
-            border-left: 5px solid #154af9;
-        }
-
-        .rule-item h3 {
-            color: #154af9;
-            margin-bottom: 0.5rem;
-        }
-
-        .prize-card {
-            background: linear-gradient(135deg, #f0fdfe 0%, #d2e4fd 100%);
-            padding: 1.5rem;
-            margin: 1.5rem 0;
-            border-radius: 10px;
-            border: 2px solid #154af9;
-        }
-
-        .prize-card h3 {
-            color: #154af9;
-            font-size: 1.5rem;
-            margin-bottom: 0.8rem;
-        }
-
-        .prize-card p {
-            font-size: 1.1rem;
-            color: #555;
-        }
-
-        footer {
-            background: #7acaf6;
-            color: #154af9;
-            text-align: center;
-            padding: 2rem;
-            margin-top: 3rem;
-        }
-
-        footer p:first-child {
-            display: none;
-        }
-
-        .footer-copy {
-            margin-bottom: 0.5rem;
-        }
-
-        .hero-buttons {
-            margin-top: 0.1rem;
-            margin-bottom: 0.7rem;
-            display: flex;
-            justify-content: center;
-            gap: 1rem;
-            flex-wrap: wrap;
-        }
-
-        .hero-cta {
-            background: #7acaf6;
-            color: #154af9;
-            padding: 0.9rem 2.2rem;
-            border-radius: 999px;
-            text-decoration: none;
-            font-weight: 700;
-            font-size: 1.15rem;
-            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
-            transition: transform 0.2s ease, box-shadow 0.2s ease, background 0.2s ease;
-        }
-
-        .hero-cta:hover {
-            transform: translateY(-2px);
-            background: #f0f7fe;
-            box-shadow: 0 6px 14px rgba(0, 0, 0, 0.2);
-            text-decoration: none;
-        }
-
-        .hero-cta.secondary {
-            background: transparent;
-            color: white;
-            border: 2px solid white;
-        }
-
-        .cta-button {
+        .hero-copy,
+        .hero-art { position: relative; z-index: 1; }
+        .eyebrow {
             display: inline-block;
-            background: #154af9;
-            color: white;
-            padding: 1rem 2rem;
-            border-radius: 8px;
-            text-decoration: none;
-            font-weight: 600;
-            margin-top: 1rem;
-            transition: background 0.3s;
-        }
-
-        .cta-button:hover {
-            background: #154af9;
-        }
-
-        .about-copy {
-            font-size: 1.08rem;
-        }
-
-        .about-copy p + p {
-            margin-top: 1rem;
-        }
-
-        .discord-community-section {
-            max-width: 430px;
-            margin-left: auto;
-            margin-right: auto;
-            padding-top: 2rem;
-        }
-
-        .discord-community-kicker {
-            display: flex;
-            align-items: center;
-            flex-wrap: wrap;
-            gap: 0.45rem;
             margin-bottom: 1rem;
-            font-size: 1.05rem;
-            font-weight: 800;
-            letter-spacing: 0.03em;
-            text-transform: lowercase;
-        }
-
-        .discord-community-kicker span {
-            color: #2d2d2d;
-            font-size: 1.2rem;
-            line-height: 1;
-        }
-
-        .discord-community-kicker a {
-            color: #ff4b4b;
-            text-decoration-thickness: 2px;
-            text-underline-offset: 0.18em;
-        }
-
-        .discord-community-kicker a:hover {
-            color: #ff6961;
-        }
-
-        .discord-widget-wrap {
-            display: flex;
-            justify-content: left;
-        }
-
-        .discord-widget-embed {
-            display: block;
-            width: min(100%, 350px);
-            height: 500px;
-            border: none;
-            border-radius: 18px;
-            background: #111318;
-        }
-
-        .theme-suggestion-card {
-            margin-top: 1.75rem;
-            padding: 1.5rem;
-            border-radius: 18px;
-            background: linear-gradient(135deg, #f8fbff 0%, #e6efff 100%);
-            border: 2px solid #d5e2ff;
-            box-shadow: 0 18px 30px rgba(21, 74, 249, 0.08);
-        }
-
-        .theme-suggestion-card h3 {
-            color: #154af9;
-            font-size: 1.45rem;
-            margin-bottom: 0.4rem;
-        }
-
-        .theme-suggestion-card p {
-            color: #4f5d7a;
-        }
-
-        .theme-suggestion-form {
-            display: grid;
-            gap: 0.85rem;
-            margin-top: 1rem;
-        }
-
-        .theme-suggestion-label {
-            color: #154af9;
-            font-weight: 700;
-        }
-
-        .theme-suggestion-input {
-            width: 100%;
-            padding: 0.95rem 1rem;
-            border-radius: 14px;
-            border: 2px solid #bfd4ff;
-            background: #ffffff;
-            color: #2d2d2d;
-            font: inherit;
-            transition: border-color 0.2s ease, box-shadow 0.2s ease;
-        }
-
-        .theme-suggestion-input:focus {
-            outline: none;
-            border-color: #154af9;
-            box-shadow: 0 0 0 4px rgba(21, 74, 249, 0.14);
-        }
-
-        .theme-suggestion-submit {
-            border: none;
-            cursor: pointer;
-            justify-self: start;
-        }
-
-        .theme-suggestion-status {
-            min-height: 1.5rem;
-            color: #154af9;
-            font-weight: 700;
-        }
-
-        .why-pixel-forge {
-            margin-top: 3rem;
-            padding-top: 2.5rem;
-            border-top: 2px solid #dbe6ff;
-        }
-
-        .why-pixel-forge-layout {
-            display: grid;
-            grid-template-columns: minmax(240px, 0.9fr) minmax(0, 1.1fr);
-            gap: 1.5rem;
-            align-items: start;
-        }
-
-        .why-pixel-forge-intro {
-            position: sticky;
-            top: 7rem;
-            padding: 1.75rem;
-            border-radius: 18px;
-            background: linear-gradient(160deg, #154af9 0%, #24b0fa 100%);
-            color: white;
-            box-shadow: 0 18px 34px rgba(21, 74, 249, 0.22);
-        }
-
-        .why-kicker {
-            display: inline-block;
-            margin-bottom: 0.8rem;
-            padding: 0.3rem 0.7rem;
+            padding: 0.48rem 0.78rem;
             border-radius: 999px;
-            background: rgba(255, 255, 255, 0.18);
-            font-size: 0.9rem;
-            font-weight: 700;
-            letter-spacing: 0.04em;
+            background: rgba(70, 200, 255, 0.14);
+            color: var(--cyan);
+            font-family: 'Press Start 2P', cursive;
+            font-size: 0.64rem;
+            letter-spacing: 0.08em;
             text-transform: uppercase;
         }
 
-        .why-pixel-forge-intro h3 {
-            font-size: 2rem;
-            line-height: 1.1;
+        .hero h1 {
+            max-width: 10ch;
             margin-bottom: 1rem;
+            color: #f4f8ff;
+            font-size: clamp(2.4rem, 5vw, 4.8rem);
+            line-height: 0.96;
         }
 
-        .why-pixel-forge-intro p {
-            color: rgba(255, 255, 255, 0.92);
-            font-size: 1rem;
+        .hero p.lead {
+            max-width: 56ch;
+            margin-bottom: 1.4rem;
+            color: rgba(244, 248, 255, 0.82);
+            font-size: 1.05rem;
         }
 
-        .why-pixel-forge-cards {
-            display: grid;
-            gap: 1rem;
-        }
-
-        .reason-card {
-            padding: 1.5rem;
-            border-radius: 18px;
-            border: 1px solid #d8e4ff;
-            background: linear-gradient(180deg, #ffffff 0%, #f4f8ff 100%);
-            box-shadow: 0 14px 28px rgba(21, 74, 249, 0.08);
-            transition: transform 0.65s cubic-bezier(0.22, 1, 0.36, 1), box-shadow 0.25s ease, opacity 0.65s ease, filter 0.65s ease;
-            transition-delay: var(--delay, 0ms);
-        }
-
-        .reason-card:hover {
-            transform: translateY(-4px);
-            box-shadow: 0 18px 32px rgba(21, 74, 249, 0.14);
-        }
-
-        .reason-index {
+        .hero-actions,
+        .theme-actions { display: flex; flex-wrap: wrap; gap: 0.8rem; }
+        .hero-cta {
             display: inline-flex;
             align-items: center;
             justify-content: center;
-            width: 2.75rem;
-            height: 2.75rem;
-            margin-bottom: 1rem;
-            border-radius: 50%;
-            background: #154af9;
-            color: white;
-            font-weight: 800;
-            letter-spacing: 0.05em;
+            min-height: 50px;
+            padding: 0.95rem 1.35rem;
+            border-radius: 999px;
+            font-weight: 700;
+            text-decoration: none;
+            transition: transform 0.2s ease, box-shadow 0.2s ease, background 0.2s ease;
         }
-
-        .reason-card h3 {
-            color: #154af9;
-            font-size: 1.55rem;
-            margin-bottom: 0.5rem;
+        .hero-cta.primary { background: linear-gradient(135deg, #ff9b3f 0%, #ff7a18 100%); color: #111827; box-shadow: 0 16px 28px rgba(255, 122, 24, 0.24); }
+        .hero-cta.secondary { background: rgba(244, 248, 255, 0.08); color: #f4f8ff; border: 1px solid rgba(244, 248, 255, 0.18); }
+        .hero-cta:hover { transform: translateY(-2px); text-decoration: none; }
+        .hero-cta.primary:hover { color: #111827; }
+        .hero-cta.secondary:hover { color: #f4f8ff; background: rgba(244, 248, 255, 0.14); }
+        .hero-stats,
+        .benefit-grid,
+        .timeline-grid,
+        .rules-grid,
+        .prize-grid,
+        .legal-grid { display: grid; gap: 1rem; }
+        .hero-stats { grid-template-columns: repeat(4, minmax(0, 1fr)); margin-top: 1.5rem; }
+        .hero-stat,
+        .card,
+        .faq-item,
+        .sponsor-prospectus {
+            border-radius: var(--radius-lg);
+            border: 1px solid var(--line);
         }
+        .hero-stat { padding: 1rem; background: rgba(244, 248, 255, 0.06); color: rgba(244, 248, 255, 0.8); }
+        .hero-stat strong { display: block; margin-top: 0.2rem; color: #fff; font-size: 1.12rem; }
+        .hero-art-frame { padding: 1rem; border-radius: 28px; background: linear-gradient(145deg, rgba(255,255,255,0.12) 0%, rgba(255,255,255,0.04) 100%); border: 1px solid rgba(244, 248, 255, 0.14); }
+        .floating-header { width: 100%; animation: floatY 4.5s ease-in-out infinite; }
+        .hero-note { margin-top: 1rem; padding: 0.9rem 1rem; border-radius: 18px; background: rgba(8, 17, 31, 0.5); color: rgba(244, 248, 255, 0.8); text-align: center; }
 
-        .reason-card p {
-            color: #4c5a72;
-            font-size: 1rem;
+        nav {
+            position: sticky;
+            top: 0.8rem;
+            z-index: 20;
+            margin-top: 1rem;
+            margin-bottom: 1.25rem;
+            padding: 0.8rem 1rem;
+            border-radius: 24px;
+            background: rgba(8, 17, 31, 0.86);
+            backdrop-filter: blur(16px);
         }
+        .nav-row { display: flex; align-items: center; justify-content: space-between; gap: 1rem; }
+        .nav-brand { display: inline-flex; align-items: center; gap: 0.7rem; color: #f4f8ff; text-decoration: none; }
+        .nav-brand:hover { color: #f4f8ff; }
+        .nav-brand span { font-family: 'Press Start 2P', cursive; font-size: 0.74rem; }
+        .nav-brand img { width: 26px; height: 26px; }
+        .menu-toggle { display: none; padding: 0.7rem 1rem; border-radius: 999px; border: 1px solid rgba(244, 248, 255, 0.16); background: rgba(244, 248, 255, 0.08); color: #f4f8ff; font: inherit; font-weight: 700; }
+        .nav-menu { list-style: none; display: flex; flex-wrap: wrap; justify-content: flex-end; gap: 0.6rem; }
+        .nav-menu a { display: inline-flex; align-items: center; min-height: 42px; padding: 0.7rem 1rem; border-radius: 999px; color: rgba(244, 248, 255, 0.88); text-decoration: none; font-weight: 700; }
+        .nav-menu a:hover { background: rgba(244, 248, 255, 0.12); color: #fff; }
 
-        .scroll-fade {
-            opacity: 1;
-            transform: none;
-            filter: none;
-        }
+        .container { display: grid; gap: 1.25rem; }
+        section { padding: clamp(1.4rem, 2.5vw, 2rem); border-radius: var(--radius-xl); background: linear-gradient(180deg, rgba(255,255,255,0.82) 0%, rgba(245,249,255,0.96) 100%); backdrop-filter: blur(16px); scroll-margin-top: 7rem; position: relative; overflow: hidden; }
+        section::before { content: ""; position: absolute; top: 0; left: 0; right: 0; height: 6px; background: linear-gradient(90deg, var(--orange) 0%, var(--gold) 30%, var(--cyan) 70%, var(--blue) 100%); }
+        .section-head { display: flex; align-items: flex-end; justify-content: space-between; gap: 1rem; margin-bottom: 1.4rem; }
+        .section-head .eyebrow { background: rgba(255, 122, 24, 0.1); color: var(--orange); margin-bottom: 0.75rem; }
+        .section-head img { height: clamp(64px, 8vw, 96px); width: auto; }
+        .section-head p { max-width: 38ch; color: var(--muted); }
+        .about-grid,
+        .theme-grid { display: grid; grid-template-columns: minmax(0, 1.1fr) minmax(300px, 0.9fr); gap: 1.25rem; }
+        .about-copy { display: grid; gap: 1rem; font-size: 1.05rem; }
+        .meta-card { padding: 1.3rem; border-radius: var(--radius-lg); background: linear-gradient(160deg, rgba(8,17,31,0.96) 0%, rgba(18,42,87,0.94) 100%); color: #f4f8ff; }
+        .meta-card p { color: rgba(244, 248, 255, 0.8); }
+        .meta-list { list-style: none; display: grid; gap: 0.7rem; margin-top: 1rem; }
+        .meta-list li { display: flex; justify-content: space-between; gap: 1rem; padding-bottom: 0.7rem; border-bottom: 1px solid rgba(244, 248, 255, 0.12); }
+        .meta-list li:last-child { border-bottom: 0; padding-bottom: 0; }
+        .meta-list strong { color: var(--gold); }
+        .benefit-grid { grid-template-columns: repeat(3, minmax(0, 1fr)); margin-top: 1.2rem; }
+        .card,
+        .faq-item { background: var(--panel); }
+        .card { padding: 1.2rem; }
+        .card h3,
+        .faq-question,
+        #sponsors h3,
+        .legal-grid h3 { color: var(--ink); line-height: 1.1; }
+        .card p,
+        .faq-answer,
+        #sponsors p,
+        .legal-grid p { color: var(--muted); }
+        .card .eyebrow { margin-bottom: 0.7rem; background: rgba(29, 125, 255, 0.1); color: var(--blue); }
+        .timeline-grid { grid-template-columns: repeat(4, minmax(0, 1fr)); }
+        .timeline-card { padding: 1.2rem; border-radius: var(--radius-lg); background: linear-gradient(180deg, rgba(8,17,31,0.96) 0%, rgba(18,42,87,0.95) 100%); color: #f4f8ff; }
+        .timeline-card p,
+        .timeline-card h3 { color: #f4f8ff; }
+        .timeline-date,
+        .prize-rank,
+        .rule-index { display: inline-flex; align-items: center; justify-content: center; border-radius: 999px; font-weight: 700; }
+        .timeline-date { margin-bottom: 0.8rem; padding: 0.34rem 0.7rem; background: rgba(70, 200, 255, 0.16); color: var(--cyan); }
+        .theme-panel { padding: 1.3rem; background: var(--panel); }
+        .theme-note { margin: 1rem 0; padding: 1rem; border-radius: var(--radius-md); border: 1px solid rgba(255, 122, 24, 0.14); background: linear-gradient(135deg, rgba(255,122,24,0.08) 0%, rgba(255,213,109,0.14) 100%); }
+        .theme-form { display: grid; gap: 0.8rem; margin-top: 1rem; }
+        .theme-form label { color: var(--blue); font-weight: 700; }
+        .theme-form input { min-height: 52px; padding: 0.9rem 1rem; border-radius: 16px; border: 1px solid rgba(73, 128, 255, 0.22); background: #fff; color: var(--ink); font: inherit; }
+        .theme-form input:focus { outline: none; border-color: var(--blue); box-shadow: 0 0 0 4px rgba(29, 125, 255, 0.12); }
+        .theme-status { min-height: 1.5rem; color: var(--blue); font-weight: 700; }
+        .rules-grid,
+        .prize-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+        .rule-index { width: 2.5rem; height: 2.5rem; margin-bottom: 0.8rem; background: linear-gradient(135deg, var(--blue) 0%, var(--cyan) 100%); color: #fff; }
+        .prize-rank { margin-bottom: 0.8rem; padding: 0.3rem 0.7rem; background: rgba(29, 125, 255, 0.1); color: var(--blue); }
+        .prize-card ul { list-style: none; display: grid; gap: 0.55rem; margin-top: 0.85rem; }
+        .prize-card li { color: var(--muted); }
+        .prize-card li::before { content: "+ "; color: var(--green); font-weight: 700; }
+        .prizes-intro,
+        .legal-intro { max-width: 70ch; margin-bottom: 1.2rem; color: var(--muted); }
 
-        .js-scroll .scroll-fade {
-            opacity: 0;
-            transform: translateY(32px);
-            filter: blur(8px);
-        }
-
-        .js-scroll .reason-card.scroll-fade {
-            transform: translateY(48px) scale(0.96);
-        }
-
-        .js-scroll .scroll-fade.is-visible {
-            opacity: 1;
-            transform: none;
-            filter: none;
-        }
-
-        @media (prefers-reduced-motion: reduce) {
-            html {
-                scroll-behavior: auto;
-            }
-
-            .reason-card,
-            .scroll-fade,
-            .js-scroll .scroll-fade,
-            .js-scroll .reason-card.scroll-fade {
-                transition: none;
-                transform: none;
-                opacity: 1;
-                filter: none;
-            }
-
-            .aseprite-logo-link::before,
-            .aseprite-logo-link::after {
-                animation: none;
-            }
-        }
-
-        @media (max-width: 768px) {
-            h1 {
-                font-size: 2.5rem;
-            }
-
-            nav ul {
-                gap: 1rem;
-            }
-
-            section {
-                padding: 1.5rem;
-            }
-
-            .why-pixel-forge-layout {
-                grid-template-columns: 1fr;
-            }
-
-            .why-pixel-forge-intro {
-                position: static;
-                top: auto;
-            }
-
-            .discord-widget-embed {
-                height: 420px;
-            }
-
-            .discord-community-section {
-                max-width: 100%;
-            }
-        }
-
-        #sponsors {
-            text-align: center;
-            margin: 3rem 0;
-        }
-
-        .sponsor-tier {
-            margin-bottom: 2.5rem;
-        }
-
+        #sponsors { text-align: center; }
+        #sponsors .section-head { justify-content: center; }
+        #sponsors .section-head p { display: none; }
+        .sponsor-tier { margin-bottom: 2.5rem; }
         .sponsor-prospectus {
             margin-top: 2rem;
             padding: 1.5rem 1.25rem;
@@ -535,19 +241,16 @@
             border: 2px solid #7acaf6;
             box-shadow: 0 16px 30px rgba(21, 74, 249, 0.12);
         }
-
         .sponsor-prospectus h3 {
             color: #154af9;
             font-size: clamp(1.45rem, 3vw, 2.1rem);
             line-height: 1.15;
             margin-bottom: 0.85rem;
         }
-
         .sponsor-prospectus p {
             color: #555;
             font-size: 1rem;
         }
-
         .sponsor-prospectus .hero-cta {
             display: inline-block;
             min-width: min(100%, 300px);
@@ -558,103 +261,15 @@
             font-size: 1.1rem;
             box-shadow: 0 12px 24px rgba(21, 74, 249, 0.2);
         }
-
         .sponsor-prospectus .hero-cta:hover {
             background: linear-gradient(135deg, #0f3dd1 0%, #1b97dd 100%);
             color: white;
         }
-
         .sponsor-prospectus .email-link {
             font-size: clamp(1.05rem, 2.4vw, 1.45rem);
             font-weight: 700;
             color: #154af9;
         }
-
-        .faq-list {
-            display: grid;
-            gap: 1rem;
-        }
-
-        .faq-item {
-            background: linear-gradient(135deg, #f7fbff 0%, #eaf2ff 100%);
-            border: 1px solid #dbe6ff;
-            border-radius: 14px;
-            overflow: hidden;
-        }
-
-        .faq-question {
-            list-style: none;
-            cursor: pointer;
-            color: #154af9;
-            font-size: 1.25rem;
-            font-style: normal;
-            font-weight: 700;
-            line-height: 1.2;
-            padding: 1.15rem 3.75rem 1.15rem 1.25rem;
-            position: relative;
-        }
-
-        .faq-question::-webkit-details-marker {
-            display: none;
-        }
-
-        .faq-question::after {
-            content: "+";
-            position: absolute;
-            right: 1.25rem;
-            top: 50%;
-            transform: translateY(-50%);
-            font-size: 1.9rem;
-            line-height: 1;
-            color: #154af9;
-            transition: transform 0.2s ease;
-        }
-
-        .faq-item[open] .faq-question::after {
-            content: "-";
-        }
-
-        .faq-answer {
-            color: #555;
-            font-size: 1.1rem;
-            max-width: 940px;
-            padding: 0 1.25rem 1.25rem;
-        }
-
-        .faq-answer p {
-            margin: 0;
-        }
-
-        .legal-section-intro {
-            color: #555;
-            font-size: 1.08rem;
-            margin-bottom: 1.35rem;
-        }
-
-        .legal-list {
-            display: grid;
-            gap: 1rem;
-        }
-
-        .legal-item {
-            background: linear-gradient(135deg, #f0f7fe 0%, #dfeaff 100%);
-            border-left: 5px solid #154af9;
-            border-radius: 10px;
-            padding: 1.2rem 1.3rem;
-        }
-
-        .legal-item h3 {
-            color: #154af9;
-            font-size: 1.2rem;
-            margin-bottom: 0.35rem;
-        }
-
-        .legal-item p {
-            color: #555;
-            font-size: 1.05rem;
-            max-width: 940px;
-        }
-
         .sponsor-logos {
             display: flex;
             justify-content: center;
@@ -662,529 +277,317 @@
             flex-wrap: wrap;
             margin-top: 1rem;
         }
+        .sponsor-logos img { border-radius: 8px; }
+        .sponsor-logos.xlarge img { width: clamp(260px, 60vw, 600px); height: auto; object-fit: contain; }
+        .sponsor-logos.medium img { width: clamp(180px, 40vw, 450px); height: auto; object-fit: contain; }
+        .sponsor-logos.medium .xyz { flex-basis: 100%; display: flex; justify-content: center; }
+        .sponsor-logos.medium .xyz img { height: 150px; width: auto; }
+        .sponsor-logos.small img { width: clamp(120px, 25vw, 300px); height: auto; object-fit: contain; }
+        .sponsor-logos.small { display: flex; align-items: center; justify-content: center; gap: 2rem; }
+        .sponsor-logos a { transition: transform 0.2s ease, opacity 0.2s ease; }
+        .sponsor-logos a:hover { transform: translateY(-4px); opacity: 0.85; }
 
-        .sponsor-logos img {
-            border-radius: 8px;
-        }
-        /*gold*/
-        .sponsor-logos.xlarge img {
-            width: clamp(260px, 60vw, 600px);
-            height: auto;
-            object-fit: contain;
-        }
-        /*silver*/
-        .sponsor-logos.medium img {
-            width: clamp(180px, 40vw, 450px);
-            height: auto;
-            object-fit: contain;
-        }
-        .sponsor-logos.medium .xyz {
-            flex-basis: 100%;
-            display: flex;
-            justify-content: center;
-        }
+        .faq-list { display: grid; gap: 0.9rem; }
+        .faq-item { overflow: hidden; }
+        .faq-question { position: relative; padding: 1.15rem 4rem 1.15rem 1.2rem; list-style: none; cursor: pointer; font-size: 1.08rem; font-weight: 700; }
+        .faq-question::-webkit-details-marker { display: none; }
+        .faq-question::after { content: "+"; position: absolute; right: 1.2rem; top: 50%; transform: translateY(-50%); color: var(--blue); font-size: 1.8rem; line-height: 1; }
+        .faq-item[open] .faq-question::after { content: "-"; }
+        .faq-answer { padding: 0 1.2rem 1.2rem; }
+        .discord-widget-wrap { margin-top: 0.8rem; display: flex; }
+        .discord-widget-embed { width: min(100%, 350px); height: 420px; border: 0; border-radius: 18px; background: #111318; }
 
-        .sponsor-logos.medium .xyz img {
-            height: 150px;
-            width: auto;
-        }
-        /*bronze*/
-        .sponsor-logos.small img {
-            width: clamp(120px, 25vw, 300px);
-            height: auto;
-            object-fit: contain;
-        }
+        .legal-grid { grid-template-columns: repeat(3, minmax(0, 1fr)); }
+        .legal-grid .card { padding: 1.25rem; }
+        footer { margin-top: 1.5rem; padding: 1.4rem 1.6rem; border-radius: 26px; background: rgba(8, 17, 31, 0.88); color: rgba(244, 248, 255, 0.8); }
+        .footer-copy { color: #fff; font-weight: 700; }
 
-        .sponsor-logos.small {
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            gap: 2rem;
+        @keyframes floatY { 0% { transform: translateY(0); } 50% { transform: translateY(-14px); } 100% { transform: translateY(0); } }
+        @media (prefers-reduced-motion: reduce) { html { scroll-behavior: auto; } .floating-header { animation: none; } }
+        @media (max-width: 980px) {
+            .hero,
+            .about-grid,
+            .theme-grid { grid-template-columns: 1fr; }
+            .hero h1 { max-width: none; }
+            .hero-stats,
+            .benefit-grid,
+            .timeline-grid,
+            .legal-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
         }
-
-        a:hover {
-            color: #5379f6;
-            text-decoration: underline;
-        }
-
-        .hexany-logo {
-            height: 120px;
-            width: auto;
-            object-fit: contain;
-        }
-
-        .chequered-logo {
-            height: 250px;
-            width: auto;
-            object-fit: contain;
-        }
-
-        .sponsor-logos a {
-            transition: transform 0.2s ease, opacity 0.2s ease;
-        }
-
-        .sponsor-logos a:hover {
-            transform: translateY(-4px);
-            opacity: 0.85;
-        }
-
-        /*.silver img {
-            position: relative;
-            z-index: 1;
-            filter: drop-shadow(30px 30px 22px rgb(92, 91, 91));
-        }
-        .gold img {
-            position: relative;
-            z-index: 1;
-            filter: drop-shadow(0 14px 22px rgba(255, 242, 0, 0.593));
-        }
-        .bronze img {
-            position: relative;
-            z-index: 1;
-            filter: drop-shadow(0 14px 22px rgba(132, 76, 3, 0.696));
-        }*/
-
-        @keyframes asepritePatchFloat {
-            0%,
-            100% {
-                transform: translateY(12px) scale(1.16, 0.92);
-            }
-
-            50% {
-                transform: translateY(2px) scale(1.22, 0.98);
-            }
-        }
-
-        @keyframes asepritePatchDrift {
-            0%,
-            100% {
-                transform: translateY(18px) scale(1.26, 0.6);
-                opacity: 0.82;
-            }
-
-            50% {
-                transform: translateY(10px) scale(1.32, 0.66);
-                opacity: 0.96;
-            }
-        }
-
-        .winners-img {
-            width: 100%;
-            max-width: 700px;
-            height: auto;
-            display: block;
-            margin: 1.5rem auto 0;
-            border-radius: 10px;
-        }
-        .menu-toggle {
-            display: none;
-            font-size: 1.8rem;
-            background: none;
-            border: none;
-            color: #154af9;
-            cursor: pointer;
-        }
-        @media (max-width: 768px) {
-
-            .menu-toggle {
-                display: block;
-                margin: 0 auto;
-            }
-
-            nav ul {
-                display: none;
-                flex-direction: column;
-                gap: 1rem;
-                margin-top: 1rem;
-            }
-
-            nav ul.active {
-                display: flex;
-            }
-        }
-        .floating-header {
-            max-width: 1000px;
-            width: 100%;
-            height: auto;
-            animation: floatY 4s ease-in-out infinite;
-        }
-
-        @keyframes floatY {
-            0% {
-                transform: translateY(0px);
-            }
-            50% {
-                transform: translateY(-15px);
-            }
-            100% {
-                transform: translateY(0px);
-            }
-        }
-        a,
-        button,
-        .hero-cta,
-        .cta-button,
-        .menu-toggle,
-        input,
-        textarea,
-        select {
-            cursor: url('images/pointer.png') 8 8, pointer;
+        @media (max-width: 760px) {
+            body { background-attachment: scroll, scroll, scroll, scroll; }
+            .hero,
+            section,
+            footer { border-radius: 24px; }
+            nav { top: 0.5rem; }
+            .menu-toggle { display: inline-flex; }
+            .nav-row { align-items: flex-start; flex-direction: column; }
+            .nav-menu { display: none; width: 100%; flex-direction: column; align-items: stretch; }
+            .nav-menu.active { display: flex; }
+            .nav-menu a { justify-content: center; }
+            .section-head { flex-direction: column; align-items: flex-start; }
+            .hero-actions,
+            .theme-actions { flex-direction: column; align-items: stretch; }
+            .hero-stats,
+            .benefit-grid,
+            .timeline-grid,
+            .rules-grid,
+            .prize-grid,
+            .legal-grid { grid-template-columns: 1fr; }
         }
     </style>
 </head>
-
 <body>
-    <header>
-        <img src="images/header.png" alt="Pixel Forge Game Jam" style="max-width: 1000px; width: 100%; height: auto; " class="floating-header">
-        <div class="hero-buttons">
-            <a href="https://itch.io/jam/pixelforge" class="hero-cta">Join the Jam</a>
-            <a href="https://discord.gg/mM8PpjGyM6" class="hero-cta">Join Discord</a>
-        </div>
-    </header>
-
-    <nav>
-        <button class="menu-toggle" id="menuToggle">☰</button>
-
-        <ul id="navMenu">
-            <li><a href="#about">About</a></li>
-            <!--<li><a href="#winners">Winners</a></li>-->
-            <li><a href="#timeline">Timeline</a></li>
-            <li><a href="#themes">Themes</a></li>
-            <li><a href="#rules">Rules</a></li>
-            <li><a href="#prizes">Prizes</a></li>
-            <li><a href="#sponsors">Sponsors</a></li>
-            <li><a href="#faq">FAQ</a></li>
-            <li><a href="#legal">Legal</a></li>
-        </ul>
-    </nav>
-
-    <div class="container">
-        <section id="about">
-            <h2 class="section-title-image"><img src="images\About-3-20-2026.png" width="200px" alt="About"></h2>
-            <div class="about-copy">
-                <p>Pixel Forge Jam is a 1-week game development hackathon where developers, artists, designers, and creators come together to build
-                    something awesome. You have 7 days to create a game from scratch, experiment with ideas,
-                    and turn creativity into playable projects. Whether you're a beginner or experienced developer,
-                    Pixel Forge is all about creativity, learning, and building cool games. Not only will you have a shiny new game to add to your portfolio, but you'll also receive
-                    recognition, feedback, and the chance to win prizes!</p>
-                <p>Don't worry if you can't participate in this jam, as we are running more
-                    iterations in the future!</p>
-            </div>
-        </section>
-
-        <!--<section id="winners">
-            <h2>Pixel Forge Jam 2026 Winners</h2>
-            <p>The winners will be announced and highlighted once the game jam has ended. You can go to the game jam <a href="https://itch.io/jam/pixelforge" target="_blank">here!</a></p>
-        </section> -->
-
-        <section id="timeline">
-            <h2 class="section-title-image"><img src="images/2026-Timeline-3-20-2026.png" alt="2026 Timeline"></h2>
-            <div class="timeline-item">
-                <h3>Jam Starts</h3>
-                <p>April 18th</p>
-            </div>
-            <div class="timeline-item">
-                <h3>Submission Deadline</h3>
-                <p>April 25th</p>
-            </div>
-            <div class="timeline-item">
-                <h3>Voting Period</h3>
-                <p>April 25th to April 30th</p>
-            </div>
-            <div class="timeline-item">
-                <h3>Winners Announced</h3>
-                <p>May 1st</p>
-            </div>
-        </section>
-
-        <section id="themes">
-            <h2 class="section-title-image"><img src="images\Theme-3-17-2026 (3).png" width="250px" alt="Theme"></h2>
-            <p><b>The theme will be released at the start of the game jam! Head over to our <a href="https://discord.gg/mM8PpjGyM6">Discord</a> for more info!</b></p>
-            <!--<p style="margin-top: 1rem;">You can interpret the themes however you like!</p>-->
-            <div class="theme-suggestion-card">
-                <h3>Suggest a Theme</h3>
-                <p>Enter a possible theme idea for the hackathon. We do not tolerate spam and it will result in you getting banned from being able to participate in future Pixel Forge Jams.</p>
-                <form id="themeSuggestionForm" class="theme-suggestion-form">
-                    <label for="themeSuggestionInput" class="theme-suggestion-label">Theme idea</label>
-                    <input
-                        id="themeSuggestionInput"
-                        class="theme-suggestion-input"
-                        type="text"
-                        name="themeSuggestion"
-                        maxlength="120"
-                        placeholder="Example: Tiny Worlds"
-                        required
-                    >
-                    <button type="submit" class="hero-cta theme-suggestion-submit">Submit Theme</button>
-                    <p id="themeSuggestionStatus" class="theme-suggestion-status" aria-live="polite"></p>
-                </form>
-            </div>
-        </section>
-
-        <section id="rules">
-            <h2 class="section-title-image"><img src="images\Rules-3-17-2026 (1).png" width="200px" alt="Rules"></h2>
-            <div class="rule-item">
-                <h3>1. Submissions</h3>
-                <p>Your game must have been entirely made during the jam period. You may use small pre-existing assets and
-                    tools, but disclose and properly credit them in your game description. You should also include an explanation of how
-                    your game relates to one of the themes. You can use any game engine!</p>
-            </div>
-            <div class="rule-item">
-                <h3>2. Progress</h3>
-                <p><b>YOU MUST KEEP TRACK OF YOUR PROGRESS!</b> This can be done either by taking screenshots every day with
-                    the date/time visible, or by having a public GitHub repository for your project. We may ask to see
-                    it at the end of the jam.</p>
-            </div>
-            <div class="rule-item">
-                <h3>3. Team Size</h3>
-                <p>Solo developers and teams of up to 4 people are allowed. Join our Discord server to easily find
-                    teammates!</p>
-            </div>
-            <div class="rule-item">
-                <h3>4. Game Content</h3>
-                <p>Games should generally be appropriate for all ages, with the exception of scary/violent content in
-                    horror games. No offensive, hateful, or explicit content.</p>
-            </div>
-            <div class="rule-item">
-                <h3>5. Be Kind</h3>
-                <p>Provide constructive feedback to others and maintain a supportive community atmosphere!</p>
-            </div>
-        </section>
-
-        <section id="prizes">
-            <h2 class="section-title-image"><img src="images\Prizes-3-17-2026.png" width="250px" alt="Prizes"></h2>
-            <p>Winners should contact <a href="mailto:pixelforgejam@gmail.com">pixelforgejam@gmail.com</a> or join the <a href="https://discord.gg/mM8PpjGyM6">Discord</a> to claim their prizes. As most of the prizes
-                listed below aren't 1 for each team member, teams are responsible for determining how they'll split
-                them. Prizes will be distributed per team member. Teams may receive one key per member
-                 (up to the number of available keys). Solo winners will receive one key.</p>
-
-            <div class="prize-card">
-                <h3>🥇 First Place (1 Winner)</h3>
-                <p>- Up to 2 Aseprite Keys ($20 Value Each)</p>
-                <p>- Upto 3 Pyxel Edit Keys ($9 value Each)</p>
-                <p>- Up to 4 .xyz domains that are free for 1 year ($15 Value Each)</p>
-                <p>- 1 PixelOver key ($30 Value Each)</p>
-                <p>-1 Kronnect Non-Bundle Asset License ($50 value)</p>
-                <p>- Featured on our websites, signed winner certificate, and Discord role</p>
-            </div>
-
-            <div class="prize-card">
-                <h3>🥈 Second Place (1 Winner)</h3>
-                <p>- Up to 2 Aseprite Keys ($20 Value Each)</p>
-                <p>- Upto 3 Pyxel Edit Keys ($9 value Each)</p>
-                <p>- Up to 4 .xyz domains that are free for 1 year ($15 Value Each)</p>
-                <p>- 1 PixelOver key ($30 Value Each)</p>
-                <p>-1 Kronnect Non-Bundle Asset License ($50 value)</p>
-                <p>- Featured on our websites, signed winner certificate, and Discord role</p>
-            </div>
-
-            <div class="prize-card">
-                <h3>🥉 Third Place (1 Winner)</h3>
-                <p>- Up to 2 Aseprite Keys ($20 Value Each)</p>
-                <p>- Upto 2 Pyxel Edit Keys ($9 value Each)</p>
-                <p>- Up to 2 .xyz domains that are free for 1 year ($15 Value Each)</p>
-                <p>- 1 PixelOver key ($30 Value Each)</p>
-                <p>- 1 Kronnect Non-Bundle Asset License ($50 value)</p>
-                <p>- Featured on our websites, signed winner certificate, and Discord role</p>
-            </div>
-
-            <div class="prize-card">
-                <h3>🏅 Fourth Place (1 Winner)</h3>
-                <p>- 1 Aseprite key ($20 Value)</p>
-                <p>- 1 Pyxel Edit Key ($9 value)</p>
-                <p>- 1 PixelOver key ($30 Value)</p>
-                <p>- 1 Kronnect Non-Bundle Asset License ($50 value)</p>
-                <p>- Featured on our websites, signed winner certificate, and Discord role</p>
-            </div>
-
-            <div class="prize-card">
-                <h3>🏅 Fifth Place (1 Winner)</h3>
-                <p>- 1 PixelOver key ($30 Value)</p>
-                <p>- 1 Pyxel Edit Key ($9 value)</p>
-                <p>- 1 Kronnect Non-Bundle Asset License ($50 value)</p>
-                <p>- Featured on our websites, signed winner certificate, and Discord role</p>
-            </div>
-
-            <div class="prize-card">
-                <h3>💎 Judges' Choice (3 Winners)</h3>
-                <p>- 1 Aseprite Key Each ($20 Value)</p>
-                <p>- Featured on our websites, signed winner certificate, and Discord role</p>
-                <p>Chosen by the Pixel Forge organizers. The winners of the above categories are not eligible for this
-                    prize.</p>
-            </div>
-            
-
-            <div class="prize-card">
-                <h3>🎁 All Participants</h3>
-                <p>- Signed participation certificate for those that want one</p>
-            </div>
-        </section>
-
-        <section id="sponsors">
-            <h2 class="section-title-image"><img src="images/Sponsors-3-17-2026.png" alt="Sponsors"></h2>
-            <!-- Gold Sponsors -->
-            <div class="sponsor-tier gold">
-                <h3>Gold Sponsors</h3>
-                <p>none</p>
-                <div class="sponsor-logos xlarge">
-                    <!--<a href="https://www.aseprite.org/"><img src="images\Aseprite-logo.png" alt="Aseprite"></a>-->
+    <div class="site-shell">
+        <header class="hero">
+            <div class="hero-copy">
+                <p class="eyebrow">April 18-25, 2026</p>
+                <h1>Build a game that feels forged by hand.</h1>
+                <p class="lead">Pixel Forge Jam is a one-week online game jam where developers, artists, designers, musicians, and creators ship something original fast. Bring a fresh idea, turn it into a playable project, and share it with a community that wants to see cool work get made.</p>
+                <div class="hero-actions">
+                    <a href="https://itch.io/jam/pixelforge" class="hero-cta primary" rel="noopener noreferrer">Join the Jam</a>
+                    <a href="https://discord.gg/mM8PpjGyM6" class="hero-cta secondary" rel="noopener noreferrer">Join Discord</a>
+                </div>
+                <div class="hero-stats">
+                    <div class="hero-stat"><span>Format</span><strong>Online</strong></div>
+                    <div class="hero-stat"><span>Duration</span><strong>7 days</strong></div>
+                    <div class="hero-stat"><span>Teams</span><strong>Up to 4</strong></div>
+                    <div class="hero-stat"><span>Focus</span><strong>New games</strong></div>
                 </div>
             </div>
+            <div class="hero-art">
+                <div class="hero-art-frame"><img src="images/header.png" alt="Pixel Forge Jam" class="floating-header"></div>
+                <p class="hero-note">Make something weird, polished, experimental, or small. The point is to ship.</p>
+            </div>
+        </header>
 
-            <!-- Silver Sponsors -->
-            <div class="sponsor-tier silver">
-                <h3>Silver Sponsors</h3>
-                <div class="sponsor-logos medium">
-                    <a href="https://www.aseprite.org/"><img src="images\Aseprite-logo.png" alt="Aseprite"></a>
-                    <a href="http://kronnect.com"><img src="images\kronnect.png" alt="Kronnect"></a>
-                    <a href="https://gen.xyz/" class="xyz" ><img src="images\xyz-logo-color.png" alt="gen.xyz"></a>
-                    <a href="https://pixelover.io/"><img src="images\title_final.png" alt="PixelOver"></a>
-                    <a href="https://pyxeledit.com/"><img src="images\PyxelLogo9 (1).png" alt="Pyxel Edit"></a>
+        <nav aria-label="Primary">
+            <div class="nav-row">
+                <a class="nav-brand" href="#top" aria-label="Pixel Forge Jam home">
+                    <img src="images/New Piskel-2.png (12).png" alt="">
+                    <span>Pixel Forge</span>
+                </a>
+                <button class="menu-toggle" id="menuToggle" aria-expanded="false" aria-controls="navMenu">Menu</button>
+                <ul class="nav-menu" id="navMenu">
+                    <li><a href="#about">About</a></li>
+                    <li><a href="#timeline">Timeline</a></li>
+                    <li><a href="#themes">Themes</a></li>
+                    <li><a href="#rules">Rules</a></li>
+                    <li><a href="#prizes">Prizes</a></li>
+                    <li><a href="#sponsors">Sponsors</a></li>
+                    <li><a href="#faq">FAQ</a></li>
+                    <li><a href="#legal">Legal</a></li>
+                </ul>
+            </div>
+        </nav>
+
+        <main class="container" id="top">
+            <section id="about">
+                <div class="section-head">
+                    <div>
+                        <p class="eyebrow">What It Is</p>
+                        <h2><img src="images/About-3-20-2026.png" alt="About"></h2>
+                    </div>
+                    <p>A week-long jam built for people who want momentum, feedback, and a finished game at the end.</p>
                 </div>
-            </div>
-
-            <!-- bronze Sponsors -->
-            <div class="sponsor-tier bronze">
-                <h3>Bronze Sponsors</h3>
-                <p>none</p>
-                <div class="sponsor-logos small">
-                    <!--<a href="https://example.com"><img src="images/company1.png" alt="Company 1"></a>-->
+                <div class="about-grid">
+                    <div class="about-copy">
+                        <p>Pixel Forge Jam is a one-week game development hackathon where developers, artists, designers, and creators come together to build something original from scratch.</p>
+                        <p>You have seven days to experiment, iterate, and turn an idea into a playable game. Whether you are a beginner or a veteran, the jam is designed around creativity, learning, and finishing work you are proud to share.</p>
+                        <p>If you cannot join this round, that is fine. More Pixel Forge Jam events are planned for the future.</p>
+                    </div>
+                    <aside class="meta-card">
+                        <p class="eyebrow">Jam Snapshot</p>
+                        <h3>Small scope, fast feedback, real portfolio work.</h3>
+                        <p>Finish a playable project, meet other creators, and give yourself a deadline that actually forces progress.</p>
+                        <ul class="meta-list">
+                            <li><span>Submission platform</span><strong>itch.io</strong></li>
+                            <li><span>Collaboration</span><strong>Solo or teams</strong></li>
+                            <li><span>Community</span><strong>Discord based</strong></li>
+                            <li><span>Outcome</span><strong>Prizes and recognition</strong></li>
+                        </ul>
+                    </aside>
                 </div>
-            </div>
-            <div class="sponsor-prospectus">
-                <h3>Interested in Sponsoring? Check out our:</h3>
-                <a href="contents\Pixel Forge Jam 2026 Sponsorship Prospectus.pdf" download="Pixel Forge Jam 2026 Sponsorship Prospectus.pdf" class="hero-cta">Sponsorship Prospectus</a>
-                <h3>Or email: <a href="mailto:pixelforgejam@gmail.com" class="email-link">pixelforgejam@gmail.com</a></h3>
-            </div>
-        </section>
+                <div class="benefit-grid">
+                    <article class="card"><p class="eyebrow">Build</p><h3>Ship something concrete</h3><p>Use the jam to finish a game instead of letting another idea sit in a folder.</p></article>
+                    <article class="card"><p class="eyebrow">Learn</p><h3>Try risky ideas fast</h3><p>Jam constraints make experimentation easier because the scope is already short and sharp.</p></article>
+                    <article class="card"><p class="eyebrow">Share</p><h3>Get seen by other creators</h3><p>Receive feedback, recognition, and a finished piece you can point to after the week ends.</p></article>
+                </div>
+            </section>
 
-        <section id="faq">
-            <h2 class="section-title-image"><img src="images\FAQ-3-20-2026.png" width="150px" alt="FAQ"></h2>
-            <div class="faq-list">
-                <details class="faq-item">
-                    <summary class="faq-question">Question: What is the theme?</summary>
-                    <div class="faq-answer">
-                        <p>Answer: The theme will be announced when the jam begins.</p>
+            <section id="timeline">
+                <div class="section-head">
+                    <div>
+                        <p class="eyebrow">Key Dates</p>
+                        <h2><img src="images/2026-Timeline-3-20-2026.png" alt="2026 Timeline"></h2>
                     </div>
-                </details>
+                    <p>The jam is short on purpose. Plan your week early and leave time to package your submission.</p>
+                </div>
+                <div class="timeline-grid">
+                    <article class="timeline-card"><span class="timeline-date">April 18</span><h3>Jam Starts</h3><p>The theme goes live and the build week begins.</p></article>
+                    <article class="timeline-card"><span class="timeline-date">April 25</span><h3>Submission Deadline</h3><p>Have your page, files, and credits ready before the cutoff.</p></article>
+                    <article class="timeline-card"><span class="timeline-date">April 25-30</span><h3>Voting Period</h3><p>Play entries, leave feedback, and help surface strong work.</p></article>
+                    <article class="timeline-card"><span class="timeline-date">May 1</span><h3>Winners Announced</h3><p>Final placements and highlighted projects are shared after voting closes.</p></article>
+                </div>
+            </section>
 
-                <details class="faq-item">
-                    <summary class="faq-question">Question: Does my game have to be a certain format?</summary>
-                    <div class="faq-answer">
-                        <p>Answer: No, but remember that not all users have Windows/Mac/Linux devices. Browser based is a good idea to get as many people playing your game as possible and try to make at least a Windows version.</p>
+            <section id="themes">
+                <div class="section-head">
+                    <div>
+                        <p class="eyebrow">Prompt</p>
+                        <h2><img src="images/Theme-3-17-2026 (3).png" alt="Theme"></h2>
                     </div>
-                </details>
-
-                <details class="faq-item">
-                    <summary class="faq-question">Question: What assets can I use?</summary>
-                    <div class="faq-answer">
-                        <p>Answer: The vast majority of code must be written during the jam, but you can use whatever art and audio assets you have the legal right to use.</p>
-                    </div>
-                </details>
-
-                <details class="faq-item">
-                    <summary class="faq-question">Question: Can I submit a game that I already started on?</summary>
-                    <div class="faq-answer">
-                        <p>Answer: No, it is required that all participants make the entirety of the game in the time provided.</p>
-                    </div>
-                </details>
-
-                <details class="faq-item">
-                    <summary class="faq-question">Question: Is there a Discord I can join?</summary>
-                    <div class="faq-answer">
-                        <p>Answer: Yes, <a href="https://discord.gg/mM8PpjGyM6">click here to join</a>.</p>
-                        <br>
-                        <div class="discord-widget-wrap">
-                            <iframe
-                                class="discord-widget-embed"
-                                src="https://discord.com/widget?id=1483430081501204572&theme=dark"
-                                title="Pixel Forge Jam Discord widget"
-                                loading="lazy"
-                                allowtransparency="true"
-                                frameborder="0"
-                                sandbox="allow-popups allow-popups-to-escape-sandbox allow-same-origin allow-scripts"
-                            ></iframe>
+                    <p>The exact theme drops when the jam begins, but you can already start thinking about approaches and scope.</p>
+                </div>
+                <div class="theme-grid">
+                    <div class="theme-panel card">
+                        <h3>The official theme is revealed at the start of the jam.</h3>
+                        <p>Head to the Discord server for announcements, team coordination, and updates once the theme drops.</p>
+                        <div class="theme-note">Interpret the prompt however you like. Strong entries usually take one idea and execute it clearly instead of trying to do everything.</div>
+                        <div class="theme-actions">
+                            <a href="https://discord.gg/mM8PpjGyM6" class="hero-cta secondary" rel="noopener noreferrer">Get Updates on Discord</a>
+                            <a href="https://itch.io/jam/pixelforge" class="hero-cta primary" rel="noopener noreferrer">See the Jam Page</a>
                         </div>
                     </div>
-                </details>
-            </div>
-        </section>
-
-        <section id="legal">
-            <h2 class="section-title-image"><img src="images/Legal-3-20-2026_2.png" width="200px" alt="Legal and Ownership"></h2>
-            <p class="legal-section-intro">The following terms apply to all Pixel Forge Jam submissions:</p>
-            <div class="legal-list">
-                <div class="legal-item">
-                    <h3>You Keep Your Rights</h3>
-                    <p>Anything you make during the Pixel Forge Jam is your property. Pixel Forge claims no rights or ownership of your game.</p>
+                    <div class="theme-panel card">
+                        <h3>Suggest a Theme</h3>
+                        <p>Send a possible theme idea to the organizers. Spam is not tolerated and may affect access to future Pixel Forge Jams.</p>
+                        <form id="themeSuggestionForm" class="theme-form">
+                            <label for="themeSuggestionInput">Theme idea</label>
+                            <input id="themeSuggestionInput" type="text" name="themeSuggestion" maxlength="120" placeholder="Example: Tiny Worlds" required>
+                            <button type="submit" class="hero-cta primary">Submit Theme</button>
+                            <p id="themeSuggestionStatus" class="theme-status" aria-live="polite"></p>
+                        </form>
+                    </div>
                 </div>
+            </section>
 
-                <div class="legal-item">
-                    <h3>Submission Promotion</h3>
-                    <p>Any game submitted to the Pixel Forge Jam may appear in a Pixel Forge YouTube video, social media post, or on the Pixel Forge website without needing your express permission.</p>
+            <section id="rules">
+                <div class="section-head">
+                    <div>
+                        <p class="eyebrow">How It Works</p>
+                        <h2><img src="images/Rules-3-17-2026 (1).png" alt="Rules"></h2>
+                    </div>
+                    <p>The rules are straightforward: build during the jam, keep proof of progress, and keep the community healthy.</p>
                 </div>
+                <div class="rules-grid">
+                    <article class="card"><span class="rule-index">1</span><h3>Submissions</h3><p>Your game must be made during the jam. Small pre-existing assets and tools are fine if you disclose and credit them properly.</p></article>
+                    <article class="card"><span class="rule-index">2</span><h3>Progress</h3><p>You must track progress with dated screenshots or a public repository. Organizers may ask to review it after the jam.</p></article>
+                    <article class="card"><span class="rule-index">3</span><h3>Team Size</h3><p>Solo developers and teams of up to four are allowed. Use the Discord server if you need teammates.</p></article>
+                    <article class="card"><span class="rule-index">4</span><h3>Game Content</h3><p>Games should be broadly appropriate for all ages, aside from standard horror or non-explicit violent content.</p></article>
+                    <article class="card"><span class="rule-index">5</span><h3>Be Kind</h3><p>Give useful feedback, respect other participants, and help keep the jam constructive and welcoming.</p></article>
+                </div>
+            </section>
+            <section id="prizes">
+                <div class="section-head">
+                    <div>
+                        <p class="eyebrow">What You Can Win</p>
+                        <h2><img src="images/Prizes-3-17-2026.png" alt="Prizes"></h2>
+                    </div>
+                    <p>Prize distribution depends on team size and available keys. Teams decide how shared rewards are split.</p>
+                </div>
+                <p class="prizes-intro">Winners should contact <a href="mailto:pixelforgejam@gmail.com">pixelforgejam@gmail.com</a> or join the <a href="https://discord.gg/mM8PpjGyM6" rel="noopener noreferrer">Discord</a> to claim prizes. Teams may receive one key per member, up to the number of available keys. Solo winners receive one key.</p>
+                <div class="prize-grid">
+                    <article class="card prize-card"><span class="prize-rank">First Place</span><h3>1 Winner</h3><ul><li>Up to 2 Aseprite keys at $20 each</li><li>Up to 4 .xyz domains free for 1 year at $15 each</li><li>1 PixelOver key at $30</li><li>1 Kronnect non-bundle asset license at $50</li><li>Featured on Pixel Forge websites, signed winner certificate, and Discord role</li></ul></article>
+                    <article class="card prize-card"><span class="prize-rank">Second Place</span><h3>1 Winner</h3><ul><li>Up to 2 Aseprite keys at $20 each</li><li>Up to 4 .xyz domains free for 1 year at $15 each</li><li>1 PixelOver key at $30</li><li>1 Kronnect non-bundle asset license at $50</li><li>Featured on Pixel Forge websites, signed winner certificate, and Discord role</li></ul></article>
+                    <article class="card prize-card"><span class="prize-rank">Third Place</span><h3>1 Winner</h3><ul><li>Up to 2 Aseprite keys at $20 each</li><li>Up to 2 .xyz domains free for 1 year at $15 each</li><li>1 PixelOver key at $30</li><li>1 Kronnect non-bundle asset license at $50</li><li>Featured on Pixel Forge websites, signed winner certificate, and Discord role</li></ul></article>
+                    <article class="card prize-card"><span class="prize-rank">Fourth Place</span><h3>1 Winner</h3><ul><li>1 PixelOver key at $30</li><li>1 Kronnect non-bundle asset license at $50</li><li>Featured on Pixel Forge websites, signed winner certificate, and Discord role</li></ul></article>
+                    <article class="card prize-card"><span class="prize-rank">Fifth Place</span><h3>1 Winner</h3><ul><li>1 PixelOver key at $30</li><li>1 Kronnect non-bundle asset license at $50</li><li>Featured on Pixel Forge websites, signed winner certificate, and Discord role</li></ul></article>
+                    <article class="card prize-card"><span class="prize-rank">Judges' Choice</span><h3>3 Winners</h3><ul><li>1 Aseprite key each at $20 value</li><li>Featured on Pixel Forge websites, signed winner certificate, and Discord role</li><li>Chosen by the organizers and not available to winners of the ranked categories above</li></ul></article>
+                    <article class="card prize-card"><span class="prize-rank">All Participants</span><h3>Open to everyone who submits</h3><ul><li>Signed participation certificate for anyone who wants one</li></ul></article>
+                </div>
+            </section>
 
-                <div class="legal-item">
-                    <h3>Asset Rights</h3>
-                    <p>By submitting a game, you confirm that you have the legal right to use and share all code, art, audio, fonts, and other assets included in your project, and that any required credits are provided.</p>
+            <section id="sponsors">
+                <div class="section-head">
+                    <div>
+                        <h2><img src="images/Sponsors-3-17-2026.png" alt="Sponsors"></h2>
+                    </div>
                 </div>
-            </div>
-        </section>
+                <div class="sponsor-tier gold">
+                    <h3>Gold Sponsors</h3>
+                    <p>none</p>
+                    <div class="sponsor-logos xlarge"></div>
+                </div>
+                <div class="sponsor-tier silver">
+                    <h3>Silver Sponsors</h3>
+                    <div class="sponsor-logos medium">
+                        <a href="https://www.aseprite.org/" rel="noopener noreferrer"><img src="images/Aseprite-logo.png" alt="Aseprite"></a>
+                        <a href="http://kronnect.com" rel="noopener noreferrer"><img src="images/kronnect.png" alt="Kronnect"></a>
+                        <a href="https://gen.xyz/" class="xyz" rel="noopener noreferrer"><img src="images/xyz-logo-color.png" alt="gen.xyz"></a>
+                        <a href="https://pixelover.io/" rel="noopener noreferrer"><img src="images/title_final.png" alt="PixelOver"></a>
+                        <a href="https://pyxeledit.com/" rel="noopener noreferrer"><img src="images/PyxelLogo9 (1).png" alt="Pyxel Edit"></a>
+                    </div>
+                </div>
+                <div class="sponsor-tier bronze">
+                    <h3>Bronze Sponsors</h3>
+                    <p>none</p>
+                    <div class="sponsor-logos small"></div>
+                </div>
+                <div class="sponsor-prospectus">
+                    <h3>Interested in Sponsoring? Check out our:</h3>
+                    <a href="contents/Pixel Forge Jam 2026 Sponsorship Prospectus.pdf" download="Pixel Forge Jam 2026 Sponsorship Prospectus.pdf" class="hero-cta">Sponsorship Prospectus</a>
+                    <h3>Or email: <a href="mailto:pixelforgejam@gmail.com" class="email-link">pixelforgejam@gmail.com</a></h3>
+                </div>
+            </section>
+
+            <section id="faq">
+                <div class="section-head">
+                    <div>
+                        <p class="eyebrow">Questions</p>
+                        <h2><img src="images/FAQ-3-20-2026.png" alt="FAQ"></h2>
+                    </div>
+                    <p>If you are unsure about format, assets, or the community channels, the answers are here.</p>
+                </div>
+                <div class="faq-list">
+                    <details class="faq-item"><summary class="faq-question">What is the theme?</summary><div class="faq-answer"><p>The theme will be announced when the jam begins.</p></div></details>
+                    <details class="faq-item"><summary class="faq-question">Does my game have to be in a specific format?</summary><div class="faq-answer"><p>No. Browser-based games are a strong option because they are easy for more people to play, but a Windows version is also a good idea.</p></div></details>
+                    <details class="faq-item"><summary class="faq-question">What assets can I use?</summary><div class="faq-answer"><p>You can use any art, audio, code, or tools that you have the legal right to use. The vast majority of new work should still be created during the jam.</p></div></details>
+                    <details class="faq-item"><summary class="faq-question">Can I submit a game that I already started?</summary><div class="faq-answer"><p>No. Entries are expected to be made during the jam period.</p></div></details>
+                    <details class="faq-item"><summary class="faq-question">Is there a Discord I can join?</summary><div class="faq-answer"><p>Yes. <a href="https://discord.gg/mM8PpjGyM6" rel="noopener noreferrer">Join the Pixel Forge Discord here</a>.</p><div class="discord-widget-wrap"><iframe class="discord-widget-embed" src="https://discord.com/widget?id=1483430081501204572&theme=dark" title="Pixel Forge Jam Discord widget" loading="lazy" allowtransparency="true" frameborder="0" sandbox="allow-popups allow-popups-to-escape-sandbox allow-same-origin allow-scripts"></iframe></div></div></details>
+                </div>
+            </section>
+            <section id="legal">
+                <div class="section-head">
+                    <div>
+                        <p class="eyebrow">Ownership</p>
+                        <h2><img src="images/Legal-3-20-2026_2.png" alt="Legal and Ownership"></h2>
+                    </div>
+                    <p>The event keeps ownership simple: you keep your project, and organizers retain standard promotional rights for submitted work.</p>
+                </div>
+                <p class="legal-intro">The following terms apply to all Pixel Forge Jam submissions:</p>
+                <div class="legal-grid">
+                    <article class="card"><h3>You Keep Your Rights</h3><p>Anything you make during Pixel Forge Jam remains your property. Pixel Forge does not claim ownership of your game.</p></article>
+                    <article class="card"><h3>Submission Promotion</h3><p>Submitted games may appear in Pixel Forge videos, social posts, or website coverage without requiring additional permission.</p></article>
+                    <article class="card"><h3>Asset Rights</h3><p>By submitting, you confirm that you have the legal right to use and share all assets, code, fonts, and audio included in your project.</p></article>
+                </div>
+            </section>
+        </main>
+
+        <footer>
+            <p class="footer-copy">&copy; Pixel Forge Jam 2026</p>
+            <p>Questions? Contact <a href="mailto:pixelforgejam@gmail.com">pixelforgejam@gmail.com</a> or ask in the Discord.</p>
+        </footer>
     </div>
 
-    <footer>
-        <p>© Pixel Forge Jam 2026</p>
-        <p class="footer-copy">&copy; Pixel Forge Jam 2026</p>
-        <p style="margin-top: 0.5rem;">Questions? Contact us at pixelforgejam@gmail.com or ask in our Discord.</p>
-    </footer>
-
     <script>
-
-        document.documentElement.classList.add('js-scroll');
-
-        const scrollAnimatedItems = document.querySelectorAll('.scroll-fade');
-
-        if ('IntersectionObserver' in window) {
-            const scrollObserver = new IntersectionObserver((entries, observer) => {
-                entries.forEach((entry) => {
-                    if (!entry.isIntersecting) {
-                        return;
-                    }
-
-                    entry.target.classList.add('is-visible');
-                    observer.unobserve(entry.target);
-                });
-            }, {
-                threshold: 0.2,
-                rootMargin: '0px 0px -10% 0px'
-            });
-
-            scrollAnimatedItems.forEach((item) => {
-                scrollObserver.observe(item);
-            });
-        } else {
-            scrollAnimatedItems.forEach((item) => {
-                item.classList.add('is-visible');
-            });
-        }
-
-        const menuToggle = document.getElementById("menuToggle");
-        const navMenu = document.getElementById("navMenu");
-        const themeSuggestionForm = document.getElementById("themeSuggestionForm");
-        const themeSuggestionInput = document.getElementById("themeSuggestionInput");
-        const themeSuggestionStatus = document.getElementById("themeSuggestionStatus");
-        const themeSuggestionEndpoint = "https://script.google.com/macros/s/AKfycbzPaFrfhRuD7meUpfmPyM7QQjzIi0XntGk7HWh7rEowdxp5Vp4RFtXqfyc8imYIvneA/exec";
+        const menuToggle = document.getElementById('menuToggle');
+        const navMenu = document.getElementById('navMenu');
+        const themeSuggestionForm = document.getElementById('themeSuggestionForm');
+        const themeSuggestionInput = document.getElementById('themeSuggestionInput');
+        const themeSuggestionStatus = document.getElementById('themeSuggestionStatus');
+        const themeSuggestionEndpoint = 'https://script.google.com/macros/s/AKfycbzPaFrfhRuD7meUpfmPyM7QQjzIi0XntGk7HWh7rEowdxp5Vp4RFtXqfyc8imYIvneA/exec';
 
         const appendThemeSuggestion = async (theme) => {
-            if (!themeSuggestionEndpoint || themeSuggestionEndpoint === "PASTE_YOUR_GOOGLE_APPS_SCRIPT_WEB_APP_URL_HERE") {
-                throw new Error("Add your Google Apps Script web app URL in index.html before using this form.");
+            if (!themeSuggestionEndpoint || themeSuggestionEndpoint === 'PASTE_YOUR_GOOGLE_APPS_SCRIPT_WEB_APP_URL_HERE') {
+                throw new Error('Add your Google Apps Script web app URL in index.html before using this form.');
             }
 
             const payload = new URLSearchParams({ theme });
             const response = await fetch(themeSuggestionEndpoint, {
-                method: "POST",
+                method: 'POST',
                 body: payload,
-                mode: "cors"
+                mode: 'cors'
             });
 
             const responseText = await response.text();
@@ -1201,43 +604,48 @@
             }
 
             if (!response.ok) {
-                throw new Error(responsePayload && responsePayload.error ? responsePayload.error : "Unable to submit your theme right now.");
+                throw new Error(responsePayload && responsePayload.error ? responsePayload.error : 'Unable to submit your theme right now.');
             }
 
             if (!responsePayload || responsePayload.ok !== true) {
-                throw new Error("Theme service returned an unexpected response.");
+                throw new Error('Theme service returned an unexpected response.');
             }
         };
 
         if (menuToggle && navMenu) {
-            menuToggle.addEventListener("click", () => {
-                navMenu.classList.toggle("active");
+            menuToggle.addEventListener('click', () => {
+                const isOpen = navMenu.classList.toggle('active');
+                menuToggle.setAttribute('aria-expanded', String(isOpen));
+            });
+
+            navMenu.querySelectorAll('a').forEach((link) => {
+                link.addEventListener('click', () => {
+                    navMenu.classList.remove('active');
+                    menuToggle.setAttribute('aria-expanded', 'false');
+                });
             });
         }
-
         if (themeSuggestionForm && themeSuggestionInput && themeSuggestionStatus) {
-            themeSuggestionForm.addEventListener("submit", async (event) => {
+            themeSuggestionForm.addEventListener('submit', async (event) => {
                 event.preventDefault();
-
                 const theme = themeSuggestionInput.value.trim();
 
                 if (!theme) {
-                    themeSuggestionStatus.textContent = "Enter a theme before submitting.";
+                    themeSuggestionStatus.textContent = 'Enter a theme before submitting.';
                     return;
                 }
 
-                themeSuggestionStatus.textContent = "Submitting your theme...";
+                themeSuggestionStatus.textContent = 'Submitting your theme...';
 
                 try {
                     await appendThemeSuggestion(theme);
-                    themeSuggestionStatus.textContent = "The theme has been added to our list.";
+                    themeSuggestionStatus.textContent = 'The theme has been added to our list.';
                     themeSuggestionForm.reset();
                 } catch (error) {
-                    themeSuggestionStatus.textContent = error.message || "Unable to submit your theme right now.";
+                    themeSuggestionStatus.textContent = error.message || 'Unable to submit your theme right now.';
                 }
             });
         }
-
     </script>
-
-</body></html>
+</body>
+</html>
