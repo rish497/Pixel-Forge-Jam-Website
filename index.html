@@ -232,7 +232,14 @@
         #sponsors { text-align: center; }
         #sponsors .section-head { justify-content: center; }
         #sponsors .section-head p { display: none; }
-        .sponsor-tier { margin-bottom: 2.5rem; }
+        .sponsor-tier {
+            margin-bottom: 2.5rem;
+            min-height: 260px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+        }
         .sponsor-prospectus {
             margin-top: 2rem;
             padding: 1.5rem 1.25rem;
@@ -272,9 +279,9 @@
         }
         .sponsor-logos {
             display: flex;
-            justify-content: center;
-            gap: 3rem;
-            flex-wrap: wrap;
+            flex-direction: column;  
+            align-items: center;      
+            gap: 2rem;               
             margin-top: 1rem;
         }
         .sponsor-logos img { border-radius: 8px; }
@@ -445,7 +452,7 @@
                         <p>Head to the Discord server for announcements, team coordination, and updates once the theme drops.</p>
                         <div class="theme-note">Interpret the prompt however you like. Strong entries usually take one idea and execute it clearly instead of trying to do everything.</div>
                         <div class="theme-actions">
-                            <a href="https://discord.gg/mM8PpjGyM6" class="hero-cta secondary" rel="noopener noreferrer">Get Updates on Discord</a>
+                            <a href="https://discord.gg/mM8PpjGyM6" class="hero-cta primary" rel="noopener noreferrer">Get Updates on Discord</a>
                             <a href="https://itch.io/jam/pixelforge" class="hero-cta primary" rel="noopener noreferrer">See the Jam Page</a>
                         </div>
                     </div>
@@ -488,13 +495,96 @@
                 </div>
                 <p class="prizes-intro">Winners should contact <a href="mailto:pixelforgejam@gmail.com">pixelforgejam@gmail.com</a> or join the <a href="https://discord.gg/mM8PpjGyM6" rel="noopener noreferrer">Discord</a> to claim prizes. Teams may receive one key per member, up to the number of available keys. Solo winners receive one key.</p>
                 <div class="prize-grid">
-                    <article class="card prize-card"><span class="prize-rank">First Place</span><h3>1 Winner</h3><ul><li>Up to 2 Aseprite keys at $20 each</li><li>Up to 4 .xyz domains free for 1 year at $15 each</li><li>1 PixelOver key at $30</li><li>1 Kronnect non-bundle asset license at $50</li><li>Featured on Pixel Forge websites, signed winner certificate, and Discord role</li></ul></article>
-                    <article class="card prize-card"><span class="prize-rank">Second Place</span><h3>1 Winner</h3><ul><li>Up to 2 Aseprite keys at $20 each</li><li>Up to 4 .xyz domains free for 1 year at $15 each</li><li>1 PixelOver key at $30</li><li>1 Kronnect non-bundle asset license at $50</li><li>Featured on Pixel Forge websites, signed winner certificate, and Discord role</li></ul></article>
-                    <article class="card prize-card"><span class="prize-rank">Third Place</span><h3>1 Winner</h3><ul><li>Up to 2 Aseprite keys at $20 each</li><li>Up to 2 .xyz domains free for 1 year at $15 each</li><li>1 PixelOver key at $30</li><li>1 Kronnect non-bundle asset license at $50</li><li>Featured on Pixel Forge websites, signed winner certificate, and Discord role</li></ul></article>
-                    <article class="card prize-card"><span class="prize-rank">Fourth Place</span><h3>1 Winner</h3><ul><li>1 PixelOver key at $30</li><li>1 Kronnect non-bundle asset license at $50</li><li>Featured on Pixel Forge websites, signed winner certificate, and Discord role</li></ul></article>
-                    <article class="card prize-card"><span class="prize-rank">Fifth Place</span><h3>1 Winner</h3><ul><li>1 PixelOver key at $30</li><li>1 Kronnect non-bundle asset license at $50</li><li>Featured on Pixel Forge websites, signed winner certificate, and Discord role</li></ul></article>
-                    <article class="card prize-card"><span class="prize-rank">Judges' Choice</span><h3>3 Winners</h3><ul><li>1 Aseprite key each at $20 value</li><li>Featured on Pixel Forge websites, signed winner certificate, and Discord role</li><li>Chosen by the organizers and not available to winners of the ranked categories above</li></ul></article>
-                    <article class="card prize-card"><span class="prize-rank">All Participants</span><h3>Open to everyone who submits</h3><ul><li>Signed participation certificate for anyone who wants one</li></ul></article>
+                    <article class="card prize-card">
+                        <span class="prize-rank">First Place</span>
+                        <h3>1 Winner</h3>
+                        <ul>
+                            <li>Code Crafters 2-year VIP membership ($720 value)</li>
+                            <li>Up to 3 CraftPix annual premium subscriptions ($48 value each)</li>
+                            <li>1 Kronnect non-bundle asset license ($50 value)</li>
+                            <li>Up to 2 Aseprite keys ($40 value)</li>
+                            <li>1 PixelOver key ($30 value)</li>
+                            <li>Up to 4 .xyz domains (free for 1 year, $15 value each)</li>
+                            <li>Up to 3 Pyxel Edit keys ($9 value each)</li>
+                            <li>Featured on our websites, signed winner certificate, and Discord role</li>
+                        </ul>
+                    </article>
+
+                    <article class="card prize-card">
+                        <span class="prize-rank">Second Place</span>
+                        <h3>1 Winner</h3>
+                        <ul>
+                            <li>Code Crafters 1-year VIP membership ($360 value)</li>
+                            <li>Up to 3 CraftPix annual premium subscriptions ($48 value each)</li>
+                            <li>1 Kronnect non-bundle asset license ($50 value)</li>
+                            <li>Up to 2 Aseprite keys ($40 value)</li>
+                            <li>1 PixelOver key ($30 value)</li>
+                            <li>Up to 4 .xyz domains (free for 1 year, $15 value each)</li>
+                            <li>Up to 3 Pyxel Edit keys ($9 value each)</li>
+                            <li>Featured on our websites, signed winner certificate, and Discord role</li>
+                        </ul>
+                    </article>
+
+                    <article class="card prize-card">
+                        <span class="prize-rank">Third Place</span>
+                        <h3>1 Winner</h3>
+                        <ul>
+                            <li>Code Crafters 6-month VIP membership ($180 value)</li>
+                            <li>Up to 3 CraftPix annual premium subscriptions ($48 value each)</li>
+                            <li>1 Kronnect non-bundle asset license ($50 value)</li>
+                            <li>Up to 2 Aseprite keys ($40 value)</li>
+                            <li>1 PixelOver key ($30 value)</li>
+                            <li>Up to 2 .xyz domains (free for 1 year, $15 value each)</li>
+                            <li>Up to 2 Pyxel Edit keys ($9 value each)</li>
+                            <li>Featured on our websites, signed winner certificate, and Discord role</li>
+                        </ul>
+                    </article>
+
+                    <article class="card prize-card">
+                        <span class="prize-rank">Fourth Place</span>
+                        <h3>1 Winner</h3>
+                        <ul>
+                            <li>Up to 3 CraftPix annual premium subscriptions ($48 value each)</li>
+                            <li>1 Kronnect non-bundle asset license ($50 value)</li>
+                            <li>1 PixelOver key ($30 value)</li>
+                            <li>1 Aseprite key ($20 value)</li>
+                            <li>1 Pyxel Edit key ($9 value)</li>
+                            <li>Featured on our websites, signed winner certificate, and Discord role</li>
+                        </ul>
+                    </article>
+
+                    <article class="card prize-card">
+                        <span class="prize-rank">Fifth Place</span>
+                        <h3>1 Winner</h3>
+                        <ul>
+                            <li>Up to 3 CraftPix annual premium subscriptions ($48 value each)</li>
+                            <li>1 Kronnect non-bundle asset license ($50 value)</li>
+                            <li>1 PixelOver key ($30 value)</li>
+                            <li>1 Pyxel Edit key ($9 value)</li>
+                            <li>Featured on our websites, signed winner certificate, and Discord role</li>
+                        </ul>
+                    </article>
+
+                    <article class="card prize-card">
+                        <span class="prize-rank">Judges' Favorites</span>
+                        <h3>3 Winners</h3>
+                        <ul>
+                            <li>Up to 3 CraftPix annual premium subscriptions ($48 value each)</li>
+                            <li>1 Aseprite key ($20 value)</li>
+                            <li>Featured on our websites, signed winner certificate, and Discord role</li>
+                            <li>Chosen by the Pixel Forge Jam organizers</li>
+                            <li>Winners of ranked categories are not eligible</li>
+                            <li>Top 15 from community vote will be judged</li>
+                        </ul>
+                    </article>
+
+                    <article class="card prize-card">
+                        <span class="prize-rank">All Participants</span>
+                        <h3>Open to everyone who submits</h3>
+                        <ul>
+                            <li>Signed participation certificate (on request)</li>
+                        </ul>
+                    </article>
                 </div>
             </section>
 
@@ -506,8 +596,10 @@
                 </div>
                 <div class="sponsor-tier gold">
                     <h3>Gold Sponsors</h3>
-                    <p>none</p>
-                    <div class="sponsor-logos xlarge"></div>
+                    <div class="sponsor-logos xlarge">
+                        <a href="https://craftpix.net/" rel="noopener noreferrer"><img src="images\Craftpix_logo.png" alt="Craftpix"></a>
+                        <a href="https://codecrafters.io/" rel="noopener noreferrer"><img src="images\Lockup-Horizontal-Dark.png" alt="CodeCrafters"></a>
+                    </div>
                 </div>
                 <div class="sponsor-tier silver">
                     <h3>Silver Sponsors</h3>
