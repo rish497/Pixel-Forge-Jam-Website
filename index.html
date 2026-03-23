@@ -50,13 +50,14 @@
 
         .site-shell { padding: 1rem clamp(0.9rem, 2vw, 1.4rem) 4rem; }
         .hero,
-        nav,
-        section,
-        footer {
-            width: 1180px;
+        section {
+            width: 100%;
+            max-width: 1180px;
             margin-inline: auto;
-            border: 1px solid var(--line);
-            box-shadow: var(--shadow);
+        }
+        nav, footer {
+            width: 100%;
+            margin-inline: auto;
         }
 
         .hero {
