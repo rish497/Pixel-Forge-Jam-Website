@@ -286,11 +286,11 @@
             margin-top: 1rem;
         }
         .sponsor-logos img { border-radius: 8px; }
-        .sponsor-logos.xlarge img { width: clamp(260px, 60vw, 800px); height: auto; object-fit: contain; }
-        .sponsor-logos.medium img { width: clamp(180px, 40vw, 500px); height: auto; object-fit: contain; }
+        .sponsor-logos.xlarge img { width: clamp(260px, 60vw, 700px); height: auto; object-fit: contain; }
+        .sponsor-logos.medium img { width: clamp(180px, 40vw, 450px); height: auto; object-fit: contain; }
         .sponsor-logos.medium .xyz { flex-basis: 100%; display: flex; justify-content: center; }
-        .sponsor-logos.medium .xyz img { height: 150px; width: auto; }
-        .sponsor-logos.small img { width: clamp(120px, 25vw, 300px); height: auto; object-fit: contain; }
+        .sponsor-logos.medium .xyz img { height: clamp(180px, 40vw, 150px);}
+        .sponsor-logos.small img { width: clamp(120px, 25vw, 350px); height: auto; object-fit: contain; }
         .sponsor-logos.small { display: flex; align-items: center; justify-content: center; gap: 2rem; }
         .sponsor-logos a { transition: transform 0.2s ease, opacity 0.2s ease; }
         .sponsor-logos a:hover { transform: translateY(-4px); opacity: 0.85; }
@@ -400,7 +400,7 @@
                 </div>
                 <div class="about-grid">
                     <div class="about-copy">
-                        <p>Pixel Forge Jam is a one-week game development hackathon where developers, artists, designers, and creators come together to build something original from scratch.</p>
+                        <p>Pixel Forge Jam is a one-week game jam where developers, artists, designers, and creators come together to build something original from scratch.</p>
                         <p>You have seven days to experiment, iterate, and turn an idea into a playable game. Whether you are a beginner or a veteran, the jam is designed around creativity, learning, and finishing work you are proud to share.</p>
                         <p>If you cannot join this round, that is fine. More Pixel Forge Jam events are planned for the future.</p>
                     </div>
@@ -540,6 +540,9 @@
                         <ul>
                             <li>Code Crafters 2-year VIP membership ($720 value)</li>
                             <li>Up to 3 CraftPix annual premium subscriptions ($48 value each)</li>
+                            <li>Complete Minifantasy bundle ($70 Value)</li>
+                            <li>Up to 2 12-month Easel+ subscriptions ($60 value Each)</li>
+                            <li>12 months Minifantasy Patreon Subscription ($50 Value)</li>
                             <li>1 Kronnect non-bundle asset license ($50 value)</li>
                             <li>Up to 2 Aseprite keys ($40 value)</li>
                             <li>1 PixelOver key ($30 value)</li>
@@ -554,6 +557,7 @@
                         <h3>1 Winner</h3>
                         <ul>
                             <li>Code Crafters 1-year VIP membership ($360 value)</li>
+                            <li>Up to 2 12-month Easel+ subscriptions ($60 value Each)</li>
                             <li>Up to 3 CraftPix annual premium subscriptions ($48 value each)</li>
                             <li>1 Kronnect non-bundle asset license ($50 value)</li>
                             <li>Up to 2 Aseprite keys ($40 value)</li>
@@ -569,6 +573,7 @@
                         <h3>1 Winner</h3>
                         <ul>
                             <li>Code Crafters 6-month VIP membership ($180 value)</li>
+                            <li>Up to 2 12-month Easel+ subscriptions ($60 value Each)</li>
                             <li>Up to 3 CraftPix annual premium subscriptions ($48 value each)</li>
                             <li>1 Kronnect non-bundle asset license ($50 value)</li>
                             <li>Up to 2 Aseprite keys ($40 value)</li>
@@ -583,6 +588,7 @@
                         <span class="prize-rank">Fourth Place</span>
                         <h3>1 Winner</h3>
                         <ul>
+                            <li>Up to 2 12-month Easel+ subscriptions ($60 value Each)</li>
                             <li>Up to 3 CraftPix annual premium subscriptions ($48 value each)</li>
                             <li>1 Kronnect non-bundle asset license ($50 value)</li>
                             <li>1 PixelOver key ($30 value)</li>
@@ -596,10 +602,10 @@
                         <span class="prize-rank">Fifth Place</span>
                         <h3>1 Winner</h3>
                         <ul>
+                            <li>Up to 2 12-month Easel+ subscriptions ($60 value Each)</li>
                             <li>Up to 3 CraftPix annual premium subscriptions ($48 value each)</li>
                             <li>1 Kronnect non-bundle asset license ($50 value)</li>
                             <li>1 PixelOver key ($30 value)</li>
-                            <li>1 Pyxel Edit key ($9 value)</li>
                             <li>Featured on our websites, signed winner certificate, and Discord role</li>
                         </ul>
                     </article>
@@ -621,6 +627,10 @@
                         <span class="prize-rank">All Participants</span>
                         <h3>Open to everyone who submits</h3>
                         <ul>
+                            <li>Interview Cake course access (Join Discord)</li>
+                            <li>Vue School License (Join Discord)</li>
+                            <li>Wolfram|One for one month (Join Discord)</li>
+                            <!--<li>Curated bundle with a selection of 9 Minifantasy asset packs ($39 Value)</li>-->
                             <li>Signed participation certificate (on request)</li>
                         </ul>
                     </article>
@@ -638,6 +648,8 @@
                     <div class="sponsor-logos xlarge">
                         <a href="https://craftpix.net/" rel="noopener noreferrer"><img src="images\Craftpix_logo.png" alt="Craftpix"></a>
                         <a href="https://codecrafters.io/" rel="noopener noreferrer"><img src="images\Lockup-Horizontal-Dark.png" alt="CodeCrafters"></a>
+                        <a href="https://www.wolfram.com/" rel="noopener noreferrer"><img src="images\wolfram-corporate-logo-horz-lg.png" alt="Wolfram"></a>
+                        <a href="https://easel.games/" rel="noopener noreferrer"><img src="images\easelName.png" alt="Easel"></a>
                     </div>
                 </div>
                 <div class="sponsor-tier silver">
@@ -648,12 +660,15 @@
                         <a href="https://gen.xyz/" class="xyz" rel="noopener noreferrer"><img src="images/xyz-logo-color.png" alt="gen.xyz"></a>
                         <a href="https://pixelover.io/" rel="noopener noreferrer"><img src="images/title_final.png" alt="PixelOver"></a>
                         <a href="https://pyxeledit.com/" rel="noopener noreferrer"><img src="images/PyxelLogo9 (1).png" alt="Pyxel Edit"></a>
+                        <a href="https://www.minifantasy.net/" rel="noopener noreferrer"><img src="images\NewBannerWhite.png" alt="Minifantasy"></a>
                     </div>
                 </div>
                 <div class="sponsor-tier bronze">
                     <h3>Bronze Sponsors</h3>
-                    <p>none</p>
-                    <div class="sponsor-logos small"></div>
+                    <div class="sponsor-logos small">
+                        <a href="https://www.interviewcake.com/" rel="noopener noreferrer"><img src="images\cake_logo_blue_gray.png" alt="Interview Cake"></a>
+                        <a href="https://vueschool.io/" rel="noopener noreferrer"><img src="images\vueschool-logo.png" alt="Vue School"></a>
+                    </div>
                 </div>
                 <div class="sponsor-prospectus">
                     <h3>Interested in Sponsoring? Check out our:</h3>
