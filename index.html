@@ -863,91 +863,6 @@
             border-top: 1px solid var(--line);
         }
 
-        .sponsor-groups {
-            display: grid;
-            gap: var(--space-5);
-        }
-
-        .sponsor-row {
-            display: grid;
-            grid-template-columns: minmax(0, 15rem) minmax(0, 1fr);
-            gap: var(--space-5);
-            padding-top: var(--space-4);
-            border-top: 1px solid var(--line);
-            align-items: start;
-        }
-
-        .logo-grid {
-            display: grid;
-            grid-template-columns: repeat(3, minmax(0, 1fr));
-            gap: var(--space-4);
-            align-items: center;
-        }
-
-        .logo-grid.compact {
-            grid-template-columns: repeat(2, minmax(0, 1fr));
-        }
-
-        .logo-grid a {
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            min-height: 7.25rem;
-            padding: 1rem 1.15rem;
-            border-radius: var(--radius);
-            background: rgba(255, 255, 255, 0.68);
-            transition: transform 180ms ease, background 180ms ease, box-shadow 180ms ease;
-        }
-
-        .logo-grid a:hover,
-        .logo-grid a:focus-visible {
-            transform: translateY(-1px);
-            background: rgba(255, 255, 255, 0.95);
-            box-shadow: 0 10px 18px rgba(18, 26, 44, 0.07);
-        }
-
-        .logo-grid a.logo-dark {
-            background: #13244a;
-        }
-
-        .logo-grid a.logo-dark:hover,
-        .logo-grid a.logo-dark:focus-visible {
-            background: #19305f;
-        }
-
-        .logo-grid img {
-            max-height: 5rem;
-            width: 100%;
-            object-fit: contain;
-        }
-
-        .logo-grid--gold a {
-            min-height: 10.5rem;
-            padding: 1.35rem 1.6rem;
-        }
-
-        .logo-grid--gold img {
-            max-height: 7.25rem;
-        }
-
-        .logo-grid--silver a {
-            min-height: 7.7rem;
-            padding: 1rem 1.15rem;
-        }
-
-        .logo-grid--silver img {
-            max-height: 5rem;
-        }
-
-        .logo-grid--bronze a {
-            min-height: 5.1rem;
-            padding: 0.7rem 0.85rem;
-        }
-
-        .logo-grid--bronze img {
-            max-height: 3.1rem;
-        }
-
         .sponsor-callout {
             grid-template-columns: minmax(0, 1fr) auto;
             align-items: center;
@@ -1067,6 +982,63 @@
             opacity: 1;
             transform: translateY(0);
         }
+        /* Base */
+            .sponsor-logos {
+                display: flex;
+                flex-wrap: wrap;
+                justify-content: center;
+                align-items: center;
+                flex-direction: column;
+                gap: 2rem;
+            }
+
+            .sponsor-logos img {
+                border-radius: 8px;
+                object-fit: contain;
+            }
+
+            /* Sizes */
+            .sponsor-logos.xlarge img {
+                width: clamp(260px, 60vw, 700px);
+                height: auto;
+            }
+
+            .sponsor-logos.medium img {
+                
+                width: clamp(180px, 40vw, 400px);
+                height: auto;
+            }
+
+            /* Special center row */
+            .sponsor-logos.medium .xyz {
+                flex-basis: 100%;
+                display: flex;
+                justify-content: center;
+            }
+
+            .sponsor-logos.medium .xyz img {
+                height: clamp(120px, 20vw, 180px);
+            }
+
+            /* Small sponsors */
+            .sponsor-logos.small img {
+                width: clamp(120px, 25vw,300px);
+                flex-direction: column;
+                height: auto;
+            }
+
+            /* Hover */
+            .sponsor-logos a {
+                transition: transform 0.2s ease, opacity 0.2s ease;
+            }
+
+            .sponsor-logos a:hover {
+                transform: translateY(-4px);
+                opacity: 0.85;
+            }
+            
+
+            
 
         @media (prefers-reduced-motion: reduce) {
             html {
@@ -1199,7 +1171,6 @@
             .prize-secondary,
             .rights-list,
             .fact-grid,
-            .logo-grid,
             .logo-grid.compact {
                 grid-template-columns: 1fr;
             }
@@ -1224,12 +1195,8 @@
                 margin-top: var(--space-3);
                 grid-template-columns: 1fr;
             }
-
-            .sponsor-row {
-                grid-template-columns: 1fr;
-                gap: var(--space-3);
-            }
         }
+
     </style>
 </head>
 <body>
@@ -1664,45 +1631,70 @@
                         <p>Tools and support for builders.</p>
                     </div>
 
-                    <div class="sponsor-groups">
-                        <div class="sponsor-row reveal">
-                            <div>
-                                <h3>Gold sponsors</h3>
-                            </div>
-                            <div class="logo-grid logo-grid--gold">
-                                <a href="https://craftpix.net/" rel="noopener noreferrer"><img src="images/Craftpix_logo.png" alt="Craftpix"></a>
-                                <a href="https://codecrafters.io/" rel="noopener noreferrer"><img src="images/Lockup-Horizontal-Dark.png" alt="CodeCrafters"></a>
-                                <a href="https://www.wolfram.com/" rel="noopener noreferrer"><img src="images/wolfram-corporate-logo-horz-lg.png" alt="Wolfram"></a>
-                                <a href="https://easel.games/" rel="noopener noreferrer"><img src="images/easelName.png" alt="Easel"></a>
-                                <a href="https://www.minifantasy.net/" class="logo-dark" rel="noopener noreferrer"><img src="images/NewBannerWhite.png" alt="Minifantasy"></a>
-                            </div>
-                        </div>
-
-                        <div class="sponsor-row reveal">
-                            <div>
-                                <h3>Silver sponsors</h3>
-                            </div>
-                            <div class="logo-grid logo-grid--silver">
-                                <a href="https://www.aseprite.org/" rel="noopener noreferrer"><img src="images/Aseprite-logo.png" alt="Aseprite"></a>
-                                <a href="http://kronnect.com" rel="noopener noreferrer"><img src="images/kronnect.png" alt="Kronnect"></a>
-                                <a href="https://gen.xyz/" rel="noopener noreferrer"><img src="images/xyz-logo-color.png" alt="gen.xyz"></a>
-                                <a href="https://pixelover.io/" rel="noopener noreferrer"><img src="images/title_final.png" alt="PixelOver"></a>
-                                <a href="https://pyxeledit.com/" rel="noopener noreferrer"><img src="images/PyxelLogo9 (1).png" alt="Pyxel Edit"></a>
-                                <a href="https://weloveindies.com/en/welcome/jammers" rel="noopener noreferrer"><img src="images/dyn-wli-logo-dark.png" alt="WeLoveIndies"></a>
-                            </div>
-                        </div>
-
-                        <div class="sponsor-row reveal">
-                            <div>
-                                <h3>Bronze sponsors</h3>
-                            </div>
-                            <div class="logo-grid compact logo-grid--bronze">
-                                <a href="https://www.interviewcake.com/" rel="noopener noreferrer"><img src="images/cake_logo_blue_gray.png" alt="Interview Cake"></a>
-                                <a href="https://vueschool.io/" rel="noopener noreferrer"><img src="images/vueschool-logo.png" alt="Vue School"></a>
-                            </div>
+                    <!-- GOLD -->
+                    <div class="reveal">
+                        <h3 style="text-align:center; margin-bottom: 1rem;">Gold sponsors</h3>
+                        <div class="sponsor-logos xlarge">
+                            <a href="https://craftpix.net/" target="_blank">
+                                <img src="images/Craftpix_logo.png" alt="Craftpix">
+                            </a>
+                            <a href="https://codecrafters.io/" target="_blank">
+                                <img src="images/Lockup-Horizontal-Dark.png" alt="CodeCrafters">
+                            </a>
+                            <a href="https://www.wolfram.com/" target="_blank">
+                                <img src="images/wolfram-corporate-logo-horz-lg.png" alt="Wolfram">
+                            </a>
+                            <a href="https://easel.games/" target="_blank">
+                                <img src="images/easelName.png" alt="Easel">
+                            </a>
+                            <a href="https://www.minifantasy.net/" target="_blank">
+                                <img src="images/NewBannerWhite.png" alt="Minifantasy">
+                            </a>
                         </div>
                     </div>
 
+                    <!-- SILVER -->
+                    <div class="reveal" style="margin-top: 3rem;">
+                        <h3 style="text-align:center; margin-bottom: 1rem;">Silver sponsors</h3>
+                        <div class="sponsor-logos medium">
+                            <a href="https://www.aseprite.org/" target="_blank">
+                                <img src="images/Aseprite-logo.png" alt="Aseprite">
+                            </a>
+                            <a href="http://kronnect.com" target="_blank">
+                                <img src="images/kronnect.png" alt="Kronnect">
+                            </a>
+
+                            <!-- centered special -->
+                            <a href="https://gen.xyz/" class="xyz" target="_blank">
+                                <img src="images/xyz-logo-color.png" alt="gen.xyz">
+                            </a>
+
+                            <a href="https://pixelover.io/" target="_blank">
+                                <img src="images/title_final.png" alt="PixelOver">
+                            </a>
+                            <a href="https://pyxeledit.com/" target="_blank">
+                                <img src="images/PyxelLogo9 (1).png" alt="Pyxel Edit">
+                            </a>
+                            <a href="https://weloveindies.com/en/welcome/jammers" target="_blank">
+                                <img src="images/dyn-wli-logo-dark.png" alt="WeLoveIndies">
+                            </a>
+                        </div>
+                    </div>
+
+                    <!-- BRONZE -->
+                    <div class="reveal" style="margin-top: 3rem;">
+                        <h3 style="text-align:center; margin-bottom: 1rem;">Bronze sponsors</h3>
+                        <div class="sponsor-logos small">
+                            <a href="https://www.interviewcake.com/" target="_blank">
+                                <img src="images/cake_logo_blue_gray.png" alt="Interview Cake">
+                            </a>
+                            <a href="https://vueschool.io/" target="_blank">
+                                <img src="images/vueschool-logo.png" alt="Vue School">
+                            </a>
+                        </div>
+                    </div>
+
+                    <!-- CALLOUT (unchanged) -->
                     <div class="sponsor-callout reveal">
                         <div>
                             <p class="eyebrow">Partner With Pixel Forge</p>
@@ -1710,57 +1702,16 @@
                             <p>Read the prospectus or email the team.</p>
                         </div>
                         <div class="callout-actions">
-                            <a href="contents/Pixel Forge Jam 2026 Sponsorship Prospectus.pdf" download="Pixel Forge Jam 2026 Sponsorship Prospectus.pdf" class="button primary">Sponsorship Prospectus</a>
-                            <a href="mailto:pixelforgejam@gmail.com" class="button secondary">Email the Team</a>
+                            <a href="contents/Pixel Forge Jam 2026 Sponsorship Prospectus.pdf" download class="button primary">
+                                Sponsorship Prospectus
+                            </a>
+                            <a href="mailto:pixelforgejam@gmail.com" class="button secondary">
+                                Email the Team
+                            </a>
                         </div>
                     </div>
                 </div>
             </section>
-
-            <section class="section" id="faq">
-                <div class="container faq-grid">
-                    <div class="faq-intro reveal">
-                        <h2 class="title-art">
-                            <span class="sr-only">FAQ</span>
-                            <img src="images/FAQ-3-20-2026.png" alt="">
-                        </h2>
-                    </div>
-
-                    <div class="faq-list">
-                        <details class="faq-item reveal">
-                            <summary class="faq-question">What is the theme?</summary>
-                            <div class="faq-answer">
-                                <p>The theme will be announced when the jam begins.</p>
-                            </div>
-                        </details>
-                        <details class="faq-item reveal">
-                            <summary class="faq-question">Does my game have to be in a specific format?</summary>
-                            <div class="faq-answer">
-                                <p>No. Browser-based games are strongly recommended because they are easier for more people to play, but a Windows version is also acceptable.</p>
-                            </div>
-                        </details>
-                        <details class="faq-item reveal">
-                            <summary class="faq-question">What assets can I use?</summary>
-                            <div class="faq-answer">
-                                <p>You can use any art, audio, code, or tools that you have the legal right to use. The vast majority of new work should still be created during the jam.</p>
-                            </div>
-                        </details>
-                        <details class="faq-item reveal">
-                            <summary class="faq-question">Can I submit a game that I already started?</summary>
-                            <div class="faq-answer">
-                                <p>No. Entries are expected to be made during the jam period.</p>
-                            </div>
-                        </details>
-                        <details class="faq-item reveal">
-                            <summary class="faq-question">Is there a Discord I can join?</summary>
-                            <div class="faq-answer">
-                                <p>Yes. <a href="https://discord.gg/mM8PpjGyM6" rel="noopener noreferrer">Join the Pixel Forge Discord here</a>.</p>
-                            </div>
-                        </details>
-                    </div>
-                </div>
-            </section>
-
             <section class="section soft" id="legal">
                 <div class="container">
                     <div class="section-heading reveal">
