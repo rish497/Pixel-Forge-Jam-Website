@@ -277,13 +277,13 @@
         }
 
         .hero-copy h1 {
-            max-width: 10ch;
             font-size: 4.8rem;
             margin-bottom: var(--space-4);
         }
-
+        .hero-copy {
+        text-align: center;
+        }
         .hero-lead {
-            max-width: 36rem;
             font-size: 1.1rem;
             color: var(--hero-muted);
             margin-bottom: var(--space-5);
@@ -297,7 +297,11 @@
             flex-wrap: wrap;
             gap: 0.9rem;
         }
-
+        .hero-actions {
+            display: flex;
+            justify-content: center; /* centers buttons */
+            gap: 0.9rem;
+        }
         .button {
             display: inline-flex;
             align-items: center;
@@ -353,29 +357,6 @@
             background: rgba(47, 107, 255, 0.06);
         }
 
-        .hero-facts {
-            display: grid;
-            grid-template-columns: repeat(4, minmax(0, 1fr));
-            gap: var(--space-3);
-            margin-top: var(--space-6);
-            padding-top: var(--space-5);
-            border-top: 1px solid rgba(255, 255, 255, 0.12);
-        }
-
-        .hero-facts div {
-            display: grid;
-            gap: 0.3rem;
-        }
-
-        .hero-facts dt {
-            color: rgba(255, 255, 255, 0.58);
-            font-size: 0.88rem;
-        }
-
-        .hero-facts dd {
-            font-size: 1.1rem;
-            font-weight: 700;
-        }
 
         .hero-visual {
             position: relative;
@@ -645,8 +626,6 @@
         .theme-media img {
             width: 100%;
             aspect-ratio: 4 / 3;
-            object-fit: contain;
-            padding: clamp(1.5rem, 4vw, 2.75rem);
             transition: transform 600ms ease;
         }
 
@@ -847,13 +826,13 @@
         .tier-label {
             display: inline-flex;
             align-items: center;
-            min-height: 2rem;
+            min-height: 3rem;
             margin-bottom: var(--space-3);
             padding: 0.3rem 0.7rem;
             border-radius: 999px;
             background: var(--accent-soft);
             color: var(--accent-strong);
-            font-size: 0.86rem;
+            font-size: 0.9.2rem;
             font-weight: 700;
         }
 
@@ -1057,7 +1036,7 @@
 
         .site-footer {
             padding: var(--space-6) 0 var(--space-7);
-            background: linear-gradient(180deg, rgba(255, 255, 255, 0) 0%, rgba(223, 232, 255, 0.56) 100%);
+            background: linear-gradient(180deg, rgb(176, 204, 251) 0%, rgba(226, 234, 255, 0.56) 100%);
         }
 
         .footer-grid {
@@ -1261,7 +1240,7 @@
                     <img src="images/New Piskel-2.png (9).png" alt="">
                     <span class="brand-mark">
                         <strong>Pixel Forge Jam</strong>
-                        <span>Online game jam, April 18 to 25, 2026</span>
+                        
                     </span>
                 </a>
                 <button class="menu-toggle" id="menuToggle" aria-expanded="false" aria-controls="navMenu">Menu</button>
@@ -1282,7 +1261,6 @@
 
         <main>
             <section class="hero-band" aria-labelledby="hero-title">
-                <div class="container hero-grid">
                     <div class="hero-copy reveal">
                         <p class="eyebrow">April 18 to 25, 2026</p>
                         <h1 id="hero-title">Pixel Forge Jam</h1>
@@ -1291,40 +1269,8 @@
                             <a href="https://itch.io/jam/pixelforge" class="button primary" rel="noopener noreferrer">Join the Jam</a>
                             <a href="https://discord.gg/mM8PpjGyM6" class="button secondary" rel="noopener noreferrer">Join Discord</a>
                         </div>
-                        <dl class="hero-facts">
-                            <div>
-                                <dt>Format</dt>
-                                <dd>Online</dd>
-                            </div>
-                            <div>
-                                <dt>Duration</dt>
-                                <dd>7 days</dd>
-                            </div>
-                            <div>
-                                <dt>Teams</dt>
-                                <dd>Up to 4</dd>
-                            </div>
-                            <div>
-                                <dt>Outcome</dt>
-                                <dd>Playable work</dd>
-                            </div>
-                        </dl>
+                        
                     </div>
-                    <div class="hero-visual reveal">
-                        <div class="hero-photo-wrap">
-                            <img
-                                class="hero-photo"
-                                src="images/header.png"
-                                alt="Pixel Forge Jam logo"
-                                loading="eager"
-                                decoding="async">
-                        </div>
-                        <div class="hero-badge">
-                            <img src="images/header.png" alt="Pixel Forge Jam logo">
-                            <p>New work. Fast feedback.</p>
-                        </div>
-                    </div>
-                </div>
             </section>
 
             <section class="support-strip" aria-label="Selected sponsors">
@@ -1368,22 +1314,26 @@
                                 <img src="images/About-3-20-2026.png" alt="">
                             </h2>
                         </div>
-                        <p>Make something new and finish it.</p>
                     </div>
 
                     <div class="editorial-grid">
                         <div class="editorial-copy reveal">
-                            <p>Build solo or with a team in seven days.</p>
-                            <p>Beginners and veterans are welcome.</p>
-
                             <dl class="fact-grid" aria-label="Jam snapshot">
+                                <div>
+                                    <dt>Format</dt>
+                                    <dd>Online</dd>
+                                </div>
+                                <div>
+                                    <dt>Duration</dt>
+                                    <dd>7 Days</dd>
+                                </div>
                                 <div>
                                     <dt>Submission platform</dt>
                                     <dd>itch.io</dd>
                                 </div>
                                 <div>
-                                    <dt>Collaboration</dt>
-                                    <dd>Solo or teams</dd>
+                                    <dt>Teams</dt>
+                                    <dd>Upto 4 Members</dd>
                                 </div>
                                 <div>
                                     <dt>Community</dt>
@@ -1399,7 +1349,7 @@
                         <div class="editorial-media reveal">
                             <figure>
                                 <img
-                                    src="images/header.png"
+                                    src="images\Untitled design (21).png"
                                     alt="Pixel Forge Jam logo"
                                     loading="lazy"
                                     decoding="async">
@@ -1431,7 +1381,6 @@
                             <span class="sr-only">2026 Timeline</span>
                             <img src="images/2026-Timeline-3-20-2026.png" alt="">
                         </h2>
-                        <p>Start fast. Leave time to polish.</p>
                     </div>
 
                     <div class="timeline-list">
@@ -1478,19 +1427,19 @@
                                 <img src="images/Theme-3-17-2026 (3).png" alt="">
                             </h2>
                         </div>
-                        <p>Pick your tools and scope early.</p>
                     </div>
 
                     <div class="theme-grid">
                         <div class="theme-copy reveal">
-                            <p>The theme drops at kickoff. Discord handles updates and teamups.</p>
-                            <p class="theme-note-text">Voting is now open.</p>
+                            <p>The theme will be revealed at the start of the Game Jam</p>
+                            <p class="theme-note-text">Voting for the theme is now open.</p>
                             <div class="theme-actions">
                                 <a href="https://forms.gle/2ExwrsoYFQmfMT2x8" class="button primary" rel="noopener noreferrer">Vote on the Theme</a>
                                 <a href="https://discord.gg/mM8PpjGyM6" class="button ghost" rel="noopener noreferrer">Get Updates on Discord</a>
                                 <a href="https://itch.io/jam/pixelforge" class="button ghost" rel="noopener noreferrer">See the Jam Page</a>
                             </div>
-                            <ol class="process-list">
+                        </div>
+                        <ol class="process-list">
                                 <li>
                                     <strong>01</strong>
                                     <div>
@@ -1513,17 +1462,6 @@
                                     </div>
                                 </li>
                             </ol>
-                        </div>
-
-                        <div class="theme-media reveal">
-                            <figure>
-                                <img
-                                    src="images/New Piskel-2.png (9).png"
-                                    alt="Pixel Forge hammer logo"
-                                    loading="lazy"
-                                    decoding="async">
-                            </figure>
-                        </div>
                     </div>
                 </div>
             </section>
@@ -1537,7 +1475,6 @@
                                 <img src="images/Rules-3-17-2026 (1).png" alt="">
                             </h2>
                         </div>
-                        <p>Fair, simple, and easy to follow.</p>
                     </div>
 
                     <ol class="rule-list">
@@ -1596,13 +1533,13 @@
                                 <img src="images/Prizes-3-17-2026.png" alt="">
                             </h2>
                         </div>
-                        <p>Claim prizes by email or in <a href="https://discord.gg/mM8PpjGyM6" rel="noopener noreferrer">Discord</a>.</p>
+                         <p>Claim prizes by emailing to <a href="mailto:pixelforgejam@gmail.com">pixelforgejam@gmail.com</a> or in <a href="https://discord.gg/mM8PpjGyM6" rel="noopener noreferrer">Discord</a>.</p>
                     </div>
 
                     <div class="prize-highlights">
                         <article class="prize-card featured reveal">
                             <p class="tier-label">First Place</p>
-                            <h3>1 winner</h3>
+                            <h4>1 winner</h4>
                             <ul>
                                 <li>Code Crafters 2-year VIP membership ($720 value)</li>
                                 <li>$100 voucher for WeLoveIndies</li>
@@ -1621,7 +1558,7 @@
 
                         <article class="prize-card reveal">
                             <p class="tier-label">Second Place</p>
-                            <h3>1 winner</h3>
+                            <h4>1 winner</h4>
                             <ul>
                                 <li>Code Crafters 1-year VIP membership ($360 value)</li>
                                 <li>$100 voucher for WeLoveIndies</li>
@@ -1638,7 +1575,7 @@
 
                         <article class="prize-card reveal">
                             <p class="tier-label">Third Place</p>
-                            <h3>1 winner</h3>
+                            <h4>1 winner</h4>
                             <ul>
                                 <li>Code Crafters 6-month VIP membership ($180 value)</li>
                                 <li>$75 voucher for WeLoveIndies</li>
@@ -1656,10 +1593,10 @@
 
                     <div class="prize-secondary">
                         <article class="award-block reveal">
-                            <h3>More placement awards</h3>
                             <div class="award-stack">
                                 <section>
                                     <p class="tier-label">Fourth Place</p>
+                                    <h4>1 winner</h4>
                                     <ul>
                                         <li>Up to 2 12-month Easel+ subscriptions ($60 value each)</li>
                                         <li>Up to 3 CraftPix annual premium subscriptions ($48 value each)</li>
@@ -1672,6 +1609,7 @@
                                 </section>
                                 <section>
                                     <p class="tier-label">Fifth Place</p>
+                                    <h4>1 winner</h4>
                                     <ul>
                                         <li>Up to 2 12-month Easel+ subscriptions ($60 value each)</li>
                                         <li>Up to 3 CraftPix annual premium subscriptions ($48 value each)</li>
@@ -1684,10 +1622,10 @@
                         </article>
 
                         <article class="award-block reveal">
-                            <h3>Judge and community awards</h3>
                             <div class="award-stack">
                                 <section>
                                     <p class="tier-label">Judges' Favorites</p>
+                                    <h4>3 winners</h4>
                                     <ul>
                                         <li>Up to 3 CraftPix annual premium subscriptions ($48 value each)</li>
                                         <li>1 Aseprite key ($20 value)</li>
@@ -1730,7 +1668,6 @@
                         <div class="sponsor-row reveal">
                             <div>
                                 <h3>Gold sponsors</h3>
-                                <p>Main prize partners.</p>
                             </div>
                             <div class="logo-grid logo-grid--gold">
                                 <a href="https://craftpix.net/" rel="noopener noreferrer"><img src="images/Craftpix_logo.png" alt="Craftpix"></a>
@@ -1744,7 +1681,6 @@
                         <div class="sponsor-row reveal">
                             <div>
                                 <h3>Silver sponsors</h3>
-                                <p>Tools and services for winners.</p>
                             </div>
                             <div class="logo-grid logo-grid--silver">
                                 <a href="https://www.aseprite.org/" rel="noopener noreferrer"><img src="images/Aseprite-logo.png" alt="Aseprite"></a>
@@ -1759,7 +1695,6 @@
                         <div class="sponsor-row reveal">
                             <div>
                                 <h3>Bronze sponsors</h3>
-                                <p>Extra learning resources.</p>
                             </div>
                             <div class="logo-grid compact logo-grid--bronze">
                                 <a href="https://www.interviewcake.com/" rel="noopener noreferrer"><img src="images/cake_logo_blue_gray.png" alt="Interview Cake"></a>
@@ -1789,7 +1724,6 @@
                             <span class="sr-only">FAQ</span>
                             <img src="images/FAQ-3-20-2026.png" alt="">
                         </h2>
-                        <p>Format, assets, and Discord.</p>
                     </div>
 
                     <div class="faq-list">
@@ -1836,7 +1770,6 @@
                                 <img src="images/Legal-3-20-2026_2.png" alt="">
                             </h2>
                         </div>
-                        <p>You own your work.</p>
                     </div>
 
                     <div class="rights-list">
@@ -1857,8 +1790,14 @@
                         </article>
                     </div>
 
-                    <div class="cta-panel reveal">
-                        <div>
+                    
+                </div>
+            </section>
+        </main>
+
+        <footer class="site-footer">
+            <div class="container footer-grid">
+                <div>
                             <h2>Make something real this week.</h2>
                             <p>Build it. Finish it. Ship it.</p>
                         </div>
@@ -1866,13 +1805,6 @@
                             <a href="https://itch.io/jam/pixelforge" class="button primary" rel="noopener noreferrer">Register on itch.io</a>
                             <a href="https://discord.gg/mM8PpjGyM6" class="button ghost" rel="noopener noreferrer">Join the Community</a>
                         </div>
-                    </div>
-                </div>
-            </section>
-        </main>
-
-        <footer class="site-footer">
-            <div class="container footer-grid">
                 <div>
                     <p class="footer-brand">Pixel Forge Jam 2026</p>
                     <p class="footer-copy">Questions? Email <a href="mailto:pixelforgejam@gmail.com">pixelforgejam@gmail.com</a> or ask in Discord.</p>
