@@ -1305,7 +1305,114 @@
             max-width: none;   /* removes restriction */
             width: 200%;       /* increase as needed */
         }
-        
+        @keyframes firework {
+        0% { transform: translate(var(--x), var(--initialY)); width: var(--initialSize); opacity: 0; }
+        50% { width: 0.5vmin; opacity: 1; }
+        100% { width: var(--finalSize); opacity: 0; }
+        }
+        #winners .firework,
+        #winners .firework::before,
+        #winners .firework::after {
+        --initialSize: 0.5vmin;
+        --finalSize: 45vmin;
+        --particleSize: 0.2vmin;
+        --y: -30vmin;
+        --x: -50%;
+        --initialY: 60vmin;
+        content: "";
+        animation: firework 2s infinite;
+        position: absolute;
+        top: calc(20% + 60% * var(--y));
+        left: calc(10% + 80% * var(--x));
+
+        transform: translate(-50%, -50%);
+        width: var(--initialSize);
+        aspect-ratio: 1;
+        background:
+            radial-gradient(circle, #2f6bff 0.2vmin, #0000 0) 50% 00%,
+            radial-gradient(circle, #5c89ff 0.3vmin, #0000 0) 00% 50%,
+            radial-gradient(circle, #1f4db0 0.5vmin, #0000 0) 50% 99%,
+            radial-gradient(circle, #2f6bff 0.2vmin, #0000 0) 99% 50%,
+            radial-gradient(circle, #5c89ff 0.3vmin, #0000 0) 80% 90%,
+            radial-gradient(circle, #1f4db0 0.5vmin, #0000 0) 95% 90%,
+            radial-gradient(circle, #2f6bff 0.5vmin, #0000 0) 10% 60%,
+            radial-gradient(circle, #5c89ff 0.2vmin, #0000 0) 31% 80%,
+            radial-gradient(circle, #1f4db0 0.3vmin, #0000 0) 80% 10%,
+            radial-gradient(circle, #2f6bff 0.2vmin, #0000 0) 90% 23%,
+            radial-gradient(circle, #5c89ff 0.3vmin, #0000 0) 45% 20%,
+            radial-gradient(circle, #1f4db0 0.5vmin, #0000 0) 13% 24%;
+            ;
+        background-size: var(--initialSize) var(--initialSize);
+        background-repeat: no-repeat;
+        }
+        #winners .firework {
+        z-index: 0;
+        pointer-events: none;
+        }
+        #winners .container {
+        position: relative;
+        z-index: 1;
+        }
+        .firework::before {
+        --x: -50%;
+        --y: -50%;
+        --initialY: -50%;
+        /*   transform: translate(-20vmin, -2vmin) rotate(40deg) scale(1.3) rotateY(40deg); */
+        transform: translate(-50%, -50%) rotate(40deg) scale(1.3) rotateY(40deg);
+        /*   animation: fireworkPseudo 2s infinite; */
+        }
+
+        #winners .firework::after {
+        --x: -50%;
+        --y: -50%;
+        --initialY: -50%;
+        /*   transform: translate(44vmin, -50%) rotate(170deg) scale(1.15) rotateY(-30deg); */
+        transform: translate(-50%, -50%) rotate(170deg) scale(1.15) rotateY(-30deg);
+        /*   animation: fireworkPseudo 2s infinite; */
+        }
+
+        #winners .firework:nth-child(2) {
+        --x: 30vmin;
+        }
+
+        .firework:nth-child(2),
+        .firework:nth-child(2)::before,
+        .firework:nth-child(2)::after {
+        --color1: pink;
+        --color2: violet;
+        --color3: fuchsia;
+        --color4: orchid;
+        --color5: plum;
+        --color6: lavender;  
+        --finalSize: 40vmin;
+        left: 30%;
+        top: 60%;
+        animation-delay: -0.25s;
+        }
+
+        .firework:nth-child(3) {
+        --x: -30vmin;
+        --y: -50vmin;
+        }
+
+        .firework:nth-child(3),
+        .firework:nth-child(3)::before,
+        .firework:nth-child(3)::after {
+        --color1: cyan;
+        --color2: lightcyan;
+        --color3: lightblue;
+        --color4: PaleTurquoise;
+        --color5: SkyBlue;
+        --color6: lavender;
+        --finalSize: 35vmin;
+        left: 70%;
+        top: 60%;
+        animation-delay: -0.4s;
+        }
+        #winners {
+            position: relative;
+            overflow: hidden;
+        }
     </style>
 </head>
 
@@ -1451,9 +1558,12 @@
                 </div>
             </section>
 
-           <!--<section class="section soft" id="winners">
+         <!--<section class="section soft" id="winners">
+            <div class="firework" style="--x:0.2; --y:0.7;"></div>
+            <div class="firework" style="--x:0.8; --y:0.3;"></div>
+            <div class="firework" style="--x:0.5; --y:0.5;"></div>
+
                 <div class="container">
-                    
 
                     <div class="section-heading reveal">
                         <div>
@@ -2057,6 +2167,27 @@
                 element.classList.add('is-visible');
             });
         }
+        const container = document.querySelector("#winners");
+
+    for (let i = 0; i < 2; i++) {
+        const fw = document.createElement("div");
+        fw.className = "firework";
+
+        function randomize() {
+            fw.style.setProperty("--x", Math.random());
+            fw.style.setProperty("--y", Math.random());
+        }
+
+        randomize();
+
+        // change position every time animation restarts
+        fw.addEventListener("animationiteration", randomize);
+
+        // random delay so they don't sync
+        fw.style.animationDelay = (Math.random() * 2) + "s";
+
+        container.appendChild(fw);
+    }
     </script>
 </body>
 </html>
