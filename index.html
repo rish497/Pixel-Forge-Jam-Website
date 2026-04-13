@@ -988,7 +988,7 @@
                 justify-content: center;
                 align-items: center;
                 flex-direction: column;
-                gap: 2rem;
+                gap: 2.5rem;
             }
 
             .sponsor-logos img {
@@ -998,12 +998,13 @@
 
             /* Sizes */
             .sponsor-logos.xlarge img {
-                width: clamp(260px, 60vw, 700px);
+                width: clamp(260px, 60vw, 550px);
                 height: auto;
+                filter: drop-shadow(10px 10px 15px rgba(252, 217, 143, 0.792));
             }
 
             .sponsor-logos.medium img {
-                
+                filter: drop-shadow(10px 10px 15px rgba(0, 0, 0, 0.408));
                 width: clamp(180px, 40vw, 400px);
                 height: auto;
             }
@@ -1024,6 +1025,7 @@
                 width: clamp(120px, 25vw,300px);
                 flex-direction: column;
                 height: auto;
+                filter: drop-shadow(10px 10px 15px rgb(79, 43, 1));
             }
 
             /* Hover */
