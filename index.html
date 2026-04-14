@@ -803,10 +803,12 @@
             display: grid;
             gap: var(--space-4);
         }
+        
 
         .prize-highlights {
             margin-top:3rem;
-            grid-template-columns: repeat(3, minmax(0, 1fr));
+            justify-content: center;
+            grid-template-columns: repeat(1, minmax(0, 80rem));
             margin-bottom: var(--space-4);
         }
 
@@ -838,6 +840,7 @@
 
         .prize-card ul,
         .award-block ul {
+            
             display: grid;
             gap: 0.55rem;
             list-style: none;
@@ -1039,8 +1042,170 @@
                 opacity: 0.85;
             }
             
+            .prize-card.featured, .prize-card,.award-block {
+                position: relative;   /* 🔥 REQUIRED */
+                overflow: hidden;     /* keeps shine inside card */
+                transform: scale(1.05);
+                border: 1px solid rgba(47, 107, 255, 0.4);
 
-            
+                background: linear-gradient(
+                    180deg,
+                    #ffffff,
+                    rgba(223, 232, 255, 0.9)
+                );
+
+                box-shadow:
+                    0 20px 50px rgba(47, 107, 255, 0.25),
+                    0 0 40px rgba(47, 107, 255, 0.15);
+            }
+            .tier-label {
+                margin: 0 auto var(--space-3);
+                padding: 0.4rem 0.9rem;
+
+                border-radius: 999px;
+
+                background: linear-gradient(
+                    135deg,
+                    var(--accent),
+                    var(--warm)
+                );
+
+                color: white;
+                font-size: 0.8rem;
+                letter-spacing: 0.5px;
+
+                box-shadow: 0 4px 10px rgba(47, 107, 255, 0.3);
+            }
+
+
+            .prize-card li, .award-block li {
+                position: relative;
+                padding-left: 1.4rem;
+                margin-bottom: 0.4rem;
+                color: var(--muted);
+            }
+
+            .prize-card li::before,.award-block li::before{
+                content: "✔";
+                position: absolute;
+                left: 0;
+                color: var(--accent);
+                font-size: 0.9rem;
+            }
+
+/* SHINE LAYER */
+.prize-card::after,
+.award-block::after {
+    content: "";
+    position: absolute;
+
+    top: -50%;
+    left: -30%;
+
+    width: 40%;
+    height: 200%;
+
+    background: linear-gradient(
+        120deg,
+        transparent,
+        rgba(255,255,255,0.6),
+        transparent
+    );
+
+    transform: rotate(25deg);
+
+    opacity: 0;
+    pointer-events: none;
+}
+
+/* TRIGGER */
+.prize-card:hover::after,
+.award-block:hover::after {
+    animation: shineSweep 1.5s ease forwards;
+}
+
+/* ANIMATION */
+@keyframes shineSweep {
+    0% {
+        transform: translateX(-120%) rotate(25deg);
+        opacity: 0;
+    }
+    20% {
+        opacity: 1;
+    }
+    100% {
+        transform: translateX(250%) rotate(25deg);
+        opacity: 0;
+    }
+}
+        /* =========================
+        GLOBAL SMOOTH SCROLL
+        ========================= */
+        html {
+            scroll-behavior: smooth;
+
+            /* Firefox */
+            scrollbar-width: thin;
+            scrollbar-color: #2f6bff #0b1220;
+        }
+
+
+        /* =========================
+        CHROME / EDGE / SAFARI
+        ========================= */
+        ::-webkit-scrollbar {
+            width: 10px;
+        }
+
+        ::-webkit-scrollbar-track {
+            background: linear-gradient(
+                180deg,
+                #0b1220,
+                #0f172a
+            );
+        }
+
+        /* MAIN BAR */
+        ::-webkit-scrollbar-thumb {
+            border-radius: 999px;
+
+            background: linear-gradient(
+                180deg,
+                #2f6bff,
+                #6ea8ff,
+                #2f6bff
+            );
+
+            background-size: 100% 200%;
+
+            box-shadow:
+                0 0 10px rgba(47, 107, 255, 0.6),
+                0 0 20px rgba(47, 107, 255, 0.3),
+                inset 0 0 6px rgba(255,255,255,0.2);
+
+            animation: scrollGlow 4s linear infinite;
+        }
+
+        /* HOVER = MORE POWER */
+        ::-webkit-scrollbar-thumb:hover {
+            background: linear-gradient(
+                180deg,
+                #4c82ff,
+                #9cc0ff,
+                #4c82ff
+            );
+
+            box-shadow:
+                0 0 15px rgba(47, 107, 255, 1),
+                0 0 30px rgba(47, 107, 255, 0.6),
+                inset 0 0 10px rgba(255,255,255,0.4);
+        }
+
+        /* CLICK EFFECT */
+        ::-webkit-scrollbar-thumb:active {
+            background: #2f6bff;
+        }
+
 
         @media (prefers-reduced-motion: reduce) {
             html {
@@ -1226,6 +1391,7 @@
                 margin-top: var(--space-3);
                 grid-template-columns: 1fr;
             }
+
         }
         /* PODIUM */
         .podium {
