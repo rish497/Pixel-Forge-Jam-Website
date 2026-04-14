@@ -1579,6 +1579,308 @@
             position: relative;
             overflow: hidden;
         }
+
+
+
+/* =========================
+   GOD CARD BASE
+========================= */
+.theme-card {
+    position: relative;
+    max-width: 800px;
+    margin: 140px auto;
+    padding: 3rem 2rem;
+    border-radius: 24px;
+
+    background: radial-gradient(circle at center,
+        rgba(33, 48, 87, 0.3),
+        rgba(5,10,25,0.95)
+    );
+
+    border: 1px solid rgba(47,107,255,0.4);
+
+    box-shadow:
+        0 0 120px rgba(47,107,255,0.4),
+        inset 0 0 60px rgba(47,107,255,0.2);
+
+    overflow: hidden;
+
+    transform: translateY(80px) scale(0.85);
+    opacity: 0;
+
+    perspective: 1200px;
+    transition: all 0.9s cubic-bezier(.2,.8,.2,1);
+}
+
+/* =========================
+   REVEAL = EXPLOSION MOMENT
+========================= */
+.theme-card.is-visible {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+
+    animation: corePulse 3s infinite;
+}
+
+/* breathing core */
+@keyframes corePulse {
+    0%,100% {
+        box-shadow:
+            0 0 120px rgba(47,107,255,0.4),
+            inset 0 0 60px rgba(47,107,255,0.2);
+    }
+    50% {
+        box-shadow:
+            0 0 200px rgba(47,107,255,0.8),
+            inset 0 0 100px rgba(47,107,255,0.35);
+    }
+}
+
+/* =========================
+   FLASH (HIT EFFECT)
+========================= */
+.flash {
+    position: absolute;
+    inset: 0;
+    background: white;
+    opacity: 0;
+}
+
+.theme-card.is-visible .flash {
+    animation: flashBang 0.5s ease;
+}
+
+@keyframes flashBang {
+    0% { opacity: 1; }
+    100% { opacity: 0; }
+}
+
+/* =========================
+   EXPANDING RING
+========================= */
+.ring {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 20px;
+    height: 20px;
+    border: 2px solid rgba(47,107,255,0.7);
+    border-radius: 50%;
+    transform: translate(-50%, -50%);
+    opacity: 0;
+}
+
+.theme-card.is-visible .ring {
+    animation: ringExpand 1.2s ease;
+}
+
+@keyframes ringExpand {
+    0% {
+        width: 20px;
+        height: 20px;
+        opacity: 1;
+    }
+    100% {
+        width: 1200px;
+        height: 1200px;
+        opacity: 0;
+    }
+}
+
+/* =========================
+   SHOCKWAVE
+========================= */
+.shockwave {
+    position: absolute;
+    inset: 0;
+    background: radial-gradient(circle at center,
+        rgba(47,107,255,0.3),
+        transparent 60%
+    );
+    opacity: 0;
+}
+
+.theme-card.is-visible .shockwave {
+    animation: shock 1.2s ease;
+}
+
+@keyframes shock {
+    0% { transform: scale(0.6); opacity: 1; }
+    100% { transform: scale(1.8); opacity: 0; }
+}
+
+/* =========================
+   PARTICLES
+========================= */
+.particles::before,
+.particles::after {
+    content: "";
+    position: absolute;
+    inset: -50%;
+
+    background-image:
+        radial-gradient(circle, rgba(255,255,255,0.2) 1px, transparent 1px);
+
+    background-size: 30px 30px;
+
+    animation: particlesMove 20s linear infinite;
+}
+
+.particles::after {
+    animation-duration: 35s;
+    opacity: 0.5;
+}
+
+@keyframes particlesMove {
+    from { transform: translate(0,0); }
+    to { transform: translate(-200px,-200px); }
+}
+
+/* =========================
+   INNER CONTENT
+========================= */
+.theme-inner {
+    position: relative;
+    z-index: 5;
+    text-align: center;
+}
+
+/* LABEL */
+.theme-label {
+    letter-spacing: 3px;
+    font-size: 0.8rem;
+    color: rgba(200,220,255,0.7);
+}
+
+/* =========================
+   TITLE (CORE)
+========================= */
+.theme-title {
+    font-size: clamp(2.5rem, 6vw, 3.5rem);
+    font-weight: 900;
+    color: white;
+
+    text-shadow:
+        0 0 15px rgba(47,107,255,0.8),
+        0 0 40px rgba(47,107,255,0.6),
+        0 0 80px rgba(47,107,255,0.4);
+}
+
+/* =========================
+   GLITCH BURST
+========================= */
+/* BASE */
+.theme-title {
+    position: relative;
+    display: inline-block;
+}
+
+/* GLITCH LAYERS */
+.glitch::before,
+.glitch::after {
+    content: attr(data-text);
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    pointer-events: none;
+}
+
+/* BLUE OFFSET */
+.glitch::before {
+    color: #2f6bff;
+    z-index: -1;
+}
+
+/* LIGHT OFFSET */
+.glitch::after {
+    color: #6ea8ff;
+    z-index: -2;
+}
+
+/* ===== ONLY TRIGGER ON REVEAL ===== */
+.theme-card.is-visible .glitch::before {
+    animation: glitchTop 0.4s steps(2,end) 3;
+}
+
+.theme-card.is-visible .glitch::after {
+    animation: glitchBottom 0.4s steps(2,end) 3;
+}
+
+/* ===== REAL GLITCH (SLICED) ===== */
+@keyframes glitchTop {
+    0% {
+        clip-path: inset(0 0 70% 0);
+        transform: translate(-10px, -50px);
+    }
+    50% {
+        clip-path: inset(0 0 40% 0);
+        transform: translate(21px, 50px);
+    }
+    100% {
+        clip-path: inset(0 0 70% 0);
+        transform: translate(0);
+    }
+}
+
+@keyframes glitchBottom {
+    0% {
+        clip-path: inset(70% 0 0 0);
+        transform: translate(92px, 37px);
+    }
+    50% {
+        clip-path: inset(40% 0 0 0);
+        transform: translate(-92px, -11px);
+    }
+    100% {
+        clip-path: inset(70% 0 0 0);
+        transform: translate(0);
+    }
+}
+/* =========================
+   3D HOVER INTERACTION
+========================= */
+/* Base */
+.theme-card {
+    position: relative;
+    overflow: hidden;
+}
+
+/* EXPANSION LAYER */
+.theme-card::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+
+    background: radial-gradient(
+        circle at var(--mouse-x, 50%) var(--mouse-y, 50%),
+        rgba(47,107,255,0.35),
+        transparent 60%
+    );
+
+    opacity: 0;
+    transition: opacity 0.3s ease;
+}
+
+/* Activate on hover */
+.theme-card:hover::before {
+    opacity: 1;
+}
+
+/* Optional glow boost */
+.theme-card:hover {
+    box-shadow:
+        0 0 120px rgba(47,107,255,0.6),
+        0 0 200px rgba(47,107,255,0.3);
+}
+.theme-card {
+    perspective: 1200px;
+}
+
+.theme-inner {
+    transform-style: preserve-3d;
+    transition: transform 0.1s ease; /* fast = responsive */
+}
     </style>
 </head>
 
@@ -1857,6 +2159,84 @@
                     </div>
                 </div>
             </section>
+
+
+
+
+
+           <!--<section class="section soft" id="theme">
+                <div class="container">
+                    <div class="section-heading reveal">
+                        <div>
+                            <h2 class="title-art">
+                                <span class="sr-only">Theme</span>
+                                <img src="images/Theme-3-17-2026 (3).png" alt="">
+                            </h2>
+                        </div>
+                    </div>
+
+                    
+                    <div class="section-heading reveal">
+                        <div>
+                            <h2 class="title-art">
+                                <span class="sr-only">Theme Reveal</span>
+                            </h2>
+                        </div>
+                    </div>
+
+                    
+                    <div class="theme-grid">
+
+                       
+                        <div class="theme-card reveal">
+                            <div class="theme-effects">
+                                <div class="flash"></div>
+                                <div class="ring"></div>
+                                <div class="shockwave"></div>
+                                <div class="particles"></div>
+                            </div>
+
+                            <div class="theme-inner">
+                                <p class="theme-label">THEME REVEAL</p>
+
+                                <h2 class="theme-title glitch"
+                                    data-text="THEME HERE">
+                                    THERE HERE
+                                </h2>
+                            </div>
+                        </div>
+
+                        
+                        <ol class="process-list reveal">
+                            <li>
+                                <strong>01</strong>
+                                <div>
+                                    <h3>Prepare your stack</h3>
+                                    <p>Choose your engine, art pipeline, and export format.</p>
+                                </div>
+                            </li>
+
+                            <li>
+                                <strong>02</strong>
+                                <div>
+                                    <h3>Interpret the theme clearly</h3>
+                                    <p>Pick one strong angle and make it clear in the game.</p>
+                                </div>
+                            </li>
+
+                            <li>
+                                <strong>03</strong>
+                                <div>
+                                    <h3>Leave room for polish</h3>
+                                    <p>Leave room for bug fixes, credits, and a clean page.</p>
+                                </div>
+                            </li>
+                        </ol>
+
+                    </div>
+
+                </div>
+            </section>-->
 
             <section class="section" id="themes">
                 <div class="container">
@@ -2343,7 +2723,60 @@
             });
         }
         const container = document.querySelector("#winners");
+        const observer = new IntersectionObserver(entries => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add("is-visible");
+                }
+            });
+        }, { threshold: 0.6 });
 
+        document.querySelectorAll(".reveal").forEach(el => {
+            observer.observe(el);
+        }); 
+
+        const cards = document.querySelectorAll(".theme-card");
+
+        cards.forEach(card => {
+            const inner = card.querySelector(".theme-inner");
+
+            card.addEventListener("mousemove", e => {
+                const rect = card.getBoundingClientRect();
+
+                const x = e.clientX - rect.left;
+                const y = e.clientY - rect.top;
+
+                const centerX = rect.width / 2;
+                const centerY = rect.height / 2;
+
+                const rotateX = -(y - centerY) / 12; // vertical tilt
+                const rotateY = (x - centerX) / 12;  // horizontal tilt
+
+                const skewX = (x - centerX) / 40;
+                const skewY = (y - centerY) / 40;
+
+                inner.style.transform = `
+                    rotateX(${rotateX}deg)
+                    rotateY(${rotateY}deg)
+                    skewX(${skewX}deg)
+                    skewY(${skewY}deg)
+                    scale(1.03)
+                `;
+            });
+
+            card.addEventListener("mouseleave", () => {
+                inner.style.transform = `
+                    rotateX(0deg)
+                    rotateY(0deg)
+                    skewX(0deg)
+                    skewY(0deg)
+                    scale(1)
+                `;
+            });
+        });
+
+
+        
     for (let i = 0; i < 2; i++) {
         const fw = document.createElement("div");
         fw.className = "firework";
@@ -2363,6 +2796,7 @@
 
         container.appendChild(fw);
     }
+
     </script>
 </body>
 </html>
