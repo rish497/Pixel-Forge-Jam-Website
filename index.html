@@ -53,6 +53,19 @@
             scroll-behavior: smooth;
         }
 
+        html,
+        body {
+            max-width: 100%;
+            overflow-x: hidden;
+        }
+
+        @supports (overflow-x: clip) {
+            html,
+            body {
+                overflow-x: clip;
+            }
+        }
+
         [id] {
             scroll-margin-top: 6rem;
         }
@@ -73,6 +86,7 @@
         img {
             display: block;
             max-width: 100%;
+            height: auto;
         }
 
         a {
@@ -126,6 +140,7 @@
             top: 0;
             z-index: 40;
             background: rgba(255, 255, 255, 0.9);
+            -webkit-backdrop-filter: blur(18px);
             backdrop-filter: blur(18px);
             border-bottom: 1px solid transparent;
             transition: border-color 220ms ease, background 220ms ease;
@@ -144,12 +159,17 @@
             min-height: 4.75rem;
         }
 
+        .nav-shell > nav {
+            min-width: 0;
+        }
+
         .brand {
             display: inline-flex;
             align-items: center;
             gap: 0.9rem;
             text-decoration: none;
             color: var(--ink);
+            min-width: 0;
         }
 
         .brand img {
@@ -162,11 +182,13 @@
         .brand-mark {
             display: grid;
             gap: 0.15rem;
+            min-width: 0;
         }
 
         .brand-mark strong {
             font-size: 0.96rem;
             line-height: 1.1;
+            overflow-wrap: break-word;
         }
 
         .brand-mark span {
@@ -311,6 +333,8 @@
             border: 1px solid transparent;
             font-weight: 700;
             text-decoration: none;
+            text-align: center;
+            overflow-wrap: break-word;
             transition: transform 180ms ease, border-color 180ms ease, background 180ms ease, color 180ms ease, box-shadow 180ms ease;
         }
 
@@ -404,6 +428,7 @@
             padding: 1rem;
             border-radius: var(--radius);
             background: rgba(12, 20, 42, 0.8);
+            -webkit-backdrop-filter: blur(14px);
             backdrop-filter: blur(14px);
         }
 
@@ -420,6 +445,7 @@
             border-top: 1px solid rgba(18, 26, 44, 0.08);
             border-bottom: 1px solid rgba(18, 26, 44, 0.08);
             background: rgba(255, 255, 255, 0.58);
+            -webkit-backdrop-filter: blur(8px);
             backdrop-filter: blur(8px);
         }
 
@@ -465,6 +491,7 @@
 
         .support-marquee {
             overflow: hidden;
+            -webkit-mask-image: linear-gradient(90deg, transparent, #000 8%, #000 92%, transparent);
             mask-image: linear-gradient(90deg, transparent, #000 8%, #000 92%, transparent);
         }
 
@@ -894,6 +921,10 @@
             align-items: start;
         }
 
+        #faq {
+            cursor: url('images/cursor.png') 8 8, auto;
+        }
+
         .faq-list {
             border-top: 1px solid var(--line);
         }
@@ -905,7 +936,7 @@
         .faq-question {
             position: relative;
             list-style: none;
-            cursor: pointer;
+            cursor: url('images/pointer.png') 8 8, pointer;
             padding: 1.25rem 3rem 1.25rem 0;
             font-size: 1.02rem;
             font-weight: 700;
@@ -1045,7 +1076,7 @@
             .prize-card.featured, .prize-card,.award-block {
                 position: relative;   /* 🔥 REQUIRED */
                 overflow: hidden;     /* keeps shine inside card */
-                transform: scale(1.05);
+                transform: none;
                 border: 1px solid rgba(47, 107, 255, 0.4);
 
                 background: linear-gradient(
@@ -1072,7 +1103,7 @@
 
                 color: white;
                 font-size: 0.8rem;
-                letter-spacing: 0.5px;
+                letter-spacing: 0;
 
                 box-shadow: 0 4px 10px rgba(47, 107, 255, 0.3);
             }
@@ -1226,6 +1257,7 @@
 
             .support-marquee {
                 overflow-x: auto;
+                -webkit-mask-image: none;
                 mask-image: none;
             }
 
@@ -1303,6 +1335,10 @@
                 padding-bottom: 0.75rem;
             }
 
+            .nav-shell > nav {
+                width: 100%;
+            }
+
             .nav-menu.active {
                 display: flex;
             }
@@ -1360,7 +1396,8 @@
 
             .feature-list,
             .process-list {
-                display: none;
+                display: grid;
+                margin-top: var(--space-4);
             }
 
             .section-heading {
@@ -1392,6 +1429,59 @@
                 grid-template-columns: 1fr;
             }
 
+            .prize-card,
+            .award-block {
+                transform: none;
+            }
+
+            .sponsor-logos a {
+                display: flex;
+                justify-content: center;
+                width: 100%;
+            }
+
+            .sponsor-logos img {
+                max-width: 100%;
+            }
+
+        }
+
+        @media (max-width: 480px) {
+            .container,
+            .hero-copy {
+                width: min(calc(100% - 1rem), var(--max-width));
+            }
+
+            .hero-copy h1 {
+                font-size: 2.65rem;
+                line-height: 1;
+            }
+
+            .section-heading h2,
+            .timeline-intro h2,
+            .faq-intro h2,
+            .cta-panel h2 {
+                font-size: 2.1rem;
+            }
+
+            .section,
+            .site-footer {
+                padding: 3.5rem 0;
+            }
+
+            .rule-list li {
+                grid-template-columns: 2.4rem minmax(0, 1fr);
+                gap: 0.75rem;
+            }
+
+            .rule-list li::before {
+                width: 2.25rem;
+                height: 2.25rem;
+            }
+
+            .sponsor-callout {
+                padding: var(--space-4);
+            }
         }
         /* PODIUM */
         .podium {
@@ -1410,7 +1500,7 @@
             flex-direction: column;
             align-items: center;
             background: white;
-            border-radius: 10px;
+            border-radius: var(--radius);
             padding: 1rem;
             box-shadow: var(--shadow);
         }
@@ -1468,8 +1558,65 @@
         }
 
         #winners .section-heading img {
-            max-width: none;   /* removes restriction */
-            width: 200%;       /* increase as needed */
+            max-width: 100%;
+            width: min(100%, 42rem);
+            margin-inline: auto;
+        }
+
+        #winners .section-heading hr {
+            width: 100%;
+            max-width: 100%;
+        }
+
+        @media (max-width: 760px) {
+            #winners .section-heading {
+                justify-items: center;
+                margin-bottom: var(--space-4);
+                text-align: center;
+            }
+
+            #winners .section-heading img {
+                width: min(100%, 20rem);
+            }
+
+            #winners .section-heading hr,
+            #winners .section-heading + p,
+            #winners .stats,
+            #winners .other-winners,
+            #winners .firework {
+                display: none;
+            }
+
+            #winners .podium {
+                display: grid;
+                grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
+                align-items: stretch;
+                gap: 1rem;
+                margin: 2rem 0 0;
+                text-align: center;
+            }
+
+            #winners .place {
+                width: 100%;
+                background: var(--surface);
+                border: 1px solid var(--line);
+                box-shadow: none;
+            }
+
+            #winners .place img {
+                width: min(100%, 12rem);
+                margin-inline: auto;
+            }
+
+            #winners .place.first {
+                order: 0;
+                transform: none;
+            }
+
+            #winners .place.second,
+            #winners .place.third {
+                opacity: 1;
+            }
         }
         @keyframes firework {
         0% { transform: translate(var(--x), var(--initialY)); width: var(--initialSize); opacity: 0; }
@@ -1590,7 +1737,7 @@
     max-width: 800px;
     margin: 140px auto;
     padding: 3rem 2rem;
-    border-radius: 24px;
+    border-radius: var(--radius);
 
     background: radial-gradient(circle at center,
         rgba(33, 48, 87, 0.3),
@@ -1747,7 +1894,7 @@
 
 /* LABEL */
 .theme-label {
-    letter-spacing: 3px;
+    letter-spacing: 0;
     font-size: 0.8rem;
     color: rgba(200,220,255,0.7);
 }
@@ -1881,6 +2028,18 @@
     transform-style: preserve-3d;
     transition: transform 0.1s ease; /* fast = responsive */
 }
+
+@media (max-width: 760px) {
+    .theme-card {
+        margin: 3rem auto;
+        padding: 2rem 1rem;
+    }
+
+    .theme-title {
+        font-size: 2.4rem;
+        overflow-wrap: anywhere;
+    }
+}
     </style>
 </head>
 
@@ -1942,7 +2101,7 @@
                             <a class="support-pill" href="https://pixelover.io/" rel="noopener noreferrer"><img src="images/title_final.png" alt="PixelOver"></a>
                             <a class="support-pill" href="https://pyxeledit.com/" rel="noopener noreferrer"><img src="images/PyxelLogo9 (1).png" alt="Pyxel Edit"></a>
                             <a class="support-pill" href="https://weloveindies.com/en/welcome/jammers" rel="noopener noreferrer"><img src="images/dyn-wli-logo-dark.png" alt="WeLoveIndies"></a>
-                            <a class="support-pill" href="https://oworowo.itch.io/" rel="noopener noreferrer"><img src="images\unnamed.png" alt="Gabriel Cortabraz"></a>
+                            <a class="support-pill" href="https://oworowo.itch.io/" rel="noopener noreferrer"><img src="images/unnamed.png" alt="Gabriel Cortabraz"></a>
                             <span class="support-pill" aria-hidden="true"><img src="images/Craftpix_logo.png" alt=""></span>
                             <span class="support-pill" aria-hidden="true"><img src="images/Lockup-Horizontal-Dark.png" alt=""></span>
                             <span class="support-pill" aria-hidden="true"><img src="images/wolfram-corporate-logo-horz-lg.png" alt=""></span>
@@ -1953,7 +2112,7 @@
                             <span class="support-pill" aria-hidden="true"><img src="images/title_final.png" alt=""></span>
                             <span class="support-pill" aria-hidden="true"><img src="images/PyxelLogo9 (1).png" alt=""></span>
                             <span class="support-pill" aria-hidden="true"><img src="images/dyn-wli-logo-dark.png" alt=""></span>
-                            <span class="support-pill" aria-hidden="true"><img src="images\unnamed.png" alt=""></span>
+                            <span class="support-pill" aria-hidden="true"><img src="images/unnamed.png" alt=""></span>
                         </div>
                     </div>
                 </div>
@@ -2037,7 +2196,7 @@
 
                     <div class="section-heading reveal">
                         <div>
-                            <img src="images\87548118714.png" alt="">
+                            <img src="images/87548118714.png" alt="">
                             <hr width="1200px">
                         </div>
                         
@@ -2070,19 +2229,19 @@
 
                         <div class="place second">
                             
-                            <img src="images\PyxelLogo9 (1).png" alt="2nd Place">
+                            <img src="images/PyxelLogo9 (1).png" alt="2nd Place">
                             <span>2nd</span>
                         </div>
 
                         <div class="place first">
                             
-                            <img src="images\PyxelLogo9 (1).png" alt="1st Place">
+                            <img src="images/PyxelLogo9 (1).png" alt="1st Place">
                             <span>1st</span>
                         </div>
 
                         <div class="place third">
                             
-                            <img src="images\PyxelLogo9 (1).png" alt="3rd Place">
+                            <img src="images/PyxelLogo9 (1).png" alt="3rd Place">
                             <span>3rd</span>
                         </div>
 
@@ -2091,25 +2250,25 @@
                     
                     <div class="other-winners reveal">
                         <div>
-                            <img src="images\PyxelLogo9 (1).png" alt="4th Place">
+                            <img src="images/PyxelLogo9 (1).png" alt="4th Place">
                             <span>4th</span>
                         </div>
 
                         <div>
-                            <img src="images\PyxelLogo9 (1).png" alt="5th Place">
+                            <img src="images/PyxelLogo9 (1).png" alt="5th Place">
                             <span>5th</span>
                         </div>
 
                         <div>
-                            <img src="images\PyxelLogo9 (1).png" alt="Judges Pick 1">
+                            <img src="images/PyxelLogo9 (1).png" alt="Judges Pick 1">
                             <span>Judges Pick 1</span>
                         </div>
                         <div>
-                            <img src="images\PyxelLogo9 (1).png" alt="Judges Pick 2">
+                            <img src="images/PyxelLogo9 (1).png" alt="Judges Pick 2">
                             <span>Judges Pick 2</span>
                         </div>
                         <div>
-                            <img src="images\PyxelLogo9 (1).png" alt="Judges Pick 3">
+                            <img src="images/PyxelLogo9 (1).png" alt="Judges Pick 3">
                             <span>Judges Pick 3</span>
                         </div>
                     </div>
@@ -2535,7 +2694,7 @@
                                 <img src="images/PyxelLogo9 (1).png" alt="Pyxel Edit">
                             </a>
                             <a href="https://oworowo.itch.io/" target="_blank">
-                                <img src="images\Screenshot 2026-04-14 155009.png" alt="Gabriel Cortabraz">
+                                <img src="images/Screenshot 2026-04-14 155009.png" alt="Gabriel Cortabraz">
                             </a>
                         </div>
                     </div>
@@ -2722,18 +2881,21 @@
                 element.classList.add('is-visible');
             });
         }
-        const container = document.querySelector("#winners");
-        const observer = new IntersectionObserver(entries => {
-            entries.forEach(entry => {
-                if (entry.isIntersecting) {
-                    entry.target.classList.add("is-visible");
-                }
-            });
-        }, { threshold: 0.6 });
+        const winnersSection = document.querySelector("#winners");
 
-        document.querySelectorAll(".reveal").forEach(el => {
-            observer.observe(el);
-        }); 
+        if (winnersSection && !reduceMotion) {
+            const winnersObserver = new IntersectionObserver(entries => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        entry.target.classList.add("is-visible");
+                    }
+                });
+            }, { threshold: 0.6 });
+
+            winnersSection.querySelectorAll(".reveal").forEach(el => {
+                winnersObserver.observe(el);
+            });
+        }
 
         const cards = document.querySelectorAll(".theme-card");
 
@@ -2777,24 +2939,26 @@
 
 
         
-    for (let i = 0; i < 2; i++) {
-        const fw = document.createElement("div");
-        fw.className = "firework";
+    if (winnersSection && !reduceMotion) {
+        for (let i = 0; i < 2; i++) {
+            const fw = document.createElement("div");
+            fw.className = "firework";
 
-        function randomize() {
-            fw.style.setProperty("--x", Math.random());
-            fw.style.setProperty("--y", Math.random());
+            function randomize() {
+                fw.style.setProperty("--x", Math.random());
+                fw.style.setProperty("--y", Math.random());
+            }
+
+            randomize();
+
+            // Change position every time animation restarts.
+            fw.addEventListener("animationiteration", randomize);
+
+            // Random delay so they do not sync.
+            fw.style.animationDelay = (Math.random() * 2) + "s";
+
+            winnersSection.appendChild(fw);
         }
-
-        randomize();
-
-        // change position every time animation restarts
-        fw.addEventListener("animationiteration", randomize);
-
-        // random delay so they don't sync
-        fw.style.animationDelay = (Math.random() * 2) + "s";
-
-        container.appendChild(fw);
     }
 
     </script>
