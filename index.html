@@ -874,12 +874,7 @@
             margin-top: var(--space-3);
         }
 
-        .prize-card li::before,
-        .award-block li::before {
-            content: "•";
-            color: var(--accent);
-            margin-right: 0.45rem;
-        }
+        
         .prize-secondary {
             grid-template-columns: repeat(2, minmax(0, 1fr));
         }
@@ -1447,6 +1442,12 @@
         }
 
         @media (max-width: 480px) {
+            .prize-card li::before,
+            .award-block li::before {
+                content: "•";
+                color: var(--accent);
+                margin-right: 0.45rem;
+            }
             .container,
             .hero-copy {
                 width: min(calc(100% - 1rem), var(--max-width));
@@ -1569,6 +1570,12 @@
         }
 
         @media (max-width: 760px) {
+            .prize-card li::before,
+            .award-block li::before {
+                content: "•";
+                color: var(--accent);
+                margin-right: 0.45rem;
+            }
             #winners .section-heading {
                 justify-items: center;
                 margin-bottom: var(--space-4);
@@ -1583,7 +1590,7 @@
             #winners .section-heading + p,
             #winners .stats,
             #winners .firework,
-            .process-list {
+            .process-list, .feature-list {
                 display: none;
             }
 
@@ -2717,7 +2724,7 @@
                     <div class="sponsor-callout reveal">
                         <div>
                             <p class="eyebrow">Partner With Pixel Forge</p>
-                            <h3>Want to sponsor a future round?</h3>
+                            <h3>Want to sponsor or donate to a future round? </h3>
                             <p>Read the prospectus or email the team.</p>
                         </div>
                         <div class="callout-actions">
@@ -2727,6 +2734,10 @@
                             <a href="mailto:pixelforgejam@gmail.com" class="button secondary">
                                 Email the Team
                             </a>
+                            <a href="https://hcb.hackclub.com/donations/start/pixel-forge-jam" class="button secondary">
+                                Donate
+                            </a>
+                            
                         </div>
                     </div>
                 </div>
@@ -2824,6 +2835,7 @@
                     <p class="footer-copy">Questions? Email <a href="mailto:pixelforgejam@gmail.com">pixelforgejam@gmail.com</a> or ask in Discord.</p>
                 </div>
                 <a href="contents/sponsorform.pdf" class="button ghost">Sponsor Form</a>
+
             </div>
         </footer>
     </div>
