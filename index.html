@@ -747,10 +747,8 @@
         }
 
         .theme-grid {
-            margin-top: -150px;
             grid-template-columns: minmax(0, 0.95fr) minmax(0, 1.05fr);
-            align-items: center;
-            margin-bottom: -100px;
+            align-items: start;
         }
 
         .theme-copy {
@@ -766,7 +764,9 @@
         .process-list {
             display: grid;
             gap: var(--space-3);
-            margin-top: var(--space-4);
+            width: min(100%, 68rem);
+            margin: -6rem auto 0;
+            padding: 0;
         }
 
         .process-list li,
@@ -1391,10 +1391,16 @@
                 padding: 4.5rem 0;
             }
 
-            .feature-list,
-            .process-list {
+            .feature-list {
                 display: grid;
                 margin-top: var(--space-4);
+            }
+
+            .process-list {
+                display: grid;
+                width: min(100%, 68rem);
+                margin: 0 auto;
+                padding: 0;
             }
 
             .section-heading {
@@ -2068,7 +2074,7 @@
                     <ul class="nav-menu" id="navMenu">
                         <li><a href="#about">About</a></li>
                         <li><a href="#timeline">Timeline</a></li>
-                        <li><a href="#theme">Theme</a></li>
+                        <li><a href="#themes">Theme</a></li>
                         <li><a href="#rules">Rules</a></li>
                         <li><a href="#prizes">Prizes</a></li>
                         <li><a href="#sponsors">Sponsors</a></li>
@@ -2661,7 +2667,7 @@
                             <p>Read the prospectus or email the team.</p>
                         </div>
                         <div class="callout-actions">
-                            <a href="contents\PixelForgeJam #2 Sponsorship Prospectus.pdf.pdf" download class="button primary">
+                            <a href="contents/PixelForgeJam%20%232%20Sponsorship%20Prospectus.pdf.pdf" download="PixelForgeJam-2-Sponsorship-Prospectus.pdf" class="button primary">
                                 Sponsorship Prospectus
                             </a>
                             <a href="mailto:pixelforgejam@gmail.com" class="button secondary">
@@ -2767,7 +2773,7 @@
                     <p class="footer-brand">Pixel Forge Jam 2026</p>
                     <p class="footer-copy">Questions? Email <a href="mailto:pixelforgejam@gmail.com">pixelforgejam@gmail.com</a> or ask in Discord.</p>
                 </div>
-                <a href="contents\PixelForgeJam #2 Sponsorship Prospectus.pdf.pdf" class="button ghost">Sponsor Form</a>
+                <a href="contents/PixelForgeJam%20%232%20Sponsorship%20Prospectus.pdf.pdf" download="PixelForgeJam-2-Sponsorship-Prospectus.pdf" class="button ghost">Sponsor Form</a>
 
             </div>
         </footer>
