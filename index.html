@@ -2483,10 +2483,9 @@
                             <p>The theme will be revealed at the start of the Game Jam</p>
                             <div class="theme-actions">
                                 <a href="https://discord.gg/mM8PpjGyM6" class="button ghost" rel="noopener noreferrer">Get Updates on Discord</a>
-                                <button type="button" class="button ghost" id="suggest-theme-toggle">Suggest a Theme</button>
                                 <a href="https://itch.io/jam/pixelforge" class="button ghost" rel="noopener noreferrer">See the Jam Page</a>
                             </div>
-                            <form id="suggest-theme-form" class="suggest-theme-form" hidden style="margin-top:1rem;display:none;flex-wrap:wrap;gap:.5rem;align-items:center;">
+                            <form id="suggest-theme-form" class="suggest-theme-form" style="margin-top:1rem;display:flex;flex-wrap:wrap;gap:.5rem;align-items:center;">
                                 <label for="suggest-theme-input" class="sr-only">Your theme idea</label>
                                 <input type="text" id="suggest-theme-input" name="theme" placeholder="Type your theme idea..." maxlength="120" required style="flex:1 1 240px;padding:.6rem .8rem;border-radius:.5rem;border:1px solid #2a3346;background:#0f1422;color:#ffffff;font:inherit;caret-color:#ffffff;">
                                 <button type="submit" class="button primary" id="suggest-theme-submit">Submit</button>
@@ -3024,19 +3023,11 @@
     }
 
     (function () {
-        const toggle = document.getElementById("suggest-theme-toggle");
         const form = document.getElementById("suggest-theme-form");
         const input = document.getElementById("suggest-theme-input");
         const submit = document.getElementById("suggest-theme-submit");
         const status = document.getElementById("suggest-theme-status");
-        if (!form || !toggle) return;
-
-        toggle.addEventListener("click", () => {
-            const showing = form.style.display === "flex";
-            form.style.display = showing ? "none" : "flex";
-            form.hidden = showing;
-            if (!showing) input.focus();
-        });
+        if (!form) return;
 
         const ENDPOINT = "https://script.google.com/macros/s/AKfycbwjJUgUR2vyfDN0mPJ5BUoIj6I_BW2txBdkVbio7sKC9dXNYMCh2aqOZb7ziQxaq0oYYQ/exec";
 
