@@ -1,0 +1,678 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pixel Forge Jam #2 [HAUNTED EDITION] | Pixel Forge Jam</title>
+    <meta name="description" content="Read the latest Pixel Forge Jam blog post.">
+    <link rel="icon" type="image/png" href="images/New Piskel-2.png (9).png">
+
+    <script>
+        document.documentElement.classList.add('js');
+        if (!window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
+            document.documentElement.classList.add('motion-ready');
+        }
+    </script>
+
+    <!-- Uses your existing website CSS -->
+    <link rel="stylesheet" href="style.fixed.css">
+
+    <style>
+        /* Blog post page only */
+
+        .post-page {
+            background:
+                radial-gradient(circle at top left, rgba(47, 107, 255, 0.12), transparent 28rem),
+                radial-gradient(circle at top right, rgba(114, 164, 255, 0.14), transparent 24rem),
+                var(--bg);
+        }
+
+        .post-shell {
+            width: min(calc(100% - 2.5rem), 1100px);
+            margin-inline: auto;
+            padding: var(--space-6) 0 var(--space-8);
+        }
+
+        .post-back {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.45rem;
+            margin-bottom: var(--space-4);
+            color: var(--accent-strong);
+            font-weight: 800;
+            text-decoration: none;
+        }
+
+        .post-back:hover,
+        .post-back:focus-visible {
+            color: var(--accent);
+        }
+
+        .post-layout {
+            display: grid;
+            grid-template-columns: minmax(0, 1fr) 17rem;
+            gap: var(--space-6);
+            align-items: start;
+        }
+
+        .post-article {
+            min-width: 0;
+            border: 1px solid rgba(47, 107, 255, 0.22);
+            border-radius: var(--radius);
+            background: rgba(255, 255, 255, 0.9);
+            box-shadow: 0 20px 50px rgba(47, 107, 255, 0.12);
+            overflow: hidden;
+        }
+
+        .post-hero {
+            padding: var(--space-6);
+            background:
+                linear-gradient(90deg, rgba(15, 24, 48, 0.94), rgba(15, 24, 48, 0.72)),
+                radial-gradient(circle at top right, rgba(47, 107, 255, 0.4), transparent 24rem),
+                var(--hero);
+            color: #ffffff;
+        }
+
+        .post-category {
+            display: inline-flex;
+            align-items: center;
+            min-height: 2.25rem;
+            margin-bottom: var(--space-3);
+            padding: 0.35rem 0.75rem;
+            border-radius: 999px;
+            background: rgba(255, 255, 255, 0.12);
+            color: var(--accent-soft);
+            font-size: 0.82rem;
+            font-weight: 800;
+            text-transform: uppercase;
+        }
+
+        .post-title {
+            max-width: 52rem;
+            margin-bottom: var(--space-3);
+            font-size: clamp(2.4rem, 7vw, 3.8rem);
+            line-height: 1.25;
+            font-weight: 800;
+        }
+
+        .post-subtitle {
+            max-width: 46rem;
+            color: var(--hero-muted);
+            font-size: 1.1rem;
+        }
+
+        .post-meta {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 0.7rem 1rem;
+            margin-top: var(--space-4);
+            color: rgba(255, 255, 255, 0.78);
+            font-size: 0.92rem;
+            font-weight: 700;
+        }
+
+        .post-cover {
+            background: linear-gradient(180deg, rgba(20, 34, 68, 0.98) 0%, rgba(31, 53, 108, 0.96) 100%);
+        }
+
+        .post-cover img {
+            width: 100%;
+            max-height: 34rem;
+            object-fit: cover;
+        }
+
+        .post-content {
+            padding: var(--space-6);
+        }
+
+        .post-content > * + * {
+            margin-top: var(--space-4);
+        }
+
+        .post-content h2 {
+            margin-top: var(--space-6);
+            color: var(--ink);
+            font-size: clamp(1.7rem, 4vw, 2.4rem);
+            line-height: 1.1;
+        }
+
+        .post-content h3 {
+            margin-top: var(--space-5);
+            color: var(--accent-strong);
+            font-size: 1.35rem;
+            line-height: 1.2;
+        }
+
+        .post-content p,
+        .post-content li {
+            color: var(--muted);
+            font-size: 1.05rem;
+        }
+
+        .post-content a {
+            color: var(--accent-strong);
+            font-weight: 700;
+        }
+
+        .post-content ul,
+        .post-content ol {
+            padding-left: 1.4rem;
+        }
+
+        .post-content li + li {
+            margin-top: 0.55rem;
+        }
+
+        .post-quote {
+            padding: var(--space-4);
+            border-left: 4px solid var(--accent);
+            border-radius: var(--radius);
+            background: var(--accent-soft);
+            color: var(--accent-strong);
+            font-size: 1.15rem;
+            font-weight: 800;
+        }
+
+        .post-note {
+            padding: var(--space-4);
+            border: 1px solid var(--line);
+            border-radius: var(--radius);
+            background: rgba(223, 232, 255, 0.54);
+        }
+
+        .post-image-row {
+            display: grid;
+            grid-template-columns: repeat(2, minmax(0, 1fr));
+            gap: var(--space-3);
+        }
+
+        .post-image-row figure,
+        .post-full-image {
+            overflow: hidden;
+            border-radius: var(--radius);
+            border: 1px solid var(--line);
+            background: var(--surface-soft);
+        }
+
+        .post-image-row img,
+        .post-full-image img {
+            width: 100%;
+            aspect-ratio: 16 / 10;
+            object-fit: cover;
+        }
+
+        figcaption {
+            padding: 0.75rem;
+            color: var(--muted);
+            font-size: 0.86rem;
+        }
+
+        .post-tags {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 0.6rem;
+            padding-top: var(--space-5);
+            border-top: 1px solid var(--line);
+        }
+
+        .post-tags span {
+            border-radius: 999px;
+            background: var(--accent-soft);
+            color: var(--accent-strong);
+            padding: 0.4rem 0.75rem;
+            font-size: 0.82rem;
+            font-weight: 800;
+        }
+
+        .post-sidebar {
+            position: sticky;
+            top: 6rem;
+            display: grid;
+            gap: var(--space-4);
+        }
+
+        .post-side-card {
+            padding: var(--space-4);
+            border: 1px solid var(--line);
+            border-radius: var(--radius);
+            background: rgba(255, 255, 255, 0.86);
+            box-shadow: 0 14px 26px rgba(18, 26, 44, 0.06);
+        }
+
+        .post-side-card h2 {
+            margin-bottom: var(--space-2);
+            font-size: 1rem;
+            color: var(--ink);
+        }
+
+        .post-side-card p,
+        .post-side-card li {
+            color: var(--muted);
+            font-size: 0.92rem;
+        }
+
+        .post-side-card ul {
+            display: grid;
+            gap: 0.65rem;
+            list-style: none;
+        }
+
+        .post-side-card a {
+            color: var(--accent-strong);
+            font-weight: 800;
+        }
+
+        .post-share {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 0.6rem;
+        }
+
+        .post-share a {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            min-height: 2.5rem;
+            padding: 0.55rem 0.8rem;
+            border-radius: 999px;
+            background: var(--accent-soft);
+            color: var(--accent-strong);
+            text-decoration: none;
+            font-size: 0.88rem;
+            font-weight: 800;
+        }
+
+        .post-more {
+            margin-top: var(--space-5);
+            padding: var(--space-5);
+            border-top: 1px solid var(--line);
+            background: linear-gradient(180deg, rgba(223, 232, 255, 0.62) 0%, rgba(223, 232, 255, 0.22) 100%);
+        }
+
+        .post-more h2 {
+            margin-bottom: var(--space-3);
+        }
+
+        .post-more-grid {
+            display: grid;
+            grid-template-columns: repeat(2, minmax(0, 1fr));
+            gap: var(--space-3);
+        }
+
+        .post-more-card {
+            padding: var(--space-4);
+            border: 1px solid var(--line);
+            border-radius: var(--radius);
+            background: var(--surface);
+            text-decoration: none;
+        }
+
+        .post-more-card span {
+            color: var(--muted);
+            font-size: 0.85rem;
+            font-weight: 700;
+        }
+
+        .post-more-card strong {
+            display: block;
+            margin-top: 0.35rem;
+            color: var(--ink);
+            line-height: 1.2;
+        }
+
+        @media (max-width: 980px) {
+            .post-layout {
+                grid-template-columns: 1fr;
+            }
+
+            .post-sidebar {
+                position: static;
+                grid-template-columns: repeat(2, minmax(0, 1fr));
+            }
+        }
+
+        @media (max-width: 760px) {
+            .post-shell {
+                width: min(calc(100% - 1.5rem), var(--max-width));
+                padding-top: var(--space-5);
+            }
+
+            .post-hero,
+            .post-content,
+            .post-more {
+                padding: var(--space-4);
+            }
+
+            .post-image-row,
+            .post-sidebar,
+            .post-more-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .post-shell {
+                width: min(calc(100% - 1rem), var(--max-width));
+            }
+
+            .post-meta {
+                display: grid;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div class="shell">
+        <header class="site-header" id="top">
+            <div class="container nav-shell">
+                <a class="brand" href="index.html#top" aria-label="Pixel Forge Jam home">
+                    <img src="images/New Piskel-2.png (9).png" alt="">
+                    <span class="brand-mark">
+                        <strong>Pixel Forge Jam</strong>
+                    </span>
+                </a>
+
+                <button class="menu-toggle" id="menuToggle" aria-expanded="false" aria-controls="navMenu">Menu</button>
+
+                <nav aria-label="Primary">
+                    <ul class="nav-menu" id="navMenu">
+                        <li><a href="index.html#about">About</a></li>
+                        <li><a href="index.html#timeline">Timeline</a></li>
+                        <li><a href="index.html#themes">Theme</a></li>
+                        <li><a href="index.html#rules">Rules</a></li>
+                        <li><a href="index.html#prizes">Prizes</a></li>
+                        <li><a href="index.html#sponsors">Sponsors</a></li>
+                        <li><a href="index.html#faq">FAQ</a></li>
+                        <li><a href="index.html#legal">Legal</a></li>
+                        <li><a href="blog.html">Blogs</a></li>
+                        
+                    </ul>
+                </nav>
+            </div>
+        </header>
+
+        <main class="post-page">
+            <div class="post-shell">
+                <a class="post-back" href="blog.html">← Back to all posts</a>
+
+                <div class="post-layout">
+                    <article class="post-article reveal">
+                        <header class="post-hero">
+                            <p class="post-category">Updates</p>
+
+                            <!-- Change this title for every post -->
+                            <h1 class="post-title">Pixel Forge Jam #2 [HAUNTED EDITION]</h1>
+
+                            <!-- Short intro under the title -->
+                            <p class="post-subtitle">
+                                After an incredible first jam, we are officially getting ready for our next one.
+                            </p>
+
+                            <div class="post-meta">
+                                <span>By Rishabh Mittal</span>
+                                <span>27 June 2026</span>
+                                <span>4 min read</span>
+                            </div>
+                        </header>
+
+                        <!-- Optional cover image. Delete this whole section if you do not want a cover image. -->
+                        <figure class="post-cover">
+                            <img src="images/Copy of Untitled Design (1).png" alt="">
+                        </figure>
+
+                        <div class="post-content">
+                            <p>
+                                When we started Pixel Forge Jam, our goal was simple: create a space where developers,
+                                artists, designers, and beginners could come together, make games, learn new skills,
+                                and share their work with the world.
+                            </p>
+
+                            <p>
+                                We did not expect our first jam to grow the way it did. Pixel Forge Jam 2026 brought in
+                                over 500 participants, 81 submissions, more than 11,000 views, a prize pool worth over
+                                $4,000, and a Discord community of more than 350 members. Seeing so many people join,
+                                build, submit, rate games, and support each other was honestly amazing.
+                            </p>
+
+                            <p>
+                                The best part was not just the numbers. It was seeing people finish real games, try new
+                                ideas, collaborate with others, and create projects they could be proud of. Some people
+                                joined with experience, while others were trying game development for the first time.
+                                That is exactly what Pixel Forge Jam is supposed to be about.
+                            </p>
+
+                            <h2>Announcing Pixel Forge Jam #2</h2>
+
+                            <p>
+                                We are excited to announce that Pixel Forge Jam #2 will run from
+                                <strong>June 27 to July 4, 2026</strong>. It will once again be an online game jam where
+                                participants will have one week to create a game based on a theme revealed at the start
+                                of the event.
+                            </p>
+
+                            <p>
+                                Just like the first jam, this event is focused on creativity, experimentation, and learning.
+                                Whether you are a beginner making your first game or an experienced developer looking to
+                                challenge yourself, Pixel Forge Jam #2 is built to give you a reason to start, finish,
+                                and share something real.
+                            </p>
+
+                            <h2>Why We Are Doing This Again</h2>
+
+                            <p>
+                                The first Pixel Forge Jam showed us how much potential this community has. People did not
+                                just submit games; they gave feedback, joined discussions, supported other creators, and
+                                helped make the jam feel alive.
+                            </p>
+
+                            <p>
+                                That success made us even more excited to continue building Pixel Forge. We want Jam #2
+                                to be bigger, smoother, and even more fun. Our goal is to give participants a better
+                                experience, more opportunities, more community interaction, and another chance to create
+                                games they can showcase proudly.
+                            </p>
+
+                            <blockquote class="post-quote">
+                                Pixel Forge Jam #2 is not just about making a game. It is about learning, experimenting,
+                                finishing something, and being part of a creative community.
+                            </blockquote>
+
+                            <h2>What to Expect</h2>
+
+                            <p>
+                                Pixel Forge Jam #2 will follow the same core idea: build a game in a limited time span,
+                                submit it, play other entries, and be part of the community voting process.
+                            </p>
+
+                            <ul>
+                                <li><strong>Dates:</strong> June 27 to July 4, 2026</li>
+                                <li><strong>Format:</strong> Online</li>
+                                <li><strong>Duration:</strong> 7 days</li>
+                                <li><strong>Submission platform:</strong> itch.io</li>
+                                <li><strong>Teams:</strong> Solo or teams of up to 4 people</li>
+                                <li><strong>Theme:</strong> Revealed when the jam begins</li>
+                                <li><strong>Community:</strong> Discord based</li>
+                            </ul>
+
+                            <p>
+                                We are also working on bringing in sponsors, prizes, and community opportunities that
+                                make the event more exciting for everyone involved. The first jam had a prize pool worth
+                                over $4,000, and we are hoping to continue giving participants meaningful rewards,
+                                recognition, and reasons to push their ideas further.
+                            </p>
+
+                            <h2>For New Participants</h2>
+
+                            <p>
+                                If you missed the first jam, this is a great time to join. You do not need to be an expert
+                                to participate. Pixel Forge Jam is meant to be welcoming to beginners while still giving
+                                experienced developers a challenge.
+                            </p>
+
+                            <p>
+                                You can use any game engine or tool you like. You can work alone or with a team. The most
+                                important thing is that you make something during the jam, connect it to the theme, and
+                                submit it before the deadline.
+                            </p>
+
+                            <h2>Thank You to Our Community</h2>
+
+                            <p>
+                                Thank you to everyone who joined the first Pixel Forge Jam, submitted a game, rated entries,
+                                gave feedback, joined the Discord, sponsored the event, or helped spread the word. The first
+                                jam was successful because of the community around it.
+                            </p>
+
+                            <p>
+                                We are incredibly excited for Pixel Forge Jam #2, and we cannot wait to see what everyone
+                                creates next.
+                            </p>
+
+                            <p>
+                                Get ready. The forge opens again on <strong>June 27, 2026</strong>.
+                            </p>
+                            
+
+                            <div class="post-tags" aria-label="Post tags">
+                                <span>Pixel Forge</span>
+                                <span>Game Jam</span>
+                                <span>Updates</span>
+                            </div>
+                        </div>
+
+                        <section class="post-more" aria-labelledby="more-posts-title">
+                            <h2 id="more-posts-title">More posts</h2>
+
+                            <div class="post-more-grid">
+                                <a class="post-more-card" href="blog.html">
+                                    <span>All posts</span>
+                                    <strong>Go back to the blog page</strong>
+                                </a>
+
+                                <a class="post-more-card" href="pixel-forge-jam-winners.html">
+                                    <span>Next article</span>
+                                    <strong>Winners of Pixel Forge Jam #1</strong>
+                                </a>
+                            </div>
+                        </section>
+                    </article>
+
+                    <aside class="post-sidebar reveal" aria-label="Blog sidebar">
+                        <section class="post-side-card">
+                            <h2>In this post</h2>
+                            <ul>
+                                <li><a href="#top">Intro</a></li>
+                                <li><a href="#top">Main section</a></li>
+                                <li><a href="#top">Final thoughts</a></li>
+                            </ul>
+                        </section>
+
+                        <section class="post-side-card">
+                            <h2>About Pixel Forge</h2>
+                            <p>
+                                Pixel Forge Jam is an online game jam for creators who want to build, finish, and ship a game.
+                            </p>
+                        </section>
+
+                        <section class="post-side-card">
+                            <h2>Share</h2>
+                            <div class="post-share">
+                                <a href="https://x.com/PixelForgeJam" target="_blank" rel="noopener noreferrer">X</a>
+                                <a href="https://discord.gg/mM8PpjGyM6" target="_blank" rel="noopener noreferrer">Discord</a>
+                                <a href="blog.html">Blog</a>
+                            </div>
+                        </section>
+                    </aside>
+                </div>
+            </div>
+        </main>
+
+        <footer class="site-footer">
+            <div class="container footer-grid">
+                <div>
+                    <h2>Make something real this week.</h2>
+                    <p>Build it. Finish it. Ship it.</p>
+                </div>
+
+                <div class="footer-actions">
+                    <a href="https://itch.io/jam/pixel-forge-jam-2" class="button primary" rel="noopener noreferrer">Register on itch.io</a>
+                    <a href="https://discord.gg/mM8PpjGyM6" class="button ghost" rel="noopener noreferrer">Join the Community</a>
+                </div>
+
+                <div>
+                    <p class="footer-brand">Pixel Forge Jam 2026</p>
+                    <p class="footer-copy">
+                        Questions? Email
+                        <a href="https://mail.google.com/mail/u/0/?fs=1&tf=cm&source=mailto&to=pixelforgejam@gmail.com">pixelforgejam@gmail.com</a>
+                        or ask in Discord.
+                    </p>
+                </div>
+
+                <a href="contents/PixelForgeJam%20%232%20Sponsorship%20Prospectus.pdf.pdf" download="PixelForgeJam-2-Sponsorship-Prospectus.pdf" class="button ghost">Sponsor Form</a>
+
+                <div>
+                    <p class="footer-brand">Follow Us</p>
+                    <p style="width: 70px; display: flex; gap: 10px;">
+                        <a class="nav-social" href="https://x.com/PixelForgeJam" target="_blank" rel="noopener noreferrer" aria-label="Pixel Forge Jam on X">
+                            <img src="images/twitter.png" alt="X">
+                        </a>
+                        <a class="nav-social" href="https://www.linkedin.com/in/pixel-forge-game-jams-8003a640b/" target="_blank" rel="noopener noreferrer" aria-label="Pixel Forge Jam on LinkedIn">
+                            <img src="images/linkedin.png" alt="LinkedIn">
+                        </a>
+                    </p>
+                </div>
+            </div>
+        </footer>
+    </div>
+
+    <script>
+        const siteHeader = document.querySelector('.site-header');
+        const menuToggle = document.getElementById('menuToggle');
+        const navMenu = document.getElementById('navMenu');
+        const reduceMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+
+        const syncHeaderState = () => {
+            if (!siteHeader) return;
+            siteHeader.classList.toggle('is-scrolled', window.scrollY > 24);
+        };
+
+        syncHeaderState();
+        window.addEventListener('scroll', syncHeaderState, { passive: true });
+
+        if (menuToggle && navMenu) {
+            menuToggle.addEventListener('click', () => {
+                const isOpen = navMenu.classList.toggle('active');
+                menuToggle.setAttribute('aria-expanded', String(isOpen));
+            });
+
+            navMenu.querySelectorAll('a').forEach((link) => {
+                link.addEventListener('click', () => {
+                    navMenu.classList.remove('active');
+                    menuToggle.setAttribute('aria-expanded', 'false');
+                });
+            });
+        }
+
+        if (!reduceMotion) {
+            const revealElements = document.querySelectorAll('.reveal');
+            const observer = new IntersectionObserver((entries, activeObserver) => {
+                entries.forEach((entry) => {
+                    if (!entry.isIntersecting) return;
+                    entry.target.classList.add('is-visible');
+                    activeObserver.unobserve(entry.target);
+                });
+            }, {
+                threshold: 0.12,
+                rootMargin: '0px 0px -40px 0px'
+            });
+
+            revealElements.forEach((element) => observer.observe(element));
+        } else {
+            document.querySelectorAll('.reveal').forEach((element) => {
+                element.classList.add('is-visible');
+            });
+        }
+    </script>
+</body>
+</html>

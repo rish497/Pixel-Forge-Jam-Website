@@ -1,0 +1,315 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Pixel Forge Jam blog posts, updates, announcements, and community stories.">
+    <meta name="keywords" content="Pixel Forge Jam, game jam blog, indie game development, jam updates, Pixel Forge announcements">
+    <link rel="icon" type="image/png" href="images/New Piskel-2.png (9).png">
+    <title>Pixel Forge Jam Blog</title>
+
+    <script>
+        document.documentElement.classList.add('js');
+        if (!window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
+            document.documentElement.classList.add('motion-ready');
+        }
+    </script>
+
+    <!-- Keep your existing site CSS first, then blog.css for only blog-page styles. -->
+    <link rel="stylesheet" href="style.fixed.css">
+    <link rel="stylesheet" href="blog.css">
+</head>
+
+<body>
+    <div class="shell">
+        <header class="site-header" id="top">
+            <div class="container nav-shell">
+                <a class="brand" href="index.html#top" aria-label="Pixel Forge Jam home">
+                    <img src="images/New Piskel-2.png (9).png" alt="">
+                    <span class="brand-mark">
+                        <strong>Pixel Forge Jam</strong>
+                    </span>
+                </a>
+
+                <button class="menu-toggle" id="menuToggle" aria-expanded="false" aria-controls="navMenu">Menu</button>
+
+                <nav aria-label="Primary">
+                    <ul class="nav-menu" id="navMenu">
+                        <li><a href="index.html#about">About</a></li>
+                        <li><a href="index.html#timeline">Timeline</a></li>
+                        <li><a href="index.html#themes">Theme</a></li>
+                        <li><a href="index.html#rules">Rules</a></li>
+                        <li><a href="index.html#prizes">Prizes</a></li>
+                        <li><a href="index.html#sponsors">Sponsors</a></li>
+                        <li><a href="index.html#faq">FAQ</a></li>
+                        <li><a href="index.html#legal">Legal</a></li>
+                        <li><a href="blog.html">Blogs</a></li>
+                        
+                    </ul>
+                </nav>
+            </div>
+        </header>
+
+        <main class="blog-page">
+            <!-- Top task/ad bar area from your sketch. Leave empty or replace with sponsor/ad code later. -->
+            <section class="blog-top-slot" aria-label="Top banner">
+            </section>
+
+            <div class="blog-frame">
+                <!-- Left empty side space from your sketch. -->
+                <aside class="blog-side-slot blog-side-slot-left" aria-label="Left sidebar space">
+                    <div class="blog-slot blog-slot-vertical">
+                    </div>
+                </aside>
+
+                <section class="blog-main" aria-labelledby="blog-title">
+                    <div class="container blog-container">
+                        <header class="blog-hero reveal">
+                            <p class="eyebrow">Pixel Forge Updates</p>
+                            <h1 id="blog-title">Blog</h1>
+                            <p class="blog-lead">Announcements, jam updates, creator notes, and community highlights.</p>
+                        </header>
+
+                        <div class="blog-search-card reveal" role="search">
+                            <label class="sr-only" for="blogSearch">Search blog posts</label>
+                            <input id="blogSearch" type="search" placeholder="Search posts..." autocomplete="off">
+
+                            <div class="blog-tabs" aria-label="Blog categories">
+                                <button class="blog-tab active" type="button" data-category="All">All</button>
+                                <button class="blog-tab" type="button" data-category="Updates">Updates</button>
+                                <button class="blog-tab" type="button" data-category="Guides">Guides</button>
+                                <button class="blog-tab" type="button" data-category="Community">Community</button>
+                                <button class="blog-tab" type="button" data-category="Sponsors">Sponsors</button>
+                            </div>
+                        </div>
+
+                        <section class="latest-blog reveal" aria-labelledby="latest-blog-title">
+                            <h2 id="latest-blog-title">Announcements</h2>
+                            <div id="featuredPost"></div>
+                        </section>
+
+                        <section class="blog-explore reveal" aria-labelledby="explore-title">
+                            <div class="blog-section-title">
+                                <h2 id="explore-title">Explore</h2>
+                                <span id="postCount"></span>
+                            </div>
+
+                            <div class="blog-grid" id="blogGrid"></div>
+
+                            <p class="blog-empty" id="emptyState" hidden>No posts match your search yet.</p>
+                        </section>
+                    </div>
+                </section>
+
+                <!-- Right empty side space from your sketch. -->
+                <aside class="blog-side-slot blog-side-slot-right" aria-label="Right sidebar space">
+                    <div class="blog-slot blog-slot-vertical">
+                    </div>
+                </aside>
+            </div>
+        </main>
+
+        <footer class="site-footer">
+            <div class="container footer-grid">
+                <div>
+                    <h2>Make something real this week.</h2>
+                    <p>Build it. Finish it. Ship it.</p>
+                </div>
+
+                <div class="footer-actions">
+                    <a href="https://itch.io/jam/pixel-forge-jam-2" class="button primary" rel="noopener noreferrer">Register on itch.io</a>
+                    <a href="https://discord.gg/mM8PpjGyM6" class="button ghost" rel="noopener noreferrer">Join the Community</a>
+                </div>
+
+                <div>
+                    <p class="footer-brand">Pixel Forge Jam 2026</p>
+                    <p class="footer-copy">Questions? Email <a href="https://mail.google.com/mail/u/0/?fs=1&tf=cm&source=mailto&to=pixelforgejam@gmail.com">pixelforgejam@gmail.com</a> or ask in Discord.</p>
+                </div>
+
+                <a href="contents/PixelForgeJam%20%232%20Sponsorship%20Prospectus.pdf.pdf" download="PixelForgeJam-2-Sponsorship-Prospectus.pdf" class="button ghost">Sponsor Form</a>
+
+                <div>
+                    <p class="footer-brand">Follow Us</p>
+                    <p style="width: 70px; display: flex; gap: 10px;">
+                        <a class="nav-social" href="https://x.com/PixelForgeJam" target="_blank" rel="noopener noreferrer" aria-label="Pixel Forge Jam on X"><img src="images/twitter.png" alt="X"></a>
+                        <a class="nav-social" href="https://www.linkedin.com/in/pixel-forge-game-jams-8003a640b/" target="_blank" rel="noopener noreferrer" aria-label="Pixel Forge Jam on LinkedIn"><img src="images/linkedin.png" alt="LinkedIn"></a>
+                    </p>
+                </div>
+            </div>
+        </footer>
+    </div>
+
+    <script>
+        /*
+            ADDING A NEW BLOG POST:
+            Copy one object inside POSTS and edit the values.
+
+            - Put newest posts at the top.
+            - image is optional. Leave it as "" if you do not want an image.
+            - link can point to another page later, or keep "#" for now.
+        */
+        const POSTS = [
+            {
+                title: "Pixel Forge Jam #2 [HAUNTED EDITION]",
+                date: "27 June 2026",
+                author: "Rishabh Mittal",
+                category: "Updates",
+                excerpt: "Join our second game jam, save the dates on your calendars - June 27th to July 4th",
+                image: "images/Copy of Untitled Design (1).png",
+                link: "pixel-forge-jam-2.html"
+            },
+            {
+                title: "Congratulations to the Pixel Forge Jam Winners",
+                date: "May 2026",
+                author: "Pixel Forge Team",
+                category: "Community",
+                excerpt: "We are celebrating the winners of our first Pixel Forge Jam, including our top five placements and Judges' Picks. Play their games and support the creators.",
+                image: "",
+                link: "pixel-forge-jam-winners.html"
+            },
+        ];
+
+        const siteHeader = document.querySelector('.site-header');
+        const menuToggle = document.getElementById('menuToggle');
+        const navMenu = document.getElementById('navMenu');
+        const reduceMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+
+        const blogSearch = document.getElementById('blogSearch');
+        const blogGrid = document.getElementById('blogGrid');
+        const featuredPost = document.getElementById('featuredPost');
+        const postCount = document.getElementById('postCount');
+        const emptyState = document.getElementById('emptyState');
+        const tabs = Array.from(document.querySelectorAll('.blog-tab'));
+
+        let activeCategory = "All";
+
+        const syncHeaderState = () => {
+            if (!siteHeader) return;
+            siteHeader.classList.toggle('is-scrolled', window.scrollY > 24);
+        };
+
+        const escapeHTML = (value) => {
+            return String(value)
+                .replaceAll("&", "&amp;")
+                .replaceAll("<", "&lt;")
+                .replaceAll(">", "&gt;")
+                .replaceAll('"', "&quot;")
+                .replaceAll("'", "&#039;");
+        };
+
+        const postMatches = (post, query) => {
+            const searchable = [
+                post.title,
+                post.date,
+                post.author,
+                post.category,
+                post.excerpt
+            ].join(" ").toLowerCase();
+
+            const matchesQuery = searchable.includes(query.toLowerCase());
+            const matchesCategory = activeCategory === "All" || post.category === activeCategory;
+
+            return matchesQuery && matchesCategory;
+        };
+
+        const postCardHTML = (post, featured = false) => {
+            const safeTitle = escapeHTML(post.title);
+            const safeDate = escapeHTML(post.date);
+            const safeAuthor = escapeHTML(post.author);
+            const safeCategory = escapeHTML(post.category);
+            const safeExcerpt = escapeHTML(post.excerpt);
+            const safeLink = escapeHTML(post.link || "#");
+            const safeImage = escapeHTML(post.image || "");
+
+            return `
+                <article class="${featured ? "blog-card blog-card-featured" : "blog-card"}">
+                    ${safeImage ? `
+                        <a class="blog-card-image" href="${safeLink}" aria-label="Read ${safeTitle}">
+                            <img src="${safeImage}" alt="" loading="${featured ? "eager" : "lazy"}" decoding="async">
+                        </a>
+                    ` : `
+                        <a class="blog-card-image blog-card-image-empty" href="${safeLink}" aria-label="Read ${safeTitle}">
+                            <span>${safeCategory}</span>
+                        </a>
+                    `}
+                    <div class="blog-card-body">
+                        <p class="blog-meta">
+                            <span>${safeCategory}</span>
+                            <span>${safeDate}</span>
+                        </p>
+                        <h3><a href="${safeLink}">${safeTitle}</a></h3>
+                        <p>${safeExcerpt}</p>
+                        <div class="blog-card-footer">
+                            <span>By ${safeAuthor}</span>
+                            <a href="${safeLink}">Read more</a>
+                        </div>
+                    </div>
+                </article>
+            `;
+        };
+
+        const renderPosts = () => {
+            const query = blogSearch.value.trim();
+            const filteredPosts = POSTS.filter((post) => postMatches(post, query));
+
+            featuredPost.innerHTML = filteredPosts.length ? postCardHTML(filteredPosts[0], true) : "";
+            blogGrid.innerHTML = filteredPosts.slice(1).map((post) => postCardHTML(post)).join("");
+
+            postCount.textContent = filteredPosts.length === 1
+                ? "1 post"
+                : `${filteredPosts.length} posts`;
+
+            emptyState.hidden = filteredPosts.length !== 0;
+        };
+
+        syncHeaderState();
+        window.addEventListener('scroll', syncHeaderState, { passive: true });
+
+        if (menuToggle && navMenu) {
+            menuToggle.addEventListener('click', () => {
+                const isOpen = navMenu.classList.toggle('active');
+                menuToggle.setAttribute('aria-expanded', String(isOpen));
+            });
+
+            navMenu.querySelectorAll('a').forEach((link) => {
+                link.addEventListener('click', () => {
+                    navMenu.classList.remove('active');
+                    menuToggle.setAttribute('aria-expanded', 'false');
+                });
+            });
+        }
+
+        tabs.forEach((tab) => {
+            tab.addEventListener('click', () => {
+                activeCategory = tab.dataset.category;
+                tabs.forEach((item) => item.classList.toggle('active', item === tab));
+                renderPosts();
+            });
+        });
+
+        blogSearch.addEventListener('input', renderPosts);
+
+        if (!reduceMotion) {
+            const revealElements = document.querySelectorAll('.reveal');
+            const observer = new IntersectionObserver((entries, activeObserver) => {
+                entries.forEach((entry) => {
+                    if (!entry.isIntersecting) return;
+                    entry.target.classList.add('is-visible');
+                    activeObserver.unobserve(entry.target);
+                });
+            }, {
+                threshold: 0.12,
+                rootMargin: '0px 0px -40px 0px'
+            });
+
+            revealElements.forEach((element) => observer.observe(element));
+        } else {
+            document.querySelectorAll('.reveal').forEach((element) => {
+                element.classList.add('is-visible');
+            });
+        }
+
+        renderPosts();
+    </script>
+</body>
+</html>
