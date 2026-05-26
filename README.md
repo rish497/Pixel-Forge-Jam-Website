@@ -1,7 +1,7 @@
 #PIXEL FORGE JAM 2026!
 
 --> What is Pixel Forge Jam?
-A 1-week game jam where developers, artists, designers, and creators come together to build something awesome. You have 7 days to create a game from scratch, experiment with ideas, and turn creativity into playable projects. Whether you're a beginner or experienced developer, Pixel Forge is all about creativity, learning, and building cool games. 
+Pixel Forge Jam is a 1-week game jam where developers, artists, designers, and creators come together to build something awesome. You have 7 days to create a game from scratch, experiment with ideas, and turn creativity into playable projects. Whether you're a beginner or experienced developer, Pixel Forge is all about creativity, learning, and building cool games. 
 
 --> Some Features of the website:
 - The link to the join our Discord
