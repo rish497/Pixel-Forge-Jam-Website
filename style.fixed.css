@@ -2534,3 +2534,7 @@ html {
 .ad-section {
     padding: 0rem 0;
 }
+
+.ad-container {
+    margin: 0 auto;
+}
