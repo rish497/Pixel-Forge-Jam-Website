@@ -1106,14 +1106,20 @@ html {
 
             /* Sizes */
             .sponsor-logos.xlarge img {
-                width: clamp(260px, 60vw, 600px);
+                width: clamp(260px, 60vw, 550px);
                 height: auto;
                 filter: drop-shadow(10px 10px 15px rgba(252, 217, 143, 0.792));
             }
-
+            .sponsor-logos.medium {
+                display: grid;
+                grid-template-columns: repeat(2, 1fr); 
+                gap: 20px;                             
+                justify-items: center;                 
+                align-items: center;                   
+            }
             .sponsor-logos.medium img {
                 filter: drop-shadow(10px 10px 15px rgba(0, 0, 0, 0.408));
-                width: clamp(180px, 40vw, 400px);
+                width: clamp(180px, 40vw, 350px);
                 height: auto;
             }
 
@@ -1129,13 +1135,22 @@ html {
             }
 
             /* Small sponsors */
-            .sponsor-logos.small img {
-                width: clamp(120px, 25vw,300px);
-                flex-direction: column;
-                height: auto;
-                filter: drop-shadow(10px 10px 15px rgb(79, 43, 1));
+            .sponsor-logos.small {
+                display: grid;
+                grid-template-columns: repeat(3, 1fr); 
+                gap: 20px;                             
+                justify-items: center;                 
+                align-items: center;                   
             }
 
+            
+            .sponsor-logos.small img {
+                width: 100%;                           
+                max-width: clamp(120px, 25vw, 250px);  
+                height: auto;                          
+                display: block;                        
+                filter: drop-shadow(10px 10px 15px rgba(79, 43, 1, 0.4)); 
+            }
             /* Hover */
             .sponsor-logos a {
                 transition: transform 0.2s ease, opacity 0.2s ease;
