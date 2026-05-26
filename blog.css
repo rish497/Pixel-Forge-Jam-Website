@@ -24,6 +24,8 @@
 }
 
 .blog-slot-vertical {
+    background-color: #ffffff;
+    border-radius: 20px;
     min-height: calc(100vh - 8rem);
     position: sticky;
     top: 6rem;
