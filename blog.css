@@ -41,7 +41,7 @@
 
 .blog-frame {
     display: grid;
-    grid-template-columns: minmax(7rem, 16vw) minmax(0, 1160px) minmax(7rem, 16vw);
+    grid-template-columns: minmax(7rem, .1vw) minmax(0, 1160px) minmax(7rem, 16vw);
     gap: var(--space-4);
     width: min(calc(100% - 1rem), 1500px);
     margin: var(--space-4) auto var(--space-8);
