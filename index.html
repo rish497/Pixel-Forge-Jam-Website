@@ -49,6 +49,9 @@
 
         <main>
             <section class="hero-band" aria-labelledby="hero-title">
+                    <canvas class="hero-canvas" id="heroCanvas" aria-hidden="true"></canvas>
+                    <div class="hero-bg-grid" aria-hidden="true"></div>
+                    <div class="hero-bg-vignette" aria-hidden="true"></div>
                     <div class="hero-copy reveal">
                         <p class="eyebrow">June 27 to July 4, 2026</p>
                         <h1 id="hero-title">
@@ -910,6 +913,151 @@
                 status.textContent = "Could not submit. Try again later.";
             } finally {
                 submit.disabled = false;
+            }
+        });
+    })();
+
+    (function initHeroForge() {
+        const canvas = document.getElementById('heroCanvas');
+        if (!canvas) return;
+        if (window.matchMedia('(prefers-reduced-motion: reduce)').matches) return;
+
+        const ctx = canvas.getContext('2d');
+        const DPR = Math.min(window.devicePixelRatio || 1, 2);
+        let width = 0, height = 0;
+        let embers = [];
+        let stars = [];
+        let smoke = [];
+        let rafId = null;
+
+        function resize() {
+            const rect = canvas.getBoundingClientRect();
+            width = rect.width;
+            height = rect.height;
+            canvas.width = Math.floor(width * DPR);
+            canvas.height = Math.floor(height * DPR);
+            ctx.setTransform(DPR, 0, 0, DPR, 0, 0);
+            seed();
+        }
+
+        function rand(min, max) { return Math.random() * (max - min) + min; }
+
+        function seed() {
+            const emberCount = Math.max(65, Math.floor(width * height / 11000));
+            embers = new Array(emberCount).fill(0).map(() => spawnEmber(true));
+            stars = new Array(120).fill(0).map(() => ({
+                x: Math.random() * width,
+                y: Math.random() * height,
+                r: rand(0.4, 1.4),
+                tw: rand(0, Math.PI * 2),
+                ts: rand(0.005, 0.02)
+            }));
+            smoke = new Array(8).fill(0).map(() => ({
+                x: rand(0, width),
+                y: rand(height * 0.4, height),
+                r: rand(120, 220),
+                vx: rand(-0.15, 0.15),
+                vy: rand(-0.1, -0.03),
+                hue: rand(10, 30),
+                a: rand(0.04, 0.09)
+            }));
+        }
+
+        function spawnEmber(initial) {
+            return {
+                x: rand(0, width),
+                y: initial ? rand(0, height) : height + rand(0, 40),
+                vx: rand(-0.25, 0.25),
+                vy: rand(-1.4, -0.5),
+                size: rand(1.2, 2.8),
+                life: 0,
+                maxLife: rand(180, 360),
+                hue: rand(8, 35),
+                flicker: rand(0, Math.PI * 2)
+            };
+        }
+
+        function draw() {
+            ctx.clearRect(0, 0, width, height);
+
+            for (const s of stars) {
+                s.tw += s.ts;
+                const a = 0.35 + Math.sin(s.tw) * 0.35;
+                ctx.globalAlpha = a;
+                ctx.fillStyle = '#cfd9ff';
+                ctx.fillRect(Math.floor(s.x), Math.floor(s.y), s.r, s.r);
+            }
+            ctx.globalAlpha = 1;
+
+            ctx.globalCompositeOperation = 'lighter';
+            for (const p of smoke) {
+                p.x += p.vx;
+                p.y += p.vy;
+                if (p.y + p.r < 0) {
+                    p.y = height + p.r;
+                    p.x = rand(0, width);
+                }
+                if (p.x < -p.r) p.x = width + p.r;
+                if (p.x > width + p.r) p.x = -p.r;
+
+                const grad = ctx.createRadialGradient(p.x, p.y, 0, p.x, p.y, p.r);
+                grad.addColorStop(0, `hsla(${p.hue}, 90%, 55%, ${p.a})`);
+                grad.addColorStop(1, 'hsla(20, 90%, 50%, 0)');
+                ctx.fillStyle = grad;
+                ctx.beginPath();
+                ctx.arc(p.x, p.y, p.r, 0, Math.PI * 2);
+                ctx.fill();
+            }
+
+            for (let i = 0; i < embers.length; i++) {
+                const e = embers[i];
+                e.life++;
+                e.x += e.vx;
+                e.y += e.vy;
+                e.vy *= 0.995;
+                e.vx += Math.sin((e.life + e.flicker) * 0.05) * 0.02;
+
+                const lifeRatio = e.life / e.maxLife;
+                if (e.y < -10 || lifeRatio >= 1) {
+                    embers[i] = spawnEmber(false);
+                    continue;
+                }
+
+                const alpha = (1 - lifeRatio) * (0.7 + Math.sin(e.flicker + e.life * 0.2) * 0.3);
+                const sz = e.size * (1 - lifeRatio * 0.4);
+
+                const g = ctx.createRadialGradient(e.x, e.y, 0, e.x, e.y, sz * 6);
+                g.addColorStop(0, `hsla(${e.hue}, 100%, 70%, ${alpha})`);
+                g.addColorStop(0.4, `hsla(${e.hue}, 100%, 50%, ${alpha * 0.4})`);
+                g.addColorStop(1, `hsla(${e.hue}, 100%, 40%, 0)`);
+                ctx.fillStyle = g;
+                ctx.beginPath();
+                ctx.arc(e.x, e.y, sz * 6, 0, Math.PI * 2);
+                ctx.fill();
+
+                ctx.fillStyle = `hsla(${e.hue + 20}, 100%, 85%, ${alpha})`;
+                ctx.fillRect(Math.floor(e.x - sz / 2), Math.floor(e.y - sz / 2), Math.ceil(sz), Math.ceil(sz));
+            }
+            ctx.globalCompositeOperation = 'source-over';
+
+            rafId = requestAnimationFrame(draw);
+        }
+
+        resize();
+        draw();
+
+        let resizeTimer = null;
+        window.addEventListener('resize', () => {
+            clearTimeout(resizeTimer);
+            resizeTimer = setTimeout(resize, 150);
+        });
+
+        document.addEventListener('visibilitychange', () => {
+            if (document.hidden) {
+                if (rafId) cancelAnimationFrame(rafId);
+                rafId = null;
+            } else if (!rafId) {
+                draw();
             }
         });
     })();

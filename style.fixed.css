@@ -229,9 +229,80 @@ html {
         }
 
         .hero-band {
-            background: radial-gradient(circle,rgba(15, 24, 48, 0.98) 0%, rgba(21, 37, 81, 0.98) 100%);
+            position: relative;
+            overflow: hidden;
+            isolation: isolate;
+            background:
+                radial-gradient(ellipse at 20% 110%, rgba(255, 99, 32, 0.22) 0%, rgba(255, 99, 32, 0) 55%),
+                radial-gradient(ellipse at 80% 0%, rgba(120, 70, 220, 0.28) 0%, rgba(120, 70, 220, 0) 55%),
+                radial-gradient(circle at 50% 50%, rgba(21, 37, 81, 0.95) 0%, rgba(9, 12, 28, 0.98) 100%);
             color: #f7faf7;
             padding: 1.25rem 0 4rem;
+        }
+
+        .hero-band::before {
+            content: "";
+            position: absolute;
+            inset: -20%;
+            background:
+                radial-gradient(circle at 30% 30%, rgba(255, 120, 50, 0.18), transparent 40%),
+                radial-gradient(circle at 70% 60%, rgba(140, 80, 255, 0.18), transparent 45%),
+                radial-gradient(circle at 50% 90%, rgba(255, 60, 100, 0.14), transparent 40%);
+            filter: blur(40px);
+            animation: heroAuroraDrift 18s ease-in-out infinite alternate;
+            z-index: 0;
+            pointer-events: none;
+        }
+
+        @keyframes heroAuroraDrift {
+            0%   { transform: translate3d(0, 0, 0) scale(1); }
+            50%  { transform: translate3d(2%, -1.5%, 0) scale(1.05); }
+            100% { transform: translate3d(-2%, 1.5%, 0) scale(1.02); }
+        }
+
+        .hero-canvas {
+            position: absolute;
+            inset: 0;
+            width: 100%;
+            height: 100%;
+            z-index: 1;
+            pointer-events: none;
+            display: block;
+        }
+
+        .hero-bg-grid {
+            position: absolute;
+            inset: 0;
+            z-index: 2;
+            pointer-events: none;
+            background-image:
+                linear-gradient(rgba(255, 255, 255, 0.045) 1px, transparent 1px),
+                linear-gradient(90deg, rgba(255, 255, 255, 0.045) 1px, transparent 1px);
+            background-size: 32px 32px;
+            mask-image: radial-gradient(ellipse at center, rgba(0, 0, 0, 0.8) 0%, transparent 75%);
+            -webkit-mask-image: radial-gradient(ellipse at center, rgba(0, 0, 0, 0.8) 0%, transparent 75%);
+            opacity: 0.55;
+        }
+
+        .hero-bg-vignette {
+            position: absolute;
+            inset: 0;
+            z-index: 3;
+            pointer-events: none;
+            background:
+                radial-gradient(ellipse at center, transparent 35%, rgba(5, 8, 20, 0.55) 100%),
+                linear-gradient(180deg, transparent 60%, rgba(5, 8, 20, 0.6) 100%);
+        }
+
+        .hero-band > .hero-copy,
+        .hero-band > .container {
+            position: relative;
+            z-index: 4;
+        }
+
+        @media (prefers-reduced-motion: reduce) {
+            .hero-band::before { animation: none; }
+            .hero-canvas { display: none; }
         }
 
         .hero-grid {
