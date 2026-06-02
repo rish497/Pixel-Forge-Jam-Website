@@ -2538,3 +2538,7 @@ html {
 .ad-container {
     margin: 0 auto;
 }
+.jam-link {
+    color: #00a3e4 !important;
+    font-weight: 700 !important;
+}
