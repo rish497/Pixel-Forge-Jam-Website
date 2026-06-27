@@ -1816,7 +1816,9 @@ html {
 .theme-card {
     position: relative;
     max-width: 800px;
-    margin: 140px auto;
+    margin: 1px auto;
+    margin-left: -100px;
+    margin-top: -100px;
     padding: 3rem 2rem;
     border-radius: var(--radius);
     background: radial-gradient(circle at center,
