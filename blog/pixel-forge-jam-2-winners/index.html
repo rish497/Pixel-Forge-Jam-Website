@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pixel Forge Jam #2 Winners | Pixel Forge Jam</title>
+    <meta name="description" content="Meet the top five winners and three Judges' Picks from Pixel Forge Jam #2: Haunted Edition.">
+    <link rel="icon" type="image/png" href="/images/New%20Piskel-2.png%20(9).png">
+    <link rel="stylesheet" href="/style.fixed.css">
+    <style>
+        .post-page { background: var(--bg); }
+        .post-shell { width: min(calc(100% - 2.5rem), 1100px); margin-inline: auto; padding: var(--space-6) 0 var(--space-8); }
+        .post-back { display: inline-flex; margin-bottom: var(--space-4); color: var(--accent-strong); font-weight: 800; text-decoration: none; }
+        .post-layout { display: grid; grid-template-columns: minmax(0, 1fr) 17rem; gap: var(--space-6); align-items: start; }
+        .post-article { min-width: 0; overflow: hidden; border: 1px solid rgba(47, 107, 255, 0.22); border-radius: var(--radius); background: rgba(255, 255, 255, 0.94); box-shadow: var(--shadow); }
+        .post-hero { padding: var(--space-6); background: linear-gradient(120deg, rgba(5, 48, 25, 0.96), rgba(15, 24, 48, 0.88)); color: #fff; }
+        .post-category { display: inline-flex; margin-bottom: var(--space-3); padding: 0.35rem 0.75rem; border-radius: 999px; background: rgba(255,255,255,.12); color: #c8ff8f; font-size: .82rem; font-weight: 800; text-transform: uppercase; }
+        .post-title { max-width: 48rem; margin-bottom: var(--space-3); font-size: clamp(2.35rem, 7vw, 4.5rem); line-height: .98; font-weight: 800; }
+        .post-subtitle { max-width: 44rem; color: rgba(255,255,255,.78); font-size: 1.08rem; }
+        .post-meta { display: flex; flex-wrap: wrap; gap: .7rem 1rem; margin-top: var(--space-4); color: rgba(255,255,255,.72); font-size: .9rem; font-weight: 700; }
+        .post-cover { margin: 0; background: #073b20; }
+        .post-cover img { width: 100%; max-height: 34rem; object-fit: cover; }
+        .post-content { padding: var(--space-6); }
+        .post-content > * + * { margin-top: var(--space-4); }
+        .post-content h2 { margin-top: var(--space-6); color: var(--ink); font-size: clamp(1.7rem, 4vw, 2.35rem); line-height: 1.1; }
+        .post-content p { color: var(--muted); font-size: 1.03rem; }
+        .post-note { padding: var(--space-4); border: 1px solid var(--line); border-left: 4px solid #65d629; border-radius: var(--radius); background: #f2ffe9; }
+        .winner-list { display: grid; gap: 1rem; margin-top: 1.5rem; }
+        .winner-card { display: grid; grid-template-columns: 11rem minmax(0, 1fr); gap: 1rem; align-items: center; padding: 1rem; border: 1px solid var(--line); border-radius: var(--radius); background: var(--surface); }
+        .winner-card > a { display: block; }
+        .winner-card img { width: 100%; aspect-ratio: 16 / 10; border-radius: var(--radius); object-fit: cover; }
+        .winner-card h3 { margin: 0 0 .45rem; color: var(--accent-strong); font-size: 1.3rem; }
+        .judges-grid { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 1rem; margin-top: 1.5rem; }
+        .judges-grid .winner-card { display: block; }
+        .judges-grid img { margin-bottom: 1rem; }
+        .post-tags { display: flex; flex-wrap: wrap; gap: .6rem; padding-top: var(--space-5); border-top: 1px solid var(--line); }
+        .post-tags span { padding: .4rem .75rem; border-radius: 999px; background: var(--accent-soft); color: var(--accent-strong); font-size: .82rem; font-weight: 800; }
+        .post-more { padding: var(--space-5); border-top: 1px solid var(--line); background: var(--surface-soft); }
+        .post-more a { color: var(--accent-strong); font-weight: 800; }
+        .post-sidebar { position: sticky; top: 6rem; display: grid; gap: var(--space-4); }
+        .post-side-card { padding: var(--space-4); border: 1px solid var(--line); border-radius: var(--radius); background: rgba(255,255,255,.9); box-shadow: var(--shadow); }
+        .post-side-card h2 { margin-bottom: var(--space-2); color: var(--ink); font-size: 1rem; }
+        .post-side-card p { color: var(--muted); font-size: .92rem; }
+        .post-share { display: flex; flex-wrap: wrap; gap: .6rem; }
+        .post-share a { color: var(--accent-strong); font-weight: 800; }
+        @media (max-width: 980px) { .post-layout { grid-template-columns: 1fr; } .post-sidebar { position: static; grid-template-columns: repeat(2, minmax(0,1fr)); } }
+        @media (max-width: 760px) { .post-shell { width: min(calc(100% - 1.5rem), var(--max-width)); } .post-hero, .post-content, .post-more { padding: var(--space-4); } .winner-card { grid-template-columns: 1fr; } .judges-grid, .post-sidebar { grid-template-columns: 1fr; } }
+    </style>
+</head>
+<body>
+    <div class="shell">
+        <header class="site-header" id="top">
+            <div class="container nav-shell">
+                <a class="brand" href="/#top" aria-label="Pixel Forge Jam home">
+                    <img src="/images/New%20Piskel-2.png%20(9).png" alt="">
+                    <span class="brand-mark"><strong>Pixel Forge Jam</strong></span>
+                </a>
+                <button class="menu-toggle" id="menuToggle" aria-expanded="false" aria-controls="navMenu">Menu</button>
+                <nav aria-label="Primary"><ul class="nav-menu" id="navMenu"><li><a href="/blog/">Blogs</a></li></ul></nav>
+            </div>
+        </header>
+
+        <main class="post-page">
+            <div class="post-shell">
+                <a class="post-back" href="/blog/">Back to all posts</a>
+                <div class="post-layout">
+                    <article class="post-article">
+                        <header class="post-hero">
+                            <p class="post-category">Community</p>
+                            <h1 class="post-title">Pixel Forge Jam #2 Winners</h1>
+                            <p class="post-subtitle">Celebrating the top five games and three Judges' Picks from Haunted Edition.</p>
+                            <div class="post-meta"><span>By Pixel Forge Team</span><span>July 2026</span><span>4 min read</span></div>
+                        </header>
+                        <figure class="post-cover">
+                            <img src="/images/Copy%20of%20Untitled%20Design%20(1).png" alt="Pixel Forge Jam #2 Haunted Edition artwork">
+                        </figure>
+                        <div class="post-content">
+                            <p>Pixel Forge Jam #2: Haunted Edition is officially complete, and we are thrilled to celebrate the games that rose to the top. The jam received <strong>111 entries</strong> and <strong>1,259 ratings</strong>, with creators building, playing, and supporting one another throughout the event.</p>
+                            <p>Thank you to everyone who submitted a game, rated entries, shared feedback, or joined the community. The quality and variety of the Haunted Edition submissions made these results worth celebrating.</p>
+                            <div class="post-note"><p><strong>Play the games:</strong> Every winner card below links directly to its official itch.io page. Visit the games, leave the creators some support, and experience the projects for yourself.</p></div>
+
+                            <h2>Our Top Five Winners</h2>
+                            <div class="winner-list">
+                                <article class="winner-card"><a href="https://jakekleiner.itch.io/lament-of-the-crimson-angel-and-white-garden" target="_blank" rel="noopener noreferrer"><img src="images/lament.png" alt="Lament of the Crimson Angel and White Garden"></a><div><h3>1st Place: Lament of the Crimson Angel and White Garden</h3><p>By <strong>JakeKleiner</strong>. Ranked first overall with 17 ratings and a score of 3.471, while also placing first for atmosphere.</p><p><a href="https://jakekleiner.itch.io/lament-of-the-crimson-angel-and-white-garden" target="_blank" rel="noopener noreferrer">Play Lament of the Crimson Angel and White Garden</a></p></div></article>
+                                <article class="winner-card"><a href="https://bryanjietang-boop.itch.io/holy-moly" target="_blank" rel="noopener noreferrer"><img src="images/holy-moly.png" alt="Holy Moly"></a><div><h3>2nd Place: Holy Moly</h3><p>By <strong>BryanCodes, quantumvortex18, javis, and GeorgeCodes</strong>. Ranked second overall with 21 ratings and a score of 3.448, taking first place for both gameplay and music.</p><p><a href="https://bryanjietang-boop.itch.io/holy-moly" target="_blank" rel="noopener noreferrer">Play Holy Moly</a></p></div></article>
+                                <article class="winner-card"><a href="https://pixcarex.itch.io/madbot" target="_blank" rel="noopener noreferrer"><img src="images/madbot.png" alt="MadBot"></a><div><h3>3rd Place: MadBot</h3><p>By <strong>pixcarex</strong>. Ranked third overall with 11 ratings and a score of 3.291, earning first place in the horror category.</p><p><a href="https://pixcarex.itch.io/madbot" target="_blank" rel="noopener noreferrer">Play MadBot</a></p></div></article>
+                                <article class="winner-card"><a href="https://reee101.itch.io/escape-corrupted-forest" target="_blank" rel="noopener noreferrer"><img src="images/escape-corrupted-forest.png" alt="Escape The Corrupted Forest"></a><div><h3>4th Place: Escape The Corrupted Forest</h3><p>By <strong>REEE101</strong>. Ranked fourth overall with 21 ratings and a score of 3.238, with especially strong horror and atmosphere results.</p><p><a href="https://reee101.itch.io/escape-corrupted-forest" target="_blank" rel="noopener noreferrer">Play Escape The Corrupted Forest</a></p></div></article>
+                                <article class="winner-card"><a href="https://jukgames.itch.io/cinder-vigil" target="_blank" rel="noopener noreferrer"><img src="images/cinder-vigil.png" alt="Cinder Vigil"></a><div><h3>5th Place: Cinder Vigil</h3><p>By <strong>Juk Games</strong>. Ranked fifth overall with 20 ratings and a score of 3.180, placing third for use of the theme.</p><p><a href="https://jukgames.itch.io/cinder-vigil" target="_blank" rel="noopener noreferrer">Play Cinder Vigil</a></p></div></article>
+                            </div>
+
+                            <h2>Judges' Favorite Picks</h2>
+                            <p>Alongside the ranked top five, the Pixel Forge Jam organizers selected three additional games for special recognition.</p>
+                            <div class="judges-grid">
+                                <article class="winner-card"><a href="https://asecondguy.itch.io/thetowerofabstractmagics" target="_blank" rel="noopener noreferrer"><img src="images/tower-abstract-magics.png" alt="The tower of abstract magics"></a><h3>1st Judges' Pick: The tower of abstract magics</h3><p>By <strong>ASecondGuy, Ancyyy, and Anomalocaris_Games</strong>.</p><p><a href="https://asecondguy.itch.io/thetowerofabstractmagics" target="_blank" rel="noopener noreferrer">Play The tower of abstract magics</a></p></article>
+                                <article class="winner-card"><a href="https://geatz.itch.io/so-below" target="_blank" rel="noopener noreferrer"><img src="images/so-below.png" alt="So, Below"></a><h3>2nd Judges' Pick: So, Below</h3><p>By <strong>Geatz, KamenCrafter, MagicMan077, and Guss219</strong>.</p><p><a href="https://geatz.itch.io/so-below" target="_blank" rel="noopener noreferrer">Play So, Below</a></p></article>
+                                <article class="winner-card"><a href="https://breakfastllamastudios.itch.io/the-last-light" target="_blank" rel="noopener noreferrer"><img src="images/the-last-light.png" alt="The Last Light"></a><h3>3rd Judges' Pick: The Last Light</h3><p>By <strong>BreakfastLlamaStudios</strong>.</p><p><a href="https://breakfastllamastudios.itch.io/the-last-light" target="_blank" rel="noopener noreferrer">Play The Last Light</a></p></article>
+                            </div>
+
+                            <h2>Thank You, Creators</h2>
+                            <p>Even if your game is not listed here, thank you for helping make Haunted Edition special. Every submission represents a finished idea, a new skill learned, or a creative risk taken.</p>
+                            <p>Game jams are not only about winning. They are about learning, experimenting, finishing something, and sharing it with other creators. We are proud of everyone who took part.</p>
+                            <p>See all entries and the complete rankings on the <a href="https://itch.io/jam/pixel-forge-jam-2/results" target="_blank" rel="noopener noreferrer">official Pixel Forge Jam #2 results page</a>.</p>
+                            <div class="post-tags" aria-label="Post tags"><span>Pixel Forge</span><span>Jam #2</span><span>Winners</span><span>Community</span></div>
+                        </div>
+                        <section class="post-more"><a href="/blog/">Return to all Pixel Forge posts</a></section>
+                    </article>
+                    <aside class="post-sidebar" aria-label="Blog sidebar">
+                        <section class="post-side-card"><h2>About Pixel Forge</h2><p>Pixel Forge Jam is a student-run game development community focused on creativity, learning, and shipping games.</p></section>
+                        <section class="post-side-card"><h2>Share</h2><div class="post-share"><a href="https://x.com/PixelForgeJam">X</a><a href="https://discord.gg/mM8PpjGyM6">Discord</a><a href="/blog/">Blog</a></div></section>
+                    </aside>
+                </div>
+            </div>
+        </main>
+    </div>
+    <script>
+        const menuToggle = document.getElementById('menuToggle');
+        const navMenu = document.getElementById('navMenu');
+        if (menuToggle && navMenu) menuToggle.addEventListener('click', () => {
+            const open = navMenu.classList.toggle('active');
+            menuToggle.setAttribute('aria-expanded', String(open));
+        });
+    </script>
+</body>
+</html>
