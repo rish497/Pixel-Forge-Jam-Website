@@ -1405,6 +1405,10 @@ html {
 
         @media (max-width: 760px) {
             
+            .page-home .process-list {
+                display: none;
+            }
+
             .container {
                 width: min(calc(100% - 1.5rem), var(--max-width));
             }
