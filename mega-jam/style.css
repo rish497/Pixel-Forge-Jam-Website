@@ -162,10 +162,10 @@
         .sponsor-tier.visible .sponsor-logo:nth-child(4) { transition-delay: .3s; }
         .sponsor-tier.visible .sponsor-logo:hover { transform: translateY(-8px) scale(1.045); filter: drop-shadow(0 18px 24px rgba(55,145,235,.25)); }
         .sponsor-logo img { width: auto; height: auto; object-fit: contain; }
-        .sponsor-logos.platinum .sponsor-logo img { width: clamp(380px, 48vw, 670px); max-height: 230px; }
-        .sponsor-logos.gold .sponsor-logo img { width: clamp(300px, 38vw, 530px); max-height: 180px; }
-        .sponsor-logos.silver .sponsor-logo img { width: clamp(230px, 29vw, 390px); max-height: 135px; }
-        .sponsor-logos.bronze .sponsor-logo img { width: clamp(170px, 22vw, 285px); max-height: 100px; }
+        .sponsor-logos.platinum .sponsor-logo img { width: clamp(380px, 48vw, 670px); max-height: 200px; }
+        .sponsor-logos.gold .sponsor-logo img { width: clamp(300px, 38vw, 530px); max-height: 165px; }
+        .sponsor-logos.silver .sponsor-logo img { width: clamp(230px, 29vw, 390px); max-height: 100px; }
+        .sponsor-logos.bronze .sponsor-logo img { width: clamp(170px, 22vw, 285px); max-height: 65px; }
         .partner-cta { margin-top: 18px; padding-top: 18px; border-top: 1px solid var(--mist-line); display: flex; justify-content: space-between; align-items: center; gap: 30px; }
         .partner-cta p { margin: 0; color: #8d9aaa; }
         .partner-actions { display: flex; flex-wrap: wrap; gap: 10px; }
