@@ -1,0 +1,1067 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Pixel Forge Jam is a one-week online game jam for developers, artists, designers, and creators.">
+    <meta name="keywords" content="pixel forge, coding competitions, India, jam, game jam, itch, itch.io jams, game jams for beginners, hackathon, pixel forge jam, forge, pixel, 1 week game jam, prizes, community, coding, competition, beginner, proffesional">
+    <link rel="icon" type="image/png" href="/images/New Piskel-2.png (9).png">
+    
+    <title>Pixel Forge Jam</title>
+    <script>
+        document.documentElement.classList.add('js');
+        if (!window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
+            document.documentElement.classList.add('motion-ready');
+        }
+    </script>
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-L1EEQDSQ42"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+
+        gtag('config', 'G-L1EEQDSQ42');
+    </script>
+    <link rel="stylesheet" href="/style.fixed.css">
+</head>
+
+
+<body class="page-home">
+    <div class="shell">
+        <header class="site-header" id="top">
+            <div class="container nav-shell">
+                <a class="brand" href="#top" aria-label="Pixel Forge Jam home">
+                    <img src="/images/New Piskel-2.png (9).png" alt="">
+                    <span class="brand-mark">
+                        <strong>Pixel Forge Jam</strong>
+                    </span>
+                </a>
+                <button class="menu-toggle" id="menuToggle" aria-expanded="false" aria-controls="navMenu">Menu</button>
+                <nav aria-label="Primary">
+                    <ul class="nav-menu" id="navMenu">
+                        <li>
+                            <a class="jam-link" href="https://pixelforgehackathons.info/">
+                                Pixel Forge Hackathons
+                            </a>
+                        </li>
+                        <li><a href="#about">About</a></li>
+                        <li><a href="#timeline">Timeline</a></li>
+                        <li><a href="#themes">Theme</a></li>
+                        <li><a href="#rules">Rules</a></li>
+                        <li><a href="#prizes">Prizes</a></li>
+                        <li><a href="#sponsors">Sponsors</a></li>
+                        <li><a href="#faq">FAQ</a></li>
+                        <li><a href="/blog/">Blogs</a></li>
+                        <li><a href="/press/">Press Kit</a></li>
+
+                    </ul>
+                </nav>
+            </div>
+        </header>
+
+        <main>
+            <section class="hero-band" aria-labelledby="hero-title">
+                    <canvas class="hero-canvas" id="heroCanvas" aria-hidden="true"></canvas>
+                    <div class="hero-bg-grid" aria-hidden="true"></div>
+                    <div class="hero-bg-vignette" aria-hidden="true"></div>
+                    <div class="hero-copy reveal">
+                        <p class="eyebrow">September 5 - 12, 2026</p>
+                        <h1 id="hero-title">
+                        Pixel Forge Jam #3
+                        <span class="jam-stamp" style="text-shadow:0 0 10px rgba(255, 255, 255, 0.7), 0 0 20px rgba(0, 51, 255, 0.4) !important; ">  
+                        <span style="color: red !important;">Tri</span><span style="color: blue !important;">color</span><span style="color: black !important;"> Challenge!</span>
+                        </span>
+                        </h1>
+                        <p class="hero-lead">Build a game forged by hand.</p>
+                        <div class="hero-actions">
+                            <a href="https://itch.io/jam/pixel-forge-jam-3" class="button primary" rel="noopener noreferrer">Join the Jam</a>
+                            <a href="https://discord.gg/mM8PpjGyM6" class="button secondary" rel="noopener noreferrer">Join Discord</a>
+                        </div>
+                        
+                    </div>
+            </section>
+
+            <section class="support-strip" aria-label="Selected sponsors">
+                <div class="container support-grid reveal">
+                    <div class="support-title">
+                        <p>Supported by sponsors.</p>
+                    </div>
+                    <div class="support-marquee">
+                        <div class="support-track">
+                            <a class="support-pill" href="https://weloveindies.com/en/welcome/jammers" rel="noopener noreferrer"><img src="/images/dyn-wli-logo-dark.png" alt="WeLoveIndies"></a>
+                            <a class="support-pill" href="https://assethoard.com/" rel="noopener noreferrer"><img src="/images/logo-full-lockup-dark.png" alt="AssetHoard"></a>  
+                            <a class="support-pill" href="https://esotericsoftware.com/" rel="noopener noreferrer"><img src="/images/spine_logo_dark.png" alt="Spine"></a>  
+                            <a class="support-pill" href="https://www.oppalin.com/" rel="noopener noreferrer"><img src="/images/OppalinLogoA.png" alt="Oppalin"></a>                           
+                            <a class="support-pill" href="https://www.zaragsoft.se/" rel="noopener noreferrer"><img src="/images/hawkeye logo red.png" alt="Oppalin"></a>  
+                            <a class="support-pill" href="https://craftpix.net/" rel="noopener noreferrer"><img src="/images/Craftpix_logo.png" alt="Craftpix"></a>  
+                            <a class="support-pill" href=" https://gamedev.tv/?utm_source=sponsor&utm_medium=&utm_campaign=pixelforge" rel="noopener noreferrer"><img src="images\gamedev-logo-full-color-rgb-900px@300ppi.png" alt="GameDev"></a>                          
+                            <span class="support-pill" aria-hidden="true"><img src="/images/dyn-wli-logo-dark.png" alt=""></span>
+                            <span class="support-pill" aria-hidden="true"><img src="/images/logo-full-lockup-dark.png" alt=""></span>
+                            <span class="support-pill" aria-hidden="true"><img src="/images/spine_logo_dark.png" alt=""></span>
+                            <span class="support-pill" aria-hidden="true"><img src="/images/OppalinLogoA.png" alt=""></span>
+                            <span class="support-pill" aria-hidden="true"><img src="/images/hawkeye logo red.png" alt=""></span> 
+                            <span class="support-pill" aria-hidden="true"><img src="/images/Craftpix_logo.png" alt=""></span>  
+                            <span class="support-pill" aria-hidden="true"><img src="/images/gamedev-logo-full-color-rgb-900px@300ppi.png" alt=""></span>                        
+                        <!--<a class="support-pill" href="https://easel.games/" rel="noopener noreferrer"><img src="/images/easelName.png" alt="Easel"></a>
+                            <a class="support-pill" href="https://pixelover.io/" rel="noopener noreferrer"><img src="/images/title_final.png" alt="PixelOver"></a>
+                            <a class="support-pill" href="https://pyxeledit.com/" rel="noopener noreferrer"><img src="/images/PyxelLogo9 (1).png" alt="Pyxel Edit"></a>
+                            <a class="support-pill" href="https://gen.xyz/" rel="noopener noreferrer"><img src="/images/xyz-logo-color.png" alt="gen.xyz"></a>
+                            <a class="support-pill" href="https://kronnect.com/" rel="noopener noreferrer"><img src="/images/kronnect.png" alt="Kronnect"></a>
+                            <a class="support-pill" href="https://codecrafters.io/" rel="noopener noreferrer"><img src="/images/Lockup-Horizontal-Dark.png" alt="CodeCrafters"></a>
+                            <a class="support-pill" href="https://picocad.net/" rel="noopener noreferrer"><img src="/images/picocad2_logo_horizontal.png" alt="picocad"></a>
+                            <a class="support-pill" href="https://xogot.com/" rel="noopener noreferrer"><img src="/images/xogot_banner.png" alt="Xogot"></a>
+                            
+                            <a class="support-pill" href="https://www.cardsagainsthumanity.com/" rel="noopener noreferrer"><img src="/images/featuring-CAH-black.png" alt="cardsagainsthumanity"></a>
+                            <span class="support-pill" aria-hidden="true"><img src="/images/easelName.png" alt=""></span>
+                            <span class="support-pill" aria-hidden="true"><img src="/images/title_final.png" alt=""></span>                            
+                            <span class="support-pill" aria-hidden="true"><img src="/images/PyxelLogo9 (1).png" alt=""></span>
+                            <span class="support-pill" aria-hidden="true"><img src="/images/xyz-logo-color.png" alt=""></span>
+                            <span class="support-pill" aria-hidden="true"><img src="/images/kronnect.png" alt=""></span>
+                            <span class="support-pill" aria-hidden="true"><img src="/images/Lockup-Horizontal-Dark.png" alt=""></span>
+                            <span class="support-pill" aria-hidden="true"><img src="/images/picocad2_logo_horizontal.png" alt=""></span>
+                            <span class="support-pill" aria-hidden="true"><img src="/images/xogot_banner.png" alt=""></span>
+                            <span class="support-pill" aria-hidden="true"><img src="/images/Craftpix_logo.png" alt=""></span>
+                            <span class="support-pill" aria-hidden="true"><img src="/images/featuring-CAH-black.png" alt=""></span>-->
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <section class="section" id="about">
+                <div class="container">
+                    <div class="section-heading reveal">
+                        <div>
+                            <h2 class="title-art">
+                                <span class="sr-only">About</span>
+                                <img src="/images/About-3-20-2026.png" alt="">
+                            </h2>
+                        </div>
+                    </div>
+
+                    <div class="editorial-grid">
+                        <div class="editorial-copy reveal">
+                            <dl class="fact-grid" aria-label="Jam snapshot">
+                                <div>
+                                    <dt>Format</dt>
+                                    <dd>Online</dd>
+                                </div>
+                                <div>
+                                    <dt>Duration</dt>
+                                    <dd>7 Days</dd>
+                                </div>
+                                <div>
+                                    <dt>Submission platform</dt>
+                                    <dd>itch.io</dd>
+                                </div>
+                                <div>
+                                    <dt>Teams</dt>
+                                    <dd>Upto 4 Members</dd>
+                                </div>
+                                <div>
+                                    <dt>Community</dt>
+                                    <dd>Discord based</dd>
+                                </div>
+                                <div>
+                                    <dt>Outcome</dt>
+                                    <dd>Prizes and recognition</dd>
+                                </div>
+                            </dl>
+                        </div>
+
+                        <div class="editorial-media reveal">
+                            <figure>
+                                <img
+                                    src="/images/Untitled design (21).png"
+                                    alt="Pixel Forge Jam logo"
+                                    loading="lazy"
+                                    decoding="async">
+                            </figure>
+                        </div>
+                    </div>
+
+                    <div class="feature-list">
+                        <article class="reveal">
+                            <h3>Ship something concrete</h3>
+                            <p>Finish a real game.</p>
+                        </article>
+                        <article class="reveal">
+                            <h3>Try risky ideas fast</h3>
+                            <p>Short deadlines make bold ideas easier to try.</p>
+                        </article>
+                        <article class="reveal">
+                            <h3>Be seen by other creators</h3>
+                            <p>Get feedback and something to show later.</p>
+                        </article>
+                    </div>
+                </div>
+            </section>
+
+            <section class="section soft" id="timeline">
+                <div class="container timeline-layout">
+                    <div class="timeline-intro reveal">
+                        <h2 class="title-art">
+                            <span class="sr-only">2026 Timeline</span>
+                            <img src="/images/2026-Timeline-3-20-2026.png" alt="">
+                        </h2>
+                    </div>
+
+                    <div class="timeline-list">
+                        <article class="timeline-event reveal">
+                            <span class="timeline-date">September 5</span>
+                            <h3>Jam starts</h3>
+                            <p>The theme goes live and the build week begins.</p>
+                        </article>
+                        <article class="timeline-event reveal">
+                            <span class="timeline-date">September 12</span>
+                            <h3>Submission deadline</h3>
+                            <p>Submit your build, credits, and theme note before the cutoff.</p>
+                        </article>
+                        <article class="timeline-event reveal">
+                            <span class="timeline-date">September 12 to 17</span>
+                            <h3>Voting period</h3>
+                            <p>Play entries and leave feedback.</p>
+                        </article>
+                        <article class="timeline-event reveal">
+                            <span class="timeline-date">September 17</span>
+                            <h3>Winners announced</h3>
+                            <p>Placements and featured games go live.</p>
+                        </article>
+                    </div>
+                </div>
+            </section>
+
+
+           <!--<section class="section soft" id="theme">
+                <div class="container">
+                    <div class="section-heading reveal">
+                        <div>
+                            <h2 class="title-art">
+                                <span class="sr-only">Theme</span>
+                                <img src="/images/Theme-3-17-2026 (3).png" alt="">
+                            </h2>
+                        </div>
+                    </div>
+
+                    
+                    <div class="section-heading reveal">
+                        <div>
+                            <h2 class="title-art">
+                                <span class="sr-only">Theme Reveal</span>
+                            </h2>
+                        </div>
+                    </div>
+
+                    
+                    <div class="theme-grid">
+
+                       
+                        <div class="theme-card reveal">
+                            <div class="theme-effects">
+                                <div class="flash"></div>
+                                <div class="ring"></div>
+                                <div class="shockwave"></div>
+                                <div class="particles"></div>
+                            </div>
+
+                            <div class="theme-inner">
+                                <p class="theme-label">THEME REVEAL</p>
+
+                                <h2 class="theme-title glitch"
+                                    data-text="Theme Name Here">
+                                    Theme Name Here
+                                </h2>
+                            </div>
+                        </div>
+
+                        
+                        <ol class="process-list reveal">
+                            <li>
+                                <strong>01</strong>
+                                <div>
+                                    <h3>Prepare your stack</h3>
+                                    <p>Choose your engine, art pipeline, and export format.</p>
+                                </div>
+                            </li>
+
+                            <li>
+                                <strong>02</strong>
+                                <div>
+                                    <h3>Interpret the theme clearly</h3>
+                                    <p>Pick one strong angle and make it clear in the game.</p>
+                                </div>
+                            </li>
+
+                            <li>
+                                <strong>03</strong>
+                                <div>
+                                    <h3>Leave room for polish</h3>
+                                    <p>Leave room for bug fixes, credits, and a clean page.</p>
+                                </div>
+                            </li>
+                        </ol>
+
+                    </div>
+
+                </div>
+            </section>-->
+
+            <section class="section" id="themes">
+                <div class="container">
+                    <div class="section-heading reveal">
+                        <div>
+                            <h2 class="title-art">
+                                <span class="sr-only">Theme</span>
+                                <img src="/images/Theme-3-17-2026 (3).png" alt="">
+                            </h2>
+                        </div>
+                    </div>
+
+                    <div class="theme-grid">
+                        <div class="theme-copy reveal">
+                            <p>Main Challenge is to make the game "USING ONLY 3 COLORS". The game theme is "FREEDOM BUT AT WHAT COST?"</p>
+                            <div class="theme-actions">
+                                <a href="https://discord.gg/mM8PpjGyM6" class="button ghost" rel="noopener noreferrer">Get Updates on Discord</a>
+                                <a href="https://itch.io/jam/pixel-forge-jam-3" class="button ghost" rel="noopener noreferrer">See the Jam Page</a>
+                            </div>
+                            <form id="suggest-theme-form" class="suggest-theme-form" style="margin-top:1rem;display:flex;flex-wrap:wrap;gap:.5rem;align-items:center;">
+                                <label for="suggest-theme-input" class="sr-only">Your theme idea</label>
+                                <input type="text" id="suggest-theme-input" name="theme" placeholder="Type your theme idea..." maxlength="120" required style="flex:1 1 240px;padding:.6rem .8rem;border-radius:.5rem;border:1px solid #2a3346;background:#0f1422;color:#ffffff;font:inherit;caret-color:#ffffff;">
+                                <button type="submit" class="button primary" id="suggest-theme-submit">Submit</button>
+                                <span id="suggest-theme-status" role="status" aria-live="polite" style="font-size:.9rem;color:#9aa3b8;flex-basis:100%;"></span>
+                            </form>
+                        </div>
+                        <ol class="process-list">
+                                <li>
+                                    <strong>01</strong>
+                                    <div>
+                                        <h3>Prepare your stack</h3>
+                                        <p>Choose your engine, art pipeline, and export format.</p>
+                                    </div>
+                                </li>
+                                <li>
+                                    <strong>02</strong>
+                                    <div>
+                                        <h3>Interpret the theme clearly</h3>
+                                        <p>Pick one strong angle and make it clear in the game.</p>
+                                    </div>
+                                </li>
+                                <li>
+                                    <strong>03</strong>
+                                    <div>
+                                        <h3>Leave room for polish</h3>
+                                        <p>Leave room for bug fixes, credits, and a clean page.</p>
+                                    </div>
+                                </li>
+                            </ol>
+                    </div>
+                </div>
+            </section>
+
+        
+            <section class="section soft" id="rules">
+                <div class="container">
+                    <div class="section-heading reveal">
+                        <div>
+                            <h2 class="title-art">
+                                <span class="sr-only">Rules</span>
+                                <img src="/images/Rules-3-17-2026 (1).png" alt="">
+                            </h2>
+                        </div>
+                    </div>
+
+                    <ol class="rule-list">
+                        <li class="reveal">
+                            <div>
+                                <h3>Participation</h3>
+                                <p>You can use any game engine you like and participate solo or in a team of up to 4 people.</p>
+                            </div>
+                        </li>
+                        <li class="reveal">
+                            <div>
+                                <h3>Original work</h3>
+                                <p>All work should be created during the jam period. Pre-made assets are allowed if properly credited. AI-generated content is not allowed.</p>
+                            </div>
+                        </li>
+                        <li class="reveal">
+                            <div>
+                                <h3>Theme usage</h3>
+                                <p>Your submission must include a short explanation of how your game uses the theme.</p>
+                            </div>
+                        </li>
+                        <li class="reveal">
+                            <div>
+                                <h3>Content guidelines</h3>
+                                <p>No hateful, offensive, or NSFW content. If your game includes horror or violence, clearly mention it on your game page.</p>
+                            </div>
+                        </li>
+                        <li class="reveal">
+                            <div>
+                                <h3>Submission format</h3>
+                                <p>A browser-playable version is highly recommended. If that is not possible, Windows or Mac builds are acceptable.</p>
+                            </div>
+                        </li>
+                        <li class="reveal">
+                            <div>
+                                <h3>Fair play</h3>
+                                <p>Do not attempt to manipulate ratings in any way.</p>
+                            </div>
+                        </li>
+                        <li class="reveal">
+                            <div>
+                                <h3>Respect and feedback</h3>
+                                <p>Be respectful during the voting period and provide useful, constructive feedback to other participants.</p>
+                            </div>
+                        </li>
+                    </ol>
+                </div>
+            </section>
+
+            <section class="section" id="prizes">
+                <div class="container">
+                    <div class="section-heading reveal">
+                        <div>
+                            <h2 class="title-art">
+                                <span class="sr-only">Prizes</span>
+                                <img src="/images/Prizes-3-17-2026.png" alt="">
+                            </h2>
+                        </div>
+                    </div>
+                    <p style="color:#5b6781">Claim prizes by emailing to <a href="https://mail.google.com/mail/u/0/?fs=1&tf=cm&source=mailto&to=pixelforgejam@gmail.com">pixelforgejam@gmail.com</a> or in <a href="https://discord.gg/mM8PpjGyM6" rel="noopener noreferrer">Discord</a>. Teams are responsible for splitting prizes, and distribution is typically one key per member (subject to availability). Solo winners receive one key.</p>
+                    <div class="prize-highlights">
+                        <article class="prize-card featured reveal">
+                            <p class="tier-label">First Place</p>
+                            <h4>1 Team</h4>
+                            <ul>
+                                <li>Up to 4x 1 year license for Spine Professional ($379 Value Each)</li>
+                                <li>100€ Voucher for WeLoveIndies (Used at checkout)</li>
+                                <li>Upto 4 Free 1-year Hawkeye commercial license ($99 Value)</li>
+                                <li>Oppalin one lifetime license ($99 Value)</li>
+                                <li>Up to 4 CraftPix Annual Premium subscription ($48 Value Each)</li>
+                                <li>1x GameDev Course of Winners' Choice from <a href="https://gamedev.tv/?utm_source=sponsor&utm_medium=&utm_campaign=pixelforge">GameDev.tv</a> ($20-$50 Value)</li>
+                                <li>1 Assethoard License ($40 Value Each)</li>                
+                                <li>Featured on our websites, signed winner certificate, and Discord role</li>
+                            </ul>
+                        </article>
+
+                        <article class="prize-card reveal">
+                            <p class="tier-label">Second Place</p>
+                            <h4>1 Team</h4>
+                            <ul>
+                                <li>100€ Voucher for WeLoveIndies (Used at checkout)</li>
+                                <li>Upto 4 Free 1-year Hawkeye commercial license ($99 Value)</li>
+                                <li>Up to 4x  1-year license for Spine Essential ($69 Value Each)</li>
+                                <li>Oppalin one 12-month Pro license ($67 Value)</li>
+                                <li>Up to 4 CraftPix Annual Premium subscription ($48 Value Each)</li>
+                                <li>1x GameDev Course of Winners' Choice from <a href="https://gamedev.tv/?utm_source=sponsor&utm_medium=&utm_campaign=pixelforge">GameDev.tv</a> ($20-$50 Value)</li>
+                                <li>1 Assethoard License ($40 Value Each)</li>
+                                <li>Featured on our websites, signed winner certificate, and Discord role</li>
+                            </ul>
+                        </article>
+
+                        <article class="prize-card reveal">
+                            <p class="tier-label">Third Place</p>
+                            <h4>1 Team</h4>
+                            <ul>
+                                <li>100€ Voucher for WeLoveIndies (Used at checkout)</li>
+                                <li>Upto 4 Free 1-year Hawkeye commercial license ($99 Value)</li>
+                                <li>Up to 4x  1-year license for Spine Essential ($69 Value Each)</li>
+                                <li>Up to 4 CraftPix Annual Premium subscription ($48 Value Each)</li>
+                                <li>1x GameDev Course of Winners' Choice from <a href="https://gamedev.tv/?utm_source=sponsor&utm_medium=&utm_campaign=pixelforge">GameDev.tv</a> ($20-$50 Value)</li>
+                                <li>1 Assethoard License ($40 Value Each)</li>
+                                <li>Featured on our websites, signed winner certificate, and Discord role</li>
+                            </ul>
+                        </article>
+                    </div>
+
+                    <div class="prize-secondary">
+                        <article class="award-block reveal">
+                            <div class="award-stack">
+                                <section>
+                                    <p class="tier-label">Fourth Place</p>
+                                    <h4>1 Team</h4>
+                                    <ul>
+                                        <li>Upto 4 Free 1-year Hawkeye commercial license ($99 Value)</li>
+                                        <li>50€ Voucher for WeLoveIndies (Used at checkout)</li>
+                                        <li>Up to 4 CraftPix Annual Premium subscription ($48 Value Each)</li>
+                                        <li>1x GameDev Course of Winners' Choice from <a href="https://gamedev.tv/?utm_source=sponsor&utm_medium=&utm_campaign=pixelforge">GameDev.tv</a> ($20-$50 Value)</li>
+                                        <li>1 Assethoard License ($40 Value Each)</li>
+                                        <li>Featured on our websites, signed winner certificate, and Discord role</li>
+                                    </ul>
+                                </section>
+                                <section>
+                                    <p class="tier-label">Fifth Place</p>
+                                    <h4>1 Team</h4>
+                                    <ul>
+                                        <li>Upto 4 Free 1-year Hawkeye commercial license ($99 Value)</li>
+                                        <li>50€ Voucher for WeLoveIndies (Used at checkout)</li>
+                                        <li>Up to 4 CraftPix Annual Premium subscription ($48 Value Each)</li>
+                                        <li>1x GameDev Course of Winners' Choice from <a href="https://gamedev.tv/?utm_source=sponsor&utm_medium=&utm_campaign=pixelforge">GameDev.tv</a> ($20-$50 Value)</li>
+                                        <li>1 Assethoard License ($40 Value Each)</li>
+                                        <li>Featured on our websites, signed winner certificate, and Discord role</li>
+                                    </ul>
+                                </section>
+                            </div>
+                        </article>
+
+                        <article class="award-block reveal">
+                            <div class="award-stack">
+                                <section>
+                                    <p class="tier-label">Judges' Favorites</p>
+                                    <h4>3 Teams</h4>
+                                    <ul>
+                                        <li>Featured on our websites, signed winner certificate, and Discord role</li>
+                                        <li>Chosen by the Pixel Forge Jam organizers from the Top 15 community vote. Winners of ranked categories are not eligible</li>
+                                    </ul>
+                                </section>
+                                <section>
+                                    <p class="tier-label">All Participants</p>
+                                    <ul>
+                                        <li>Free 6-month Hawkeye commercial license ($49.50 Value)</li>
+                                        <li>Signed participation certificate on request</li>
+                                    </ul>
+                                </section>
+                                
+                            </div>
+                        </article>
+                    </div>
+                </div>
+            </section>
+
+            <section class="section soft" id="sponsors">
+                <div class="container">
+                    <div class="section-heading reveal">
+                        <div>
+                            <h2 class="title-art">
+                                <span class="sr-only">Sponsors</span>
+                                <img src="/images/Sponsors-3-17-2026.png" alt="">
+                            </h2>
+                        </div>
+                    
+                    </div>
+
+                    <!-- GOLD -->
+                    <div class="reveal">
+                        <h1 style="text-align:center; margin-bottom: 2rem;">Gold sponsors</h1>
+                        <div class="sponsor-logos xlarge">
+                            
+                            <!--<a href="https://xogot.com/" target="_blank">
+                                <img src="/images/xogot_banner.png" alt="Xogot">
+                            </a>-->
+                            
+                            <!--<a href="https://codecrafters.io/" target="_blank">
+                                <img src="/images/Lockup-Horizontal-Dark.png" alt="CodeCrafters">
+                            </a>-->
+                            <a href="https://craftpix.net/?utm_source=itch.io&utm_medium=gamejam&utm_campaign=pixel-forge-jam-2" target="_blank">
+                                <img src="images/Craftpix_logo.png" alt="Craftpix">
+                            </a>                            
+
+                            <a href="https://weloveindies.com/en/welcome/jammers" target="_blank">
+                                <img src="/images/dyn-wli-logo-dark.png" alt="WeLoveIndies">
+                            </a>
+                            <a href="https://esotericsoftware.com/" target="_blank">
+                                <img src="/images\spine_logo_dark.png" alt="Spine">
+                            </a>
+                            <a href="https://www.zaragsoft.se/" target="_blank">
+                                <img src="/images/hawkeye logo red.png" alt="Hawkeye">
+                            </a>
+                            <!--<a href="https://www.minifantasy.net/" target="_blank">
+                                <img src="/images/NewBannerWhite.png" alt="Minifantasy">-->
+                        </div>
+                    </div>
+
+                    <!-- SILVER -->
+                    <div class="reveal" style="margin-top: 3rem;">
+                        <h1 style="text-align:center; margin-bottom: 2rem; margin-top: 5rem;">Silver sponsors</h1>
+                        <div class="sponsor-logos medium">
+                            <a href="https://assethoard.com/" target="_blank">
+                                <img src="/images/logo-full-lockup-dark.png" alt="AssetHoard">
+                           </a>
+                           <a href="https://www.oppalin.com/" target="_blank">
+                                <img src="/images/OppalinLogoA.png" alt="oppalin">
+                           </a>
+                           <a href=" https://gamedev.tv/?utm_source=sponsor&utm_medium=&utm_campaign=pixelforge" target="_blank">
+                                <img src="/images/gamedev-logo-full-color-rgb-900px@300ppi.png" alt="GameDev">
+                           </a>
+                            <!--<a href="https://pixelover.io/" target="_blank">
+                                <img src="/images/title_final.png" alt="PixelOver">
+                            </a>
+                            <a href="https://gen.xyz/" class="xyz" target="_blank">
+                                <img src="/images/xyz-logo-color.png" alt="gen.xyz">
+                            </a>
+                            <a href="http://kronnect.com" target="_blank">
+                                <img src="/images/kronnect.png" alt="Kronnect">
+                            </a>
+                            <a href="https://picocad.net/" target="_blank">
+                                <img src="/images/picocad2_logo_horizontal.png" alt="PicoCAD">
+                            </a>
+                           <a href="https://www.aseprite.org/" target="_blank">
+                                <img src="/images/Aseprite-logo.png" alt="Aseprite">
+                           </a>-->
+                           
+                        </div>
+                    </div>
+
+                    <!--Bronze-->
+                    <div class="reveal" style="margin-top: 3rem;">
+                        <h1 style="text-align:center; margin-bottom: 1rem; margin-top: 5rem;">Bronze sponsors</h1>
+                        <div class="sponsor-logos small">
+                            <!--<a href="https://pyxeledit.com/" target="_blank">
+                                <img src="/images/PyxelLogo9 (1).png" alt="Pyxel Edit">
+                            </a>-->
+                            
+                        </div>
+                    </div>
+
+                    <!-- CALLOUT (unchanged) -->
+                    <div class="sponsor-callout reveal">
+                        <div>
+                            <p class="eyebrow">Partner With Pixel Forge</p>
+                            <h3>Want to sponsor or donate to a future round? </h3>
+                            <p>Read the prospectus or email the team.</p>
+                        </div>
+                        <div class="callout-actions">
+                            <a href="/contents/PixelForgeJam%20%232%20Sponsorship%20Prospectus.pdf.pdf" download="PixelForgeJam-2-Sponsorship-Prospectus.pdf" class="button primary">
+                                Sponsorship Prospectus
+                            </a>
+                            <a href="https://mail.google.com/mail/u/0/?fs=1&tf=cm&source=mailto&to=pixelforgejam@gmail.com" class="button secondary">
+                                Email the Team
+                            </a>
+                            <a href="https://hcb.hackclub.com/donations/start/pixel-forge-jam" class="button secondary">
+                                Donate
+                            </a>
+                            
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <section class="section" id="faq">
+                <div class="container faq-grid">
+                    <div class="faq-intro reveal">
+                        <h2 class="title-art">
+                            <span class="sr-only">FAQ</span>
+                            <img src="/images/FAQ-3-20-2026.png" alt="">
+                        </h2>
+                        <p>Format, assets, and Discord.</p>
+                    </div>
+
+                    <div class="faq-list">
+                        <details class="faq-item reveal">
+                            <summary class="faq-question">What is the theme?</summary>
+                            <div class="faq-answer">
+                                <p>The main challenge is to make the game of only 3 colors! The theme is Freedom But at what cost? </p>
+                            </div>
+                        </details>
+                        <details class="faq-item reveal">
+                            <summary class="faq-question">Does my game have to be in a specific format?</summary>
+                            <div class="faq-answer">
+                                <p>No. Browser-based games are strongly recommended because they are easier for more people to play, but a Windows version is also acceptable.</p>
+                            </div>
+                        </details>
+                        <details class="faq-item reveal">
+                            <summary class="faq-question">What assets can I use?</summary>
+                            <div class="faq-answer">
+                                <p>You can use any art, audio, code, or tools that you have the legal right to use. The vast majority of new work should still be created during the jam.</p>
+                            </div>
+                        </details>
+                        <details class="faq-item reveal">
+                            <summary class="faq-question">Can I submit a game that I already started?</summary>
+                            <div class="faq-answer">
+                                <p>No. Entries are expected to be made during the jam period.</p>
+                            </div>
+                        </details>
+                        <details class="faq-item reveal">
+                            <summary class="faq-question">Is there a Discord I can join?</summary>
+                            <div class="faq-answer">
+                                <p>Yes. <a href="https://discord.gg/mM8PpjGyM6" rel="noopener noreferrer">Join the Pixel Forge Discord here</a>.</p>
+                            </div>
+                        </details>
+                    </div>
+                </div>
+            </section>
+<section class="section soft" id="legal">
+                <div class="container">
+                    <div class="section-heading reveal">
+                        <div>
+                            <h2 class="title-art">
+                                <span class="sr-only">Legal and Ownership</span>
+                                <img src="/images/Legal-3-20-2026_2.png" alt="">
+                            </h2>
+                        </div>
+                    </div>
+
+                    <div class="rights-list">
+                        <article class="reveal">
+                            <span class="rights-number">01</span>
+                            <h3>You keep your rights</h3>
+                            <p>Anything you make during Pixel Forge Jam remains your property. Pixel Forge does not claim ownership of your game.</p>
+                        </article>
+                        <article class="reveal">
+                            <span class="rights-number">02</span>
+                            <h3>Submission promotion</h3>
+                            <p>Submitted games may appear in Pixel Forge videos, social posts, or website coverage without requiring additional permission.</p>
+                        </article>
+                        <article class="reveal">
+                            <span class="rights-number">03</span>
+                            <h3>Asset rights</h3>
+                            <p>By submitting, you confirm that you have the legal right to use and share all assets, code, fonts, and audio included in your project.</p>
+                        </article>
+                    </div>
+
+                    
+                </div>
+            </section>
+        </main>
+
+        <footer class="site-footer">
+            <div class="container footer-grid">
+                <div>
+                            <h2>Make something real this week.</h2>
+                            <p>Build it. Finish it. Ship it.</p>
+                        </div>
+                        <div class="footer-actions">
+                            <a href="https://itch.io/jam/pixel-forge-jam-3" class="button primary" rel="noopener noreferrer">Register on itch.io</a>
+                            <a href="https://discord.gg/mM8PpjGyM6" class="button ghost" rel="noopener noreferrer">Join the Community</a>
+                        </div>
+                <div>
+                    <p class="footer-brand">Pixel Forge Jam 2026</p>
+                    <p class="footer-copy">Questions? Email <a href="https://mail.google.com/mail/u/0/?fs=1&tf=cm&source=mailto&to=pixelforgejam@gmail.com">pixelforgejam@gmail.com</a> or ask in Discord.</p>
+                </div>
+                <a href="/contents/PixelForgeJam%20%232%20Sponsorship%20Prospectus.pdf.pdf" download="PixelForgeJam-2-Sponsorship-Prospectus.pdf" class="button ghost">Sponsor Form</a>
+                
+
+                <div>
+                    <p class="footer-brand">Follow Us</p>
+                    <div class="footer-socials" aria-label="Pixel Forge Jam social media">
+                        <a href="https://x.com/PixelForgeJam" target="_blank" rel="noopener noreferrer" aria-label="Pixel Forge Jam on X">
+                            <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24h-6.657l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231 5.45-6.231Zm-1.161 17.52h1.833L7.084 4.126H5.117L17.083 19.77Z"/></svg>
+                        </a>
+                        <a href="https://www.linkedin.com/company/pixel-forge123/posts/?feedView=all" target="_blank" rel="noopener noreferrer" aria-label="Pixel Forge Jam on LinkedIn">
+                            <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286ZM5.337 7.433a2.062 2.062 0 1 1 0-4.124 2.062 2.062 0 0 1 0 4.124ZM7.119 20.452H3.555V9h3.564v11.452Z"/></svg>
+                        </a>
+                        <a href="https://www.instagram.com/pixelforgecommunity/" target="_blank" rel="noopener noreferrer" aria-label="Pixel Forge Jam on Instagram">
+                            <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M7.8 2h8.4A5.8 5.8 0 0 1 22 7.8v8.4a5.8 5.8 0 0 1-5.8 5.8H7.8A5.8 5.8 0 0 1 2 16.2V7.8A5.8 5.8 0 0 1 7.8 2Zm-.2 2A3.6 3.6 0 0 0 4 7.6v8.8A3.6 3.6 0 0 0 7.6 20h8.8a3.6 3.6 0 0 0 3.6-3.6V7.6A3.6 3.6 0 0 0 16.4 4H7.6Zm9.65 1.5a1.25 1.25 0 1 1 0 2.5 1.25 1.25 0 0 1 0-2.5ZM12 7a5 5 0 1 1 0 10 5 5 0 0 1 0-10Zm0 2a3 3 0 1 0 0 6 3 3 0 0 0 0-6Z"/></svg>
+                        </a>
+                        <a href="https://www.youtube.com/channel/UCz1PcBlSNnIXZSPCmad5ZeQ" target="_blank" rel="noopener noreferrer" aria-label="Pixel Forge Jam on YouTube">
+                            <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M23.5 6.2a3 3 0 0 0-2.1-2.1C19.5 3.6 12 3.6 12 3.6s-7.5 0-9.4.5A3 3 0 0 0 .5 6.2 31 31 0 0 0 0 12a31 31 0 0 0 .5 5.8 3 3 0 0 0 2.1 2.1c1.9.5 9.4.5 9.4.5s7.5 0 9.4-.5a3 3 0 0 0 2.1-2.1A31 31 0 0 0 24 12a31 31 0 0 0-.5-5.8ZM9.6 15.6V8.4l6.2 3.6-6.2 3.6Z"/></svg>
+                        </a>
+                    </div>
+                </div>
+
+            </div>
+        </footer>
+    </div>
+
+    <script>
+        const siteHeader = document.querySelector('.site-header');
+        const menuToggle = document.getElementById('menuToggle');
+        const navMenu = document.getElementById('navMenu');
+        const reduceMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+
+        const syncHeaderState = () => {
+            if (!siteHeader) {
+                return;
+            }
+
+            siteHeader.classList.toggle('is-scrolled', window.scrollY > 24);
+        };
+
+        syncHeaderState();
+        window.addEventListener('scroll', syncHeaderState, { passive: true });
+
+        if (menuToggle && navMenu) {
+            menuToggle.addEventListener('click', () => {
+                const isOpen = navMenu.classList.toggle('active');
+                menuToggle.setAttribute('aria-expanded', String(isOpen));
+            });
+
+            navMenu.querySelectorAll('a').forEach((link) => {
+                link.addEventListener('click', () => {
+                    navMenu.classList.remove('active');
+                    menuToggle.setAttribute('aria-expanded', 'false');
+                });
+            });
+        }
+
+        if (!reduceMotion) {
+            const revealElements = document.querySelectorAll('.reveal');
+            const observer = new IntersectionObserver((entries, activeObserver) => {
+                entries.forEach((entry) => {
+                    if (!entry.isIntersecting) {
+                        return;
+                    }
+
+                    entry.target.classList.add('is-visible');
+                    activeObserver.unobserve(entry.target);
+                });
+            }, {
+                threshold: 0.12,
+                rootMargin: '0px 0px -40px 0px'
+            });
+
+            revealElements.forEach((element) => observer.observe(element));
+        } else {
+            document.querySelectorAll('.reveal').forEach((element) => {
+                element.classList.add('is-visible');
+            });
+        }
+        const winnersSection = document.querySelector("#winners");
+
+        if (winnersSection && !reduceMotion) {
+            const winnersObserver = new IntersectionObserver(entries => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        entry.target.classList.add("is-visible");
+                    }
+                });
+            }, { threshold: 0.6 });
+
+            winnersSection.querySelectorAll(".reveal").forEach(el => {
+                winnersObserver.observe(el);
+            });
+        }
+
+        const cards = document.querySelectorAll(".theme-card");
+
+        cards.forEach(card => {
+            const inner = card.querySelector(".theme-inner");
+
+            card.addEventListener("mousemove", e => {
+                const rect = card.getBoundingClientRect();
+
+                const x = e.clientX - rect.left;
+                const y = e.clientY - rect.top;
+
+                const centerX = rect.width / 2;
+                const centerY = rect.height / 2;
+
+                const rotateX = -(y - centerY) / 12; // vertical tilt
+                const rotateY = (x - centerX) / 12;  // horizontal tilt
+
+                const skewX = (x - centerX) / 40;
+                const skewY = (y - centerY) / 40;
+
+                inner.style.transform = `
+                    rotateX(${rotateX}deg)
+                    rotateY(${rotateY}deg)
+                    skewX(${skewX}deg)
+                    skewY(${skewY}deg)
+                    scale(1.03)
+                `;
+            });
+
+            card.addEventListener("mouseleave", () => {
+                inner.style.transform = `
+                    rotateX(0deg)
+                    rotateY(0deg)
+                    skewX(0deg)
+                    skewY(0deg)
+                    scale(1)
+                `;
+            });
+        });
+
+
+        
+    if (winnersSection && !reduceMotion) {
+        for (let i = 0; i < 2; i++) {
+            const fw = document.createElement("div");
+            fw.className = "firework";
+
+            function randomize() {
+                fw.style.setProperty("--x", Math.random());
+                fw.style.setProperty("--y", Math.random());
+            }
+
+            randomize();
+
+            // Change position every time animation restarts.
+            fw.addEventListener("animationiteration", randomize);
+
+            // Random delay so they do not sync.
+            fw.style.animationDelay = (Math.random() * 2) + "s";
+
+            winnersSection.appendChild(fw);
+        }
+    }
+
+    (function () {
+        const form = document.getElementById("suggest-theme-form");
+        const input = document.getElementById("suggest-theme-input");
+        const submit = document.getElementById("suggest-theme-submit");
+        const status = document.getElementById("suggest-theme-status");
+        if (!form) return;
+
+        const ENDPOINT = "https://script.google.com/macros/s/AKfycbwjJUgUR2vyfDN0mPJ5BUoIj6I_BW2txBdkVbio7sKC9dXNYMCh2aqOZb7ziQxaq0oYYQ/exec";
+
+        form.addEventListener("submit", async (e) => {
+            e.preventDefault();
+            const theme = (input.value || "").trim();
+            if (!theme) {
+                status.textContent = "Please type a theme first.";
+                input.focus();
+                return;
+            }
+            submit.disabled = true;
+            status.textContent = "Submitting \"" + theme + "\"...";
+            try {
+                const body = new URLSearchParams({ theme });
+                await fetch(ENDPOINT, { method: "POST", mode: "no-cors", body });
+                status.textContent = "Thanks! Submitted: \"" + theme + "\"";
+                input.value = "";
+            } catch (err) {
+                status.textContent = "Could not submit. Try again later.";
+            } finally {
+                submit.disabled = false;
+            }
+        });
+    })();
+
+    (function initHeroForge() {
+        const canvas = document.getElementById('heroCanvas');
+        if (!canvas) return;
+        if (window.matchMedia('(prefers-reduced-motion: reduce)').matches) return;
+
+        const ctx = canvas.getContext('2d');
+        const DPR = Math.min(window.devicePixelRatio || 1, 2);
+        let width = 0, height = 0;
+        let embers = [];
+        let stars = [];
+        let smoke = [];
+        let rafId = null;
+
+        function resize() {
+            const rect = canvas.getBoundingClientRect();
+            width = rect.width;
+            height = rect.height;
+            canvas.width = Math.floor(width * DPR);
+            canvas.height = Math.floor(height * DPR);
+            ctx.setTransform(DPR, 0, 0, DPR, 0, 0);
+            seed();
+        }
+
+        function rand(min, max) { return Math.random() * (max - min) + min; }
+
+        function seed() {
+            const emberCount = Math.max(65, Math.floor(width * height / 11000));
+            embers = new Array(emberCount).fill(0).map(() => spawnEmber(true));
+            stars = new Array(120).fill(0).map(() => ({
+                x: Math.random() * width,
+                y: Math.random() * height,
+                r: rand(0.4, 1.4),
+                tw: rand(0, Math.PI * 2),
+                ts: rand(0.005, 0.02)
+            }));
+            smoke = new Array(8).fill(0).map(() => ({
+                x: rand(0, width),
+                y: rand(height * 0.4, height),
+                r: rand(120, 220),
+                vx: rand(-0.15, 0.15),
+                vy: rand(-0.1, -0.03),
+                hue: rand(10, 30),
+                a: rand(0.04, 0.09)
+            }));
+        }
+
+        function spawnEmber(initial) {
+            return {
+                x: rand(0, width),
+                y: initial ? rand(0, height) : height + rand(0, 40),
+                vx: rand(-0.25, 0.25),
+                vy: rand(-1.4, -0.5),
+                size: rand(1.2, 2.8),
+                life: 0,
+                maxLife: rand(180, 360),
+                hue: rand(8, 35),
+                flicker: rand(0, Math.PI * 2)
+            };
+        }
+
+        function draw() {
+            ctx.clearRect(0, 0, width, height);
+
+            for (const s of stars) {
+                s.tw += s.ts;
+                const a = 0.35 + Math.sin(s.tw) * 0.35;
+                ctx.globalAlpha = a;
+                ctx.fillStyle = '#cfd9ff';
+                ctx.fillRect(Math.floor(s.x), Math.floor(s.y), s.r, s.r);
+            }
+            ctx.globalAlpha = 1;
+
+            ctx.globalCompositeOperation = 'lighter';
+            for (const p of smoke) {
+                p.x += p.vx;
+                p.y += p.vy;
+                if (p.y + p.r < 0) {
+                    p.y = height + p.r;
+                    p.x = rand(0, width);
+                }
+                if (p.x < -p.r) p.x = width + p.r;
+                if (p.x > width + p.r) p.x = -p.r;
+
+                const grad = ctx.createRadialGradient(p.x, p.y, 0, p.x, p.y, p.r);
+                grad.addColorStop(0, `hsla(${p.hue}, 90%, 55%, ${p.a})`);
+                grad.addColorStop(1, 'hsla(20, 90%, 50%, 0)');
+                ctx.fillStyle = grad;
+                ctx.beginPath();
+                ctx.arc(p.x, p.y, p.r, 0, Math.PI * 2);
+                ctx.fill();
+            }
+
+            for (let i = 0; i < embers.length; i++) {
+                const e = embers[i];
+                e.life++;
+                e.x += e.vx;
+                e.y += e.vy;
+                e.vy *= 0.995;
+                e.vx += Math.sin((e.life + e.flicker) * 0.05) * 0.02;
+
+                const lifeRatio = e.life / e.maxLife;
+                if (e.y < -10 || lifeRatio >= 1) {
+                    embers[i] = spawnEmber(false);
+                    continue;
+                }
+
+                const alpha = (1 - lifeRatio) * (0.7 + Math.sin(e.flicker + e.life * 0.2) * 0.3);
+                const sz = e.size * (1 - lifeRatio * 0.4);
+
+                const g = ctx.createRadialGradient(e.x, e.y, 0, e.x, e.y, sz * 6);
+                g.addColorStop(0, `hsla(${e.hue}, 100%, 70%, ${alpha})`);
+                g.addColorStop(0.4, `hsla(${e.hue}, 100%, 50%, ${alpha * 0.4})`);
+                g.addColorStop(1, `hsla(${e.hue}, 100%, 40%, 0)`);
+                ctx.fillStyle = g;
+                ctx.beginPath();
+                ctx.arc(e.x, e.y, sz * 6, 0, Math.PI * 2);
+                ctx.fill();
+
+                ctx.fillStyle = `hsla(${e.hue + 20}, 100%, 85%, ${alpha})`;
+                ctx.fillRect(Math.floor(e.x - sz / 2), Math.floor(e.y - sz / 2), Math.ceil(sz), Math.ceil(sz));
+            }
+            ctx.globalCompositeOperation = 'source-over';
+
+            rafId = requestAnimationFrame(draw);
+        }
+
+        resize();
+        draw();
+
+        let resizeTimer = null;
+        window.addEventListener('resize', () => {
+            clearTimeout(resizeTimer);
+            resizeTimer = setTimeout(resize, 150);
+        });
+
+        document.addEventListener('visibilitychange', () => {
+            if (document.hidden) {
+                if (rafId) cancelAnimationFrame(rafId);
+                rafId = null;
+            } else if (!rafId) {
+                draw();
+            }
+        });
+    })();
+
+    </script>
+</body>
+</html>
