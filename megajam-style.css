@@ -162,10 +162,10 @@
         .sponsor-tier.visible .sponsor-logo:nth-child(4) { transition-delay: .3s; }
         .sponsor-tier.visible .sponsor-logo:hover { transform: translateY(-8px) scale(1.045); filter: drop-shadow(0 18px 24px rgba(55,145,235,.25)); }
         .sponsor-logo img { width: auto; height: auto; object-fit: contain; }
-        .sponsor-logos.platinum .sponsor-logo img { width: clamp(380px, 48vw, 670px); max-height: 200px; }
-        .sponsor-logos.gold .sponsor-logo img { width: clamp(300px, 38vw, 530px); max-height: 165px; }
-        .sponsor-logos.silver .sponsor-logo img { width: clamp(230px, 29vw, 390px); max-height: 100px; }
-        .sponsor-logos.bronze .sponsor-logo img { width: clamp(170px, 22vw, 285px); max-height: 65px; }
+        .sponsor-logos.platinum .sponsor-logo img { width: clamp(240px, 38vw, 530px); max-height: 200px; }
+        .sponsor-logos.gold .sponsor-logo img { width: clamp(160px, 28vw, 390px); max-height: 165px; }
+        .sponsor-logos.silver .sponsor-logo img { width: clamp(90px, 19vw, 250px); max-height: 100px; }
+        .sponsor-logos.bronze .sponsor-logo img { width: clamp(70px, 12vw, 165px); max-height: 65px; }
         .partner-cta { margin-top: 18px; padding-top: 18px; border-top: 1px solid var(--mist-line); display: flex; justify-content: space-between; align-items: center; gap: 30px; }
         .partner-cta p { margin: 0; color: #8d9aaa; }
         .partner-actions { display: flex; flex-wrap: wrap; gap: 10px; }
@@ -269,10 +269,10 @@
             .prize-card.featured { min-height: 0; }
             .sponsor-tier { min-height: 0; grid-template-columns: 1fr; gap: 24px; padding: 30px 0; }
             .sponsor-logos { min-height: 82px; justify-content: flex-start; }
-            .sponsor-logos.platinum .sponsor-logo img { width: min(100%, 420px); }
-            .sponsor-logos.gold .sponsor-logo img { width: min(90%, 380px); }
-            .sponsor-logos.silver .sponsor-logo img { width: min(76%, 300px); }
-            .sponsor-logos.bronze .sponsor-logo img { width: min(62%, 250px); }
+            .sponsor-logos.platinum .sponsor-logo img { width: min(100%, 350px); }
+            .sponsor-logos.gold .sponsor-logo img { width: min(90%, 310px); }
+            .sponsor-logos.silver .sponsor-logo img { width: min(76%, 230px); }
+            .sponsor-logos.bronze .sponsor-logo img { width: min(62%, 180px); }
             .partner-cta { align-items: stretch; flex-direction: column; }
             .partner-actions { display: grid; }
             .closing { min-height: 620px; }
