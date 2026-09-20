@@ -269,9 +269,9 @@
             .prize-card.featured { min-height: 0; }
             .sponsor-tier { min-height: 0; grid-template-columns: 1fr; gap: 24px; padding: 30px 0; }
             .sponsor-logos { min-height: 82px; justify-content: flex-start; }
-            .sponsor-logos.platinum .sponsor-logo img { width: min(100%, 520px); }
-            .sponsor-logos.gold .sponsor-logo img { width: min(90%, 430px); }
-            .sponsor-logos.silver .sponsor-logo img { width: min(76%, 340px); }
+            .sponsor-logos.platinum .sponsor-logo img { width: min(100%, 420px); }
+            .sponsor-logos.gold .sponsor-logo img { width: min(90%, 380px); }
+            .sponsor-logos.silver .sponsor-logo img { width: min(76%, 300px); }
             .sponsor-logos.bronze .sponsor-logo img { width: min(62%, 250px); }
             .partner-cta { align-items: stretch; flex-direction: column; }
             .partner-actions { display: grid; }
