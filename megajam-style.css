@@ -102,6 +102,9 @@
         .step span { color: var(--blue); font: 500 10px/1 "DM Mono", monospace; }
         .step h3 { margin: 32px 0 10px; font-size: 20px; }
         .step p { margin: 0; color: #8d9aaa; font-size: 13px; }
+        .step .workshop-register { display: inline-flex; align-items: center; justify-content: center; min-height: 42px; margin-top: 16px; padding: 10px 14px; border: 1px solid #69b3ff; color: white; background: var(--blue); text-decoration: none; font-size: 12px; font-weight: 800; transition: transform .18s, color .18s, background .18s, border-color .18s; }
+        .step .workshop-register:hover { color: var(--black); background: #7bc7ff; border-color: #7bc7ff; transform: translateY(-2px); }
+        .step .workshop-register:focus-visible { outline: 2px solid var(--cyan); outline-offset: 3px; }
 
         .rules-head { display: grid; grid-template-columns: .85fr 1.15fr; gap: 48px; margin-bottom: 38px; align-items: end; }
         .rules-head p:last-child { margin: 8px 0 0; max-width: 620px; color: var(--muted); font-size: 18px; }
