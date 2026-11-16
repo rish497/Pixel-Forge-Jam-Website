@@ -17,6 +17,9 @@
         />
         <title>Pixel Forge Mega Jam</title>
         <link rel="stylesheet" href="./megajam-style.css" />
+        <script src="./scripts/about-theme.js" defer></script>
+        <script src="./scripts/timeline-stack.js" defer></script>
+        <script src="./scripts/judging-scroll.js" defer></script>
     </head>
     <body>
         <a class="skip" href="#main">Skip to content</a>
@@ -56,12 +59,17 @@
 
         <main id="main">
             <section class="hero" id="top" aria-labelledby="hero-title">
+                <div class="hero-media" aria-hidden="true">
+                    <video class="hero-video" autoplay muted loop playsinline preload="auto" poster="./videos/hero-poster.jpg" tabindex="-1">
+                        <source src="./videos/hero-loop.mp4" type="video/mp4" />
+                    </video>
+                </div>
                 <div class="wrap hero-content reveal visible">
-                    <p class="status">Registration open</p>
                     <h1 id="hero-title">
                         <span class="topline">Pixel Forge presents</span>
                         <span class="mega">Mega</span>
                         <span class="jam">Jam</span>
+                        <span class="hero-dates">Nov 28-Dec 8, 2026</span>
                     </h1>
                     <p class="hero-lead">Ten days to take one bold idea from a blank project to a playable game.</p>
                     <div class="actions">
@@ -84,32 +92,11 @@
                         </a>
                     </div>
                 </div>
-                <div class="hero-facts">
-                    <div class="wrap hero-facts-inner">
-                        <div class="hero-fact">
-                            <span>Dates</span>
-                            <strong>Nov 28-Dec 8, 2026</strong>
-                        </div>
-                        <div class="hero-fact">
-                            <span>Duration</span>
-                            <strong>10 days</strong>
-                        </div>
-                        <div class="hero-fact">
-                            <span>Format</span>
-                            <strong>Online · Teams up to 4</strong>
-                        </div>
-                        <div class="hero-fact theme">
-                            <span>Theme</span>
-                            <strong>Revealed at kickoff</strong>
-                        </div>
-                    </div>
-                </div>
             </section>
 
             <section class="band band-light" id="about">
                 <div class="wrap intro-grid reveal">
                     <div>
-                        <p class="eyebrow">01 / About the event</p>
                         <h2 class="display">
                             Build.
                             <br />
@@ -136,11 +123,9 @@
                 <div class="wrap theme-layout reveal">
                     <span class="theme-number" aria-hidden="true">02</span>
                     <div>
-                        <p class="eyebrow">02 / Theme reveal</p>
                         <h2 class="theme-title">
-                            Locked until
-                            <br />
-                            <em>kickoff.</em>
+                            
+                            <em>THEME.</em>
                         </h2>
                         <p class="theme-copy">
                             The official theme will be revealed when the Mega Jam begins on November 28, 2026. Start with
@@ -154,11 +139,8 @@
                 <div class="wrap">
                     <div class="process-head reveal">
                         <div>
-                            <p class="eyebrow">03 / How it runs</p>
                             <h2 class="display">
-                                Ten days.
-                                <br />
-                                Four moves.
+                                Timeline
                             </h2>
                         </div>
                         <p>
@@ -209,17 +191,12 @@
                 <div class="wrap">
                     <div class="rules-head reveal">
                         <div>
-                            <p class="eyebrow">04 / The rules</p>
                             <h2 class="display">
                                 Keep it fair.
                                 <br />
                                 Make it yours.
                             </h2>
                         </div>
-                        <p>
-                            The guardrails are simple: begin during the jam, respect other creators, and be honest about
-                            what went into your submission.
-                        </p>
                     </div>
                     <div class="rules reveal">
                         <article class="rule">
@@ -285,7 +262,6 @@
             <section class="band band-blue" id="judging">
                 <div class="wrap">
                     <div class="judging-top reveal">
-                        <p class="eyebrow">05 / Community voting</p>
                         <h2 class="display">
                             Four ways to
                             <br />
@@ -325,7 +301,6 @@
                 <div class="wrap recognition-grid">
                     <div class="prize-head reveal">
                         <div>
-                            <p class="eyebrow">06 / Prizes</p>
                             <h2 class="display">
                                 Build it.
                                 <br />
@@ -526,7 +501,6 @@
                 <div class="wrap">
                     <div class="sponsor-head reveal from-left">
                         <div>
-                            <p class="eyebrow">07 / Sponsors</p>
                             <h2 class="display">
                                 Powering the
                                 <br />
@@ -667,7 +641,6 @@
                 <div class="wrap">
                     <div class="partner-section-head reveal">
                         <div>
-                            <p class="eyebrow">08 / Partners</p>
                             <h2 class="display">People who<br />help us build.</h2>
                         </div>
                         <p>Meet the people and platforms helping Pixel Forge creators learn, experiment, and make games together.</p>
@@ -691,7 +664,6 @@
             <section class="band" id="faq">
                 <div class="wrap faq-layout">
                     <div class="reveal">
-                        <p class="eyebrow">09 / Questions</p>
                         <h2 class="display">
                             Good to
                             <br />
@@ -855,6 +827,36 @@
         </footer>
 
         <script>
+            const heroVideo = document.querySelector(".hero-video");
+            const reducedMotion = matchMedia("(prefers-reduced-motion: reduce)");
+            heroVideo.muted = true;
+            heroVideo.loop = true;
+            let heroInView = true;
+            function updateHeroVideo() {
+                if (reducedMotion.matches || document.hidden || !heroInView) {
+                    heroVideo.pause();
+                } else {
+                    heroVideo.play().then(() => {
+                        if (reducedMotion.matches || document.hidden || !heroInView) heroVideo.pause();
+                    }).catch(() => {});
+                }
+            }
+            reducedMotion.addEventListener("change", updateHeroVideo);
+            document.addEventListener("visibilitychange", updateHeroVideo);
+            new IntersectionObserver(([entry]) => {
+                heroInView = entry.isIntersecting;
+                updateHeroVideo();
+            }).observe(document.querySelector(".hero"));
+            // Recover if a browser stops at the end instead of applying native looping.
+            heroVideo.addEventListener("ended", () => {
+                heroVideo.currentTime = 0;
+                updateHeroVideo();
+            });
+            heroVideo.addEventListener("pause", () => {
+                if (!heroVideo.ended) updateHeroVideo();
+            });
+            heroVideo.addEventListener("canplay", updateHeroVideo);
+            updateHeroVideo();
             const menu = document.querySelector(".menu");
             const nav = document.querySelector(".nav-links");
             function closeMenu() {
@@ -888,27 +890,6 @@
             document
                 .querySelectorAll(".theme-layout, .recognition-grid, .faq-layout")
                 .forEach((el) => el.classList.add("scale-in"));
-            let timelineTicking = false;
-            function updateTimeline() {
-                const rect = timeline.getBoundingClientRect();
-                const start = innerHeight * 0.72;
-                const distance = Math.max(rect.height, 1);
-                const progress = Math.max(0, Math.min(1, (start - rect.top) / distance));
-                timeline.style.setProperty("--timeline-progress", `${progress * 100}%`);
-                timelineTicking = false;
-            }
-            addEventListener(
-                "scroll",
-                () => {
-                    if (!timelineTicking) {
-                        requestAnimationFrame(updateTimeline);
-                        timelineTicking = true;
-                    }
-                },
-                { passive: true },
-            );
-            addEventListener("resize", updateTimeline);
-            updateTimeline();
             if ("IntersectionObserver" in window && !matchMedia("(prefers-reduced-motion: reduce)").matches) {
                 const observer = new IntersectionObserver(
                     (entries) =>
