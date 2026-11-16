@@ -1,0 +1,59 @@
+{
+  "entries": 68,
+  "thumbnails": 65,
+  "viewports": [
+    {
+      "width": 390,
+      "cards": 68,
+      "uniqueLinks": 68,
+      "images": 65,
+      "loaded": 65,
+      "fallbacks": 3,
+      "catalog": 68,
+      "overflow": false
+    },
+    {
+      "width": 768,
+      "cards": 68,
+      "uniqueLinks": 68,
+      "images": 65,
+      "loaded": 65,
+      "fallbacks": 3,
+      "catalog": 68,
+      "overflow": false
+    },
+    {
+      "width": 1024,
+      "cards": 68,
+      "uniqueLinks": 68,
+      "images": 65,
+      "loaded": 65,
+      "fallbacks": 3,
+      "catalog": 68,
+      "overflow": false
+    },
+    {
+      "width": 1440,
+      "cards": 68,
+      "uniqueLinks": 68,
+      "images": 65,
+      "loaded": 65,
+      "fallbacks": 3,
+      "catalog": 68,
+      "overflow": false
+    },
+    {
+      "width": 1920,
+      "cards": 68,
+      "uniqueLinks": 68,
+      "images": 65,
+      "loaded": 65,
+      "fallbacks": 3,
+      "catalog": 68,
+      "overflow": false
+    }
+  ],
+  "errors": [],
+  "touchFirstTapFocusSecondTapLink": true,
+  "reducedMotionStatic": true
+}

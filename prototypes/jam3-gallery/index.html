@@ -1,0 +1,42 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <meta name="color-scheme" content="dark" />
+  <title>Pixel Forge Jam #3 Games — Diagonal gallery</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500&family=Manrope:wght@400;500;600&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="./gallery.css" />
+  <script src="./games.js" defer></script>
+  <script src="./gallery.js" defer></script>
+</head>
+<body>
+  <main class="page">
+    <header class="heading">
+      <div>
+        <p class="eyebrow">Pixel Forge · Interaction study</p>
+        <h1>Our previous<br />Jam #3 Games.</h1>
+      </div>
+      <div class="controls">
+        <p>One continuous stream.<br />Pause on a cover to take a closer look.</p>
+        <button class="motion-toggle" id="motion-toggle" type="button" aria-pressed="false"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M9 6v12M15 6v12" /></svg><span>Pause motion</span></button>
+      </div>
+    </header>
+    <section class="gallery-frame" id="gallery" aria-label="Pixel Forge Jam 3 games" tabindex="-1">
+      <div class="stream" id="stream"></div>
+      <div class="focus-caption" id="focus-caption" aria-hidden="true"><span id="focus-title"></span><span class="caption-detail" id="focus-detail">Open on itch.io</span></div>
+    </section>
+    <footer class="notes">
+      <p id="motion-status" role="status">Moving down-left · Hover to pause</p>
+      <p id="entries-summary"></p>
+    </footer>
+    <details class="game-index">
+      <summary id="index-heading">Browse all games</summary>
+      <div class="game-grid" id="game-grid"></div>
+    </details>
+    <p class="source-note">Game titles, creators, and thumbnails from the <a href="https://itch.io/jam/pixel-forge-jam-3/entries" target="_blank" rel="noopener noreferrer">Pixel Forge Jam #3 submissions</a>.</p>
+  </main>
+</body>
+</html>

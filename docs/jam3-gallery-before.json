@@ -1,0 +1,674 @@
+{
+  "sizes": {
+    "390": [
+      {
+        "name": "Spine",
+        "width": 350,
+        "height": 105.4375
+      },
+      {
+        "name": "Houdini",
+        "width": 350,
+        "height": 58.78125
+      },
+      {
+        "name": "CodeCrafters",
+        "width": 350,
+        "height": 44.84375
+      },
+      {
+        "name": "Farclip",
+        "width": 310,
+        "height": 134.171875
+      },
+      {
+        "name": "Defold",
+        "width": 310,
+        "height": 65.046875
+      },
+      {
+        "name": "Synty",
+        "width": 310,
+        "height": 97.765625
+      },
+      {
+        "name": "Render",
+        "width": 310,
+        "height": 127.875
+      },
+      {
+        "name": "Fly.io",
+        "width": 230,
+        "height": 68.1875
+      },
+      {
+        "name": "Easel",
+        "width": 230,
+        "height": 27.578125
+      },
+      {
+        "name": "WeLoveIndies",
+        "width": 230,
+        "height": 55.703125
+      },
+      {
+        "name": "AssetHoard",
+        "width": 230,
+        "height": 43
+      },
+      {
+        "name": "Minifantasy",
+        "width": 230,
+        "height": 57.5
+      },
+      {
+        "name": "1BITDRAGON",
+        "width": 76,
+        "height": 76
+      },
+      {
+        "name": "reactorcore",
+        "width": 230,
+        "height": 71.875
+      },
+      {
+        "name": "Craftpix",
+        "width": 230,
+        "height": 56.03125
+      },
+      {
+        "name": "Aseprite",
+        "width": 100.03125,
+        "height": 40.28125
+      },
+      {
+        "name": "Pyxel Edit",
+        "width": 97.3125,
+        "height": 40.28125
+      },
+      {
+        "name": "Kronnect",
+        "width": 180,
+        "height": 38.703125
+      },
+      {
+        "name": "GameDev",
+        "width": 180,
+        "height": 37.1875
+      },
+      {
+        "name": "Karma Play",
+        "width": 210,
+        "height": 62
+      },
+      {
+        "name": "Kodin",
+        "width": 210,
+        "height": 62
+      }
+    ],
+    "1024": [
+      {
+        "name": "Spine",
+        "width": 389.109375,
+        "height": 117.21875
+      },
+      {
+        "name": "Houdini",
+        "width": 389.109375,
+        "height": 65.359375
+      },
+      {
+        "name": "CodeCrafters",
+        "width": 389.109375,
+        "height": 49.84375
+      },
+      {
+        "name": "Farclip",
+        "width": 286.71875,
+        "height": 124.09375
+      },
+      {
+        "name": "Defold",
+        "width": 286.71875,
+        "height": 60.171875
+      },
+      {
+        "name": "Synty",
+        "width": 286.71875,
+        "height": 90.421875
+      },
+      {
+        "name": "Render",
+        "width": 286.71875,
+        "height": 118.265625
+      },
+      {
+        "name": "Fly.io",
+        "width": 194.546875,
+        "height": 57.671875
+      },
+      {
+        "name": "Easel",
+        "width": 194.546875,
+        "height": 23.328125
+      },
+      {
+        "name": "WeLoveIndies",
+        "width": 194.546875,
+        "height": 47.109375
+      },
+      {
+        "name": "AssetHoard",
+        "width": 194.546875,
+        "height": 36.375
+      },
+      {
+        "name": "Minifantasy",
+        "width": 194.546875,
+        "height": 48.625
+      },
+      {
+        "name": "1BITDRAGON",
+        "width": 194.546875,
+        "height": 100
+      },
+      {
+        "name": "reactorcore",
+        "width": 194.546875,
+        "height": 60.78125
+      },
+      {
+        "name": "Craftpix",
+        "width": 194.546875,
+        "height": 47.390625
+      },
+      {
+        "name": "Aseprite",
+        "width": 122.875,
+        "height": 49.484375
+      },
+      {
+        "name": "Pyxel Edit",
+        "width": 122.875,
+        "height": 50.875
+      },
+      {
+        "name": "Kronnect",
+        "width": 122.875,
+        "height": 26.40625
+      },
+      {
+        "name": "GameDev",
+        "width": 122.875,
+        "height": 25.390625
+      },
+      {
+        "name": "Karma Play",
+        "width": 210,
+        "height": 62
+      },
+      {
+        "name": "Kodin",
+        "width": 210,
+        "height": 62
+      }
+    ],
+    "1440": [
+      {
+        "name": "Spine",
+        "width": 530,
+        "height": 159.671875
+      },
+      {
+        "name": "Houdini",
+        "width": 530,
+        "height": 89.03125
+      },
+      {
+        "name": "CodeCrafters",
+        "width": 530,
+        "height": 67.90625
+      },
+      {
+        "name": "Farclip",
+        "width": 390,
+        "height": 165
+      },
+      {
+        "name": "Defold",
+        "width": 390,
+        "height": 81.84375
+      },
+      {
+        "name": "Synty",
+        "width": 390,
+        "height": 123
+      },
+      {
+        "name": "Render",
+        "width": 390,
+        "height": 160.875
+      },
+      {
+        "name": "Fly.io",
+        "width": 250,
+        "height": 74.125
+      },
+      {
+        "name": "Easel",
+        "width": 250,
+        "height": 29.984375
+      },
+      {
+        "name": "WeLoveIndies",
+        "width": 250,
+        "height": 60.546875
+      },
+      {
+        "name": "AssetHoard",
+        "width": 250,
+        "height": 46.75
+      },
+      {
+        "name": "Minifantasy",
+        "width": 250,
+        "height": 62.5
+      },
+      {
+        "name": "1BITDRAGON",
+        "width": 250,
+        "height": 100
+      },
+      {
+        "name": "reactorcore",
+        "width": 250,
+        "height": 78.125
+      },
+      {
+        "name": "Craftpix",
+        "width": 250,
+        "height": 60.890625
+      },
+      {
+        "name": "Aseprite",
+        "width": 165,
+        "height": 65
+      },
+      {
+        "name": "Pyxel Edit",
+        "width": 165,
+        "height": 65
+      },
+      {
+        "name": "Kronnect",
+        "width": 165,
+        "height": 35.46875
+      },
+      {
+        "name": "GameDev",
+        "width": 165,
+        "height": 34.09375
+      },
+      {
+        "name": "Karma Play",
+        "width": 210,
+        "height": 62
+      },
+      {
+        "name": "Kodin",
+        "width": 210,
+        "height": 62
+      }
+    ]
+  },
+  "errors": [],
+  "prizes": [
+    "Build it. Earn it.",
+    "Five community-ranked games and three judges' favorites will receive dedicated prize packages. Every participant can also claim recognition for completing the jam.",
+    "Community rank 01",
+    "First place",
+    "1 team",
+    "$300 CASH ( Will be paid to the team lead, who then will be responsible of splitting it )",
+    "Full year of Playtest Farclip access ($1188 Value)",
+    "Up to 4 Code Crafters 2-year VIP membership ($720 Value)",
+    "$500 worth of Fly.io Credits",
+    "Upto 4x 1 year license for Spine Professional ($499 Value Each)",
+    "Up to 4x Houdini Indie License ($299 Value Each)",
+    "Upto 4x $150 USD Voucher for Synty store",
+    "100€ Voucher for WeLoveIndies (Used at checkout)",
+    "Up to 4x Minifantasy complete bundle ($70 Value Each)",
+    "Up to 4x 12 month Easel+ subscriptions ($60 Value Each)",
+    "1x GameDev Course of Winners' Choice from GameDev.tv ($20-$50 Value)",
+    "1 Kronnect Non-Bundle Asset License ($50 value)",
+    "Up to 4 CraftPix Annual Premium subscription ($48 Value Each)",
+    "Upto 4x Asset Hoard License Key ($49 Value Each)",
+    "Up to 4x 1BitDragon Steam Key ($30 Value Each)",
+    "Upto 3x Aseprite keys ($20 Value Each)",
+    "Up to 4x Pixel to 3D Batch Builder license keys ($12 value each)",
+    "Up to 2 Pyxel Edit Keys ($9 value Each)",
+    "Featured on our websites, signed winner certificate, and Discord role",
+    "Community rank 02",
+    "Second place",
+    "1 team",
+    "$200 CASH ( Will be paid to the team lead, who then will be responsible of splitting it )",
+    "Full year of Playtest Farclip access ($1188 Value)",
+    "Up to 4 Code Crafters 1-year VIP membership ($360 Value)",
+    "Upto 4x 1 year license for Spine Professional ($499 Value Each)",
+    "$300 worth of Fly.io Credits",
+    "Up to 4x Houdini Indie License ($299 Value Each)",
+    "Upto 4x $150 USD Voucher for Synty store",
+    "100€ Voucher for WeLoveIndies (Used at checkout)",
+    "Up to 4x Minifantasy complete bundle ($70 Value Each)",
+    "1x GameDev Course of Winners' Choice from GameDev.tv ($20-$50 Value)",
+    "1 Kronnect Non-Bundle Asset License ($50 value)",
+    "Upto 4x Asset Hoard License Key ($49 Value Each)",
+    "Up to 4 CraftPix Annual Premium subscription ($48 Value Each)",
+    "Up to 4x 1BitDragon Steam Key ($30 Value Each)",
+    "Upto 3x Aseprite keys ($20 Value Each)",
+    "Up to 4x Pixel to 3D Batch Builder license keys ($12 value each)",
+    "Up to 2 Pyxel Edit Keys ($9 value Each)",
+    "Featured on our websites, signed winner certificate, and Discord role",
+    "Community rank 03",
+    "Third place",
+    "1 team",
+    "$100 CASH ( Will be paid to the team lead, who then will be responsible of splitting it )",
+    "Full year of Playtest Farclip access ($1188 Value)",
+    "Up to 4 Code Crafters 6-month VIP membership ($180 Value)",
+    "Upto 4x 1 year license for Spine Professional ($499 Value Each)",
+    "Up to 4x Houdini Indie License ($299 Value Each)",
+    "$200 worth of Fly.io Credits",
+    "Upto 4x $150 USD Voucher for Synty store",
+    "100€ Voucher for WeLoveIndies (Used at checkout)",
+    "Up to 4x Minifantasy complete bundle ($70 Value Each)",
+    "1x GameDev Course of Winners' Choice from GameDev.tv ($20-$50 Value)",
+    "1 Kronnect Non-Bundle Asset License ($50 value)",
+    "Upto 4x Asset Hoard License Key ($49 Value Each)",
+    "Up to 4 CraftPix Annual Premium subscription ($48 Value Each)",
+    "Up to 4x 1BitDragon Steam Key ($30 Value Each)",
+    "Upto 3x Aseprite keys ($20 Value Each)",
+    "Up to 4x Pixel to 3D Batch Builder license keys ($12 value each)",
+    "Up to 2 Pyxel Edit Keys ($9 value Each)",
+    "Featured on our websites, signed winner certificate, and Discord role",
+    "Community rank 04",
+    "Fourth place",
+    "1 team",
+    "Full year of Playtest Farclip access ($1188 Value)",
+    "Up to 4x Houdini Indie License ($299 Value Each)",
+    "100€ Voucher for WeLoveIndies (Used at checkout)",
+    "Upto 4x 1 year license for Spine Essential ($99 Value Each)",
+    "Up to 4x Minifantasy complete bundle ($70 Value Each)",
+    "1 Kronnect Non-Bundle Asset License ($50 value)",
+    "Up to 4 CraftPix Annual Premium subscription ($48 Value Each)",
+    "1x GameDev Course of Winners' Choice from GameDev.tv ($20-$50 Value)",
+    "Up to 4x Pixel to 3D Batch Builder license keys ($12 value each)",
+    "Up to 2 Pyxel Edit Keys ($9 value Each)",
+    "Featured on our websites, signed winner certificate, and Discord role",
+    "Community rank 05",
+    "Fifth place",
+    "1 team",
+    "Full year of Playtest Farclip access ($1188 Value)",
+    "Up to 4x Houdini Indie License ($299 Value Each)",
+    "100€ Voucher for WeLoveIndies (Used at checkout)",
+    "Upto 4x 1 year license for Spine Essential ($99 Value Each)",
+    "Up to 4x Minifantasy complete bundle ($70 Value Each)",
+    "1 Kronnect Non-Bundle Asset License ($50 value)",
+    "1x GameDev Course of Winners' Choice from GameDev.tv ($20-$50 Value)",
+    "Up to 4 CraftPix Annual Premium subscription ($48 Value Each)",
+    "Up to 4x Pixel to 3D Batch Builder license keys ($12 value each)",
+    "Up to 2 Pyxel Edit Keys ($9 value Each)",
+    "Featured on our websites, signed winner certificate, and Discord role",
+    "Sponsor Prize",
+    "Best Game Made Using Defold",
+    "10 teams",
+    "1st Place: 100€ Steam gift card",
+    "2nd Place: 50€ Steam gift card",
+    "3rd Place: 25€ Steam gift card",
+    "4th-10th Place: 10€ Steam gift card",
+    "COMMUNITY",
+    "Top Game in Art ✎ᝰ Category",
+    "3 teams",
+    "1st Place: Up to 2x 1BITDRAGON steam key ($30 Value Each), Up to 4x Pixel to 3D Batch Builder license keys ($12 value each)",
+    "2nd Place: Up to 2x 1BITDRAGON steam key ($30 Value Each), Up to 4x Pixel to 3D Batch Builder license keys ($12 value each)",
+    "3rd Place: Up to 2x 1BITDRAGON steam key ($30 Value Each), Up to 4x Pixel to 3D Batch Builder license keys ($12 value each)",
+    "Sponsor Prize",
+    "Best Game Made Using Render Workflows",
+    "3 teams",
+    "1st Place: $500 Worth of Render Credits",
+    "2nd Place: $300 Worth of Render Credits",
+    "3rd Place: $100 Worth of Render Credits",
+    "Judges choice",
+    "Three judges' picks",
+    "3 teams selected from the community top 100",
+    "Up to 2x 12 month Easel+ subscriptions ($60 Value Each)",
+    "Upto 2x Aseprite keys ($20 Value Each)",
+    "Up to 4x Pixel to 3D Batch Builder license keys ($12 value each)",
+    "Featured on our websites and signed winner certificate",
+    "Every participant",
+    "Participation award",
+    "Houdini Indie for 6 Months ($150 Value Each)",
+    "Free Minifantasy Bundle ($17.97 Value Each)",
+    "$50 Worth of Render building credits",
+    "50% off any non-discounted items on the Synty store",
+    "Signed participation certificate on request",
+    "Community recognition"
+  ],
+  "links": [
+    {
+      "text": "Skip to content",
+      "href": "#main"
+    },
+    {
+      "text": "PIXEL FORGE",
+      "href": "#top"
+    },
+    {
+      "text": "About",
+      "href": "#about"
+    },
+    {
+      "text": "Theme",
+      "href": "#theme"
+    },
+    {
+      "text": "Rules",
+      "href": "#rules"
+    },
+    {
+      "text": "Judging",
+      "href": "#judging"
+    },
+    {
+      "text": "Prizes",
+      "href": "#recognition"
+    },
+    {
+      "text": "Sponsors",
+      "href": "#sponsors"
+    },
+    {
+      "text": "Partners",
+      "href": "#partners"
+    },
+    {
+      "text": "FAQ",
+      "href": "#faq"
+    },
+    {
+      "text": "Join the jam",
+      "href": "https://itch.io/jam/pixel-forge-mega-jam"
+    },
+    {
+      "text": "Enter the Mega Jam ↗",
+      "href": "https://itch.io/jam/pixel-forge-mega-jam"
+    },
+    {
+      "text": "Join the Discord",
+      "href": "https://discord.gg/mM8PpjGyM6"
+    },
+    {
+      "text": "Register for Event",
+      "href": "https://luma.com/event/evt-OYOALINP4l5G6cO"
+    },
+    {
+      "text": "",
+      "href": "https://esotericsoftware.com/"
+    },
+    {
+      "text": "",
+      "href": "https://www.sidefx.com/"
+    },
+    {
+      "text": "",
+      "href": "https://codecrafters.io/"
+    },
+    {
+      "text": "",
+      "href": "farclip.ai/?ref=PIXELFORGEJAM&utm_source=itch&utm_medium=community&utm_campaign=PIXELFORGEJAM"
+    },
+    {
+      "text": "",
+      "href": "https://defold.com/"
+    },
+    {
+      "text": "",
+      "href": "https://syntystore.com/"
+    },
+    {
+      "text": "",
+      "href": "https://render.com/?utm_source=website&utm_medium=website&utm_campaign=PixelForgeMegaJam"
+    },
+    {
+      "text": "",
+      "href": "https://fly.io/"
+    },
+    {
+      "text": "",
+      "href": "https://easel.games/"
+    },
+    {
+      "text": "",
+      "href": "https://weloveindies.com/en/welcome/jammers"
+    },
+    {
+      "text": "",
+      "href": "https://assethoard.com/"
+    },
+    {
+      "text": "",
+      "href": "https://www.minifantasy.net/"
+    },
+    {
+      "text": "",
+      "href": "https://1bitdragon.com/"
+    },
+    {
+      "text": "",
+      "href": "https://reactorcore.itch.io/"
+    },
+    {
+      "text": "",
+      "href": "https://craftpix.net/?utm_source=itch.io&utm_medium=gamejam&utm_campaign=pixel-forge-jam"
+    },
+    {
+      "text": "",
+      "href": "https://www.aseprite.org/"
+    },
+    {
+      "text": "",
+      "href": "https://pyxeledit.com/"
+    },
+    {
+      "text": "",
+      "href": "http://kronnect.com"
+    },
+    {
+      "text": "",
+      "href": "https://gamedev.tv/?utm_source=sponsor&utm_medium=&utm_campaign=pixelforge"
+    },
+    {
+      "text": "View prospectus ↗",
+      "href": "https://drive.google.com/file/d/1qa6IL2PpG82Mu1muxoZEwuTH4M8j1OVw/view?usp=sharing"
+    },
+    {
+      "text": "Become a sponsor",
+      "href": "mailto:pixelforgejam@gmail.com?subject=Pixel%20Forge%20Mega%20Jam%20Sponsorship"
+    },
+    {
+      "text": "Workshop partner Karma Play Free career workshop for aspiring game makers",
+      "href": "https://luma.com/ii8yga8i"
+    },
+    {
+      "text": "Community partner A platform and community for Thai game developers.",
+      "href": "https://kod.in/"
+    },
+    {
+      "text": "Join on itch.io ↗",
+      "href": "https://itch.io/jam/pixel-forge-mega-jam"
+    },
+    {
+      "text": "Contact the team",
+      "href": "mailto:pixelforgejam@gmail.com"
+    },
+    {
+      "text": "Pixel Forge Jam",
+      "href": "https://pixelforgejam.org/"
+    },
+    {
+      "text": "About",
+      "href": "#about"
+    },
+    {
+      "text": "Rules",
+      "href": "#rules"
+    },
+    {
+      "text": "Prizes",
+      "href": "#recognition"
+    },
+    {
+      "text": "Sponsors",
+      "href": "#sponsors"
+    },
+    {
+      "text": "FAQ",
+      "href": "#faq"
+    },
+    {
+      "text": "Blog",
+      "href": "/blog/"
+    },
+    {
+      "text": "Press kit",
+      "href": "/press/"
+    },
+    {
+      "text": "Donate",
+      "href": "https://hcb.hackclub.com/donations/start/pixel-forge-jam"
+    },
+    {
+      "text": "Discord",
+      "href": "https://discord.gg/mM8PpjGyM6"
+    },
+    {
+      "text": "pixelforgejam@gmail.com",
+      "href": "mailto:pixelforgejam@gmail.com"
+    },
+    {
+      "text": "",
+      "href": "https://x.com/PixelForgeJam"
+    },
+    {
+      "text": "",
+      "href": "https://www.linkedin.com/company/pixel-forge-community/"
+    },
+    {
+      "text": "",
+      "href": "https://www.instagram.com/pixelforgecommunity/"
+    },
+    {
+      "text": "",
+      "href": "https://www.youtube.com/@PixelForgeCommunity"
+    }
+  ]
+}

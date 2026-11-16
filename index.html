@@ -12,14 +12,17 @@
         <link rel="preconnect" href="https://fonts.googleapis.com" />
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
         <link
-            href="https://fonts.googleapis.com/css2?family=DM+Mono:wght@400;500&family=Manrope:wght@400;500;600;700;800&display=swap"
+            href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500&family=DM+Mono:wght@400;500&family=Manrope:wght@400;500;600;700;800&display=swap"
             rel="stylesheet"
         />
         <title>Pixel Forge Mega Jam</title>
         <link rel="stylesheet" href="./megajam-style.css" />
+        <link rel="stylesheet" href="./jam3-gallery.css" />
+        <link rel="stylesheet" href="./timeline-horizontal.css" />
         <script src="./scripts/about-theme.js" defer></script>
-        <script src="./scripts/timeline-stack.js" defer></script>
-        <script src="./scripts/judging-scroll.js" defer></script>
+        <script src="./scripts/timeline-horizontal.js" defer></script>
+        <script src="./data/jam3-games.js" defer></script>
+        <script src="./scripts/jam3-gallery.js?v=2" defer></script>
     </head>
     <body>
         <a class="skip" href="#main">Skip to content</a>
@@ -137,7 +140,7 @@
 
             <section class="band band-light" id="process">
                 <div class="wrap">
-                    <div class="process-head reveal">
+                    <div class="process-head reveal" style="margin-top: 30px;">
                         <div>
                             <h2 class="display">
                                 Timeline
@@ -161,7 +164,7 @@
                             <p>Design, code, draw, compose, test, and keep the playable core moving forward.</p>
                         </article>
                         <article class="step">
-                            <span>03 / NOV 8</span>
+                            <span>03 / Dec 8</span>
                             <h3>Submit your build</h3>
                             <p>Publish the game on itch.io with credits and a short theme explanation.</p>
                         </article>
@@ -184,116 +187,6 @@
                             </a>
                         </article>
                     </div>
-                </div>
-            </section>
-
-            <section class="band" id="rules">
-                <div class="wrap">
-                    <div class="rules-head reveal">
-                        <div>
-                            <h2 class="display">
-                                Keep it fair.
-                                <br />
-                                Make it yours.
-                            </h2>
-                        </div>
-                    </div>
-                    <div class="rules reveal">
-                        <article class="rule">
-                            <div>
-                                <h3>Start during the jam</h3>
-                                <p>Previously started games cannot be submitted.</p>
-                            </div>
-                        </article>
-                        <article class="rule">
-                            <div>
-                                <h3>Solo or teams up to four</h3>
-                                <p>Use any engine and divide the work however you like.</p>
-                            </div>
-                        </article>
-                        <article class="rule">
-                            <div>
-                                <h3>Credit pre-made assets</h3>
-                                <p>
-                                    Existing assets are permitted when their licenses allow it and they are properly
-                                    credited.
-                                </p>
-                            </div>
-                        </article>
-                        <article class="rule">
-                            <div>
-                                <h3>No generative AI</h3>
-                                <p>AI-generated code, art, audio, writing, and other generated content are banned.</p>
-                            </div>
-                        </article>
-                        <article class="rule">
-                            <div>
-                                <h3>Keep it appropriate</h3>
-                                <p>
-                                    No hateful, offensive, or NSFW content. Disclose horror, violence, and sensitive
-                                    material.
-                                </p>
-                            </div>
-                        </article>
-                        <article class="rule">
-                            <div>
-                                <h3>Make it accessible</h3>
-                                <p>Browser builds are recommended. Windows and macOS downloads are accepted.</p>
-                            </div>
-                        </article>
-                        <article class="rule">
-                            <div>
-                                <h3>Play fair</h3>
-                                <p>No rating manipulation. Give other participants respectful, useful feedback.</p>
-                            </div>
-                        </article>
-                        <article class="rule">
-                            <div>
-                                <h3>Ship what you have</h3>
-                                <p>
-                                    Unfinished games are welcome. A two-day upload window follows the jam for bug fixes.
-                                </p>
-                            </div>
-                        </article>
-                    </div>
-                </div>
-            </section>
-
-            <section class="band band-blue" id="judging">
-                <div class="wrap">
-                    <div class="judging-top reveal">
-                        <h2 class="display">
-                            Four ways to
-                            <br />
-                            stand out.
-                        </h2>
-                    </div>
-                    <div class="criteria reveal">
-                        <article class="criterion">
-                            <span>01</span>
-                            <h3>Gameplay</h3>
-                            <p>How engaging, understandable, and enjoyable the game feels.</p>
-                        </article>
-                        <article class="criterion">
-                            <span>02</span>
-                            <h3>Theme</h3>
-                            <p>How thoughtfully the theme shapes the concept, story, or mechanics.</p>
-                        </article>
-                        <article class="criterion">
-                            <span>03</span>
-                            <h3>Music</h3>
-                            <p>How effectively music and sound effects support the experience.</p>
-                        </article>
-                        <article class="criterion">
-                            <span>04</span>
-                            <h3>Atmosphere</h3>
-                            <p>How art, sound, and environmental storytelling create mood.</p>
-                        </article>
-                    </div>
-                    <p class="rating-note reveal">
-                        The rating queue gives participants five random games to rate first, helping every submission
-                        receive feedback.
-                    </p>
                 </div>
             </section>
 
@@ -493,6 +386,88 @@
                                 </section>
                             </article>
                         </div>
+                    </div>
+                </div>
+            </section>
+
+            <section class="jam-gallery" id="judging" aria-labelledby="jam3-title" tabindex="-1">
+                <header class="jam-gallery-heading wrap">
+                    <h2 class="jam-title display" id="jam3-title">Our previous<br />Jam #3 Games.</h2>
+                </header>
+                <div class="focus-caption" aria-hidden="true">
+                    <span id="focus-title"></span>
+                    <span class="caption-detail" id="focus-detail">Open on itch.io</span>
+                </div>
+            </section>
+
+            <section class="band" id="rules">
+                <div class="wrap">
+                    <div class="rules-head reveal">
+                        <div>
+                            <h2 class="display">
+                                Keep it fair.
+                                <br />
+                                Make it yours.
+                            </h2>
+                        </div>
+                    </div>
+                    <div class="rules reveal">
+                        <article class="rule">
+                            <div>
+                                <h3>Start during the jam</h3>
+                                <p>Previously started games cannot be submitted.</p>
+                            </div>
+                        </article>
+                        <article class="rule">
+                            <div>
+                                <h3>Solo or teams up to four</h3>
+                                <p>Use any engine and divide the work however you like.</p>
+                            </div>
+                        </article>
+                        <article class="rule">
+                            <div>
+                                <h3>Credit pre-made assets</h3>
+                                <p>
+                                    Existing assets are permitted when their licenses allow it and they are properly
+                                    credited.
+                                </p>
+                            </div>
+                        </article>
+                        <article class="rule">
+                            <div>
+                                <h3>No generative AI</h3>
+                                <p>AI-generated code, art, audio, writing, and other generated content are banned.</p>
+                            </div>
+                        </article>
+                        <article class="rule">
+                            <div>
+                                <h3>Keep it appropriate</h3>
+                                <p>
+                                    No hateful, offensive, or NSFW content. Disclose horror, violence, and sensitive
+                                    material.
+                                </p>
+                            </div>
+                        </article>
+                        <article class="rule">
+                            <div>
+                                <h3>Make it accessible</h3>
+                                <p>Browser builds are recommended. Windows and macOS downloads are accepted.</p>
+                            </div>
+                        </article>
+                        <article class="rule">
+                            <div>
+                                <h3>Play fair</h3>
+                                <p>No rating manipulation. Give other participants respectful, useful feedback.</p>
+                            </div>
+                        </article>
+                        <article class="rule">
+                            <div>
+                                <h3>Ship what you have</h3>
+                                <p>
+                                    Unfinished games are welcome. A two-day upload window follows the jam for bug fixes.
+                                </p>
+                            </div>
+                        </article>
                     </div>
                 </div>
             </section>

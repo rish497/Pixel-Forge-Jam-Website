@@ -1,0 +1,40 @@
+/* A restrained horizontal timeline, isolated from all other section layouts. */
+#process { background:#0b121c;color:var(--white);padding:68px 0; }
+#process .process-head { display:flex;align-items:start;justify-content:space-between;gap:48px;margin-bottom:36px; }
+#process .process-head > p { margin:4px 0 0;max-width:520px;font-size:16px;line-height:1.7;color:#b8c5d3; }
+#process .steps { display:grid;grid-template-columns:1fr;gap:20px;padding:0;max-width:760px;border:0; }
+#process .steps::before,#process .steps::after,#process .step::before,#process .step::after { display:none; }
+#process .step { position:relative;grid-column:auto;grid-row:auto;min-height:0;width:100%;padding:24px;border:1px solid #2b3b4d;border-radius:4px;background:#101b29;box-shadow:none; }
+#process .step > span { display:block;color:#9fc7f1;font:500 12px/1.4 "DM Mono",monospace;letter-spacing:.04em; }
+#process .step h3 { margin:18px 0 10px;color:var(--white);font-size:20px;font-weight:700;line-height:1.3; }
+#process .step p { margin:0;color:#bbc8d7;font-size:14px;line-height:1.6; }
+#process .workshop-register { display:inline-flex;align-items:center;justify-content:center;min-height:44px;margin-top:20px;padding:10px 18px;border:1px solid #438fdd;border-radius:3px;color:#fff;background:#1566be;font-size:13px;font-weight:700;text-decoration:none;transition:background-color 180ms ease; }
+#process .workshop-register:hover { background:#267bd4;transform:none; }
+#process .workshop-register:focus-visible { outline:3px solid #a3ccfa;outline-offset:4px; }
+#process .timeline-axis,#process .timeline-node,#process .timeline-stem { display:none; }
+#process.horizontal-enabled { height:var(--timeline-scroll-height,300svh);padding:0; }
+#process.horizontal-enabled .timeline-stage { position:sticky;top:var(--header);height:calc(100svh - var(--header));overflow:clip; }
+#process.horizontal-enabled .timeline-stage > .wrap { height:100%;display:flex;flex-direction:column;padding-block:30px 22px; }
+#process.horizontal-enabled .process-head { flex:none;margin-bottom:24px; }
+#process.horizontal-enabled .timeline-viewport { position:relative;flex:1;min-height:0;overflow:clip; }
+#process.horizontal-enabled .timeline-rail { --timeline-card-width:340px;position:relative;display:flex;gap:64px;width:max-content;max-width:none;height:100%; }
+#process.horizontal-enabled .timeline-stop { position:relative;flex:0 0 var(--timeline-card-width);width:var(--timeline-card-width);height:100%; }
+#process.horizontal-enabled .step { position:absolute;left:0; }
+#process.horizontal-enabled .timeline-stop[data-side="above"] .step { bottom:calc(100% - var(--timeline-axis-y) + 32px); }
+#process.horizontal-enabled .timeline-stop[data-side="below"] .step { top:calc(var(--timeline-axis-y) + 32px); }
+#process.horizontal-enabled .timeline-axis { display:block;position:absolute;left:calc(var(--timeline-card-width)/2);right:calc(var(--timeline-card-width)/2);top:var(--timeline-axis-y);height:1px;background:#35485c; }
+#process.horizontal-enabled .timeline-axis-fill { position:absolute;inset:0;background:#83b9ed;transform:scaleX(0);transform-origin:left; }
+#process.horizontal-enabled .timeline-node { display:block;position:absolute;z-index:1;left:50%;top:var(--timeline-axis-y);width:9px;height:9px;border:1px solid #8295ab;border-radius:50%;background:#0b121c;transform:translate(-50%,-50%); }
+#process.horizontal-enabled .timeline-stem { display:block;position:absolute;left:50%;width:1px;height:32px;background:#35485c; }
+#process.horizontal-enabled .timeline-stop[data-side="above"] .timeline-stem { top:calc(var(--timeline-axis-y) - 32px); }
+#process.horizontal-enabled .timeline-stop[data-side="below"] .timeline-stem { top:var(--timeline-axis-y); }
+#process.horizontal-enabled .timeline-stop[data-reached="true"] .timeline-node { background:#83b9ed;border-color:#83b9ed; }
+#process.horizontal-enabled .step[data-current="true"] { border-color:#698bb0; }
+@media(min-width:1600px) { #process.horizontal-enabled .timeline-rail { --timeline-card-width:360px;gap:80px; } }
+@media(max-width:767px) {
+    #process { padding-block:54px; }
+    #process .process-head { display:block;margin-bottom:30px; }
+    #process .process-head > p { margin-top:22px;font-size:15px; }
+    #process .step { padding:24px; }
+}
+@media(prefers-reduced-motion:reduce) { #process * { transition:none!important;animation:none!important; } }
