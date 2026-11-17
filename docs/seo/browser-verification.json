@@ -1,0 +1,134 @@
+{
+  "pages": [
+    {
+      "url": "/",
+      "h1": 1,
+      "missingAlt": 0,
+      "brokenImages": [],
+      "canonical": "https://pixelforgejam.org/",
+      "gameCards": 68,
+      "blogCards": 0
+    },
+    {
+      "url": "/jam-2/",
+      "h1": 1,
+      "missingAlt": 0,
+      "brokenImages": [],
+      "canonical": "https://pixelforgejam.org/jam-2/",
+      "gameCards": 0,
+      "blogCards": 0
+    },
+    {
+      "url": "/jam-3/",
+      "h1": 1,
+      "missingAlt": 0,
+      "brokenImages": [],
+      "canonical": "https://pixelforgejam.org/jam-3/",
+      "gameCards": 0,
+      "blogCards": 0
+    },
+    {
+      "url": "/press/",
+      "h1": 1,
+      "missingAlt": 0,
+      "brokenImages": [],
+      "canonical": "https://pixelforgejam.org/press/",
+      "gameCards": 0,
+      "blogCards": 0
+    },
+    {
+      "url": "/blog/",
+      "h1": 1,
+      "missingAlt": 0,
+      "brokenImages": [],
+      "canonical": "https://pixelforgejam.org/blog/",
+      "gameCards": 0,
+      "blogCards": 3
+    },
+    {
+      "url": "/blog/pixel-forge-jam-2/",
+      "h1": 1,
+      "missingAlt": 0,
+      "brokenImages": [],
+      "canonical": "https://pixelforgejam.org/blog/pixel-forge-jam-2/",
+      "gameCards": 0,
+      "blogCards": 0
+    },
+    {
+      "url": "/blog/pixel-forge-jam-winners/",
+      "h1": 1,
+      "missingAlt": 0,
+      "brokenImages": [],
+      "canonical": "https://pixelforgejam.org/blog/pixel-forge-jam-winners/",
+      "gameCards": 0,
+      "blogCards": 0
+    },
+    {
+      "url": "/blog/pixel-forge-jam-2-winners/",
+      "h1": 1,
+      "missingAlt": 0,
+      "brokenImages": [],
+      "canonical": "https://pixelforgejam.org/blog/pixel-forge-jam-2-winners/",
+      "gameCards": 0,
+      "blogCards": 0
+    },
+    {
+      "url": "/blog/pixel-forge-jam-3/",
+      "h1": 1,
+      "missingAlt": 0,
+      "brokenImages": [],
+      "canonical": "https://pixelforgejam.org/blog/pixel-forge-jam-3/",
+      "gameCards": 0,
+      "blogCards": 0
+    },
+    {
+      "url": "/blog/workshop-career-in-video-games/",
+      "h1": 1,
+      "missingAlt": 0,
+      "brokenImages": [],
+      "canonical": "https://pixelforgejam.org/blog/workshop-career-in-video-games/",
+      "gameCards": 0,
+      "blogCards": 0
+    }
+  ],
+  "responsive": [
+    {
+      "width": 390,
+      "overflow": false,
+      "gameCards": 68
+    },
+    {
+      "width": 768,
+      "overflow": false,
+      "gameCards": 68
+    },
+    {
+      "width": 1024,
+      "overflow": false,
+      "gameCards": 68
+    },
+    {
+      "width": 1440,
+      "overflow": false,
+      "gameCards": 68
+    },
+    {
+      "width": 1920,
+      "overflow": false,
+      "gameCards": 68
+    }
+  ],
+  "logoDifferences": [],
+  "errors": [],
+  "gallery": {
+    "count": 68,
+    "nativeAnimations": 68,
+    "elapsed": 1349.3979999999865
+  },
+  "noJavaScript": {
+    "cards": 68,
+    "overflow": false,
+    "visibleHeadline": true,
+    "blogCards": 3
+  }
+}

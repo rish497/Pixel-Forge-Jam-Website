@@ -377,3 +377,8 @@
         padding: var(--space-3);
     }
 }
+
+/* Crawlable links to published articles and archived jam details. */
+.blog-archive-links { margin-top: var(--space-5); padding-top: var(--space-4); border-top: 1px solid var(--line); }
+.blog-archive-links ul { display: flex; flex-wrap: wrap; gap: .75rem 1.5rem; list-style: none; }
+.blog-archive-links a { color: var(--accent-strong); font-weight: 700; }

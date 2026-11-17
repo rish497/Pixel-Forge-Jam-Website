@@ -105,6 +105,12 @@
 #judging.jam-gallery[data-focusing="true"] .focus-caption { opacity:1;transform:translateY(0); }
 #judging.jam-gallery #focus-title { font-size:14px;font-weight:600;color:var(--white);overflow-wrap:anywhere; }
 #judging.jam-gallery .caption-detail { font-size:11px;color:#c2cbd5;border-left:1px solid #ffffff30;padding-left:16px; }
+@media (hover:hover) and (pointer:fine) {
+    #judging.jam-gallery, #judging.jam-gallery .game-tile { cursor:grab;user-select:none; }
+}
+#judging.jam-gallery .game-tile, #judging.jam-gallery .game-tile img { -webkit-user-drag:none; }
+#judging.jam-gallery[data-dragging="true"], #judging.jam-gallery[data-dragging="true"] * { cursor:grabbing;user-select:none; }
+#judging.jam-gallery[data-dragging="true"] .game-tile { transition:none; }
 @media(max-width:767px) {
     #judging.jam-gallery .game-tile { border-radius:10px; }
     #judging.jam-gallery .focus-caption { left:15px;bottom:20px;max-width:calc(100% - 30px);display:block; }

@@ -1,0 +1,918 @@
+[
+  {
+    "file": "index.html",
+    "title": "Pixel Forge Mega Jam",
+    "h1": [
+      "Pixel Forge presents\n                        Mega\n                        Jam\n                        Nov 28-Dec 8, 2026"
+    ],
+    "imgs": [
+      {
+        "src": "/images/New Piskel-2.png (9).png",
+        "alt": "",
+        "hidden": false,
+        "context": "PIXEL FORGE"
+      },
+      {
+        "src": "/images\\spine_logo_dark.png",
+        "alt": "Spine",
+        "hidden": false,
+        "context": ""
+      },
+      {
+        "src": "/images\\Houdini_white_color.png",
+        "alt": "Houdini",
+        "hidden": false,
+        "context": ""
+      },
+      {
+        "src": "/images\\Lockup-Horizontal-White (1).svg",
+        "alt": "CodeCrafters",
+        "hidden": false,
+        "context": ""
+      },
+      {
+        "src": "/images/Primary_LightAzure.png",
+        "alt": "Farclip",
+        "hidden": false,
+        "context": ""
+      },
+      {
+        "src": "https://img.itch.zone/aW1nLzI5NTY2NjYyLnBuZw==/original/S1jss%2B.png",
+        "alt": "Defold",
+        "hidden": false,
+        "context": ""
+      },
+      {
+        "src": "/images\\Black Synty logo@4x.png",
+        "alt": "Synty",
+        "hidden": false,
+        "context": ""
+      },
+      {
+        "src": "/images/Render logo - White.png",
+        "alt": "Render",
+        "hidden": false,
+        "context": ""
+      },
+      {
+        "src": "/images/logo-landscape-inverted.png",
+        "alt": "Fly.io",
+        "hidden": false,
+        "context": ""
+      },
+      {
+        "src": "images/easelName.png",
+        "alt": "Easel",
+        "hidden": false,
+        "context": ""
+      },
+      {
+        "src": "/images\\dyn-wli-logo-light.png",
+        "alt": "WeLoveIndies",
+        "hidden": false,
+        "context": ""
+      },
+      {
+        "src": "/images/logo-full-lockup-dark.png",
+        "alt": "AssetHoard",
+        "hidden": false,
+        "context": ""
+      },
+      {
+        "src": "images/NewBannerWhite.png",
+        "alt": "Minifantasy",
+        "hidden": false,
+        "context": ""
+      },
+      {
+        "src": "images/1BitDragon.png",
+        "alt": "1BITDRAGON",
+        "hidden": false,
+        "context": ""
+      },
+      {
+        "src": "images/QBcwq1.jpg",
+        "alt": "reactorcore",
+        "hidden": false,
+        "context": ""
+      },
+      {
+        "src": "images/Craftpix_logo.png",
+        "alt": "Craftpix",
+        "hidden": false,
+        "context": ""
+      },
+      {
+        "src": "/images/Aseprite-logo.png",
+        "alt": "Aseprite",
+        "hidden": false,
+        "context": ""
+      },
+      {
+        "src": "images/PyxelLogo9 (1).png",
+        "alt": "Pyxel Edit",
+        "hidden": false,
+        "context": ""
+      },
+      {
+        "src": "https://img.itch.zone/aW1nLzMwMTk2MzM5LnBuZw==/original/A%2FqAJa.png",
+        "alt": "Kronnect",
+        "hidden": false,
+        "context": ""
+      },
+      {
+        "src": "/images/gamedev-logo-full-color-rgb-900px@300ppi.png",
+        "alt": "GameDev",
+        "hidden": false,
+        "context": ""
+      },
+      {
+        "src": "/images/karma-play-logo.jpg",
+        "alt": "Karma Play",
+        "hidden": false,
+        "context": "Workshop partner\n                            \n                            Karma Play\n               "
+      },
+      {
+        "src": "/images/Logo-KodIn.png",
+        "alt": "Kodin",
+        "hidden": false,
+        "context": "Community partner\n                            \n                            A platform and community "
+      },
+      {
+        "src": "/images/New Piskel-2.png (9).png",
+        "alt": "",
+        "hidden": false,
+        "context": "Pixel Forge Jam"
+      }
+    ],
+    "body": " Pixel Forge Mega Jam Skip to content PIXEL FORGE About Theme Rules Judging Prizes Sponsors Partners FAQ Join the jam Pixel Forge presents Mega Jam Nov 28-Dec 8, 2026 Ten days to take one bold idea from a blank project to a playable game. Enter the Mega Jam ↗ Join the Discord Build. Experiment. Finish. 10 DAYS / ONLINE Pixel Forge Mega Jam brings developers, artists, designers, and curious first-timers together to create a game from scratch. Work alone or with up to three teammates. Use any engine. Try the mechanic you have been saving for later, learn in public, and leave with something you can share. 02 THEME. The official theme will be revealed when the Mega Jam begins on November 28, 2026. Start with a blank project and discover the creative constraint alongside everyone else. Timeline A straightforward path from idea to submission, with enough room to experiment and enough pressure to choose what matters. 01 / NOV 28 Meet the theme Choose your interpretation, your tools, and a scope your team can finish. 02 / BUILD Make the game Design, code, draw, compose, test, and keep the playable core moving forward. 03 / Dec 8 Submit your build Publish the game on itch.io with credits and a short theme explanation. 04 / RATE Play the field Rate other entries and leave useful feedback for the creators behind them. 05 / WORKSHOP Free 2 Hours Workshop for A Career in Video Games! Karma Play X Pixel Forge Mega Jam Register for Event Build it. Earn it. Five community-ranked games and th"
+  },
+  {
+    "file": "jam-2/index.html",
+    "title": "Pixel Forge Jam",
+    "h1": [
+      "Pixel Forge Jam #2\n                        Haunted Edition",
+      "Gold sponsors",
+      "Silver sponsors",
+      "Bronze sponsors",
+      "Partners"
+    ],
+    "imgs": [
+      {
+        "src": "images/New Piskel-2.png (9).png",
+        "alt": "",
+        "hidden": false,
+        "context": "Pixel Forge Jam"
+      },
+      {
+        "src": "images/easelName.png",
+        "alt": "Easel",
+        "hidden": false,
+        "context": ""
+      },
+      {
+        "src": "images/title_final.png",
+        "alt": "PixelOver",
+        "hidden": false,
+        "context": ""
+      },
+      {
+        "src": "images/PyxelLogo9 (1).png",
+        "alt": "Pyxel Edit",
+        "hidden": false,
+        "context": ""
+      },
+      {
+        "src": "images/xyz-logo-color.png",
+        "alt": "gen.xyz",
+        "hidden": false,
+        "context": ""
+      },
+      {
+        "src": "images\\kronnect.png",
+        "alt": "Kronnect",
+        "hidden": false,
+        "context": ""
+      },
+      {
+        "src": "images/Lockup-Horizontal-Dark.png",
+        "alt": "CodeCrafters",
+        "hidden": false,
+        "context": ""
+      },
+      {
+        "src": "images\\picocad2_logo_horizontal.png",
+        "alt": "picocad",
+        "hidden": false,
+        "context": ""
+      },
+      {
+        "src": "images\\xogot_banner.png",
+        "alt": "Xogot",
+        "hidden": false,
+        "context": ""
+      },
+      {
+        "src": "images/dyn-wli-logo-dark.png",
+        "alt": "WeLoveIndies",
+        "hidden": false,
+        "context": ""
+      },
+      {
+        "src": "images/Craftpix_logo.png",
+        "alt": "Craftpix",
+        "hidden": false,
+        "context": ""
+      },
+      {
+        "src": "images\\featuring-CAH-black.png",
+        "alt": "cardsagainsthumanity",
+        "hidden": false,
+        "context": ""
+      },
+      {
+        "src": "images/easelName.png",
+        "alt": "",
+        "hidden": true,
+        "context": ""
+      },
+      {
+        "src": "images/title_final.png",
+        "alt": "",
+        "hidden": true,
+        "context": ""
+      },
+      {
+        "src": "images/PyxelLogo9 (1).png",
+        "alt": "",
+        "hidden": true,
+        "context": ""
+      },
+      {
+        "src": "images/xyz-logo-color.png",
+        "alt": "",
+        "hidden": true,
+        "context": ""
+      },
+      {
+        "src": "images\\kronnect.png",
+        "alt": "",
+        "hidden": true,
+        "context": ""
+      },
+      {
+        "src": "images/Lockup-Horizontal-Dark.png",
+        "alt": "",
+        "hidden": true,
+        "context": ""
+      },
+      {
+        "src": "images\\picocad2_logo_horizontal.png",
+        "alt": "",
+        "hidden": true,
+        "context": ""
+      },
+      {
+        "src": "images\\xogot_banner.png",
+        "alt": "",
+        "hidden": true,
+        "context": ""
+      },
+      {
+        "src": "images/dyn-wli-logo-dark.png",
+        "alt": "",
+        "hidden": true,
+        "context": ""
+      },
+      {
+        "src": "images/Craftpix_logo.png",
+        "alt": "",
+        "hidden": true,
+        "context": ""
+      },
+      {
+        "src": "images\\featuring-CAH-black.png",
+        "alt": "",
+        "hidden": true,
+        "context": ""
+      },
+      {
+        "src": "images/About-3-20-2026.png",
+        "alt": "",
+        "hidden": false,
+        "context": "About"
+      },
+      {
+        "src": "images/Untitled design (21).png",
+        "alt": "Pixel Forge Jam logo",
+        "hidden": false,
+        "context": ""
+      },
+      {
+        "src": "images/2026-Timeline-3-20-2026.png",
+        "alt": "",
+        "hidden": false,
+        "context": "2026 Timeline"
+      },
+      {
+        "src": "images/Theme-3-17-2026 (3).png",
+        "alt": "",
+        "hidden": false,
+        "context": "Theme"
+      },
+      {
+        "src": "images/Rules-3-17-2026 (1).png",
+        "alt": "",
+        "hidden": false,
+        "context": "Rules"
+      },
+      {
+        "src": "images/Prizes-3-17-2026.png",
+        "alt": "",
+        "hidden": false,
+        "context": "Prizes"
+      },
+      {
+        "src": "images/Sponsors-3-17-2026.png",
+        "alt": "",
+        "hidden": false,
+        "context": "Sponsors"
+      },
+      {
+        "src": "images\\xogot_banner.png",
+        "alt": "Xogot",
+        "hidden": false,
+        "context": ""
+      },
+      {
+        "src": "images/Lockup-Horizontal-Dark.png",
+        "alt": "CodeCrafters",
+        "hidden": false,
+        "context": ""
+      },
+      {
+        "src": "images/dyn-wli-logo-dark.png",
+        "alt": "WeLoveIndies",
+        "hidden": false,
+        "context": ""
+      },
+      {
+        "src": "images/Craftpix_logo.png",
+        "alt": "Craftpix",
+        "hidden": false,
+        "context": ""
+      },
+      {
+        "src": "images/easelName.png",
+        "alt": "Easel",
+        "hidden": false,
+        "context": ""
+      },
+      {
+        "src": "images/title_final.png",
+        "alt": "PixelOver",
+        "hidden": false,
+        "context": ""
+      },
+      {
+        "src": "images/xyz-logo-color.png",
+        "alt": "gen.xyz",
+        "hidden": false,
+        "context": ""
+      },
+      {
+        "src": "images/kronnect.png",
+        "alt": "Kronnect",
+        "hidden": false,
+        "context": ""
+      },
+      {
+        "src": "images\\picocad2_logo_horizontal.png",
+        "alt": "PicoCAD",
+        "hidden": false,
+        "context": ""
+      },
+      {
+        "src": "images/PyxelLogo9 (1).png",
+        "alt": "Pyxel Edit",
+        "hidden": false,
+        "context": ""
+      },
+      {
+        "src": "images\\featuring-CAH-black.png",
+        "alt": "cardsagainsthumanity",
+        "hidden": false,
+        "context": ""
+      },
+      {
+        "src": "images/vueschool-logo.png",
+        "alt": "Vue School",
+        "hidden": false,
+        "context": ""
+      },
+      {
+        "src": "images\\Logo-KodIn.png",
+        "alt": "Kodin",
+        "hidden": false,
+        "context": ""
+      },
+      {
+        "src": "images/FAQ-3-20-2026.png",
+        "alt": "",
+        "hidden": false,
+        "context": "FAQ"
+      },
+      {
+        "src": "images/Legal-3-20-2026_2.png",
+        "alt": "",
+        "hidden": false,
+        "context": "Legal and Ownership"
+      }
+    ],
+    "body": " Pixel Forge Jam document.documentElement.classList.add('js'); if (!window.matchMedia('(prefers-reduced-motion: reduce)').matches) { document.documentElement.classList.add('motion-ready'); } Pixel Forge Jam Menu Pixel Forge Hackathons About Timeline Theme Rules Prizes Sponsors FAQ Legal Blogs June 27 to July 4, 2026 Pixel Forge Jam #2 Haunted Edition Build a game forged by hand. Join the Jam Join Discord Supported by sponsors. About Format Online Duration 7 Days Submission platform itch.io Teams Upto 4 Members Community Discord based Outcome Prizes and recognition Ship something concrete Finish a real game. Try risky ideas fast Short deadlines make bold ideas easier to try. Be seen by other creators Get feedback and something to show later. 2026 Timeline June 27 Jam starts The theme goes live and the build week begins. July 4 Submission deadline Submit your build, credits, and theme note before the cutoff. July 4 to 8 Voting period Play entries and leave feedback. July 9 Winners announced Placements and featured games go live. Theme Theme Reveal THEME REVEAL Fantasy and Corrupted 01 Choose One of the given themes You need to put only one of the given themes 02 Both themes? You can use both themes if you want Rules Participation You can use any game engine you like and participate solo or in a team of up to 4 people. Original work All work should be created during the jam period. Pre-made assets are allowed if properly credited. AI-generated content is not allowed. Theme usage"
+  },
+  {
+    "file": "jam-3/index.html",
+    "title": "Pixel Forge Jam",
+    "h1": [
+      "Pixel Forge Jam #3\n                          \n                        Tricolor Challenge!",
+      "Gold sponsors",
+      "Silver sponsors",
+      "Bronze sponsors"
+    ],
+    "imgs": [
+      {
+        "src": "/images/New Piskel-2.png (9).png",
+        "alt": "",
+        "hidden": false,
+        "context": "Pixel Forge Jam"
+      },
+      {
+        "src": "/images/dyn-wli-logo-dark.png",
+        "alt": "WeLoveIndies",
+        "hidden": false,
+        "context": ""
+      },
+      {
+        "src": "/images/logo-full-lockup-dark.png",
+        "alt": "AssetHoard",
+        "hidden": false,
+        "context": ""
+      },
+      {
+        "src": "/images/spine_logo_dark.png",
+        "alt": "Spine",
+        "hidden": false,
+        "context": ""
+      },
+      {
+        "src": "/images/OppalinLogoA.png",
+        "alt": "Oppalin",
+        "hidden": false,
+        "context": ""
+      },
+      {
+        "src": "/images/hawkeye logo red.png",
+        "alt": "Oppalin",
+        "hidden": false,
+        "context": ""
+      },
+      {
+        "src": "/images/Craftpix_logo.png",
+        "alt": "Craftpix",
+        "hidden": false,
+        "context": ""
+      },
+      {
+        "src": "images\\gamedev-logo-full-color-rgb-900px@300ppi.png",
+        "alt": "GameDev",
+        "hidden": false,
+        "context": ""
+      },
+      {
+        "src": "/images/dyn-wli-logo-dark.png",
+        "alt": "",
+        "hidden": true,
+        "context": ""
+      },
+      {
+        "src": "/images/logo-full-lockup-dark.png",
+        "alt": "",
+        "hidden": true,
+        "context": ""
+      },
+      {
+        "src": "/images/spine_logo_dark.png",
+        "alt": "",
+        "hidden": true,
+        "context": ""
+      },
+      {
+        "src": "/images/OppalinLogoA.png",
+        "alt": "",
+        "hidden": true,
+        "context": ""
+      },
+      {
+        "src": "/images/hawkeye logo red.png",
+        "alt": "",
+        "hidden": true,
+        "context": ""
+      },
+      {
+        "src": "/images/Craftpix_logo.png",
+        "alt": "",
+        "hidden": true,
+        "context": ""
+      },
+      {
+        "src": "/images/gamedev-logo-full-color-rgb-900px@300ppi.png",
+        "alt": "",
+        "hidden": true,
+        "context": ""
+      },
+      {
+        "src": "/images/About-3-20-2026.png",
+        "alt": "",
+        "hidden": false,
+        "context": "About"
+      },
+      {
+        "src": "/images/Untitled design (21).png",
+        "alt": "Pixel Forge Jam logo",
+        "hidden": false,
+        "context": ""
+      },
+      {
+        "src": "/images/2026-Timeline-3-20-2026.png",
+        "alt": "",
+        "hidden": false,
+        "context": "2026 Timeline"
+      },
+      {
+        "src": "/images/Theme-3-17-2026 (3).png",
+        "alt": "",
+        "hidden": false,
+        "context": "Theme"
+      },
+      {
+        "src": "/images/Rules-3-17-2026 (1).png",
+        "alt": "",
+        "hidden": false,
+        "context": "Rules"
+      },
+      {
+        "src": "/images/Prizes-3-17-2026.png",
+        "alt": "",
+        "hidden": false,
+        "context": "Prizes"
+      },
+      {
+        "src": "/images/Sponsors-3-17-2026.png",
+        "alt": "",
+        "hidden": false,
+        "context": "Sponsors"
+      },
+      {
+        "src": "images/Craftpix_logo.png",
+        "alt": "Craftpix",
+        "hidden": false,
+        "context": ""
+      },
+      {
+        "src": "/images/dyn-wli-logo-dark.png",
+        "alt": "WeLoveIndies",
+        "hidden": false,
+        "context": ""
+      },
+      {
+        "src": "/images\\spine_logo_dark.png",
+        "alt": "Spine",
+        "hidden": false,
+        "context": ""
+      },
+      {
+        "src": "/images/hawkeye logo red.png",
+        "alt": "Hawkeye",
+        "hidden": false,
+        "context": ""
+      },
+      {
+        "src": "/images/logo-full-lockup-dark.png",
+        "alt": "AssetHoard",
+        "hidden": false,
+        "context": ""
+      },
+      {
+        "src": "/images/OppalinLogoA.png",
+        "alt": "oppalin",
+        "hidden": false,
+        "context": ""
+      },
+      {
+        "src": "/images/gamedev-logo-full-color-rgb-900px@300ppi.png",
+        "alt": "GameDev",
+        "hidden": false,
+        "context": ""
+      },
+      {
+        "src": "/images/FAQ-3-20-2026.png",
+        "alt": "",
+        "hidden": false,
+        "context": "FAQ"
+      },
+      {
+        "src": "/images/Legal-3-20-2026_2.png",
+        "alt": "",
+        "hidden": false,
+        "context": "Legal and Ownership"
+      }
+    ],
+    "body": " Pixel Forge Jam document.documentElement.classList.add('js'); if (!window.matchMedia('(prefers-reduced-motion: reduce)').matches) { document.documentElement.classList.add('motion-ready'); } window.dataLayer = window.dataLayer || []; function gtag(){dataLayer.push(arguments);} gtag('js', new Date()); gtag('config', 'G-L1EEQDSQ42'); Pixel Forge Jam Menu Pixel Forge Hackathons About Timeline Theme Rules Prizes Sponsors FAQ Blogs Press Kit September 5 - 12, 2026 Pixel Forge Jam #3 Tricolor Challenge! Build a game forged by hand. Join the Jam Join Discord Supported by sponsors. About Format Online Duration 7 Days Submission platform itch.io Teams Upto 4 Members Community Discord based Outcome Prizes and recognition Ship something concrete Finish a real game. Try risky ideas fast Short deadlines make bold ideas easier to try. Be seen by other creators Get feedback and something to show later. 2026 Timeline September 5 Jam starts The theme goes live and the build week begins. September 12 Submission deadline Submit your build, credits, and theme note before the cutoff. September 12 to 17 Voting period Play entries and leave feedback. September 17 Winners announced Placements and featured games go live. Theme Main Challenge is to make the game \"USING ONLY 3 COLORS\". The game theme is \"FREEDOM BUT AT WHAT COST?\" Get Updates on Discord See the Jam Page Your theme idea Submit 01 Prepare your stack Choose your engine, art pipeline, and export format. 02 Interpret the theme clearly Pick "
+  },
+  {
+    "file": "press/index.html",
+    "title": "Press Kit | Pixel Forge Jam",
+    "h1": [
+      "Press Kit"
+    ],
+    "imgs": [
+      {
+        "src": "/images/New Piskel-2.png (9).png",
+        "alt": "",
+        "hidden": false,
+        "context": "Pixel Forge Jam"
+      },
+      {
+        "src": "/images/New%20Piskel-2.png%20(9).png",
+        "alt": "",
+        "hidden": true,
+        "context": "Official media resources\n                        Press Kit\n                        Everything press,"
+      },
+      {
+        "src": "/images/PIXEL-FORGE-3-17-2026.png",
+        "alt": "Pixel Forge Jam logo on dark",
+        "hidden": false,
+        "context": ""
+      },
+      {
+        "src": "/images/PIXEL-FORGE-3-17-2026.png",
+        "alt": "Pixel Forge Jam logo on dark",
+        "hidden": false,
+        "context": ""
+      },
+      {
+        "src": "/images/New%20Piskel-2.png%20(9).png",
+        "alt": "Pixel Forge Jam primary logo",
+        "hidden": false,
+        "context": ""
+      },
+      {
+        "src": "/images/monochrome_version.png",
+        "alt": "Pixel Forge Jam monochrome logo",
+        "hidden": false,
+        "context": ""
+      },
+      {
+        "src": "/images/press/banner-wide.png",
+        "alt": "Pixel Forge Jam wide banner",
+        "hidden": false,
+        "context": ""
+      },
+      {
+        "src": "/images/press/banner-square.png",
+        "alt": "Pixel Forge Jam square banner",
+        "hidden": false,
+        "context": ""
+      },
+      {
+        "src": "/images/press/banner-story.png",
+        "alt": "Pixel Forge Jam story banner",
+        "hidden": false,
+        "context": ""
+      },
+      {
+        "src": "/images/press/banner-social-card.png",
+        "alt": "Pixel Forge Jam link preview card",
+        "hidden": false,
+        "context": ""
+      }
+    ],
+    "body": " Pixel Forge Jam Menu ◀ back Official media resources Press Kit Everything press, partners, and creators need to represent Pixel Forge Jam accurately, all in one place. Logos / Brand colours / Approved copy / Social assets Download full kit (.zip) Email the team 01 Logo Four approved variants. Pick the one that fits the background you are placing it on, and keep clear space around it equal to the height of the logo mark. Primary logo Default choice for light backgrounds, decks, and articles. PNG SVG Logo on dark For dark layouts, video overlays, and Void Black backgrounds. PNG SVG Logo mark Square icon for avatars, favicons, and tight spaces. PNG SVG Monochrome One-colour version for print, merch, and low-contrast placements. PNG SVG Logo do's and don'ts Do keep the original proportions and colours. Do leave clear space around the logo so nothing crowds it. Don't stretch, rotate, recolour, or add effects to the logo. Don't place the dark logo on a dark background, or the light one on a light background. 02 Brand Colours The Pixel Forge palette. Click any value to copy it. Pixel Cyan Bright highlights from the top of the logo. #24C8FF Copy Forge Blue Primary mid-tone from the logo gradient. #1471FF Copy Electric Blue Strong lower edge and high-energy accents. #051BFF Copy Shadow Blue Deep pixel shadows and dimensional details. #020B98 Copy Void Black Logo outlines, shadows, and dark backgrounds. #000000 Copy Mono White Monochrome logo and knockout applications. #FFFFFF Copy 03"
+  },
+  {
+    "file": "blog/index.html",
+    "title": "Pixel Forge Jam Blog",
+    "h1": [
+      "Blog"
+    ],
+    "imgs": [
+      {
+        "src": "images/New Piskel-2.png (9).png",
+        "alt": "",
+        "hidden": false,
+        "context": "Pixel Forge Jam"
+      }
+    ],
+    "body": " Pixel Forge Jam Menu ◀ back Pixel Forge Updates Blog Announcements, jam updates, creator notes, and community highlights. Search blog posts All Updates Guides Community Sponsors Announcements Explore No posts match your search yet. Make something real this week. Build it. Finish it. Ship it. Register on itch.io Join the Community Pixel Forge Jam 2026 Questions? Email pixelforgejam@gmail.com or ask in Discord. Sponsor Form Follow Us /* ADDING A NEW BLOG POST: Copy one object inside POSTS and edit the values. - Put newest posts at the top. - image is optional. Leave it as \"\" if you do not want an image. - link can point to another page later, or keep \"#\" for now. */ const POSTS = [ { title: \"Free Workshop: A Career in Video Games\", date: \"23 September 2026\", author: \"Pixel Forge Team\", category: \"Updates\", excerpt: \"Join Karma Play and Pixel Forge for a free two-hour workshop about finding your way into the video game industry.\", image: \"../images/workshop-career-in-video-games.png\", link: \"/blog/workshop-career-in-video-games/\" }, { title: \"Pixel Forge Jam #2 [HAUNTED EDITION]\", date: \"27 June 2026\", author: \"Rishabh Mittal\", category: \"Updates\", excerpt: \"Join our second game jam, save the dates on your calendars - June 27th to July 4th\", image: \"images/Copy of Untitled Design (1).png\", link: \"/blog/pixel-forge-jam-2/\" }, { title: \"Congratulations to the Pixel Forge Jam Winners\", date: \"May 2026\", author: \"Pixel Forge Team\", category: \"Community\", excerpt: \"We are celebratin"
+  },
+  {
+    "file": "blog/pixel-forge-jam-2/index.html",
+    "title": "Pixel Forge Jam #2 [HAUNTED EDITION] | Pixel Forge Jam",
+    "h1": [
+      "Pixel Forge Jam #2 [HAUNTED EDITION]"
+    ],
+    "meta": "By Rishabh Mittal\n                                27 June 2026\n                                4 min read",
+    "imgs": [
+      {
+        "src": "images/New Piskel-2.png (9).png",
+        "alt": "",
+        "hidden": false,
+        "context": "Pixel Forge Jam"
+      },
+      {
+        "src": "images/Copy of Untitled Design (1).png",
+        "alt": "",
+        "hidden": false,
+        "context": ""
+      }
+    ],
+    "body": " Pixel Forge Jam Menu About Timeline Theme Rules Prizes Sponsors FAQ Legal Blogs ← Back to all posts Updates Pixel Forge Jam #2 [HAUNTED EDITION] After an incredible first jam, we are officially getting ready for our next one. By Rishabh Mittal 27 June 2026 4 min read When we started Pixel Forge Jam, our goal was simple: create a space where developers, artists, designers, and beginners could come together, make games, learn new skills, and share their work with the world. We did not expect our first jam to grow the way it did. Pixel Forge Jam 2026 brought in over 500 participants, 81 submissions, more than 11,000 views, a prize pool worth over $4,000, and a Discord community of more than 350 members. Seeing so many people join, build, submit, rate games, and support each other was honestly amazing. The best part was not just the numbers. It was seeing people finish real games, try new ideas, collaborate with others, and create projects they could be proud of. Some people joined with experience, while others were trying game development for the first time. That is exactly what Pixel Forge Jam is supposed to be about. Announcing Pixel Forge Jam #2 We are excited to announce that Pixel Forge Jam #2 will run from June 27 to July 4, 2026. It will once again be an online game jam where participants will have one week to create a game based on a theme revealed at the start of the event. Just like the first jam, this event is focused on creativity, experimentation, and learning. Whe"
+  },
+  {
+    "file": "blog/pixel-forge-jam-2-winners/index.html",
+    "title": "Pixel Forge Jam #2 Winners | Pixel Forge Jam",
+    "h1": [
+      "Pixel Forge Jam #2 Winners"
+    ],
+    "meta": "By Pixel Forge TeamJuly 20264 min read",
+    "imgs": [
+      {
+        "src": "/images/New%20Piskel-2.png%20(9).png",
+        "alt": "",
+        "hidden": false,
+        "context": "Pixel Forge Jam"
+      },
+      {
+        "src": "/images/Copy%20of%20Untitled%20Design%20(1).png",
+        "alt": "Pixel Forge Jam #2 Haunted Edition artwork",
+        "hidden": false,
+        "context": ""
+      },
+      {
+        "src": "images/lament.png",
+        "alt": "Lament of the Crimson Angel and White Garden",
+        "hidden": false,
+        "context": ""
+      },
+      {
+        "src": "images/holy-moly.png",
+        "alt": "Holy Moly",
+        "hidden": false,
+        "context": ""
+      },
+      {
+        "src": "images/madbot.png",
+        "alt": "MadBot",
+        "hidden": false,
+        "context": ""
+      },
+      {
+        "src": "images/escape-corrupted-forest.png",
+        "alt": "Escape The Corrupted Forest",
+        "hidden": false,
+        "context": ""
+      },
+      {
+        "src": "images/cinder-vigil.png",
+        "alt": "Cinder Vigil",
+        "hidden": false,
+        "context": ""
+      },
+      {
+        "src": "images/tower-abstract-magics.png",
+        "alt": "The tower of abstract magics",
+        "hidden": false,
+        "context": ""
+      },
+      {
+        "src": "images/so-below.png",
+        "alt": "So, Below",
+        "hidden": false,
+        "context": ""
+      },
+      {
+        "src": "images/the-last-light.png",
+        "alt": "The Last Light",
+        "hidden": false,
+        "context": ""
+      }
+    ],
+    "body": " Pixel Forge Jam Menu Blogs Back to all posts Community Pixel Forge Jam #2 Winners Celebrating the top five games and three Judges' Picks from Haunted Edition. By Pixel Forge TeamJuly 20264 min read Pixel Forge Jam #2: Haunted Edition is officially complete, and we are thrilled to celebrate the games that rose to the top. The jam received 111 entries and 1,259 ratings, with creators building, playing, and supporting one another throughout the event. Thank you to everyone who submitted a game, rated entries, shared feedback, or joined the community. The quality and variety of the Haunted Edition submissions made these results worth celebrating. Play the games: Every winner card below links directly to its official itch.io page. Visit the games, leave the creators some support, and experience the projects for yourself. Our Top Five Winners 1st Place: Lament of the Crimson Angel and White GardenBy JakeKleiner. Ranked first overall with 17 ratings and a score of 3.471, while also placing first for atmosphere.Play Lament of the Crimson Angel and White Garden 2nd Place: Holy MolyBy BryanCodes, quantumvortex18, javis, and GeorgeCodes. Ranked second overall with 21 ratings and a score of 3.448, taking first place for both gameplay and music.Play Holy Moly 3rd Place: MadBotBy pixcarex. Ranked third overall with 11 ratings and a score of 3.291, earning first place in the horror category.Play MadBot 4th Place: Escape The Corrupted ForestBy REEE101. Ranked fourth overall with 21 ratings "
+  },
+  {
+    "file": "blog/pixel-forge-jam-3/index.html",
+    "title": "Announcing Pixel Forge Jam #3 | Pixel Forge Jam",
+    "h1": [
+      "Announcing Pixel Forge Jam #3"
+    ],
+    "meta": "By Pixel Forge Team13 August 20264 min read",
+    "imgs": [
+      {
+        "src": "/images/New%20Piskel-2.png%20(9).png",
+        "alt": "",
+        "hidden": false,
+        "context": "Pixel Forge Jam"
+      }
+    ],
+    "body": " Pixel Forge Jam Menu Blogs Back to all posts Announcement Announcing Pixel Forge Jam #3 The forge opens again for a seven-day Tricolor Challenge with more than $5,000 in prizes. By Pixel Forge Team13 August 20264 min read Pixel Forge Jam is back. Developers, artists, designers, musicians, and first-time creators are invited to spend one focused week turning an idea into a playable game. Pixel Forge Jam #3 runs online from September 5 to September 12, 2026. Participants can work solo or in teams of up to four and submit their games through itch.io. The Tricolor Challenge This edition adds one bold creative restriction: every submitted game must visibly use exactly three colours. Engine defaults count, and fades or gradients that introduce extra visible colours are not allowed. The game theme will be revealed when the jam begins. Your entry must respond to that theme, but how you interpret it is up to you. Jam Details DatesSeptember 5-12, 2026 FormatOnline, hosted on itch.io Team sizeSolo or up to four people ChallengeUse exactly three colours ThemeRevealed at the start Prize poolMore than $5,000 in prizes What You Need to Know Use any game engine you like. Create the majority of your work during the jam period and credit any permitted pre-made assets. Generative AI content is not allowed. Include a short explanation of how your game uses the theme. Browser-playable submissions are recommended, with Windows or Mac builds also accepted. Play other entries and leave useful, cons"
+  },
+  {
+    "file": "blog/pixel-forge-jam-winners/index.html",
+    "title": "Congratulations to the Pixel Forge Jam Winners | Pixel Forge Jam",
+    "h1": [
+      "Congratulations to the Pixel Forge Jam Winners"
+    ],
+    "meta": "By Pixel Forge Team\n                                27 June 2026\n                                4 min read",
+    "imgs": [
+      {
+        "src": "images/New Piskel-2.png (9).png",
+        "alt": "",
+        "hidden": false,
+        "context": "Pixel Forge Jam"
+      },
+      {
+        "src": "images/1stPlace.png",
+        "alt": "1st Place - Tic Tac Toe Maybe",
+        "hidden": false,
+        "context": ""
+      },
+      {
+        "src": "images/2ndPlace.png",
+        "alt": "2nd Place - System Breach",
+        "hidden": false,
+        "context": ""
+      },
+      {
+        "src": "images/3rdPlace.png",
+        "alt": "3rd Place - Rataracta",
+        "hidden": false,
+        "context": ""
+      },
+      {
+        "src": "images/4thPlace.png",
+        "alt": "4th Place - A Cloaked Cat's Guide to Rule-Breaking",
+        "hidden": false,
+        "context": ""
+      },
+      {
+        "src": "images/5thPlace.png",
+        "alt": "5th Place - Delinquent",
+        "hidden": false,
+        "context": ""
+      },
+      {
+        "src": "https://img.itch.zone/aW1nLzI2OTE2MzM2LnBuZw==/315x250%23c/3lidao.png",
+        "alt": "Judges Pick - Just Another Cup",
+        "hidden": false,
+        "context": ""
+      },
+      {
+        "src": "https://img.itch.zone/aW1nLzI2OTA3MTY0LnBuZw==/315x250%23c/B3UrLJ.png",
+        "alt": "Judges Pick - Fruited to Fight",
+        "hidden": false,
+        "context": ""
+      },
+      {
+        "src": "https://img.itch.zone/aW1nLzI2OTI0NDAwLnBuZw==/315x250%23c/zUM3Q7.png",
+        "alt": "Judges Pick - Menu Hopper",
+        "hidden": false,
+        "context": ""
+      }
+    ],
+    "body": " Pixel Forge Jam Menu About Timeline Theme Rules Prizes Sponsors FAQ Legal Blogs ← Back to all posts Community Congratulations to the Pixel Forge Jam Winners Our first Pixel Forge Jam is officially complete, and we are so excited to celebrate the amazing games our community created. By Pixel Forge Team 27 June 2026 4 min read Pixel Forge Jam started with a simple goal: bring creators together, give them a theme, and challenge them to build something real in a short amount of time. Our first jam completely exceeded our expectations. We had over 500 participants, 81 submissions, more than 900 ratings, and over $4000 in prizes. More importantly, we got to see so many people create, experiment, collaborate, and finish games they can be proud of. Thank you so much to everyone who participated, submitted a game, rated entries, gave feedback, joined the Discord, or supported the jam in any way. The quality of the submissions genuinely surprised us, and choosing the winners was not easy. Our Top Winners A huge congratulations to our top five winners. These games stood out during the jam, and we highly encourage everyone to check them out, play them, and support the creators. Play the games: Each winner below links directly to their itch.io page. Please take a moment to try their games and leave them some support. 1st Place: Tic Tac Toe Maybe Congratulations to Tic Tac Toe Maybe for taking first place in Pixel Forge Jam. This game earned the top spot, and we are so excited to feature "
+  },
+  {
+    "file": "blog/workshop-career-in-video-games/index.html",
+    "title": "Free Workshop: A Career in Video Games | Pixel Forge Jam",
+    "h1": [
+      "A Career in Video Games"
+    ],
+    "meta": "By Pixel Forge Team23 September 20264 min read",
+    "imgs": [
+      {
+        "src": "/images/New%20Piskel-2.png%20(9).png",
+        "alt": "",
+        "hidden": false,
+        "context": "Pixel Forge Jam"
+      },
+      {
+        "src": "/images/workshop-career-in-video-games.png",
+        "alt": "Workshop: A Career in Video Games",
+        "hidden": false,
+        "context": ""
+      }
+    ],
+    "body": " Pixel Forge Jam Menu Blogs Back to all posts Workshop A Career in Video Games A free two-hour workshop from Karma Play and Pixel Forge for anyone curious about finding their place in the games industry. By Pixel Forge Team23 September 20264 min read Making games is a creative practice, but building a career in games can feel much less clear. This free workshop is designed to make that path easier to see. Join Karma Play and Pixel Forge for two focused hours on the people, skills, and decisions behind a career in video games. What the workshop covers We will look at the different roles that bring a game to life, how portfolios communicate what you can do, and practical ways to start building experience before you have your first professional credit. How game development teams work together. What studios look for in early portfolios and applications. How to choose a first project that demonstrates your strengths. Where to find communities, mentors, and opportunities to keep learning. Workshop details FormatFree online workshop LengthTwo hours Hosted byKarma Play x Pixel Forge AudienceAnyone curious about games careers You do not need to have everything figured out before you start making games. Save your place Bring your questions, your current project, or simply your curiosity. The workshop is a chance to meet other aspiring creators and leave with a clearer next step. Join the workshop Join the Discord WorkshopCareer in GamesPixel ForgeKarma Play Return to all Pixel Forge po"
+  }
+]

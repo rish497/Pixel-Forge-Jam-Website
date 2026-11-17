@@ -9,6 +9,7 @@
     let tiles=[],width=0,height=0,coverWidth=280,coverHeight=230,step=58,slope=.61,period=1,duration=1;
     let phase=0,startedAt=0,running=false,inView=false,selected=null,selectionType=null;
     let wrapTimer=0,resizeFrame=0,pointerX=null,pointerY=null,suppressTouchClick=false;
+    let drag=null,dragFrame=0,suppressMouseClick=false,clickResetTimer=0;
     const clamp=(n,a,b)=>Math.max(a,Math.min(b,n));
     const wrap=n=>((n+period/2)%period+period)%period-period/2;
     const clock=()=>document.timeline.currentTime||0;
@@ -44,7 +45,7 @@
         updateOrder();scheduleWrap();
     }
     function sync(){
-        const shouldPlay=selected===null&&!reduced.matches&&inView&&!document.hidden;
+        const shouldPlay=drag===null&&selected===null&&!reduced.matches&&inView&&!document.hidden;
         if(shouldPlay&&!running)play();
         else if(!shouldPlay&&running)pause();
     }
@@ -77,7 +78,7 @@
         applyFocus();sync();
     }
     function cover(game){
-        if(game.image){const image=document.createElement('img');image.src=game.image;image.alt='';image.width=315;image.height=250;image.draggable=false;image.decoding='async';return image;}
+        if(game.image){const image=document.createElement('img');image.src=game.image;image.alt='Cover art for '+game.title;image.width=315;image.height=250;image.draggable=false;image.decoding='async';return image;}
         const fallback=document.createElement('span');fallback.className='cover-fallback';
         const name=document.createElement('span');name.className='cover-fallback-title';name.textContent=game.title;
         const note=document.createElement('span');note.className='cover-fallback-note';note.textContent='No thumbnail available';fallback.append(name,note);return fallback;
@@ -85,6 +86,7 @@
     function build(){
         const nextWidth=gallery.clientWidth,nextHeight=gallery.clientHeight;
         if(tiles.length&&width===nextWidth&&height===nextHeight)return;
+        if(drag)finishDrag(null,true);
         const oldPeriod=period;if(running)pause();
         const fraction=phase/oldPeriod;width=nextWidth;height=nextHeight;
         coverWidth=width<600?220:clamp(width*.235,260,340);coverHeight=coverWidth*500/630;
@@ -92,10 +94,10 @@
         gallery.style.setProperty('--cover-width',coverWidth+'px');gallery.style.setProperty('--cover-height',coverHeight+'px');
         if(!tiles.length){
             games.forEach((game,index)=>{
-                const element=document.createElement('a');element.className='game-tile';element.dataset.index=index;element.dataset.game=index;
-                element.href=game.url;element.target='_blank';element.rel='noopener noreferrer';
+                const element=gallery.querySelector(`.game-tile[data-game="${index}"]`)||document.createElement('a');element.className='game-tile';element.dataset.index=index;element.dataset.game=index;
+                element.href=game.url;element.target='_blank';element.rel='noopener noreferrer';element.draggable=false;
                 element.setAttribute('aria-label',game.title+(game.author?' by '+game.author:'')+' — Open game on itch.io');
-                const visual=cover(game);element.append(visual);gallery.append(element);tiles.push({element,visual,gameIndex:index,motion:null,z:null});
+                const visual=element.firstElementChild||cover(game);if(!visual.parentElement)element.append(visual);if(!element.parentElement)gallery.append(element);tiles.push({element,visual,gameIndex:index,motion:null,z:null});
             });
         }
         period=tiles.length*step;duration=period/speed*1000;phase=fraction*period;
@@ -106,29 +108,90 @@
         });
         updateOrder();sync();
     }
+    function seekDrag(){
+        dragFrame=0;
+        if(!drag?.active)return;
+        // Project the pointer onto the stream's diagonal; no easing while held.
+        const distance=((drag.x-drag.startX)-slope*(drag.y-drag.startY))/(1+slope*slope);
+        phase=((drag.phase-distance)%period+period)%period;
+        tiles.forEach((tile,index)=>{tile.motion.currentTime=animationTime(index,phase);});
+        updateOrder();
+    }
+    function finishDrag(event,cancelled=false){
+        if(!drag||(event?.pointerId!==undefined&&event.pointerId!==drag.pointerId))return;
+        const ended=drag;
+        cancelAnimationFrame(dragFrame);
+        if(ended.active)seekDrag();
+        drag=null;dragFrame=0;
+        delete gallery.dataset.dragging;
+        if(gallery.hasPointerCapture(ended.pointerId))gallery.releasePointerCapture(ended.pointerId);
+        pointerX=null;pointerY=null;
+        if(ended.active){
+            suppressMouseClick=true;
+            clearTimeout(clickResetTimer);
+            clickResetTimer=setTimeout(()=>{suppressMouseClick=false;},400);
+        }
+        const hit=cancelled?null:document.elementFromPoint(event?.clientX??ended.x,event?.clientY??ended.y);
+        const tile=hit?.closest('.game-tile');
+        select(tile&&gallery.contains(tile)?Number(tile.dataset.index):null,tile&&gallery.contains(tile)?'mouse':null);
+        sync();
+    }
     gallery.addEventListener('pointermove',event=>{
+        if(drag&&event.pointerId===drag.pointerId){
+            // Recover even if the browser/OS did not deliver the release event.
+            if(!(event.buttons&1)){finishDrag(event);return;}
+            drag.x=event.clientX;drag.y=event.clientY;
+            if(!drag.active&&Math.hypot(drag.x-drag.startX,drag.y-drag.startY)>=6){
+                drag.active=true;gallery.dataset.dragging='true';
+                selected=null;selectionType=null;applyFocus();
+                gallery.setPointerCapture(event.pointerId);
+            }
+            if(drag.active){
+                event.preventDefault();
+                if(!dragFrame)dragFrame=requestAnimationFrame(seekDrag);
+            }
+            return;
+        }
         if(event.pointerType!=='mouse'||!fine.matches||selectionType==='keyboard')return;
         if(pointerX!==null&&Math.hypot(event.clientX-pointerX,event.clientY-pointerY)<3)return;
         pointerX=event.clientX;pointerY=event.clientY;
         const tile=event.target.closest('.game-tile');select(tile?Number(tile.dataset.index):null,'mouse');
     });
-    gallery.addEventListener('pointerleave',()=>{pointerX=null;pointerY=null;if(selectionType==='mouse')select(null,null);});
+    gallery.addEventListener('pointerleave',()=>{pointerX=null;pointerY=null;if(!drag&&selectionType==='mouse')select(null,null);});
     gallery.addEventListener('pointerdown',event=>{
         const tile=event.target.closest('.game-tile');
+        if(event.pointerType==='mouse'&&event.button===0){
+            if(drag)finishDrag(null,true);
+            suppressMouseClick=false;clearTimeout(clickResetTimer);
+            drag={pointerId:event.pointerId,startX:event.clientX,startY:event.clientY,x:event.clientX,y:event.clientY,phase:currentPhase(),active:false};
+            sync();
+        }
         if(event.pointerType==='touch'&&tile){const index=Number(tile.dataset.index);suppressTouchClick=selected!==index;if(suppressTouchClick)select(index,'touch');}
     });
-    gallery.addEventListener('click',event=>{if(suppressTouchClick&&event.target.closest('.game-tile')){event.preventDefault();suppressTouchClick=false;}});
+    // A link must never start the browser's native drag/drop navigation session.
+    gallery.addEventListener('dragstart',event=>{event.preventDefault();finishDrag(null,true);});
+    gallery.addEventListener('dragend',()=>{finishDrag(null,true);if(selectionType==='mouse')select(null,null);});
+    gallery.addEventListener('dragover',event=>event.preventDefault());
+    gallery.addEventListener('drop',event=>{event.preventDefault();finishDrag(null,true);});
+    window.addEventListener('pointerup',event=>finishDrag(event));
+    window.addEventListener('pointercancel',event=>finishDrag(event,true));
+    gallery.addEventListener('lostpointercapture',event=>finishDrag(event,true));
+    window.addEventListener('blur',()=>{finishDrag(null,true);if(selectionType==='mouse')select(null,null);});
+    gallery.addEventListener('click',event=>{
+        if(suppressMouseClick&&event.detail!==0){event.preventDefault();event.stopPropagation();suppressMouseClick=false;return;}
+        if(suppressTouchClick&&event.target.closest('.game-tile')){event.preventDefault();suppressTouchClick=false;}
+    },true);
     gallery.addEventListener('focusin',event=>{const tile=event.target.closest('.game-tile');if(tile&&tile.matches(':focus-visible'))select(Number(tile.dataset.index),'keyboard');});
     gallery.addEventListener('focusout',event=>{if(!gallery.contains(event.relatedTarget)&&selectionType==='keyboard')select(null,null);});
     gallery.addEventListener('keydown',event=>{
-        if(event.key==='Escape'){select(null,null);gallery.focus({preventScroll:true});return;}
+        if(event.key==='Escape'){finishDrag(null,true);select(null,null);gallery.focus({preventScroll:true});return;}
         if(!['ArrowLeft','ArrowRight'].includes(event.key)||selected===null)return;
         event.preventDefault();const index=(selected+(event.key==='ArrowRight'?1:-1)+tiles.length)%tiles.length;
         select(index,'keyboard');tiles[index].element.focus({preventScroll:true});
     });
     document.addEventListener('pointerdown',event=>{if(!gallery.contains(event.target)&&selectionType==='touch')select(null,null);});
     reduced.addEventListener('change',()=>{sync();applyFocus();});
-    document.addEventListener('visibilitychange',sync);
+    document.addEventListener('visibilitychange',()=>{if(document.hidden){finishDrag(null,true);if(selectionType==='mouse')select(null,null);}sync();});
     new IntersectionObserver(([entry])=>{inView=entry.isIntersecting;sync();},{threshold:0}).observe(gallery);
     new ResizeObserver(()=>{cancelAnimationFrame(resizeFrame);resizeFrame=requestAnimationFrame(build);}).observe(gallery);
     build();

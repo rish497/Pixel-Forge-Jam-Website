@@ -1,0 +1,133 @@
+{
+  "pages": [
+    {
+      "url": "https://pixelforgejam.org/",
+      "h1": 1,
+      "images": 88,
+      "missingAlt": 0,
+      "structuredData": [
+        "WebPage",
+        "Organization",
+        "WebSite"
+      ],
+      "missingAssets": []
+    },
+    {
+      "url": "https://pixelforgejam.org/jam-2/",
+      "h1": 1,
+      "images": 45,
+      "missingAlt": 0,
+      "structuredData": [
+        "WebPage",
+        "Organization",
+        "BreadcrumbList"
+      ],
+      "missingAssets": []
+    },
+    {
+      "url": "https://pixelforgejam.org/jam-3/",
+      "h1": 1,
+      "images": 31,
+      "missingAlt": 0,
+      "structuredData": [
+        "WebPage",
+        "Organization",
+        "BreadcrumbList"
+      ],
+      "missingAssets": []
+    },
+    {
+      "url": "https://pixelforgejam.org/press/",
+      "h1": 1,
+      "images": 10,
+      "missingAlt": 0,
+      "structuredData": [
+        "WebPage",
+        "Organization",
+        "BreadcrumbList"
+      ],
+      "missingAssets": []
+    },
+    {
+      "url": "https://pixelforgejam.org/blog/",
+      "h1": 1,
+      "images": 3,
+      "missingAlt": 0,
+      "structuredData": [
+        "CollectionPage",
+        "Organization",
+        "BreadcrumbList"
+      ],
+      "missingAssets": []
+    },
+    {
+      "url": "https://pixelforgejam.org/blog/pixel-forge-jam-2/",
+      "h1": 1,
+      "images": 2,
+      "missingAlt": 0,
+      "structuredData": [
+        "WebPage",
+        "Organization",
+        "BreadcrumbList",
+        "BlogPosting"
+      ],
+      "missingAssets": []
+    },
+    {
+      "url": "https://pixelforgejam.org/blog/pixel-forge-jam-winners/",
+      "h1": 1,
+      "images": 9,
+      "missingAlt": 0,
+      "structuredData": [
+        "WebPage",
+        "Organization",
+        "BreadcrumbList",
+        "BlogPosting"
+      ],
+      "missingAssets": []
+    },
+    {
+      "url": "https://pixelforgejam.org/blog/pixel-forge-jam-2-winners/",
+      "h1": 1,
+      "images": 10,
+      "missingAlt": 0,
+      "structuredData": [
+        "WebPage",
+        "Organization",
+        "BreadcrumbList",
+        "BlogPosting"
+      ],
+      "missingAssets": []
+    },
+    {
+      "url": "https://pixelforgejam.org/blog/pixel-forge-jam-3/",
+      "h1": 1,
+      "images": 1,
+      "missingAlt": 0,
+      "structuredData": [
+        "WebPage",
+        "Organization",
+        "BreadcrumbList",
+        "BlogPosting"
+      ],
+      "missingAssets": []
+    },
+    {
+      "url": "https://pixelforgejam.org/blog/workshop-career-in-video-games/",
+      "h1": 1,
+      "images": 2,
+      "missingAlt": 0,
+      "structuredData": [
+        "WebPage",
+        "Organization",
+        "BreadcrumbList",
+        "BlogPosting"
+      ],
+      "missingAssets": []
+    }
+  ],
+  "errors": [],
+  "warnings": [
+    "/: unresolved local link farclip.ai/?ref=PIXELFORGEJAM&utm_source=itch&utm_medium=community&utm_campaign=PIXELFORGEJAM (existing content error preserved for owner review)"
+  ]
+}

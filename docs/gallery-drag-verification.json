@@ -1,0 +1,18 @@
+{
+  "checks": [
+    "All 68 source links disable browser-native dragging",
+    "Diagonal mouse drag follows pointer and never opens a link",
+    "Hover works after drag, leaving resumes native motion",
+    "Release outside section clears capture and hover",
+    "Window blur recovers an interrupted drag",
+    "Pointer cancellation and capture loss both recover",
+    "Normal click still opens a game after repeated drags",
+    "Keyboard navigation and Escape still work",
+    "Reduced motion stays paused but allows direct dragging",
+    "Resize during a drag releases it safely",
+    "Touch keeps page scrolling and tap-to-focus / tap-to-open"
+  ],
+  "errors": [],
+  "popups": 1,
+  "gameLinks": 68
+}

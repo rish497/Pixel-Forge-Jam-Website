@@ -1,0 +1,6 @@
+User-agent: *
+Allow: /
+Disallow: /prototypes/jam3-gallery/source/
+Disallow: /docs/
+
+Sitemap: https://pixelforgejam.org/sitemap.xml
