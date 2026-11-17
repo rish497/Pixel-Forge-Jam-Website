@@ -1,0 +1,73 @@
+{
+  "prizeCount": 97,
+  "prizeOrder": [
+    "First place",
+    "Second place",
+    "Third place",
+    "Fourth place",
+    "Fifth place",
+    "Best Game Made Using Defold",
+    "Top Game in Art ✎ᝰ Category",
+    "Best Game Made Using Render Workflows",
+    "Three judges' picks",
+    "Participation award"
+  ],
+  "copyAndOrderUnchanged": true,
+  "sponsorMarkupUnchanged": true,
+  "rows": [
+    {
+      "width": 390,
+      "cardCount": 10,
+      "scrollWidth": 3540,
+      "clientWidth": 360,
+      "pageOverflow": false,
+      "position": "static",
+      "cardsFit": true,
+      "heightClipped": false
+    },
+    {
+      "width": 768,
+      "cardCount": 10,
+      "scrollWidth": 4980,
+      "clientWidth": 712,
+      "pageOverflow": false,
+      "position": "static",
+      "cardsFit": true,
+      "heightClipped": false
+    },
+    {
+      "width": 1024,
+      "cardCount": 10,
+      "scrollWidth": 4980,
+      "clientWidth": 968,
+      "pageOverflow": false,
+      "position": "static",
+      "cardsFit": true,
+      "heightClipped": false
+    },
+    {
+      "width": 1440,
+      "cardCount": 10,
+      "scrollWidth": 4980,
+      "clientWidth": 1240,
+      "pageOverflow": false,
+      "position": "static",
+      "cardsFit": true,
+      "heightClipped": false
+    },
+    {
+      "width": 1920,
+      "cardCount": 10,
+      "scrollWidth": 4980,
+      "clientWidth": 1240,
+      "pageOverflow": false,
+      "position": "static",
+      "cardsFit": true,
+      "heightClipped": false
+    }
+  ],
+  "keyboardScroll": true,
+  "normalVerticalScroll": true,
+  "errors": [],
+  "nativeTouchSwipeWithoutJavaScript": true
+}
