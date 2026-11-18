@@ -324,7 +324,7 @@
         @media (max-width: 920px) {
             .hero-media { background-size: cover; }
             .hero-video { object-fit: cover; object-position: center; }
-            .hero-content { aspect-ratio: auto; min-height: 640px; }
+            .hero-content { aspect-ratio: auto; min-height: calc(100svh - var(--header)); min-height: calc(100dvh - var(--header)); }
             .menu { display: block; }
             .menu[aria-expanded="true"] span:nth-child(1) { transform: translateY(6px) rotate(45deg); }
             .menu[aria-expanded="true"] span:nth-child(2) { opacity: 0; }
@@ -346,7 +346,7 @@
         @media (max-width: 600px) {
             :root { --header: 64px; }
             .wrap { width: min(calc(100% - 30px), var(--max)); }
-            .hero-content { min-height: 620px; padding: 58px 0; }
+            .hero-content { padding: clamp(24px, 6svh, 58px) 0; }
             .hero h1 { font-size: clamp(54px, 20vw, 82px); }
             .hero h1 .topline { font-size: .25em; }
             .hero h1 .mega { -webkit-text-stroke-width: 1px; }
