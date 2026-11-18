@@ -7,7 +7,7 @@
     const viewport=document.createElement('div');viewport.className='prizes-viewport';
     section.append(stage);stage.append(content);rail.before(viewport);viewport.append(rail);
     section.querySelectorAll('.reveal').forEach(el=>{el.classList.remove('reveal');el.classList.add('visible');});
-    let enabled=false,travel=0,current=0,target=0,frame=0,last=0;
+    let enabled=false,travel=0,current=0,target=0,frame=0,last=0,layoutWidth=0,phoneExtraRows=0;
     const clamp=(n,a,b)=>Math.max(a,Math.min(b,n));
     const header=()=>parseFloat(getComputedStyle(document.documentElement).getPropertyValue('--header'));
     function paint(){rail.style.transform=`translate3d(${-current}px,0,0)`;}
@@ -27,13 +27,38 @@
     }
     function configure(){
         cancelAnimationFrame(frame);frame=0;last=0;
-        enabled=!reduced.matches&&innerWidth>=1024;
+        enabled=!reduced.matches;
         section.classList.toggle('prizes-pinned',enabled);
         rail.style.removeProperty('transform');rail.scrollLeft=0;
         if(enabled){
+            const phone=innerWidth<1024;
+            const lists=[...rail.querySelectorAll('.prize-list')];
+            if(phone){
+                const column=Math.max(220,viewport.clientWidth-34);
+                section.style.setProperty('--prize-phone-width',viewport.clientWidth+'px');
+                section.style.setProperty('--prize-list-column',column+'px');
+                if(layoutWidth!==innerWidth||!phoneExtraRows)phoneExtraRows=viewport.clientHeight>=360?2:1;
+                if(viewport.clientHeight<360)phoneExtraRows=1;
+                section.style.setProperty('--prize-extra-rows',phoneExtraRows);
+                lists.forEach(list=>{
+                    let rows=layoutWidth===innerWidth?Number(list.style.getPropertyValue('--prize-rows')):0;
+                    rows=rows||list.children.length;
+                    const card=list.closest('.prize-card');
+                    do{
+                        list.style.setProperty('--prize-rows',rows);
+                        const bottom=card.getBoundingClientRect().bottom-parseFloat(getComputedStyle(card).paddingBottom)-1;
+                        if(list.getBoundingClientRect().bottom<=bottom+1)break;
+                    }while(--rows>=1);
+                });
+            }else lists.forEach(list=>list.style.removeProperty('--prize-rows'));
+            layoutWidth=innerWidth;
             // Never pin a layout that would crop any prize, including at browser zoom.
             const cards=[...rail.querySelectorAll('.prize-card')];
-            const fits=cards.every(card=>card.scrollHeight<=card.clientHeight+1&&card.scrollWidth<=card.clientWidth+1);
+            const bounds=viewport.getBoundingClientRect();
+            const fits=cards.every(card=>{
+                const box=card.getBoundingClientRect();
+                return box.top>=bounds.top-1&&box.bottom<=bounds.bottom+1&&card.scrollHeight<=card.clientHeight+1&&card.scrollWidth<=card.clientWidth+1;
+            });
             if(!fits){enabled=false;section.classList.remove('prizes-pinned');}
             else{
                 travel=Math.max(0,rail.scrollWidth-viewport.clientWidth);

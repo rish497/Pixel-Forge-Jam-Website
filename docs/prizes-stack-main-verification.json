@@ -1,0 +1,56 @@
+{
+  "prizes": 97,
+  "copyOrderAndOtherSectionsUnchanged": true,
+  "rows": [
+    {
+      "width": 320,
+      "height": 568,
+      "allTenStack": true,
+      "headerGap": 0,
+      "reverse": true,
+      "overflow": false
+    },
+    {
+      "width": 390,
+      "height": 844,
+      "allTenStack": true,
+      "headerGap": 0,
+      "reverse": true,
+      "overflow": false
+    },
+    {
+      "width": 768,
+      "height": 900,
+      "allTenStack": true,
+      "headerGap": 0,
+      "reverse": true,
+      "overflow": false
+    },
+    {
+      "width": 1024,
+      "height": 900,
+      "allTenStack": true,
+      "headerGap": 0,
+      "reverse": true,
+      "overflow": false
+    },
+    {
+      "width": 1440,
+      "height": 900,
+      "allTenStack": true,
+      "headerGap": 0,
+      "reverse": true,
+      "overflow": false
+    },
+    {
+      "width": 1920,
+      "height": 1080,
+      "allTenStack": true,
+      "headerGap": 0,
+      "reverse": true,
+      "overflow": false
+    }
+  ],
+  "reducedMotion": true,
+  "errors": []
+}

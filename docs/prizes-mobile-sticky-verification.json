@@ -1,0 +1,702 @@
+{
+  "copyOrderUnchanged": true,
+  "rows": [
+    {
+      "width": 320,
+      "height": 568,
+      "pinned": true,
+      "stage": 504,
+      "viewport": 316,
+      "extraRows": "1",
+      "pageOverflow": false,
+      "items": 97,
+      "cards": [
+        {
+          "title": "First place",
+          "client": 314,
+          "scroll": 315,
+          "width": 1116,
+          "scrollWidth": 1116
+        },
+        {
+          "title": "Second place",
+          "client": 314,
+          "scroll": 315,
+          "width": 1116,
+          "scrollWidth": 1116
+        },
+        {
+          "title": "Third place",
+          "client": 314,
+          "scroll": 315,
+          "width": 1116,
+          "scrollWidth": 1116
+        },
+        {
+          "title": "Fourth place",
+          "client": 314,
+          "scroll": 315,
+          "width": 1681,
+          "scrollWidth": 1681
+        },
+        {
+          "title": "Best Game Made Using Defold",
+          "client": 314,
+          "scroll": 314,
+          "width": 288,
+          "scrollWidth": 288
+        },
+        {
+          "title": "Top Game in Art ✎ᝰ Category",
+          "client": 314,
+          "scroll": 314,
+          "width": 288,
+          "scrollWidth": 288
+        },
+        {
+          "title": "Best Game Made Using Render Workflows",
+          "client": 314,
+          "scroll": 314,
+          "width": 288,
+          "scrollWidth": 288
+        },
+        {
+          "title": "Three judges' picks",
+          "client": 314,
+          "scroll": 314,
+          "width": 288,
+          "scrollWidth": 288
+        },
+        {
+          "title": "Participation award",
+          "client": 314,
+          "scroll": 314,
+          "width": 288,
+          "scrollWidth": 288
+        }
+      ],
+      "columns": [
+        "5",
+        "5",
+        "5",
+        "5",
+        "5",
+        "4",
+        "3",
+        "3",
+        "4",
+        "6"
+      ]
+    },
+    {
+      "width": 360,
+      "height": 640,
+      "pinned": true,
+      "stage": 576,
+      "viewport": 406,
+      "extraRows": "2",
+      "pageOverflow": false,
+      "items": 97,
+      "cards": [
+        {
+          "title": "First place",
+          "client": 404,
+          "scroll": 404,
+          "width": 960,
+          "scrollWidth": 960
+        },
+        {
+          "title": "Second place",
+          "client": 404,
+          "scroll": 405,
+          "width": 644,
+          "scrollWidth": 644
+        },
+        {
+          "title": "Third place",
+          "client": 404,
+          "scroll": 405,
+          "width": 644,
+          "scrollWidth": 644
+        },
+        {
+          "title": "Fourth place",
+          "client": 404,
+          "scroll": 404,
+          "width": 1289,
+          "scrollWidth": 1289
+        },
+        {
+          "title": "Best Game Made Using Defold",
+          "client": 193,
+          "scroll": 193,
+          "width": 960,
+          "scrollWidth": 960
+        },
+        {
+          "title": "Top Game in Art ✎ᝰ Category",
+          "client": 193,
+          "scroll": 193,
+          "width": 960,
+          "scrollWidth": 960
+        },
+        {
+          "title": "Best Game Made Using Render Workflows",
+          "client": 193,
+          "scroll": 193,
+          "width": 1276,
+          "scrollWidth": 1276
+        },
+        {
+          "title": "Three judges' picks",
+          "client": 193,
+          "scroll": 193,
+          "width": 1276,
+          "scrollWidth": 1276
+        },
+        {
+          "title": "Participation award",
+          "client": 193,
+          "scroll": 193,
+          "width": 644,
+          "scrollWidth": 644
+        }
+      ],
+      "columns": [
+        "8",
+        "9",
+        "9",
+        "8",
+        "8",
+        "3",
+        "1",
+        "2",
+        "1",
+        "3"
+      ]
+    },
+    {
+      "width": 390,
+      "height": 700,
+      "pinned": true,
+      "stage": 636,
+      "viewport": 466,
+      "extraRows": "2",
+      "pageOverflow": false,
+      "items": 97,
+      "cards": [
+        {
+          "title": "First place",
+          "client": 464,
+          "scroll": 464,
+          "width": 704,
+          "scrollWidth": 704
+        },
+        {
+          "title": "Second place",
+          "client": 464,
+          "scroll": 464,
+          "width": 704,
+          "scrollWidth": 704
+        },
+        {
+          "title": "Third place",
+          "client": 464,
+          "scroll": 464,
+          "width": 704,
+          "scrollWidth": 704
+        },
+        {
+          "title": "Fourth place",
+          "client": 464,
+          "scroll": 464,
+          "width": 717,
+          "scrollWidth": 717
+        },
+        {
+          "title": "Best Game Made Using Defold",
+          "client": 223,
+          "scroll": 223,
+          "width": 1050,
+          "scrollWidth": 1050
+        },
+        {
+          "title": "Top Game in Art ✎ᝰ Category",
+          "client": 223,
+          "scroll": 223,
+          "width": 1050,
+          "scrollWidth": 1050
+        },
+        {
+          "title": "Best Game Made Using Render Workflows",
+          "client": 223,
+          "scroll": 223,
+          "width": 704,
+          "scrollWidth": 704
+        },
+        {
+          "title": "Three judges' picks",
+          "client": 223,
+          "scroll": 223,
+          "width": 704,
+          "scrollWidth": 704
+        },
+        {
+          "title": "Participation award",
+          "client": 223,
+          "scroll": 223,
+          "width": 704,
+          "scrollWidth": 704
+        }
+      ],
+      "columns": [
+        "10",
+        "10",
+        "10",
+        "11",
+        "11",
+        "4",
+        "1",
+        "3",
+        "3",
+        "5"
+      ]
+    },
+    {
+      "width": 390,
+      "height": 844,
+      "pinned": true,
+      "stage": 780,
+      "viewport": 610,
+      "extraRows": "2",
+      "pageOverflow": false,
+      "items": 97,
+      "cards": [
+        {
+          "title": "First place",
+          "client": 608,
+          "scroll": 608,
+          "width": 704,
+          "scrollWidth": 704
+        },
+        {
+          "title": "Second place",
+          "client": 608,
+          "scroll": 608,
+          "width": 704,
+          "scrollWidth": 704
+        },
+        {
+          "title": "Third place",
+          "client": 608,
+          "scroll": 608,
+          "width": 704,
+          "scrollWidth": 704
+        },
+        {
+          "title": "Fourth place",
+          "client": 608,
+          "scroll": 608,
+          "width": 717,
+          "scrollWidth": 717
+        },
+        {
+          "title": "Best Game Made Using Defold",
+          "client": 295,
+          "scroll": 295,
+          "width": 358,
+          "scrollWidth": 358
+        },
+        {
+          "title": "Top Game in Art ✎ᝰ Category",
+          "client": 295,
+          "scroll": 295,
+          "width": 358,
+          "scrollWidth": 358
+        },
+        {
+          "title": "Best Game Made Using Render Workflows",
+          "client": 295,
+          "scroll": 295,
+          "width": 358,
+          "scrollWidth": 358
+        },
+        {
+          "title": "Three judges' picks",
+          "client": 295,
+          "scroll": 295,
+          "width": 358,
+          "scrollWidth": 358
+        },
+        {
+          "title": "Participation award",
+          "client": 295,
+          "scroll": 295,
+          "width": 358,
+          "scrollWidth": 358
+        }
+      ],
+      "columns": [
+        "16",
+        "17",
+        "17",
+        "11",
+        "11",
+        "4",
+        "3",
+        "3",
+        "4",
+        "6"
+      ]
+    },
+    {
+      "width": 430,
+      "height": 932,
+      "pinned": true,
+      "stage": 868,
+      "viewport": 698,
+      "extraRows": "2",
+      "pageOverflow": false,
+      "items": 97,
+      "cards": [
+        {
+          "title": "First place",
+          "client": 696,
+          "scroll": 696,
+          "width": 398,
+          "scrollWidth": 398
+        },
+        {
+          "title": "Second place",
+          "client": 696,
+          "scroll": 696,
+          "width": 398,
+          "scrollWidth": 398
+        },
+        {
+          "title": "Third place",
+          "client": 696,
+          "scroll": 696,
+          "width": 398,
+          "scrollWidth": 398
+        },
+        {
+          "title": "Fourth place",
+          "client": 696,
+          "scroll": 696,
+          "width": 797,
+          "scrollWidth": 797
+        },
+        {
+          "title": "Best Game Made Using Defold",
+          "client": 339,
+          "scroll": 339,
+          "width": 398,
+          "scrollWidth": 398
+        },
+        {
+          "title": "Top Game in Art ✎ᝰ Category",
+          "client": 339,
+          "scroll": 339,
+          "width": 398,
+          "scrollWidth": 398
+        },
+        {
+          "title": "Best Game Made Using Render Workflows",
+          "client": 339,
+          "scroll": 339,
+          "width": 398,
+          "scrollWidth": 398
+        },
+        {
+          "title": "Three judges' picks",
+          "client": 339,
+          "scroll": 339,
+          "width": 398,
+          "scrollWidth": 398
+        },
+        {
+          "title": "Participation award",
+          "client": 339,
+          "scroll": 339,
+          "width": 398,
+          "scrollWidth": 398
+        }
+      ],
+      "columns": [
+        "19",
+        "18",
+        "18",
+        "11",
+        "11",
+        "4",
+        "3",
+        "3",
+        "4",
+        "6"
+      ]
+    },
+    {
+      "width": 768,
+      "height": 900,
+      "pinned": true,
+      "stage": 828,
+      "viewport": 675,
+      "extraRows": "2",
+      "pageOverflow": false,
+      "items": 97,
+      "cards": [
+        {
+          "title": "First place",
+          "client": 673,
+          "scroll": 673,
+          "width": 710,
+          "scrollWidth": 710
+        },
+        {
+          "title": "Second place",
+          "client": 673,
+          "scroll": 673,
+          "width": 710,
+          "scrollWidth": 710
+        },
+        {
+          "title": "Third place",
+          "client": 673,
+          "scroll": 673,
+          "width": 710,
+          "scrollWidth": 710
+        },
+        {
+          "title": "Fourth place",
+          "client": 673,
+          "scroll": 673,
+          "width": 1421,
+          "scrollWidth": 1421
+        },
+        {
+          "title": "Best Game Made Using Defold",
+          "client": 328,
+          "scroll": 328,
+          "width": 710,
+          "scrollWidth": 710
+        },
+        {
+          "title": "Top Game in Art ✎ᝰ Category",
+          "client": 328,
+          "scroll": 328,
+          "width": 710,
+          "scrollWidth": 710
+        },
+        {
+          "title": "Best Game Made Using Render Workflows",
+          "client": 328,
+          "scroll": 328,
+          "width": 710,
+          "scrollWidth": 710
+        },
+        {
+          "title": "Three judges' picks",
+          "client": 328,
+          "scroll": 328,
+          "width": 710,
+          "scrollWidth": 710
+        },
+        {
+          "title": "Participation award",
+          "client": 328,
+          "scroll": 328,
+          "width": 710,
+          "scrollWidth": 710
+        }
+      ],
+      "columns": [
+        "19",
+        "18",
+        "18",
+        "11",
+        "11",
+        "4",
+        "3",
+        "3",
+        "4",
+        "6"
+      ]
+    },
+    {
+      "width": 1024,
+      "height": 900,
+      "pinned": true,
+      "stage": 828,
+      "viewport": 672,
+      "extraRows": "",
+      "pageOverflow": false,
+      "items": 97,
+      "cards": [
+        {
+          "title": "First place",
+          "client": 670,
+          "scroll": 670,
+          "width": 778,
+          "scrollWidth": 778
+        },
+        {
+          "title": "Second place",
+          "client": 670,
+          "scroll": 670,
+          "width": 778,
+          "scrollWidth": 778
+        },
+        {
+          "title": "Third place",
+          "client": 670,
+          "scroll": 670,
+          "width": 778,
+          "scrollWidth": 778
+        },
+        {
+          "title": "Fourth place",
+          "client": 670,
+          "scroll": 670,
+          "width": 1558,
+          "scrollWidth": 1558
+        },
+        {
+          "title": "Best Game Made Using Defold",
+          "client": 324,
+          "scroll": 324,
+          "width": 398,
+          "scrollWidth": 398
+        },
+        {
+          "title": "Top Game in Art ✎ᝰ Category",
+          "client": 324,
+          "scroll": 324,
+          "width": 818,
+          "scrollWidth": 818
+        },
+        {
+          "title": "Best Game Made Using Render Workflows",
+          "client": 324,
+          "scroll": 324,
+          "width": 398,
+          "scrollWidth": 398
+        },
+        {
+          "title": "Three judges' picks",
+          "client": 324,
+          "scroll": 324,
+          "width": 398,
+          "scrollWidth": 398
+        },
+        {
+          "title": "Participation award",
+          "client": 324,
+          "scroll": 324,
+          "width": 398,
+          "scrollWidth": 398
+        }
+      ],
+      "columns": [
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        ""
+      ]
+    },
+    {
+      "width": 1440,
+      "height": 900,
+      "pinned": true,
+      "stage": 828,
+      "viewport": 672,
+      "extraRows": "",
+      "pageOverflow": false,
+      "items": 97,
+      "cards": [
+        {
+          "title": "First place",
+          "client": 670,
+          "scroll": 670,
+          "width": 778,
+          "scrollWidth": 778
+        },
+        {
+          "title": "Second place",
+          "client": 670,
+          "scroll": 670,
+          "width": 778,
+          "scrollWidth": 778
+        },
+        {
+          "title": "Third place",
+          "client": 670,
+          "scroll": 670,
+          "width": 778,
+          "scrollWidth": 778
+        },
+        {
+          "title": "Fourth place",
+          "client": 670,
+          "scroll": 670,
+          "width": 1558,
+          "scrollWidth": 1558
+        },
+        {
+          "title": "Best Game Made Using Defold",
+          "client": 324,
+          "scroll": 324,
+          "width": 398,
+          "scrollWidth": 398
+        },
+        {
+          "title": "Top Game in Art ✎ᝰ Category",
+          "client": 324,
+          "scroll": 324,
+          "width": 818,
+          "scrollWidth": 818
+        },
+        {
+          "title": "Best Game Made Using Render Workflows",
+          "client": 324,
+          "scroll": 324,
+          "width": 398,
+          "scrollWidth": 398
+        },
+        {
+          "title": "Three judges' picks",
+          "client": 324,
+          "scroll": 324,
+          "width": 398,
+          "scrollWidth": 398
+        },
+        {
+          "title": "Participation award",
+          "client": 324,
+          "scroll": 324,
+          "width": 398,
+          "scrollWidth": 398
+        }
+      ],
+      "columns": [
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        ""
+      ]
+    }
+  ],
+  "errors": []
+}

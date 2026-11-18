@@ -1,0 +1,19 @@
+{
+  "gesture": {
+    "pageDelta": 305,
+    "shift": -172.191,
+    "pinned": true,
+    "top": 64
+  },
+  "gaps": [
+    16,
+    16,
+    16,
+    16
+  ],
+  "resized": {
+    "pinned": true,
+    "fits": true
+  },
+  "reducedMotion": true
+}

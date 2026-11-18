@@ -14,7 +14,7 @@
 #recognition.prizes-pinned .prize-head .display { font-size:50px; }
 #recognition.prizes-pinned .recognition-copy { font-size:14px; }
 #recognition.prizes-pinned .prizes-viewport { flex:1;min-height:0;overflow:clip; }
-#recognition.prizes-pinned .awards { width:max-content;height:100%;overflow:visible;align-items:stretch;padding:0;will-change:transform; }
+#recognition.prizes-pinned .awards { width:max-content;height:100%;grid-template-rows:minmax(0,1fr);overflow:visible;align-items:stretch;padding:0;will-change:transform; }
 #recognition.prizes-pinned .prize-card { padding:24px; }
 #recognition.prizes-pinned .prize-label { margin-bottom:12px;padding:6px 10px; }
 #recognition.prizes-pinned .prize-card h3 { font-size:20px;line-height:1.25; }
@@ -32,4 +32,34 @@
     #recognition .prize-runners section + section { margin-top:34px;padding:34px 0 0;border-left:0;border-top:1px solid var(--line); }
     #recognition .prize-extras { width:auto;min-width:0;grid-template-columns:1fr; }
     #recognition .prize-extras > .prize-card:nth-child(2) { grid-column:auto; }
+}
+/* Phone lists flow top-to-bottom, then into the next horizontal column. */
+@media(max-width:1023px) {
+    #recognition.prizes-pinned .prizes-stage { height:calc(100dvh - var(--header)); }
+    #recognition.prizes-pinned .recognition-grid { padding-block:12px; }
+    #recognition.prizes-pinned .prize-head { grid-template-columns:1fr;gap:8px;margin-bottom:12px; }
+    #recognition.prizes-pinned .prize-head .display { font-size:32px;line-height:1; }
+    #recognition.prizes-pinned .prize-head .display br { display:none; }
+    #recognition.prizes-pinned .recognition-copy { font-size:12px;line-height:1.45; }
+    #recognition.prizes-pinned .awards { grid-auto-columns:max-content;gap:16px; }
+    #recognition.prizes-pinned .awards > .prize-card { width:max-content;min-width:var(--prize-phone-width);padding:16px; }
+    #recognition.prizes-pinned .prize-label { font-size:10px;margin-bottom:8px; }
+    #recognition.prizes-pinned .prize-card h3 { max-width:var(--prize-list-column);font-size:18px; }
+    #recognition.prizes-pinned .prize-team { max-width:var(--prize-list-column); }
+    #recognition.prizes-pinned .prize-list {
+        display:grid;grid-auto-flow:column;
+        grid-template-rows:repeat(var(--prize-rows,10),max-content);
+        grid-auto-columns:var(--prize-list-column);
+        width:max-content;max-width:none;gap:5px 20px;margin-top:12px;
+    }
+    #recognition.prizes-pinned .prize-list li { white-space:normal;font-size:12px;line-height:1.45;padding-left:18px; }
+    #recognition.prizes-pinned .awards > .prize-runners { width:max-content;grid-template-columns:repeat(2,max-content);gap:16px; }
+    #recognition.prizes-pinned .prize-runners section + section { margin:0;padding:0 0 0 16px;border-top:0;border-left:1px solid var(--line); }
+    #recognition.prizes-pinned .prize-extras {
+        width:max-content;height:100%;grid-template-columns:none;
+        grid-template-rows:repeat(var(--prize-extra-rows,2),minmax(0,1fr));
+        grid-auto-flow:column;grid-auto-columns:max-content;gap:16px;
+    }
+    #recognition.prizes-pinned .prize-extras > .prize-card { grid-column:auto;width:auto;min-width:var(--prize-phone-width);min-height:0;padding:16px; }
+    #recognition.prizes-pinned .prize-extras .prize-list { gap:5px 20px; }
 }

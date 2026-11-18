@@ -1,0 +1,53 @@
+{
+  "prizes": 97,
+  "copyAndOrderUnchanged": true,
+  "rows": [
+    {
+      "width": 390,
+      "height": 844,
+      "cards": 10,
+      "allPin": true,
+      "frontOrder": true,
+      "reverse": true,
+      "firstPin": -129
+    },
+    {
+      "width": 320,
+      "height": 568,
+      "cards": 10,
+      "allPin": true,
+      "frontOrder": true,
+      "reverse": true,
+      "firstPin": -627
+    },
+    {
+      "width": 768,
+      "height": 900,
+      "cards": 10,
+      "allPin": true,
+      "frontOrder": true,
+      "reverse": true,
+      "firstPin": 88
+    },
+    {
+      "width": 1440,
+      "height": 900,
+      "cards": 10,
+      "allPin": true,
+      "frontOrder": true,
+      "reverse": true,
+      "firstPin": 88
+    },
+    {
+      "width": 1920,
+      "height": 1080,
+      "cards": 10,
+      "allPin": true,
+      "frontOrder": true,
+      "reverse": true,
+      "firstPin": 88
+    }
+  ],
+  "reducedMotion": true,
+  "errors": []
+}

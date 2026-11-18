@@ -1,5 +1,7 @@
 # Sticky prizes and aligned award grid
 
+Phone/tablet behavior below was superseded by `prizes-mobile-sticky-verification.md`; mobile pinning is now enabled.
+
 Verified 18 November 2026.
 
 - Desktop scrolling pins the prizes below navigation, moves the row horizontally, and releases after the final award grid. Reverse scrolling reverses the movement. The existing native scroll-animation approach is reused; no animation library was added.
