@@ -1,0 +1,375 @@
+{
+  "copyAndOrderUnchanged": true,
+  "rows": [
+    {
+      "width": 390,
+      "height": 844,
+      "gridHeight": 0,
+      "display": "contents",
+      "cards": [
+        {
+          "id": "prize-stack-4",
+          "top": 7516.21875,
+          "left": 15,
+          "width": 358,
+          "scrollWidth": 358,
+          "position": "sticky",
+          "clipped": false
+        },
+        {
+          "id": "prize-stack-5",
+          "top": 8340.21875,
+          "left": 15,
+          "width": 358,
+          "scrollWidth": 358,
+          "position": "sticky",
+          "clipped": false
+        },
+        {
+          "id": "prize-stack-6",
+          "top": 9164.21875,
+          "left": 15,
+          "width": 358,
+          "scrollWidth": 358,
+          "position": "sticky",
+          "clipped": false
+        },
+        {
+          "id": "prize-stack-7",
+          "top": 9988.21875,
+          "left": 15,
+          "width": 358,
+          "scrollWidth": 358,
+          "position": "sticky",
+          "clipped": false
+        },
+        {
+          "id": "prize-stack-8",
+          "top": 10812.21875,
+          "left": 15,
+          "width": 358,
+          "scrollWidth": 358,
+          "position": "sticky",
+          "clipped": false
+        },
+        {
+          "id": "prize-stack-9",
+          "top": 11636.21875,
+          "left": 15,
+          "width": 358,
+          "scrollWidth": 358,
+          "position": "sticky",
+          "clipped": false
+        },
+        {
+          "id": "prize-stack-10",
+          "top": 12460.21875,
+          "left": 15,
+          "width": 358,
+          "scrollWidth": 358,
+          "position": "sticky",
+          "clipped": false
+        }
+      ],
+      "pageOverflow": false,
+      "prizes": 97,
+      "firstGap": 64
+    },
+    {
+      "width": 768,
+      "height": 900,
+      "gridHeight": 796.53125,
+      "display": "grid",
+      "cards": [
+        {
+          "id": "prize-stack-4",
+          "top": 7845.15625,
+          "left": 28,
+          "width": 350,
+          "scrollWidth": 350,
+          "position": "relative",
+          "clipped": false
+        },
+        {
+          "id": "prize-stack-5",
+          "top": 7845.15625,
+          "left": 388,
+          "width": 350,
+          "scrollWidth": 350,
+          "position": "relative",
+          "clipped": false
+        },
+        {
+          "id": "prize-stack-6",
+          "top": 8201.53125,
+          "left": 28,
+          "width": 230,
+          "scrollWidth": 230,
+          "position": "relative",
+          "clipped": false
+        },
+        {
+          "id": "prize-stack-7",
+          "top": 8201.53125,
+          "left": 268,
+          "width": 470,
+          "scrollWidth": 470,
+          "position": "relative",
+          "clipped": false
+        },
+        {
+          "id": "prize-stack-8",
+          "top": 8393.96875,
+          "left": 28,
+          "width": 230,
+          "scrollWidth": 230,
+          "position": "relative",
+          "clipped": false
+        },
+        {
+          "id": "prize-stack-9",
+          "top": 8393.96875,
+          "left": 268,
+          "width": 230,
+          "scrollWidth": 230,
+          "position": "relative",
+          "clipped": false
+        },
+        {
+          "id": "prize-stack-10",
+          "top": 8393.96875,
+          "left": 508,
+          "width": 230,
+          "scrollWidth": 230,
+          "position": "relative",
+          "clipped": false
+        }
+      ],
+      "pageOverflow": false,
+      "prizes": 97,
+      "firstGap": 24
+    },
+    {
+      "width": 1024,
+      "height": 768,
+      "gridHeight": 671.875,
+      "display": "grid",
+      "cards": [
+        {
+          "id": "prize-stack-4",
+          "top": 7049,
+          "left": 28,
+          "width": 478,
+          "scrollWidth": 478,
+          "position": "relative",
+          "clipped": false
+        },
+        {
+          "id": "prize-stack-5",
+          "top": 7049,
+          "left": 516,
+          "width": 478,
+          "scrollWidth": 478,
+          "position": "relative",
+          "clipped": false
+        },
+        {
+          "id": "prize-stack-6",
+          "top": 7327.40625,
+          "left": 28,
+          "width": 315,
+          "scrollWidth": 315,
+          "position": "relative",
+          "clipped": false
+        },
+        {
+          "id": "prize-stack-7",
+          "top": 7327.40625,
+          "left": 353.328125,
+          "width": 641,
+          "scrollWidth": 641,
+          "position": "relative",
+          "clipped": false
+        },
+        {
+          "id": "prize-stack-8",
+          "top": 7519.84375,
+          "left": 28,
+          "width": 315,
+          "scrollWidth": 315,
+          "position": "relative",
+          "clipped": false
+        },
+        {
+          "id": "prize-stack-9",
+          "top": 7519.84375,
+          "left": 353.328125,
+          "width": 315,
+          "scrollWidth": 315,
+          "position": "relative",
+          "clipped": false
+        },
+        {
+          "id": "prize-stack-10",
+          "top": 7519.84375,
+          "left": 678.65625,
+          "width": 315,
+          "scrollWidth": 315,
+          "position": "relative",
+          "clipped": false
+        }
+      ],
+      "pageOverflow": false,
+      "prizes": 97,
+      "firstGap": 24
+    },
+    {
+      "width": 1440,
+      "height": 900,
+      "gridHeight": 767.296875,
+      "display": "grid",
+      "cards": [
+        {
+          "id": "prize-stack-4",
+          "top": 7917.390625,
+          "left": 100,
+          "width": 612,
+          "scrollWidth": 612,
+          "position": "relative",
+          "clipped": false
+        },
+        {
+          "id": "prize-stack-5",
+          "top": 7917.390625,
+          "left": 726,
+          "width": 612,
+          "scrollWidth": 612,
+          "position": "relative",
+          "clipped": false
+        },
+        {
+          "id": "prize-stack-6",
+          "top": 8263.140625,
+          "left": 100,
+          "width": 403,
+          "scrollWidth": 403,
+          "position": "relative",
+          "clipped": false
+        },
+        {
+          "id": "prize-stack-7",
+          "top": 8263.140625,
+          "left": 517.328125,
+          "width": 821,
+          "scrollWidth": 821,
+          "position": "relative",
+          "clipped": false
+        },
+        {
+          "id": "prize-stack-8",
+          "top": 8470.3125,
+          "left": 100,
+          "width": 403,
+          "scrollWidth": 403,
+          "position": "relative",
+          "clipped": false
+        },
+        {
+          "id": "prize-stack-9",
+          "top": 8470.3125,
+          "left": 517.328125,
+          "width": 403,
+          "scrollWidth": 403,
+          "position": "relative",
+          "clipped": false
+        },
+        {
+          "id": "prize-stack-10",
+          "top": 8470.3125,
+          "left": 934.65625,
+          "width": 403,
+          "scrollWidth": 403,
+          "position": "relative",
+          "clipped": false
+        }
+      ],
+      "pageOverflow": false,
+      "prizes": 97,
+      "firstGap": 24
+    },
+    {
+      "width": 1920,
+      "height": 1080,
+      "gridHeight": 767.296875,
+      "display": "grid",
+      "cards": [
+        {
+          "id": "prize-stack-4",
+          "top": 9043.796875,
+          "left": 340,
+          "width": 612,
+          "scrollWidth": 612,
+          "position": "relative",
+          "clipped": false
+        },
+        {
+          "id": "prize-stack-5",
+          "top": 9043.796875,
+          "left": 966,
+          "width": 612,
+          "scrollWidth": 612,
+          "position": "relative",
+          "clipped": false
+        },
+        {
+          "id": "prize-stack-6",
+          "top": 9389.546875,
+          "left": 340,
+          "width": 403,
+          "scrollWidth": 403,
+          "position": "relative",
+          "clipped": false
+        },
+        {
+          "id": "prize-stack-7",
+          "top": 9389.546875,
+          "left": 757.328125,
+          "width": 821,
+          "scrollWidth": 821,
+          "position": "relative",
+          "clipped": false
+        },
+        {
+          "id": "prize-stack-8",
+          "top": 9596.71875,
+          "left": 340,
+          "width": 403,
+          "scrollWidth": 403,
+          "position": "relative",
+          "clipped": false
+        },
+        {
+          "id": "prize-stack-9",
+          "top": 9596.71875,
+          "left": 757.328125,
+          "width": 403,
+          "scrollWidth": 403,
+          "position": "relative",
+          "clipped": false
+        },
+        {
+          "id": "prize-stack-10",
+          "top": 9596.71875,
+          "left": 1174.65625,
+          "width": 403,
+          "scrollWidth": 403,
+          "position": "relative",
+          "clipped": false
+        }
+      ],
+      "pageOverflow": false,
+      "prizes": 97,
+      "firstGap": 24
+    }
+  ]
+}
