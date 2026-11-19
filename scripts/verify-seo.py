@@ -19,7 +19,9 @@ class Page(HTMLParser):
   if tag=='script' and self.capture:self.jsonld.append(json.loads(self.data));self.capture=False
 
 def audit():
- errors=[];warnings=[];rows=[];urls=[e.text for e in ET.parse(ROOT/'sitemap.xml').findall('.//{*}loc')]
+ errors=[];warnings=[];rows=[];sitemap=ET.parse(ROOT/'sitemap.xml');urls=[e.text for e in sitemap.findall('{*}url/{*}loc')]
+ for image in sitemap.findall('.//{http://www.google.com/schemas/sitemap-image/1.1}loc'):
+  if not (ROOT/unquote(urlsplit(image.text).path).lstrip('/')).is_file():errors.append('Missing image sitemap asset: '+image.text)
  for url in urls:
   route=urlsplit(url).path;file=ROOT/route.lstrip('/')/'index.html';p=Page();source=file.read_text(encoding='utf-8');p.feed(source)
   metas={a.get('name',a.get('property')):a.get('content','') for t,a in p.tags if t=='meta'}
